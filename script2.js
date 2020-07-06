@@ -2302,7 +2302,7 @@ function confirmCharacter(){
       let characterChoice = "sunkeeper";
       setCookie("character", "sunkeeper", 365);
       document.getElementById("sunkeeper-perks").classList.remove("hiding");
-      flippedCard = "./SK/skBack.png";
+      flippedCard = "./sunkeeper/SK/skBack.png";
       handSize = 11;
       cardHand12.classList.add("hiding");
       var hand = document.querySelectorAll(".hand");
@@ -2311,7 +2311,7 @@ function confirmCharacter(){
           (function (){
               var cardToChooseFrom = cardsToChooseFrom[i];
               if((i>-1 && i<14) || i>14){
-                  cardToChooseFrom.innerHTML = "<img id ='"+`${cardToChooseFrom.id}`+"' class = 'chooseCards "+`${cardToChooseFrom.id}`+"' src = './SK/sk"+i+".png' />";
+                  cardToChooseFrom.innerHTML = "<img id ='"+`${cardToChooseFrom.id}`+"' class = 'chooseCards "+`${cardToChooseFrom.id}`+"' src = './sunkeeper/SK/sk"+i+".png' />";
               } else {
                   cardToChooseFrom.innerHTML = '';
               }
@@ -6909,7 +6909,7 @@ skConfirmPerksButton.onclick = () => {
         for (var i = 0; i<modDeckArray.length; i++){
             if(modDeckArray[i] === mod17){
                 modDeckArray.splice(i, 1);
-                let newCard = "./skPerks/skPlus0.png";
+                let newCard = "./sunkeeper/skPerks/skPlus0.png";
                 modDeckArray.push(newCard);
                 i = modDeckArray.length;
                 cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -6924,7 +6924,7 @@ skConfirmPerksButton.onclick = () => {
         for (var i = 0; i<modDeckArray.length; i++){
             if(modDeckArray[i] === mod5){
                 modDeckArray.splice(i, 1);
-                let newCard = "./skPerks/skPlus2.png";
+                let newCard = "./sunkeeper/skPerks/skPlus2.png";
                 modDeckArray.push(newCard);
                 i = modDeckArray.length;
                 cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -6936,7 +6936,7 @@ skConfirmPerksButton.onclick = () => {
         setCookie("perk5", "notChosen", 365);
     }
     if (skPerk6.classList.contains('checked')){
-        let newCard = "./skPerks/skRollingPlus1.png";
+        let newCard = "./sunkeeper/skPerks/skRollingPlus1.png";
         modDeckArray.push(newCard);
         modDeckArray.push(newCard);
         cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -6945,7 +6945,7 @@ skConfirmPerksButton.onclick = () => {
         setCookie("perk6", "notChosen", 365);
     }
     if (skPerk7.classList.contains('checked')){
-        let newCard = "./skPerks/skRollingPlus1.png";
+        let newCard = "./sunkeeper/skPerks/skRollingPlus1.png";
         modDeckArray.push(newCard);
         modDeckArray.push(newCard);
         cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -6954,7 +6954,7 @@ skConfirmPerksButton.onclick = () => {
         setCookie("perk7", "notChosen", 365);
     }
     if (skPerk8.classList.contains('checked')){
-        let newCard = "./skPerks/skRollingHeal1.png";
+        let newCard = "./sunkeeper/skPerks/skRollingHeal1.png";
         modDeckArray.push(newCard);
         modDeckArray.push(newCard);
         setCookie("perk8", "bechosen", 365);
@@ -6962,7 +6962,7 @@ skConfirmPerksButton.onclick = () => {
         setCookie("perk8", "notChosen", 365);
     }
     if (skPerk9.classList.contains('checked')){
-        let newCard = "./skPerks/skRollingHeal1.png";
+        let newCard = "./sunkeeper/skPerks/skRollingHeal1.png";
         modDeckArray.push(newCard);
         modDeckArray.push(newCard);
         setCookie("perk9", "bechosen", 365);
@@ -6970,14 +6970,14 @@ skConfirmPerksButton.onclick = () => {
         setCookie("perk9", "notChosen", 365);
     }
     if (skPerk10.classList.contains('checked')){
-        let newCard = "./skPerks/skRollingStun.png";
+        let newCard = "./sunkeeper/skPerks/skRollingStun.png";
         modDeckArray.push(newCard);
         setCookie("perk10", "bechosen", 365);
     } else {
         setCookie("perk10", "notChosen", 365);
     }
     if (skPerk11.classList.contains('checked')){
-        let newCard = "./skPerks/skRollingLight.png";
+        let newCard = "./sunkeeper/skPerks/skRollingLight.png";
         modDeckArray.push(newCard);
         modDeckArray.push(newCard);
         setCookie("perk11", "bechosen", 365);
@@ -6985,7 +6985,7 @@ skConfirmPerksButton.onclick = () => {
         setCookie("perk11", "notChosen", 365);
     }
     if (skPerk12.classList.contains('checked')){
-        let newCard = "./skPerks/skRollingLight.png";
+        let newCard = "./sunkeeper/skPerks/skRollingLight.png";
         modDeckArray.push(newCard);
         modDeckArray.push(newCard);
         setCookie("perk12", "bechosen", 365);
@@ -6993,7 +6993,7 @@ skConfirmPerksButton.onclick = () => {
         setCookie("perk12", "notChosen", 365);
     }
     if (skPerk13.classList.contains('checked')){
-        let newCard = "./skPerks/skRollingShield1.png";
+        let newCard = "./sunkeeper/skPerks/skRollingShield1.png";
         modDeckArray.push(newCard);
         modDeckArray.push(newCard);
         setCookie("perk13", "bechosen", 365);
@@ -7001,7 +7001,7 @@ skConfirmPerksButton.onclick = () => {
         setCookie("perk13", "notChosen", 365);
     }
     if (skPerk14.classList.contains('checked')){
-        let newCard = "./skPerks/skPlus1.png";
+        let newCard = "./sunkeeper/skPerks/skPlus1.png";
         modDeckArray.push(newCard);
         modDeckArray.push(newCard);
         setCookie("perk14", "bechosen", 365);
