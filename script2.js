@@ -1846,7 +1846,7 @@ function confirmCharacter(){
     let characterChoice = "Beast Tyrant";
     setCookie("character", "beasttyrant", 365);
     document.getElementById("beast-tyrant-perks").classList.remove("hiding");
-    flippedCard = "./bmBack.jpg";
+    flippedCard = "./beasttyrant/bmBack.jpg";
     handSize = 10
     cardHand11.classList.add("hiding");
     cardHand12.classList.add("hiding");
@@ -1861,7 +1861,7 @@ function confirmCharacter(){
       (function (){
         var cardToChooseFrom = cardsToChooseFrom[i];
         if((i>-1 && i<13) || i>14){
-          cardToChooseFrom.innerHTML = "<img id ='"+`${cardToChooseFrom.id}`+"' class = 'chooseCards "+`${cardToChooseFrom.id}`+"' src = './bm"+i+".jpg' />";
+          cardToChooseFrom.innerHTML = "<img id ='"+`${cardToChooseFrom.id}`+"' class = 'chooseCards "+`${cardToChooseFrom.id}`+"' src = './beasttyrant/bm"+i+".jpg' />";
         } else {
           cardToChooseFrom.innerHTML = '';
         }
@@ -6382,7 +6382,7 @@ btConfirmPerksButton.onclick = () => {
     for (var i = 0; i<modDeckArray.length; i++){
       if(modDeckArray[i] === mod14){
         modDeckArray.splice(i, 1);
-        let newCard = "./btPerks/btPlus1.png";
+        let newCard = "./beasttyrant/btPerks/btPlus1.png";
         modDeckArray.push(newCard);
         i = modDeckArray.length;
         cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -6396,7 +6396,7 @@ btConfirmPerksButton.onclick = () => {
     for (var i = 0; i<modDeckArray.length; i++){
       if(modDeckArray[i] === mod15){
         modDeckArray.splice(i, 1);
-        let newCard = "./btPerks/btPlus1.png";
+        let newCard = "./beasttyrant/btPerks/btPlus1.png";
         modDeckArray.push(newCard);
         i = modDeckArray.length;
         cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -6410,7 +6410,7 @@ btConfirmPerksButton.onclick = () => {
     for (var i = 0; i<modDeckArray.length; i++){
       if(modDeckArray[i] === mod16){
         modDeckArray.splice(i, 1);
-        let newCard = "./btPerks/btPlus1.png";
+        let newCard = "./beasttyrant/btPerks/btPlus1.png";
         modDeckArray.push(newCard);
         i = modDeckArray.length;
         cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -6424,7 +6424,7 @@ btConfirmPerksButton.onclick = () => {
     for (var i = 0; i<modDeckArray.length; i++){
       if(modDeckArray[i] === mod1){
         modDeckArray.splice(i, 1);
-        let newCard = "./btPerks/btPlus2.png";
+        let newCard = "./beasttyrant/btPerks/btPlus2.png";
         modDeckArray.push(newCard);
         i = modDeckArray.length;
         cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -6438,7 +6438,7 @@ btConfirmPerksButton.onclick = () => {
     for (var i = 0; i<modDeckArray.length; i++){
       if(modDeckArray[i] === mod2){
         modDeckArray.splice(i, 1);
-        let newCard = "./btPerks/btPlus2.png";
+        let newCard = "./beasttyrant/btPerks/btPlus2.png";
         modDeckArray.push(newCard);
         i = modDeckArray.length;
         cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -6449,35 +6449,35 @@ btConfirmPerksButton.onclick = () => {
     setCookie("perk6", "notChosen", 365);
   }
   if (btPerk7.classList.contains('checked')){
-    let newCard = "./btPerks/btPlus1Wound.png";
+    let newCard = "./beasttyrant/btPerks/btPlus1Wound.png";
     modDeckArray.push(newCard);
     setCookie("perk7", "btchosen", 365);
   } else {
     setCookie("perk7", "notChosen", 365);
   }
   if (btPerk8.classList.contains('checked')){
-    let newCard = "./btPerks/btPlus1Wound.png";
+    let newCard = "./beasttyrant/btPerks/btPlus1Wound.png";
     modDeckArray.push(newCard);
     setCookie("perk8", "btchosen", 365);
   } else {
     setCookie("perk8", "notChosen", 365);
   }
   if (btPerk9.classList.contains('checked')){
-    let newCard = "./btPerks/btPlus1Immobilize.png";
+    let newCard = "./beasttyrant/btPerks/btPlus1Immobilize.png";
     modDeckArray.push(newCard);
     setCookie("perk9", "btchosen", 365);
   } else {
     setCookie("perk9", "notChosen", 365);
   }
   if (btPerk10.classList.contains('checked')){
-    let newCard = "./btPerks/btPlus1Immobilize.png";
+    let newCard = "./beasttyrant/btPerks/btPlus1Immobilize.png";
     modDeckArray.push(newCard);
     setCookie("perk10", "btchosen", 365);
   } else {
     setCookie("perk10", "notChosen", 365);
   }
   if (btPerk11.classList.contains('checked')){
-    let newCard = "./btPerks/btRollingHeal1.png";
+    let newCard = "./beasttyrant/btPerks/btRollingHeal1.png";
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
     setCookie("perk11", "btchosen", 365);
@@ -6485,7 +6485,7 @@ btConfirmPerksButton.onclick = () => {
     setCookie("perk11", "notChosen", 365);
   }
   if (btPerk12.classList.contains('checked')){
-    let newCard = "./btPerks/btRollingHeal1.png";
+    let newCard = "./beasttyrant/btPerks/btRollingHeal1.png";
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
     setCookie("perk12", "btchosen", 365);
@@ -6493,7 +6493,7 @@ btConfirmPerksButton.onclick = () => {
     setCookie("perk12", "notChosen", 365);
   }
   if (btPerk13.classList.contains('checked')){
-    let newCard = "./btPerks/btRollingHeal1.png";
+    let newCard = "./beasttyrant/btPerks/btRollingHeal1.png";
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
     setCookie("perk13", "btchosen", 365);
@@ -6501,7 +6501,7 @@ btConfirmPerksButton.onclick = () => {
     setCookie("perk13", "notChosen", 365);
   }
   if (btPerk14.classList.contains('checked')){
-    let newCard = "./btPerks/btRollingEarth.png";
+    let newCard = "./beasttyrant/btPerks/btRollingEarth.png";
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
     setCookie("perk14", "btchosen", 365);
