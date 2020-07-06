@@ -2013,7 +2013,7 @@ function confirmCharacter(){
     let characterChoice = "nightshroud";
     setCookie("character", "nightshroud", 365);
     document.getElementById("nightshroud-perks").classList.remove("hiding");
-    flippedCard = "./NS/nsBack.png";
+    flippedCard = "./nightsrhoud/NS/nsBack.png";
     handSize = 9
     cardHand10.classList.add("hiding");
     cardHand11.classList.add("hiding");
@@ -2024,7 +2024,7 @@ function confirmCharacter(){
       (function (){
         var cardToChooseFrom = cardsToChooseFrom[i];
         if((i>-1 && i<12) || i>14){
-          cardToChooseFrom.innerHTML = "<img id ='"+`${cardToChooseFrom.id}`+"' class = 'chooseCards "+`${cardToChooseFrom.id}`+"' src = './NS/ns"+i+".png' />";
+          cardToChooseFrom.innerHTML = "<img id ='"+`${cardToChooseFrom.id}`+"' class = 'chooseCards "+`${cardToChooseFrom.id}`+"' src = './nightsrhoud/NS/ns"+i+".png' />";
         } else {
           cardToChooseFrom.innerHTML = '';
         }
@@ -6574,7 +6574,7 @@ if(nsPerk3.classList.contains('checked')){
   setCookie("perk3", "notChosen", 365);
 }
 if(nsPerk4.classList.contains('checked')){
-  let newCard = "./nsPerks/nsMinus1Dark.png";
+  let newCard = "./nightsrhoud/nsPerks/nsMinus1Dark.png";
   modDeckArray.push(newCard);
   hasMinus1++;
   cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -6583,7 +6583,7 @@ if(nsPerk4.classList.contains('checked')){
   setCookie("perk4", "notChosen", 365);
 }
 if (nsPerk5.classList.contains('checked')){
-  let newCard = "./nsPerks/nsMinus1Dark.png";
+  let newCard = "./nightsrhoud/nsPerks/nsMinus1Dark.png";
   modDeckArray.push(newCard);
   hasMinus1++;
   cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -6594,7 +6594,7 @@ if (nsPerk5.classList.contains('checked')){
 if (nsPerk6.classList.contains('checked') && (hasMinus1> 0)){
       hasMinus1--;
       modDeckArray.pop();
-      let newCard = "./nsPerks/nsPlus1Dark.png";
+      let newCard = "./nightsrhoud/nsPerks/nsPlus1Dark.png";
       modDeckArray.unshift(newCard);
       cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
       setCookie("perk6", "nschosen", 365);
@@ -6604,7 +6604,7 @@ if (nsPerk6.classList.contains('checked') && (hasMinus1> 0)){
 if (nsPerk7.classList.contains('checked') && (hasMinus1> 0)){
     hasMinus1--;
     modDeckArray.pop();
-    let newCard = "./nsPerks/nsPlus1Dark.png";
+    let newCard = "./nightsrhoud/nsPerks/nsPlus1Dark.png";
     modDeckArray.unshift(newCard);
     cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
     setCookie("perk7", "nschosen", 365);
@@ -6612,21 +6612,21 @@ if (nsPerk7.classList.contains('checked') && (hasMinus1> 0)){
   setCookie("perk7", "notChosen", 365);
 }
 if (nsPerk8.classList.contains('checked')){
-  let newCard = "./nsPerks/nsPlus1Invisible.png";
+  let newCard = "./nightsrhoud/nsPerks/nsPlus1Invisible.png";
   modDeckArray.push(newCard);
   setCookie("perk8", "nschosen", 365);
 } else {
   setCookie("perk8", "notChosen", 365);
 }
 if (nsPerk9.classList.contains('checked')){
-  let newCard = "./nsPerks/nsPlus1Invisible.png";
+  let newCard = "./nightsrhoud/nsPerks/nsPlus1Invisible.png";
   modDeckArray.push(newCard);
   setCookie("perk9", "nschosen", 365);
 } else {
   setCookie("perk9", "notChosen", 365);
 }
 if (nsPerk10.classList.contains('checked')){
-  let newCard = "./nsPerks/nsRollingMuddle.png";
+  let newCard = "./nightsrhoud/nsPerks/nsRollingMuddle.png";
   modDeckArray.push(newCard);
   modDeckArray.push(newCard);
   modDeckArray.push(newCard);
@@ -6635,7 +6635,7 @@ if (nsPerk10.classList.contains('checked')){
   setCookie("perk10", "notChosen", 365);
 }
 if (nsPerk11.classList.contains('checked')){
-  let newCard = "./nsPerks/nsRollingMuddle.png";
+  let newCard = "./nightsrhoud/nsPerks/nsRollingMuddle.png";
   modDeckArray.push(newCard);
   modDeckArray.push(newCard);
   modDeckArray.push(newCard);
@@ -6644,7 +6644,7 @@ if (nsPerk11.classList.contains('checked')){
   setCookie("perk11", "notChosen", 365);
 }
 if (nsPerk12.classList.contains('checked')){
-  let newCard = "./nsPerks/nsRollingHeal1.png";
+  let newCard = "./nightsrhoud/nsPerks/nsRollingHeal1.png";
   modDeckArray.push(newCard);
   modDeckArray.push(newCard);
   setCookie("perk12", "nschosen", 365);
@@ -6652,7 +6652,7 @@ if (nsPerk12.classList.contains('checked')){
   setCookie("perk12", "notChosen", 365);
 }
 if (nsPerk13.classList.contains('checked')){
-  let newCard = "./nsPerks/nsRollingCurse.png";
+  let newCard = "./nightsrhoud/nsPerks/nsRollingCurse.png";
   modDeckArray.push(newCard);
   modDeckArray.push(newCard);
   setCookie("perk13", "nschosen", 365);
@@ -6660,14 +6660,14 @@ if (nsPerk13.classList.contains('checked')){
   setCookie("perk13", "notChosen", 365);
 }
 if (nsPerk14.classList.contains('checked')){
-  let newCard = "./nsPerks/nsRollingAddTarget.png";
+  let newCard = "./nightsrhoud/nsPerks/nsRollingAddTarget.png";
   modDeckArray.push(newCard);
   setCookie("perk14", "nschosen", 365);
 } else {
   setCookie("perk14", "notChosen", 365);
 }
 if (nsPerk15.classList.contains('checked')){
-  let newCard = "./nsPerks/nsPlus1.png";
+  let newCard = "./nightsrhoud/nsPerks/nsPlus1.png";
   modDeckArray.push(newCard);
   modDeckArray.push(newCard);
   setCookie("perk15", "nschosen", 365);
