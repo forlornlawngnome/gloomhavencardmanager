@@ -1846,7 +1846,7 @@ function confirmCharacter(){
     let characterChoice = "Beast Tyrant";
     setCookie("character", "beasttyrant", 365);
     document.getElementById("beast-tyrant-perks").classList.remove("hiding");
-    flippedCard = "./beasttyrant/bmBack.jpg";
+    flippedCard = "./beasttyrant/btBack.jpg";
     handSize = 10
     cardHand11.classList.add("hiding");
     cardHand12.classList.add("hiding");
@@ -1861,7 +1861,7 @@ function confirmCharacter(){
       (function (){
         var cardToChooseFrom = cardsToChooseFrom[i];
         if((i>-1 && i<13) || i>14){
-          cardToChooseFrom.innerHTML = "<img id ='"+`${cardToChooseFrom.id}`+"' class = 'chooseCards "+`${cardToChooseFrom.id}`+"' src = './beasttyrant/bm"+i+".jpg' />";
+          cardToChooseFrom.innerHTML = "<img id ='"+`${cardToChooseFrom.id}`+"' class = 'chooseCards "+`${cardToChooseFrom.id}`+"' src = './beasttyrant/bt"+i+".jpg' />";
         } else {
           cardToChooseFrom.innerHTML = '';
         }
