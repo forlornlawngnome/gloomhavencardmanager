@@ -2158,7 +2158,7 @@ function confirmCharacter(){
       let characterChoice = "berserker";
       setCookie("character", "berserker", 365);
       document.getElementById("berserker-perks").classList.remove("hiding");
-      flippedCard = "./BE/beBack.png";
+      flippedCard = "./berserker/BE/beBack.png";
       handSize = 10;
       cardHand11.classList.add("hiding");
       cardHand12.classList.add("hiding");
@@ -2168,7 +2168,7 @@ function confirmCharacter(){
           (function (){
               var cardToChooseFrom = cardsToChooseFrom[i];
               if((i>-1 && i<13) || i>14){
-                  cardToChooseFrom.innerHTML = "<img id ='"+`${cardToChooseFrom.id}`+"' class = 'chooseCards "+`${cardToChooseFrom.id}`+"' src = './BE/be"+i+".png' />";
+                  cardToChooseFrom.innerHTML = "<img id ='"+`${cardToChooseFrom.id}`+"' class = 'chooseCards "+`${cardToChooseFrom.id}`+"' src = './berserker/BE/be"+i+".png' />";
               } else {
                   cardToChooseFrom.innerHTML = '';
               }
@@ -6725,7 +6725,7 @@ beConfirmPerksButton.onclick = () => {
         for (var i = 0; i<modDeckArray.length; i++){
             if(modDeckArray[i] === mod14){
                 modDeckArray.splice(i, 1);
-                let newCard = "./bePerks/bePlus1.png"
+                let newCard = "./berserker/bePerks/bePlus1.png"
                 modDeckArray.push(newCard);
                 i = modDeckArray.length;
                 cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -6739,7 +6739,7 @@ beConfirmPerksButton.onclick = () => {
         for (var i = 0; i<modDeckArray.length; i++){
             if(modDeckArray[i] === mod15){
                 modDeckArray.splice(i, 1);
-                let newCard = "./bePerks/bePlus1.png"
+                let newCard = "./berserker/bePerks/bePlus1.png"
                 modDeckArray.push(newCard);
                 i = modDeckArray.length;
                 cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -6754,7 +6754,7 @@ beConfirmPerksButton.onclick = () => {
         for (var i = 0; i<modDeckArray.length; i++){
             if(modDeckArray[i] === mod5){
                 modDeckArray.splice(i, 1);
-                let newCard = "./bePerks/beRollingPlus2.png"
+                let newCard = "./berserker/bePerks/beRollingPlus2.png"
                 modDeckArray.push(newCard);
                 i = modDeckArray.length;
                 cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -6769,7 +6769,7 @@ beConfirmPerksButton.onclick = () => {
         for (var i = 0; i<modDeckArray.length; i++){
             if(modDeckArray[i] === mod6){
                 modDeckArray.splice(i, 1);
-                let newCard = "./bePerks/beRollingPlus2.png"
+                let newCard = "./berserker/bePerks/beRollingPlus2.png"
                 modDeckArray.push(newCard);
                 i = modDeckArray.length;
                 cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -6781,7 +6781,7 @@ beConfirmPerksButton.onclick = () => {
         setCookie("perk6", "notChosen", 365);
     }
     if (bePerk7.classList.contains('checked')){
-        let newCard = "./bePerks/beRollingWound.png";
+        let newCard = "./berserker/bePerks/beRollingWound.png";
         modDeckArray.push(newCard);
         modDeckArray.push(newCard);
         cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -6790,7 +6790,7 @@ beConfirmPerksButton.onclick = () => {
         setCookie("perk7", "notChosen", 365);
     }
     if (bePerk8.classList.contains('checked')){
-        let newCard = "./bePerks/beRollingWound.png";
+        let newCard = "./berserker/bePerks/beRollingWound.png";
         modDeckArray.push(newCard);
         modDeckArray.push(newCard);
         setCookie("perk8", "bechosen", 365);
@@ -6798,28 +6798,28 @@ beConfirmPerksButton.onclick = () => {
         setCookie("perk8", "notChosen", 365);
     }
     if (bePerk9.classList.contains('checked')){
-        let newCard = "./bePerks/beRollingStun.png";
+        let newCard = "./berserker/bePerks/beRollingStun.png";
         modDeckArray.push(newCard);
         setCookie("perk9", "bechosen", 365);
     } else {
         setCookie("perk9", "notChosen", 365);
     }
     if (bePerk10.classList.contains('checked')){
-        let newCard = "./bePerks/beRollingStun.png";
+        let newCard = "./berserker/bePerks/beRollingStun.png";
         modDeckArray.push(newCard);
         setCookie("perk10", "bechosen", 365);
     } else {
         setCookie("perk10", "notChosen", 365);
     }
     if (bePerk11.classList.contains('checked')){
-        let newCard = "./bePerks/beRollingPlus1Disarm.png";
+        let newCard = "./berserker/bePerks/beRollingPlus1Disarm.png";
         modDeckArray.push(newCard);
         setCookie("perk11", "bechosen", 365);
     } else {
         setCookie("perk11", "notChosen", 365);
     }
     if (bePerk12.classList.contains('checked')){
-        let newCard = "./bePerks/beRollingHeal1.png";
+        let newCard = "./berserker/bePerks/beRollingHeal1.png";
         modDeckArray.push(newCard);
         modDeckArray.push(newCard);
         setCookie("perk12", "bechosen", 365);
@@ -6827,14 +6827,14 @@ beConfirmPerksButton.onclick = () => {
         setCookie("perk12", "notChosen", 365);
     }
     if (bePerk13.classList.contains('checked')){
-        let newCard = "./bePerks/bePlus2Fire.png";
+        let newCard = "./berserker/bePerks/bePlus2Fire.png";
         modDeckArray.push(newCard);
         setCookie("perk13", "bechosen", 365);
     } else {
         setCookie("perk13", "notChosen", 365);
     }
     if (bePerk14.classList.contains('checked')){
-        let newCard = "./bePerks/bePlus2Fire.png";
+        let newCard = "./berserker/bePerks/bePlus2Fire.png";
         modDeckArray.push(newCard);
         setCookie("perk14", "bechosen", 365);
     } else {
