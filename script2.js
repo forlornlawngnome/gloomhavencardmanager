@@ -1708,14 +1708,14 @@ function confirmCharacter(){
     let characterChoice = "Doomstalker";
     setCookie("character", "doomstalker", 365);
     document.getElementById("doomstalker-perks").classList.remove("hiding");
-    flippedCard = "./dsBack.jpg";
+    flippedCard = "./doomstalker/dsBack.jpg";
     handSize = 12
     var hand = document.querySelectorAll(".hand");
     var cardsToChooseFrom = document.querySelectorAll(".chooseCardsTable");
     for (var i = 0; i<cardsToChooseFrom.length; i++){
       (function (){
         var cardToChooseFrom = cardsToChooseFrom[i];
-          cardToChooseFrom.innerHTML = "<img id ='"+`${cardToChooseFrom.id}`+"' class = 'chooseCards "+`${cardToChooseFrom.id}`+"' src = './ds"+i+".jpg' />";
+          cardToChooseFrom.innerHTML = "<img id ='"+`${cardToChooseFrom.id}`+"' class = 'chooseCards "+`${cardToChooseFrom.id}`+"' src = './doomstalker/ds"+i+".jpg' />";
       }).call(this,i);
     }
     for (var j = 0; j<hand.length; j++){
@@ -5254,7 +5254,7 @@ dsConfirmPerksButton.onclick = () =>{
     for (var i = 0; i<modDeckArray.length; i++){
       if(modDeckArray[i] === mod1){
         modDeckArray.splice(i, 2);
-        let newCard = "./dsPerks/dsPlus1.png";
+        let newCard = "./doomstalker/dsPerks/dsPlus1.png";
         modDeckArray.push(newCard);
         modDeckArray.push(newCard);
         i = modDeckArray.length;
@@ -5269,7 +5269,7 @@ dsConfirmPerksButton.onclick = () =>{
     for (var i = 0; i<modDeckArray.length; i++){
       if(modDeckArray[i] === mod3){
         modDeckArray.splice(i, 2);
-        let newCard = "./dsPerks/dsPlus1.png";
+        let newCard = "./doomstalker/dsPerks/dsPlus1.png";
         modDeckArray.push(newCard);
         modDeckArray.push(newCard);
         i = modDeckArray.length;
@@ -5284,7 +5284,7 @@ dsConfirmPerksButton.onclick = () =>{
     for (var i = 0; i<modDeckArray.length; i++){
       if(modDeckArray[i] === mod5){
         modDeckArray.splice(i, 2);
-        let newCard = "./dsPerks/dsPlus1.png";
+        let newCard = "./doomstalker/dsPerks/dsPlus1.png";
         modDeckArray.push(newCard);
         modDeckArray.push(newCard);
         i = modDeckArray.length;
@@ -5296,7 +5296,7 @@ dsConfirmPerksButton.onclick = () =>{
     setCookie("perk5", "notChosen", 365);
   }
   if (dsPerk6.classList.contains('checked')){
-    let newCard = "./dsPerks/dsRollingPlus1.png";
+    let newCard = "./doomstalker/dsPerks/dsRollingPlus1.png";
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
     setCookie("perk6", "dschosen", 365);
@@ -5304,7 +5304,7 @@ dsConfirmPerksButton.onclick = () =>{
     setCookie("perk6", "notChosen", 365);
   }
   if (dsPerk7.classList.contains('checked')){
-    let newCard = "./dsPerks/dsRollingPlus1.png";
+    let newCard = "./doomstalker/dsPerks/dsRollingPlus1.png";
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
     setCookie("perk7", "dschosen", 365);
@@ -5312,49 +5312,49 @@ dsConfirmPerksButton.onclick = () =>{
     setCookie("perk7", "notChosen", 365);
   }
   if (dsPerk8.classList.contains('checked')){
-    let newCard = "./dsPerks/dsPlus2Muddle.png";
+    let newCard = "./doomstalker/dsPerks/dsPlus2Muddle.png";
     modDeckArray.push(newCard);
     setCookie("perk8", "dschosen", 365);
   } else {
     setCookie("perk8", "notChosen", 365);
   }
   if (dsPerk9.classList.contains('checked')){
-    let newCard = "./dsPerks/dsPlus1Poison.png";
+    let newCard = "./doomstalker/dsPerks/dsPlus1Poison.png";
     modDeckArray.push(newCard);
     setCookie("perk9", "dschosen", 365);
   } else {
     setCookie("perk9", "notChosen", 365);
   }
   if (dsPerk10.classList.contains('checked')){
-    let newCard = "./dsPerks/dsPlus1Wound.png";
+    let newCard = "./doomstalker/dsPerks/dsPlus1Wound.png";
     modDeckArray.push(newCard);
     setCookie("perk10", "dschosen", 365);
   } else {
     setCookie("perk10", "notChosen", 365);
   }
   if (dsPerk11.classList.contains('checked')){
-    let newCard = "./dsPerks/dsPlus1Immobilize.png";
+    let newCard = "./doomstalker/dsPerks/dsPlus1Immobilize.png";
     modDeckArray.push(newCard);
     setCookie("perk11", "dschosen", 365);
   } else {
     setCookie("perk11", "notChosen", 365);
   }
   if (dsPerk12.classList.contains('checked')){
-    let newCard = "./dsPerks/dsPlus0Stun.png";
+    let newCard = "./doomstalker/dsPerks/dsPlus0Stun.png";
     modDeckArray.push(newCard);
     setCookie("perk12", "dschosen", 365);
   } else {
     setCookie("perk12", "notChosen", 365);
   }
   if (dsPerk13.classList.contains('checked')){
-    let newCard = "./dsPerks/dsRollingAddTarget.png";
+    let newCard = "./doomstalker/dsPerks/dsRollingAddTarget.png";
     modDeckArray.push(newCard);
     setCookie("perk13", "dschosen", 365);
   } else {
     setCookie("perk13", "notChosen", 365);
   }
   if (dsPerk14.classList.contains('checked')){
-    let newCard = "./dsPerks/dsRollingAddTarget.png";
+    let newCard = "./doomstalker/dsPerks/dsRollingAddTarget.png";
     modDeckArray.push(newCard);
     setCookie("perk14", "dschosen", 365);
   } else {
