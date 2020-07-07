@@ -1,0 +1,44 @@
+.MiniCharacterCard {
+  height: 2.5em;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+
+  padding: .5em;
+}
+
+.MiniCharacterCard > img {
+  filter: invert(1);
+  width: 2.5em;
+  height: 2.5em;
+  object-fit: cover;
+  border-radius: .5em;
+}
+
+.MiniCharacterCardLabels {
+  margin: .5em;
+}
+
+.MiniCharacterCardMainTitle {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1em;
+}
+
+.MiniCharacterCardMainTitleLVLabel {
+  margin-left: .5em;
+  font-size: .6em;
+}
+
+.MiniCharacterCardMainTitleLV {
+  flex-shrink: 0;
+  margin-left: .1em;
+}
+
+.MiniCharacterCardSubtitle {
+  font-size: .7em;
+  width: 100%;
+  text-align: left;
+  opacity: .7;
+}

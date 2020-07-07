@@ -1,0 +1,10 @@
+{
+  "short_name": "Gloomhaven Card Manager",
+  "name": "Gloomhaven Card Manager",
+  "icons": [
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

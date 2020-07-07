@@ -1,0 +1,43 @@
+.CharacterCard {
+  width: 10em;
+  height: 20em;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: .5em;
+}
+
+.CharacterCard > img {
+  height: 80%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: .5em;
+}
+
+.CharacterCardLabels {
+  margin: .5em;
+}
+
+.CharacterCardMainTitle {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1em;
+}
+
+.CharacterCardMainTitleLVLabel {
+  font-size: .6em;
+}
+
+.CharacterCardMainTitleLV {
+  flex-shrink: 0;
+  margin-left: .1em;
+}
+
+.CharacterCardSubtitle {
+  font-size: .7em;
+  width: 100%;
+  text-align: left;
+  opacity: .7;
+}

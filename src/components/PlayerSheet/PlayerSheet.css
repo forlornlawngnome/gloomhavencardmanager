@@ -1,0 +1,8 @@
+.PlayerSheet {
+  width: 20em;
+}
+
+.PlayerSheet > div {
+  border: 1px solid white;
+  margin-bottom: .5em;
+}

@@ -1,0 +1,30 @@
+.EditableCharacterCard {
+  position: relative;
+}
+
+.EditableCharacterCardButtons {
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  display: flex;
+  flex-direction: column;
+  opacity: .4;
+}
+
+.EditableCharacterCardButtons:hover {
+  opacity: .8;
+}
+
+.EditableCharacterCardButtons > input {
+  filter: invert(1);
+  padding: .5em;
+  width: 1em;
+  height: 1em;
+  background-color: #ccc;
+  opacity: .8;
+}
+
+.EditableCharacterCardButtons > input:hover {
+  opacity: 1;
+  border-inline: medium solid white;
+}

@@ -1,0 +1,14 @@
+.ClassHeader {
+  height: 1.8em;
+  line-height: 1.8em;
+  vertical-align: center;
+  display: flex;
+}
+
+.ClassHeader > img {
+  filter: invert(1);
+  width: 1.5em;
+  height: 1.5em;
+  object-fit: cover;
+  margin: 0 .5em;
+}

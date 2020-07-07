@@ -1,0 +1,14 @@
+.HomeHeaderBar {
+  width: 100%;
+  display: flex;
+  background-color: #444;
+}
+
+.HomeHeaderBarItem + .HomeHeaderBarItem {
+  border-left: 1px solid #555;
+}
+
+.HomeHeaderBarNew {
+  margin-left: auto;
+  order: 2;
+}

@@ -1,0 +1,19 @@
+.NameAndLevelInfoNum {
+  font-size: .4em;
+  text-align: center;
+  width: 2.5em;
+}
+
+.NameAndLevelInfoBox {
+  border: 1px solid #555;
+}
+
+.NameAndLevelInfoBoxSelected {
+  border: 1px solid #555;
+  background-color: white;
+  color: black;
+}
+
+.NameAndLevelInfoNum + .NameAndLevelInfoNum {
+  border-left: 1px solid #555;
+}
