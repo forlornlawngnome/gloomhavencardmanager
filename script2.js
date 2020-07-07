@@ -1570,14 +1570,14 @@ function confirmCharacter(){
     let characterChoice = "Tinkerer";
     setCookie("character", "tinkerer", 365);
     document.getElementById("tinkerer-perks").classList.remove("hiding");
-    flippedCard = "./tiBack.jpg";
+    flippedCard = "./tinkerer/tiBack.jpg";
     handSize = 12
     var hand = document.querySelectorAll(".hand");
     var cardsToChooseFrom = document.querySelectorAll(".chooseCardsTable");
     for (var i = 0; i<cardsToChooseFrom.length; i++){
       (function (){
         var cardToChooseFrom = cardsToChooseFrom[i];
-          cardToChooseFrom.innerHTML = "<img id ='"+`${cardToChooseFrom.id}`+"' class = 'chooseCards "+`${cardToChooseFrom.id}`+"' src = './ti"+i+".jpg' />";
+          cardToChooseFrom.innerHTML = "<img id ='"+`${cardToChooseFrom.id}`+"' class = 'chooseCards "+`${cardToChooseFrom.id}`+"' src = './tinkerer/ti"+i+".jpg' />";
       }).call(this,i);
     }
     for (var j = 0; j<hand.length; j++){
@@ -6248,7 +6248,7 @@ tiConfirmPerksButton.onclick = () => {
     for (var i = 0; i<modDeckArray.length; i++){
       if(modDeckArray[i] === mod17){
         modDeckArray.splice(i, 1);
-        let newCard = "./tiPerks/tiPlus0.png"
+        let newCard = "./tinkerer/tiperks/tiPlus0.png"
         modDeckArray.push(newCard);
         i = modDeckArray.length;
         cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -6259,7 +6259,7 @@ tiConfirmPerksButton.onclick = () => {
     setCookie("perk3", "notChosen", 365);
   }
   if(tiPerk4.classList.contains('checked')){
-    let newCard = "./tiPerks/tiPlus1.png";
+    let newCard = "./tinkerer/tiperks/tiPlus1.png";
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
     setCookie("perk4", "tichosen", 365);
@@ -6267,14 +6267,14 @@ tiConfirmPerksButton.onclick = () => {
     setCookie("perk4", "notChosen", 365);
   }
   if (tiPerk5.classList.contains('checked')){
-    let newCard = "./tiPerks/tiPlus3.png";
+    let newCard = "./tinkerer/tiperks/tiPlus3.png";
     modDeckArray.push(newCard);
     setCookie("perk5", "tichosen", 365);
   } else {
     setCookie("perk5", "notChosen", 365);
   }
   if (tiPerk6.classList.contains('checked')){
-    let newCard = "./tiPerks/tiRollingFire.png";
+    let newCard = "./tinkerer/tiperks/tiRollingFire.png";
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
     setCookie("perk6", "tichosen", 365);
@@ -6282,7 +6282,7 @@ tiConfirmPerksButton.onclick = () => {
     setCookie("perk6", "notChosen", 365);
   }
   if (tiPerk7.classList.contains('checked')){
-    let newCard = "./tiPerks/tiRollingMuddle.png";
+    let newCard = "./tinkerer/tiperks/tiRollingMuddle.png";
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
@@ -6291,49 +6291,49 @@ tiConfirmPerksButton.onclick = () => {
     setCookie("perk7", "notChosen", 365);
   }
   if (tiPerk8.classList.contains('checked')){
-    let newCard = "./tiPerks/tiPlus1Wound.png";
+    let newCard = "./tinkerer/tiperks/tiPlus1Wound.png";
     modDeckArray.push(newCard);
     setCookie("perk8", "tichosen", 365);
   } else {
     setCookie("perk8", "notChosen", 365);
   }
   if (tiPerk9.classList.contains('checked')){
-    let newCard = "./tiPerks/tiPlus1Wound.png";
+    let newCard = "./tinkerer/tiperks/tiPlus1Wound.png";
     modDeckArray.push(newCard);
     setCookie("perk9", "tichosen", 365);
   } else {
     setCookie("perk9", "notChosen", 365);
   }
   if (tiPerk10.classList.contains('checked')){
-    let newCard = "./tiPerks/tiPlus1Immobilize.png";
+    let newCard = "./tinkerer/tiperks/tiPlus1Immobilize.png";
     modDeckArray.push(newCard);
     setCookie("perk10", "tichosen", 365);
   } else {
     setCookie("perk10", "notChosen", 365);
   }
   if (tiPerk11.classList.contains('checked')){
-    let newCard = "./tiPerks/tiPlus1Immobilize.png";
+    let newCard = "./tinkerer/tiperks/tiPlus1Immobilize.png";
     modDeckArray.push(newCard);
     setCookie("perk11", "tichosen", 365);
   } else {
     setCookie("perk11", "notChosen", 365);
   }
   if (tiPerk12.classList.contains('checked')){
-    let newCard = "./tiPerks/tiPlus1Heal2.png";
+    let newCard = "./tinkerer/tiperks/tiPlus1Heal2.png";
     modDeckArray.push(newCard);
     setCookie("perk12", "tichosen", 365);
   } else {
     setCookie("perk12", "notChosen", 365);
   }
   if (tiPerk13.classList.contains('checked')){
-    let newCard = "./tiPerks/tiPlus1Heal2.png";
+    let newCard = "./tinkerer/tiperks/tiPlus1Heal2.png";
     modDeckArray.push(newCard);
     setCookie("perk13", "tichosen", 365);
   } else {
     setCookie("perk13", "notChosen", 365);
   }
   if (tiPerk14.classList.contains('checked')){
-    let newCard = "./tiPerks/tiPlus0AddTarget.png";
+    let newCard = "./tinkerer/tiperks/tiPlus0AddTarget.png";
     modDeckArray.push(newCard);
     setCookie("perk14", "tichosen", 365);
   } else {
