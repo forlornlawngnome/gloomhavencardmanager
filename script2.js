@@ -991,7 +991,7 @@ function confirmCharacter(){
     let characterChoice = "Brute";
     setCookie("character", "brute", 365);
     document.getElementById("brute-perks").classList.remove("hiding");
-    flippedCard = "./Card Back.png";
+    flippedCard = "./brute/brBack.png";
     handSize = 10
     cardHand11.classList.add("hiding");
     cardHand12.classList.add("hiding");
@@ -1001,7 +1001,7 @@ function confirmCharacter(){
       (function (){
         var cardToChooseFrom = cardsToChooseFrom[i];
         if((i>-1 && i<13) || i>14){
-          cardToChooseFrom.innerHTML = "<img id ='"+`${cardToChooseFrom.id}`+"' class = 'chooseCards "+`${cardToChooseFrom.id}`+"' src = './bt"+i+".png' />";
+          cardToChooseFrom.innerHTML = "<img id ='"+`${cardToChooseFrom.id}`+"' class = 'chooseCards "+`${cardToChooseFrom.id}`+"' src = './br"+i+".png' />";
         } else {
           cardToChooseFrom.innerHTML = '';
         }
@@ -5755,7 +5755,7 @@ brConfirmPerksButton.onclick = () => {
     for (var i = 0; i<modDeckArray.length; i++){
       if(modDeckArray[i] === mod14){
         modDeckArray.splice(i, 1);
-        let newCard = "./brPerks/brPlus1.png"
+        let newCard = "./brute/brPerks/brPlus1.png"
         modDeckArray.push(newCard);
         i = modDeckArray.length;
         cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -5766,7 +5766,7 @@ brConfirmPerksButton.onclick = () => {
     setCookie("perk2", "notChosen", 365);
   }
   if(brPerk3.classList.contains('checked')){
-    let newCard = "./brPerks/brPlus1.png"
+    let newCard = "./brute/brPerks/brPlus1.png"
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
     cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -5775,7 +5775,7 @@ brConfirmPerksButton.onclick = () => {
     setCookie("perk3", "notChosen", 365);
   }
   if(brPerk4.classList.contains('checked')){
-    let newCard = "./brPerks/brPlus1.png"
+    let newCard = "./brute/brPerks/brPlus1.png"
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
     cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -5784,7 +5784,7 @@ brConfirmPerksButton.onclick = () => {
     setCookie("perk4", "notChosen", 365);
   }
   if (brPerk5.classList.contains('checked')){
-      let newCard = "./brPerks/brPlus3.png";
+      let newCard = "./brute/brPerks/brPlus3.png";
       modDeckArray.push(newCard);
       cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
       setCookie("perk5", "brchosen", 365);
@@ -5792,7 +5792,7 @@ brConfirmPerksButton.onclick = () => {
     setCookie("perk5", "notChosen", 365);
   }
   if (brPerk6.classList.contains('checked')){
-    let newCard = "./brPerks/brRollingPush1.png";
+    let newCard = "./brute/brPerks/brRollingPush1.png";
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
@@ -5801,7 +5801,7 @@ brConfirmPerksButton.onclick = () => {
     setCookie("perk6", "notChosen", 365);
   }
   if (brPerk7.classList.contains('checked')){
-    let newCard = "./brPerks/brRollingPush1.png";
+    let newCard = "./brute/brPerks/brRollingPush1.png";
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
@@ -5810,7 +5810,7 @@ brConfirmPerksButton.onclick = () => {
     setCookie("perk7", "notChosen", 365);
   }
   if (brPerk8.classList.contains('checked')){
-    let newCard = "./brPerks/brRollingPierce3.png";
+    let newCard = "./brute/brPerks/brRollingPierce3.png";
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
     setCookie("perk8", "brchosen", 365);
@@ -5818,22 +5818,22 @@ brConfirmPerksButton.onclick = () => {
     setCookie("perk8", "notChosen", 365);
   }
   if (brPerk9.classList.contains('checked')){
-    let newCard = "./brPerks/brRollingStun.png";
+    let newCard = "./brute/brPerks/brRollingStun.png";
     modDeckArray.push(newCard);
     setCookie("perk9", "brchosen", 365);
   } else {
     setCookie("perk9", "notChosen", 365);
   }
   if (brPerk10.classList.contains('checked')){
-    let newCard = "./brPerks/brRollingStun.png";
+    let newCard = "./brute/brPerks/brRollingStun.png";
     modDeckArray.push(newCard);
     setCookie("perk10", "brchosen", 365);
   } else {
     setCookie("perk10", "notChosen", 365);
   }
   if (brPerk11.classList.contains('checked')){
-    let newCard1 = "./brPerks/brRollingDisarm.png";
-    let newCard2 = "./brPerks/brRollingMuddle.png";
+    let newCard1 = "./brute/brPerks/brRollingDisarm.png";
+    let newCard2 = "./brute/brPerks/brRollingMuddle.png";
     modDeckArray.push(newCard1);
     modDeckArray.push(newCard2);
     setCookie("perk11", "brchosen", 365);
@@ -5841,28 +5841,28 @@ brConfirmPerksButton.onclick = () => {
     setCookie("perk11", "notChosen", 365);
   }
   if (brPerk12.classList.contains('checked')){
-    let newCard = "./brPerks/brRollingAddTarget.png";
+    let newCard = "./brute/brPerks/brRollingAddTarget.png";
     modDeckArray.push(newCard);
     setCookie("perk12", "brchosen", 365);
   } else {
     setCookie("perk12", "notChosen", 365);
   }
   if (brPerk13.classList.contains('checked')){
-    let newCard = "./brPerks/brRollingAddTarget.png";
+    let newCard = "./brute/brPerks/brRollingAddTarget.png";
     modDeckArray.push(newCard);
     setCookie("perk13", "brchosen", 365);
   } else {
     setCookie("perk13", "notChosen", 365);
   }
   if (brPerk14.classList.contains('checked')){
-    let newCard = "./brPerks/brPlus1Shield.png";
+    let newCard = "./brute/brPerks/brPlus1Shield.png";
     modDeckArray.push(newCard);
     setCookie("perk14", "brchosen", 365);
   } else {
     setCookie("perk14", "notChosen", 365);
   }
   if (brPerk15.classList.contains('checked')){
-    let newCard = "./brPerks/brPlus1.png";
+    let newCard = "./brute/brPerks/brPlus1.png";
     modDeckArray.push(newCard);
     setCookie("perk15", "brchosen", 365);
   } else {
