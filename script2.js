@@ -1001,7 +1001,7 @@ function confirmCharacter(){
       (function (){
         var cardToChooseFrom = cardsToChooseFrom[i];
         if((i>-1 && i<13) || i>14){
-          cardToChooseFrom.innerHTML = "<img id ='"+`${cardToChooseFrom.id}`+"' class = 'chooseCards "+`${cardToChooseFrom.id}`+"' src = './br"+i+".png' />";
+          cardToChooseFrom.innerHTML = "<img id ='"+`${cardToChooseFrom.id}`+"' class = 'chooseCards "+`${cardToChooseFrom.id}`+"' src = './brute/br"+i+".png' />";
         } else {
           cardToChooseFrom.innerHTML = '';
         }
