@@ -1135,7 +1135,7 @@ function confirmCharacter(){
     let characterChoice = "Mindthief";
     setCookie("character", "mindthief", 365);
     document.getElementById("mindthief-perks").classList.remove("hiding");
-    flippedCard = "./mtBack.jpg";
+    flippedCard = "./mindthief/mtBack.jpg";
     handSize = 10
     cardHand11.classList.add("hiding");
     cardHand12.classList.add("hiding");
@@ -1145,7 +1145,7 @@ function confirmCharacter(){
       (function (){
         var cardToChooseFrom = cardsToChooseFrom[i];
         if((i>-1 && i<13) || i>14){
-          cardToChooseFrom.innerHTML = "<img id ='"+`${cardToChooseFrom.id}`+"' class = 'chooseCards "+`${cardToChooseFrom.id}`+"' src = './mt"+i+".jpg' />";
+          cardToChooseFrom.innerHTML = "<img id ='"+`${cardToChooseFrom.id}`+"' class = 'chooseCards "+`${cardToChooseFrom.id}`+"' src = './mindthief/mt"+i+".jpg' />";
         } else {
           cardToChooseFrom.innerHTML = '';
         }
@@ -5428,7 +5428,7 @@ mtConfirmPerksButton.onclick = () => {
     for (var i = 0; i<modDeckArray.length; i++){
       if(modDeckArray[i] === mod7){
         modDeckArray.splice(i, 2);
-        let newCard = "./mtPerks/mtPlus2.png";
+        let newCard = "./mindthief/mtPerks/mtPlus2.png";
         modDeckArray.push(newCard);
         modDeckArray.push(newCard);
         i = modDeckArray.length;
@@ -5443,7 +5443,7 @@ mtConfirmPerksButton.onclick = () => {
     for (var i = 0; i<modDeckArray.length; i++){
       if(modDeckArray[i] === mod17){
         modDeckArray.splice(i, 1);
-        let newCard = "./mtPerks/mtPlus0.png";
+        let newCard = "./mindthief/mtPerks/mtPlus0.png";
         modDeckArray.push(newCard);
         i = modDeckArray.length;
         cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -5454,21 +5454,21 @@ mtConfirmPerksButton.onclick = () => {
     setCookie("perk5", "notChosen", 365);
   }
   if (mtPerk6.classList.contains('checked')){
-    let newCard = "./mtPerks/mtFrostPlus2.png";
+    let newCard = "./mindthief/mtPerks/mtFrostPlus2.png";
     modDeckArray.push(newCard);
     setCookie("perk6", "mtchosen", 365);
   } else {
     setCookie("perk6", "notChosen", 365);
   }
   if (mtPerk7.classList.contains('checked')){
-    let newCard = "./mtPerks/mtFrostPlus2.png";
+    let newCard = "./mindthief/mtPerks/mtFrostPlus2.png";
     modDeckArray.push(newCard);
     setCookie("perk7", "mtchosen", 365);
   } else {
     setCookie("perk7", "notChosen", 365);
   }
   if (mtPerk8.classList.contains('checked')){
-    let newCard = "./mtPerks/mtRollingPlus1.png";
+    let newCard = "./mindthief/mtPerks/mtRollingPlus1.png";
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
     setCookie("perk8", "mtchosen", 365);
@@ -5476,7 +5476,7 @@ mtConfirmPerksButton.onclick = () => {
     setCookie("perk8", "notChosen", 365);
   }
   if (mtPerk9.classList.contains('checked')){
-    let newCard = "./mtPerks/mtRollingPlus1.png";
+    let newCard = "./mindthief/mtPerks/mtRollingPlus1.png";
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
     setCookie("perk9", "mtchosen", 365);
@@ -5484,7 +5484,7 @@ mtConfirmPerksButton.onclick = () => {
     setCookie("perk9", "notChosen", 365);
   }
   if (mtPerk10.classList.contains('checked')){
-    let newCard = "./mtPerks/mtRollingPull1.png";
+    let newCard = "./mindthief/mtPerks/mtRollingPull1.png";
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
@@ -5493,7 +5493,7 @@ mtConfirmPerksButton.onclick = () => {
     setCookie("perk10", "notChosen", 365);
   }
   if (mtPerk11.classList.contains('checked')){
-    let newCard = "./mtPerks/mtRollingMuddle.png";
+    let newCard = "./mindthief/mtPerks/mtRollingMuddle.png";
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
@@ -5502,7 +5502,7 @@ mtConfirmPerksButton.onclick = () => {
     setCookie("perk11", "notChosen", 365);
   }
   if (mtPerk12.classList.contains('checked')){
-    let newCard = "./mtPerks/mtRollingImmobilize.png";
+    let newCard = "./mindthief/mtPerks/mtRollingImmobilize.png";
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
     setCookie("perk12", "mtchosen", 365);
@@ -5510,15 +5510,15 @@ mtConfirmPerksButton.onclick = () => {
     setCookie("perk12", "notChosen", 365);
   }
   if (mtPerk13.classList.contains('checked')){
-    let newCard = "./mtPerks/mtRollingStun.png";
+    let newCard = "./mindthief/mtPerks/mtRollingStun.png";
     modDeckArray.push(newCard);
     setCookie("perk13", "mtchosen", 365);
   } else {
     setCookie("perk13", "notChosen", 365);
   }
   if (mtPerk14.classList.contains('checked')){
-    let newCard1 = "./mtPerks/mtRollingDisarm.png";
-    let newCard2 = "./mtPerks/mtRollingMuddle.png";
+    let newCard1 = "./mindthief/mtPerks/mtRollingDisarm.png";
+    let newCard2 = "./mindthief/mtPerks/mtRollingMuddle.png";
     modDeckArray.push(newCard1);
     modDeckArray.push(newCard2);
     setCookie("perk14", "mtchosen", 365);
