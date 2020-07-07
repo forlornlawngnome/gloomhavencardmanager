@@ -5040,29 +5040,29 @@ loseHandCard.onclick = () => {
 //attack modifiers
 let modifierDeck = document.getElementById('amDeck');
 let playedModifiers = document.getElementById('playedModifiers');
-let mod1 = "./plus0.png";
-let mod2 = "./plus0.png";
-let mod3 = "./plus0.png";
-let mod4 = "./plus0.png";
-let mod5 = "./plus0.png";
-let mod6 = "./plus0.png";
-let mod7 = "./plus1.png";
-let mod8 = "./plus1.png";
-let mod9 = "./plus1.png";
-let mod10 = "./plus1.png";
-let mod11 = "./plus1.png";
-let mod12 = "./minus1.png";
-let mod13 = "./minus1.png";
-let mod14 = "./minus1.png";
-let mod15 = "./minus1.png";
-let mod16 = "./minus1.png";
-let mod17 = "./minus2.png";
-let mod18 = "./plus2.png";
-let mod19 = "./curseShuffle.png";
-let mod20 = "./blessShuffle.png";
-let blessCard = "./bless.png";
-let curseCard = "./curse.png";
-let minus1 = "./newMinus1.png";
+let mod1 = "./1cards/plus0.png";
+let mod2 = "./1cards/plus0.png";
+let mod3 = "./1cards/plus0.png";
+let mod4 = "./1cards/plus0.png";
+let mod5 = "./1cards/plus0.png";
+let mod6 = "./1cards/plus0.png";
+let mod7 = "./1cards/plus1.png";
+let mod8 = "./1cards/plus1.png";
+let mod9 = "./1cards/plus1.png";
+let mod10 = "./1cards/plus1.png";
+let mod11 = "./1cards/plus1.png";
+let mod12 = "./1cards/minus1.png";
+let mod13 = "./1cards/minus1.png";
+let mod14 = "./1cards/minus1.png";
+let mod15 = "./1cards/minus1.png";
+let mod16 = "./1cards/minus1.png";
+let mod17 = "./1cards/minus2.png";
+let mod18 = "./1cards/plus2.png";
+let mod19 = "./1cards/curseShuffle.png";
+let mod20 = "./1cards/blessShuffle.png";
+let blessCard = "./1cards/bless.png";
+let curseCard = "./1cards/curse.png";
+let minus1 = "./1cards/newMinus1.png";
 let modDeckArray = [mod1, mod2, mod3, mod4, mod5, mod6, mod7, mod8, mod9, mod10, mod11, mod12, mod13, mod14, mod15, mod16, mod17, mod18, mod19, mod20];
 let defaultDeckArray = [];
 let playedModifierArray = [];
@@ -5090,21 +5090,21 @@ modifierDeck.onclick = () => {
     if (modDeckArray.length === 0){
       modifierDeck.classList.add("hiding");
     }
-    if (playedModifiers.classList.contains("./curseShuffle.png") || playedModifiers.classList.contains("./blessShuffle.png")){
+    if (playedModifiers.classList.contains("./1cards/curseShuffle.png") || playedModifiers.classList.contains("./1cards/blessShuffle.png")){
       mustShuffle.classList.remove("invisible");
     }
-    if (playedModifiers.classList.contains("./curse.png")){
+    if (playedModifiers.classList.contains("./1cards/curse.png")){
       numOfCurses--;
       cursesInDeck.innerHTML = "Extra Curses in Deck: "+numOfCurses;
     }
-    if (playedModifiers.classList.contains("./bless.png")){
+    if (playedModifiers.classList.contains("./1cards/bless.png")){
       numOfBlesses--;
       blessesInDeck.innerHTML = "Extra Blesses in Deck: "+numOfBlesses;
     }
-    if (playedModifiers.classList.contains("./bless.png") || playedModifiers.classList.contains("./curse.png")){
+    if (playedModifiers.classList.contains("./1cards/bless.png") || playedModifiers.classList.contains("./1cards/curse.png")){
       playedModifierArray.splice((playedModifierArray.length-1), 1);
-      playedModifiers.classList.remove("./bless.png");
-      playedModifiers.classList.remove("./curse.png");
+      playedModifiers.classList.remove("./1cards/bless.png");
+      playedModifiers.classList.remove("./1cards/curse.png");
     }
     cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
   }
@@ -5115,7 +5115,7 @@ function shuffleModifierDeck (){
     modDeckArray.push(playedModifierArray[playedModifierArray.length - 1]);
     playedModifierArray.pop();
     playedModifiers.src = '';
-    modifierDeck.src = "./amBack.png"
+    modifierDeck.src = "./1cards/amBack.png"
     mustShuffle.classList.add('invisible');
     playedModifiers.className = "attack-modifier";
     playedModifiers.classList.add('hiding');
