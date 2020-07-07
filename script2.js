@@ -649,7 +649,7 @@ function checkCookie() {
 }
 
 //flipped card path
-let flippedCard = "./Card Back.png";
+let flippedCard = "./brute/brBack.png";
 
 //cards in hand
 let handSize = 0;
