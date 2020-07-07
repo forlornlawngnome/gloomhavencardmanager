@@ -1279,7 +1279,7 @@ function confirmCharacter(){
     let characterChoice = "Spellweaver";
     setCookie("character", "spellweaver", 365);
     document.getElementById("spellweaver-perks").classList.remove("hiding");
-    flippedCard = "./swBack.jpg";
+    flippedCard = "./spellweaver/swBack.jpg";
     handSize = 8
     cardHand9.classList.add("hiding");
     cardHand10.classList.add("hiding");
@@ -1291,7 +1291,7 @@ function confirmCharacter(){
       (function (){
         var cardToChooseFrom = cardsToChooseFrom[i];
         if((i>-1 && i<11) || i>14){
-          cardToChooseFrom.innerHTML = "<img id ='"+`${cardToChooseFrom.id}`+"' class = 'chooseCards "+`${cardToChooseFrom.id}`+"' src = './sw"+i+".jpg' />";
+          cardToChooseFrom.innerHTML = "<img id ='"+`${cardToChooseFrom.id}`+"' class = 'chooseCards "+`${cardToChooseFrom.id}`+"' src = './spellweaver/sw"+i+".jpg' />";
         } else {
           cardToChooseFrom.innerHTML = '';
         }
@@ -5907,7 +5907,7 @@ swConfirmPerksButton.onclick = () => {
     for (var i = 0; i<modDeckArray.length; i++){
       if(modDeckArray[i] === mod12){
         modDeckArray.splice(i, 1);
-        let newCard = "./swPerks/swPlus1.png"
+        let newCard = "./spellweaver/swperks/swPlus1.png"
         modDeckArray.push(newCard);
         i = modDeckArray.length;
         cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -5921,7 +5921,7 @@ swConfirmPerksButton.onclick = () => {
     for (var i = 0; i<modDeckArray.length; i++){
       if(modDeckArray[i] === mod13){
         modDeckArray.splice(i, 1);
-        let newCard = "./swPerks/swPlus1.png"
+        let newCard = "./spellweaver/swperks/swPlus1.png"
         modDeckArray.push(newCard);
         i = modDeckArray.length;
         cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -5932,7 +5932,7 @@ swConfirmPerksButton.onclick = () => {
     setCookie("perk3", "notChosen", 365);
   }
   if(swPerk4.classList.contains('checked')){
-    let newCard = "./swPerks/swPlus1.png"
+    let newCard = "./spellweaver/swperks/swPlus1.png"
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
     cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -5941,7 +5941,7 @@ swConfirmPerksButton.onclick = () => {
     setCookie("perk4", "notChosen", 365);
   }
   if (swPerk5.classList.contains('checked')){
-    let newCard = "./swPerks/swPlus1.png"
+    let newCard = "./spellweaver/swperks/swPlus1.png"
     modDeckArray.push(newCard);
     modDeckArray.push(newCard);
     cardsInDeckText.innerHTML = "Cards in Deck: "+ modDeckArray.length;
@@ -5950,64 +5950,64 @@ swConfirmPerksButton.onclick = () => {
     setCookie("perk5", "notChosen", 365);
   }
   if (swPerk6.classList.contains('checked')){
-    let newCard = "./swPerks/swPlus0Stun.png";
+    let newCard = "./spellweaver/swperks/swPlus0Stun.png";
     modDeckArray.push(newCard);
     setCookie("perk6", "swchosen", 365);
   } else {
     setCookie("perk6", "notChosen", 365);
   }
   if (swPerk7.classList.contains('checked')){
-    let newCard = "./swPerks/swPlus1Wound.png";
+    let newCard = "./spellweaver/swperks/swPlus1Wound.png";
     modDeckArray.push(newCard);
     setCookie("perk7", "swchosen", 365);
   } else {
     setCookie("perk7", "notChosen", 365);
   }
   if (swPerk8.classList.contains('checked')){
-    let newCard = "./swPerks/swPlus1Immobilize.png";
+    let newCard = "./spellweaver/swperks/swPlus1Immobilize.png";
     modDeckArray.push(newCard);
     setCookie("perk8", "swchosen", 365);
   } else {
     setCookie("perk8", "notChosen", 365);
   }
   if (swPerk9.classList.contains('checked')){
-    let newCard = "./swPerks/swPlus1Curse.png";
+    let newCard = "./spellweaver/swperks/swPlus1Curse.png";
     modDeckArray.push(newCard);
     setCookie("perk9", "swchosen", 365);
   } else {
     setCookie("perk9", "notChosen", 365);
   }
   if (swPerk10.classList.contains('checked')){
-    let newCard = "./swPerks/swPlus2Fire.png";
+    let newCard = "./spellweaver/swperks/swPlus2Fire.png";
     modDeckArray.push(newCard);
     setCookie("perk10", "swchosen", 365);
   } else {
     setCookie("perk10", "notChosen", 365);
   }
   if (swPerk11.classList.contains('checked')){
-    let newCard = "./swPerks/swPlus2Fire.png";
+    let newCard = "./spellweaver/swperks/swPlus2Fire.png";
     modDeckArray.push(newCard);
     setCookie("perk11", "swchosen", 365);
   } else {
     setCookie("perk11", "notChosen", 365);
   }
   if (swPerk12.classList.contains('checked')){
-    let newCard = "./swPerks/swPlus2Frost.png";
+    let newCard = "./spellweaver/swperks/swPlus2Frost.png";
     modDeckArray.push(newCard);
     setCookie("perk12", "swchosen", 365);
   } else {
     setCookie("perk12", "notChosen", 365);
   }
   if (swPerk13.classList.contains('checked')){
-    let newCard = "./swPerks/swPlus2Frost.png";
+    let newCard = "./spellweaver/swperks/swPlus2Frost.png";
     modDeckArray.push(newCard);
     setCookie("perk13", "swchosen", 365);
   } else {
     setCookie("perk13", "notChosen", 365);
   }
   if (swPerk14.classList.contains('checked')){
-    let newCard1 = "./swPerks/swRollingEarth.png";
-    let newCard2 = "./swPerks/swRollingWind.png"
+    let newCard1 = "./spellweaver/swperks/swRollingEarth.png";
+    let newCard2 = "./spellweaver/swperks/swRollingWind.png"
     modDeckArray.push(newCard1);
     modDeckArray.push(newCard2);
     setCookie("perk14", "swchosen", 365);
@@ -6015,8 +6015,8 @@ swConfirmPerksButton.onclick = () => {
     setCookie("perk14", "notChosen", 365);
   }
   if (swPerk15.classList.contains('checked')){
-    let newCard1 = "./swPerks/swRollingLight.png";
-    let newCard2 = "./swPerks/swRollingDark.png"
+    let newCard1 = "./spellweaver/swperks/swRollingLight.png";
+    let newCard2 = "./spellweaver/swperks/swRollingDark.png"
     modDeckArray.push(newCard1);
     modDeckArray.push(newCard2);
     setCookie("perk15", "swchosen", 365);
