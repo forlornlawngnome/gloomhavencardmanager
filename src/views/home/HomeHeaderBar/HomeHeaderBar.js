@@ -27,7 +27,7 @@ const CharacterSelect = (props) => {
             <MiniCharacterCard id={c.id} />
           </div>
         )}
-        <div class="HomeHeaderBarNew">
+        <div className="HomeHeaderBarNew">
           + New
         </div>
     </div>

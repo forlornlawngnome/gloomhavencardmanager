@@ -12,24 +12,26 @@ const NameAndLevelInfo = (props) => {
     <div className="NameAndLevelInfo">
       <div>Name: {name}</div>
       <table>
-        <tr>
-          <td>Level: </td>
-          {Array.apply(null, { length: 9 }).map((e, i) => (
-            <td className={`NameAndLevelInfoNum ${i+1 <= level ? 'NameAndLevelInfoBoxSelected' : 'NameAndLevelInfoBox'}`} key={`NameAndLevelInfolvtd${i}`}>{i+1}</td>
-          ))}
-          <td>
-            <input type="button" value="-" />
-          </td>
-          <td>
-            <input type="button" value="+" />
-          </td>
-        </tr>
-        <tr>
-          <td>XP: </td>
+        <tbody>
+          <tr>
+            <td>Level: </td>
             {Array.apply(null, { length: 9 }).map((e, i) => (
-              <td className="NameAndLevelInfoNum" key={`NameAndLevelInfoxptd${i}`}>{levelXpMap[i]}</td>
+              <td className={`NameAndLevelInfoNum ${i+1 <= level ? 'NameAndLevelInfoBoxSelected' : 'NameAndLevelInfoBox'}`} key={`NameAndLevelInfolvtd${i}`}>{i+1}</td>
             ))}
-        </tr>
+            <td>
+              <input type="button" value="-" />
+            </td>
+            <td>
+              <input type="button" value="+" />
+            </td>
+          </tr>
+          <tr>
+            <td>XP: </td>
+              {Array.apply(null, { length: 9 }).map((e, i) => (
+                <td className="NameAndLevelInfoNum" key={`NameAndLevelInfoxptd${i}`}>{levelXpMap[i]}</td>
+              ))}
+          </tr>
+        </tbody>
       </table>
     </div>
   )
