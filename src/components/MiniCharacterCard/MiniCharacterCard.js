@@ -20,7 +20,7 @@ const MiniCharacterCard = (props) => {
 
   return (
     <div className="MiniCharacterCard" onClick={onClick}>
-      <img src={icon} />
+      <img src={icon} alt={characterClass}/>
       <div className="MiniCharacterCardLabels">
         <div className="MiniCharacterCardMainTitle">
           <span>{name}</span>

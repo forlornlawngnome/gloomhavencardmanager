@@ -8,7 +8,7 @@ const ClassHeader = (props) => {
   // TODO less prop drilling
   return (
     <div className="ClassHeader">
-      <img src={iconImage} />
+      <img src={iconImage} alt={characterClass}/>
       <span>{characterClass}</span>
     </div>
   )
