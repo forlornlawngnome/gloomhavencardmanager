@@ -8,6 +8,7 @@ function Home(props) {
       <HomeHeaderBar />
       <PlayerSheet />
     </div>
+
   );
 }
 

@@ -19,17 +19,19 @@ const CharacterSelect = (props) => {
 
   return (
     <div className="HomeHeaderBar">
+      <ul className="cell menu small-12">
         {characters && characters.map(c =>
-          <div
+          <li
             key={`${c.characterClass}:${c.name}`}
             className="HomeHeaderBarItem">
 
             <MiniCharacterCard id={c.id} />
-          </div>
+          </li>
         )}
-        <div className="HomeHeaderBarNew">
+        <li className="HomeHeaderBarNew menu-text float-right">
           + New
-        </div>
+        </li>
+      </ul>
     </div>
   )
 }

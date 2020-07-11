@@ -22,19 +22,21 @@ function App() {
       objectStoresMeta={DBConfig.objectStoresMeta}>
 
         <Router>
-
-          <div>
-            <nav className="AppNav">
-              <ul>
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/setup">Start Game</Link>
-                </li>
+          <div className="top-bar" id="main-menu">
+            <div className="top-bar-left">
+              <ul className="dropdown menu" data-dropdown-menu>
+                <li className="menu-text">Gloomhaven Card Manager</li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/setup">Start Game</Link></li>
               </ul>
-            </nav>
-
+            </div>
+            <div className="top-bar-right">
+              <ul className="menu">
+                <li>Login/Logout</li>
+              </ul>
+            </div>
+          </div>
+          <div className="grid-container fluid">
             <Switch>
               <Route path="/play">
                 <GameView />
@@ -48,7 +50,6 @@ function App() {
             </Switch>
           </div>
         </Router>
-
       </IndexedDB>
     </div>
   );
