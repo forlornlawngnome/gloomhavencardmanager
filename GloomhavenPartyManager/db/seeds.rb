@@ -7,3 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 brute = CharacterClass.create(name: "Brute", hand_size: 10, symbol: "br", image: "", character_abbreviation: "br", card_back: "br", icon_image: "", health: [10,12,14,16,18,20,22,24,26,28], is_locked: false)
+
+ability_card = AbilityCard.create(name: "Balanced Measure", initiative: 77, level: 0, image: "balanced-measure", character_class: brute, active: true, counter: 0, max_counter:0, status: "Available", chosen:false)
+
+poison = Enhancement.create(description: "Poison")
+
