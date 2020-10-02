@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  hand_size: 1
+  symbol: MyString
+  image: MyString
+  character_abbreviation: MyString
+  card_back: MyString
+  icon_image: MyString
+  plaque: MyString
+  health: MyText
+  is_locked: false
+
+two:
+  name: MyString
+  hand_size: 1
+  symbol: MyString
+  image: MyString
+  character_abbreviation: MyString
+  card_back: MyString
+  icon_image: MyString
+  plaque: MyString
+  health: MyText
+  is_locked: false

@@ -1,0 +1,1123 @@
+  [1m[35m (490.8ms)[0m  [1m[35mCREATE DATABASE "GloomhavenPartyManager_development" ENCODING = 'unicode'[0m
+  [1m[35m (266.0ms)[0m  [1m[35mCREATE DATABASE "GloomhavenPartyManager_test" ENCODING = 'unicode'[0m
+Started GET "/" for ::1 at 2020-10-01 07:07:08 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/meg/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/meg/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.8ms | Allocations: 482)
+Completed 200 OK in 29ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 2883)
+
+
+  [1m[35m (50.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2204622914594959530)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateParties (20201001140923)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "parties" ("id" bigserial primary key, "name" character varying, "reputation" integer, "prosperity" decimal, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201001140923"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-01 14:09:41.582957"], ["updated_at", "2020-10-01 14:09:41.582957"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(2204622914594959530)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/parties" for ::1 at 2020-10-01 07:09:58 -0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PartiesController#index as HTML
+  Rendering parties/index.html.erb within layouts/application
+  [1m[36mParty Load (1.3ms)[0m  [1m[34mSELECT "parties".* FROM "parties"[0m
+  ↳ app/views/parties/index.html.erb:16
+  Rendered parties/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 1854)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.12.3
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 2542ms (ActiveRecord: 5.1ms | Allocations: 27015)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/meg/rails/gloomhavencardmanager/GloomhavenPartyManager/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/parties" for ::1 at 2020-10-01 07:10:13 -0700
+Processing by PartiesController#index as HTML
+  Rendering parties/index.html.erb within layouts/application
+  [1m[36mParty Load (0.3ms)[0m  [1m[34mSELECT "parties".* FROM "parties"[0m
+  ↳ app/views/parties/index.html.erb:16
+  Rendered parties/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 739)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.12.3
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1438ms (ActiveRecord: 0.3ms | Allocations: 6297)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/meg/rails/gloomhavencardmanager/GloomhavenPartyManager/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for ::1 at 2020-10-01 07:10:25 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/meg/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/meg/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.1ms | Allocations: 200)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 1069)
+
+
+Started GET "/parties" for ::1 at 2020-10-01 07:10:28 -0700
+Processing by PartiesController#index as HTML
+  Rendering parties/index.html.erb within layouts/application
+  [1m[36mParty Load (0.7ms)[0m  [1m[34mSELECT "parties".* FROM "parties"[0m
+  ↳ app/views/parties/index.html.erb:16
+  Rendered parties/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 975)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.12.3
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1459ms (ActiveRecord: 0.7ms | Allocations: 7393)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/meg/rails/gloomhavencardmanager/GloomhavenPartyManager/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/parties" for ::1 at 2020-10-01 07:12:35 -0700
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PartiesController#index as HTML
+  Rendering parties/index.html.erb within layouts/application
+  [1m[36mParty Load (0.8ms)[0m  [1m[34mSELECT "parties".* FROM "parties"[0m
+  ↳ app/views/parties/index.html.erb:16
+  Rendered parties/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 1854)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.12.3
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1562ms (ActiveRecord: 3.4ms | Allocations: 13386)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/meg/rails/gloomhavencardmanager/GloomhavenPartyManager/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/parties" for ::1 at 2020-10-01 07:13:39 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PartiesController#index as HTML
+  Rendering parties/index.html.erb within layouts/application
+  [1m[36mParty Load (1.2ms)[0m  [1m[34mSELECT "parties".* FROM "parties"[0m
+  ↳ app/views/parties/index.html.erb:16
+  Rendered parties/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 1854)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.12.3
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1512ms (ActiveRecord: 3.8ms | Allocations: 13387)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/meg/rails/gloomhavencardmanager/GloomhavenPartyManager/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/parties" for ::1 at 2020-10-01 09:30:21 -0700
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PartiesController#index as HTML
+  Rendering parties/index.html.erb within layouts/application
+  [1m[36mParty Load (16.5ms)[0m  [1m[34mSELECT "parties".* FROM "parties"[0m
+  ↳ app/views/parties/index.html.erb:16
+  Rendered parties/index.html.erb within layouts/application (Duration: 28.5ms | Allocations: 1854)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/meg/rails/gloomhavencardmanager/GloomhavenPartyManager/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.2
+Time: 5955ms
+Built at: 10/01/2020 9:30:30 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 8694ms (Views: 8658.8ms | ActiveRecord: 20.3ms | Allocations: 12316)
+
+
+Started GET "/parties/new" for ::1 at 2020-10-01 09:33:23 -0700
+Processing by PartiesController#new as HTML
+  Rendering parties/new.html.erb within layouts/application
+  Rendered parties/_form.html.erb (Duration: 64.2ms | Allocations: 9281)
+  Rendered parties/new.html.erb within layouts/application (Duration: 72.1ms | Allocations: 9653)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 117ms (Views: 85.0ms | ActiveRecord: 8.3ms | Allocations: 17849)
+
+
+Started POST "/parties" for ::1 at 2020-10-01 09:33:37 -0700
+Processing by PartiesController#create as HTML
+  Parameters: {"authenticity_token"=>"v9dVoqWz1CcYudBEC8BRM7zHxPr3Vq9s/dahGAkyQdpVnzk5i1TSZ04BK9vN70y9GHuZ9Qvv8nYEfVYzzm4wqA==", "party"=>{"name"=>"Gloom Service", "reputation"=>"14", "prosperity"=>"4.6"}, "commit"=>"Create Party"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/parties_controller.rb:30:in `block in create'
+  [1m[36mParty Create (11.7ms)[0m  [1m[32mINSERT INTO "parties" ("name", "reputation", "prosperity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gloom Service"], ["reputation", 14], ["prosperity", "4.6"], ["created_at", "2020-10-01 16:33:37.404163"], ["updated_at", "2020-10-01 16:33:37.404163"]]
+  ↳ app/controllers/parties_controller.rb:30:in `block in create'
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/parties_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/parties/1
+Completed 302 Found in 32ms (ActiveRecord: 16.3ms | Allocations: 3330)
+
+
+Started GET "/parties/1" for ::1 at 2020-10-01 09:33:37 -0700
+Processing by PartiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParty Load (0.5ms)[0m  [1m[34mSELECT "parties".* FROM "parties" WHERE "parties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/parties_controller.rb:67:in `set_party'
+  Rendering parties/show.html.erb within layouts/application
+  Rendered parties/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 303)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 14.9ms | ActiveRecord: 1.0ms | Allocations: 5701)
+
+
+Started GET "/parties" for ::1 at 2020-10-01 09:33:41 -0700
+Processing by PartiesController#index as HTML
+  Rendering parties/index.html.erb within layouts/application
+  [1m[36mParty Load (0.8ms)[0m  [1m[34mSELECT "parties".* FROM "parties"[0m
+  ↳ app/views/parties/index.html.erb:16
+  Rendered parties/index.html.erb within layouts/application (Duration: 22.0ms | Allocations: 842)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 0.8ms | Allocations: 4731)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2204622914594959530)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCharacterClasses (20201001163844)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (40.3ms)[0m  [1m[35mCREATE TABLE "character_classes" ("id" bigserial primary key, "name" character varying, "hand_size" integer, "symbol" character varying, "image" character varying, "character_abbreviation" character varying, "card_back" character varying, "icon_image" character varying, "plaque" character varying, "health" text[] DEFAULT '{}', "is_locked" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201001163844"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(2204622914594959530)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/character_classes" for ::1 at 2020-10-01 11:00:20 -0700
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharacterClassesController#index as HTML
+  Rendering character_classes/index.html.erb within layouts/application
+  [1m[36mCharacterClass Load (6.0ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes"[0m
+  ↳ app/views/character_classes/index.html.erb:23
+  Rendered character_classes/index.html.erb within layouts/application (Duration: 38.9ms | Allocations: 2465)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 210ms (Views: 177.2ms | ActiveRecord: 11.2ms | Allocations: 25308)
+
+
+Started GET "/character_classes/new" for ::1 at 2020-10-01 11:00:23 -0700
+Processing by CharacterClassesController#new as HTML
+  Rendering character_classes/new.html.erb within layouts/application
+  Rendered character_classes/_form.html.erb (Duration: 24.2ms | Allocations: 6388)
+  Rendered character_classes/new.html.erb within layouts/application (Duration: 27.8ms | Allocations: 6761)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 34.1ms | ActiveRecord: 7.2ms | Allocations: 20128)
+
+
+Started POST "/character_classes" for ::1 at 2020-10-01 11:00:34 -0700
+Processing by CharacterClassesController#create as HTML
+  Parameters: {"authenticity_token"=>"x1zRtG8J0ma5ydKx6rTRYoKfVoXii2DZZz0ESBLvKXpw4+U3YScc61fKfO5UMD9IGspFLCYWCnCZsRlhGXiDdA==", "character_class"=>{"name"=>"Brute", "hand_size"=>"10", "symbol"=>"br", "image"=>"br", "character_abbreviation"=>"br", "card_back"=>"br", "icon_image"=>"br", "plaque"=>"br", "health"=>"[10,12,14,16,18,20,22,24,26]", "is_locked"=>"0"}, "commit"=>"Create Character class"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/character_classes_controller.rb:30:in `block in create'
+  [1m[36mCharacterClass Create (1.7ms)[0m  [1m[32mINSERT INTO "character_classes" ("name", "hand_size", "symbol", "image", "character_abbreviation", "card_back", "icon_image", "plaque", "health", "is_locked", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Brute"], ["hand_size", 10], ["symbol", "br"], ["image", "br"], ["character_abbreviation", "br"], ["card_back", "br"], ["icon_image", "br"], ["plaque", "br"], ["health", "{12,14,16,18,20,22,24}"], ["is_locked", false], ["created_at", "2020-10-01 18:00:34.081088"], ["updated_at", "2020-10-01 18:00:34.081088"]]
+  ↳ app/controllers/character_classes_controller.rb:30:in `block in create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/character_classes_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/character_classes/1
+Completed 302 Found in 24ms (ActiveRecord: 3.1ms | Allocations: 3601)
+
+
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:00:34 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (1.0ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 500)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 11.2ms | ActiveRecord: 1.7ms | Allocations: 6005)
+
+
+Started GET "/character_classes/1/edit" for ::1 at 2020-10-01 11:15:21 -0700
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharacterClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (2.7ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/edit.html.erb within layouts/application
+  Rendered character_classes/_form.html.erb (Duration: 25.7ms | Allocations: 6527)
+  Rendered character_classes/edit.html.erb within layouts/application (Duration: 28.8ms | Allocations: 7237)
+Started GET "/character_classes/1/edit" for ::1 at 2020-10-01 11:15:25 -0700
+Processing by CharacterClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (7.9ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/edit.html.erb within layouts/application
+  Rendered character_classes/_form.html.erb (Duration: 14.5ms | Allocations: 2691)
+  Rendered character_classes/edit.html.erb within layouts/application (Duration: 23.4ms | Allocations: 4634)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16608ms (Views: 16550.6ms | ActiveRecord: 14.7ms | Allocations: 4408379)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12959ms (Views: 12941.6ms | ActiveRecord: 8.1ms | Allocations: 3769875)
+
+
+Started PATCH "/character_classes/1" for ::1 at 2020-10-01 11:16:22 -0700
+Processing by CharacterClassesController#update as HTML
+  Parameters: {"authenticity_token"=>"3ENxRBj2L0E+Ezvg0OTqThiP2cqLfsjaMWEANTsG3H6SDhdR3f9VC85B5Cqtl0bVAXXNRrmwRu/+t6G5ISv7jw==", "character_class"=>{"name"=>"Brute", "hand_size"=>"10", "symbol"=>"br", "image"=>"br", "character_abbreviation"=>"br", "card_back"=>"br", "icon_image"=>"br", "plaque"=>"gloomhaven-Images/images/character-mats/brute.png", "health"=>"[\"12\", \"14\", \"16\", \"18\", \"20\", \"22\", \"24\"]", "is_locked"=>"0"}, "commit"=>"Update Character class", "id"=>"1"}
+  [1m[36mCharacterClass Load (0.8ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/character_classes_controller.rb:44:in `block in update'
+  [1m[36mCharacterClass Update (0.8ms)[0m  [1m[33mUPDATE "character_classes" SET "plaque" = $1, "health" = $2, "updated_at" = $3 WHERE "character_classes"."id" = $4[0m  [["plaque", "gloomhaven-Images/images/character-mats/brute.png"], ["health", "{}"], ["updated_at", "2020-10-01 18:16:22.138490"], ["id", 1]]
+  ↳ app/controllers/character_classes_controller.rb:44:in `block in update'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/character_classes_controller.rb:44:in `block in update'
+Redirected to http://localhost:3000/character_classes/1
+Completed 302 Found in 18ms (ActiveRecord: 3.1ms | Allocations: 4125)
+
+
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:16:22 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (2.5ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 485)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 14.7ms | ActiveRecord: 2.5ms | Allocations: 5533)
+
+
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:18:31 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (0.6ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 11.9ms | Allocations: 1217)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 25.3ms | ActiveRecord: 0.6ms | Allocations: 6666)
+
+
+Started GET "/character_classes/1/edit" for ::1 at 2020-10-01 11:19:42 -0700
+Processing by CharacterClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (0.4ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/edit.html.erb within layouts/application
+  Rendered character_classes/_form.html.erb (Duration: 10.5ms | Allocations: 3291)
+  Rendered character_classes/edit.html.erb within layouts/application (Duration: 13.6ms | Allocations: 3704)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 28.5ms | ActiveRecord: 0.4ms | Allocations: 9230)
+
+
+Started PATCH "/character_classes/1" for ::1 at 2020-10-01 11:19:48 -0700
+Processing by CharacterClassesController#update as HTML
+  Parameters: {"authenticity_token"=>"qMNGuWngpz4mEMDuPjfBuc+9AsjzvufZIJDofKv2HPbKZZfX5lbINApt1jzWt/WIdo2Un7VC0j4CwIFsYVog0Q==", "character_class"=>{"name"=>"Brute", "hand_size"=>"10", "symbol"=>"br", "image"=>"br", "character_abbreviation"=>"br", "card_back"=>"br", "icon_image"=>"br", "plaque"=>"brute.png", "health"=>"[]", "is_locked"=>"0"}, "commit"=>"Update Character class", "id"=>"1"}
+  [1m[36mCharacterClass Load (0.3ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/character_classes_controller.rb:44:in `block in update'
+  [1m[36mCharacterClass Update (0.5ms)[0m  [1m[33mUPDATE "character_classes" SET "plaque" = $1, "updated_at" = $2 WHERE "character_classes"."id" = $3[0m  [["plaque", "brute.png"], ["updated_at", "2020-10-01 18:19:48.854531"], ["id", 1]]
+  ↳ app/controllers/character_classes_controller.rb:44:in `block in update'
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/character_classes_controller.rb:44:in `block in update'
+Redirected to http://localhost:3000/character_classes/1
+Completed 302 Found in 22ms (ActiveRecord: 4.6ms | Allocations: 3847)
+
+
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:19:48 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (0.5ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 23.7ms | Allocations: 5952)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.5ms | Allocations: 7344)
+
+
+  
+ActionView::Template::Error (The asset "gloomhaven-Images/images/character-mats\n/brute.png" is not present in the asset pipeline.
+):
+    38: <p>
+    39:   <strong>Plaque:</strong>
+    40:   <%= @character_class.plaque %>
+    41:   <%= image_tag "gloomhaven-Images/images/character-mats
+    42: /#{@character_class.plaque}" %>
+    43: 
+    44: </p>
+  
+app/views/character_classes/show.html.erb:41
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:20:12 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (0.4ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 504)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 16.0ms | ActiveRecord: 0.4ms | Allocations: 6098)
+
+
+Started GET "/gloomhaven-Images/images/character-mats/brute.png" for ::1 at 2020-10-01 11:20:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/gloomhaven-Images/images/character-mats/brute.png"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:20:55 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (1.1ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1895)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.1ms | Allocations: 3864)
+
+
+  
+ActionView::Template::Error (The asset "gloomhaven-Images/images/character-mats\n/brute.png" is not present in the asset pipeline.
+):
+    38: <p>
+    39:   <strong>Plaque:</strong>
+    40:   <%= @character_class.plaque %>
+    41:   <%= image_tag "gloomhaven-Images/images/character-mats
+    42: /#{@character_class.plaque}" %>
+    43: 
+    44: </p>
+  
+app/views/character_classes/show.html.erb:41
+Started GET "/character_classes/1/edit" for ::1 at 2020-10-01 11:21:17 -0700
+Processing by CharacterClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (0.3ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/edit.html.erb within layouts/application
+  Rendered character_classes/_form.html.erb (Duration: 4.0ms | Allocations: 3311)
+  Rendered character_classes/edit.html.erb within layouts/application (Duration: 10.3ms | Allocations: 3723)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.3ms | Allocations: 8636)
+
+
+Started PATCH "/character_classes/1" for ::1 at 2020-10-01 11:21:24 -0700
+Processing by CharacterClassesController#update as HTML
+  Parameters: {"authenticity_token"=>"BG2Kxv9OBVVae9QvcPB+tjUWvsXz/vvTuisFReFNf8tKIOzTOkd/H6opC+UNg9ItLOyqScEwdeZ1/aTJ+2BYOg==", "character_class"=>{"name"=>"Brute", "hand_size"=>"10", "symbol"=>"br", "image"=>"br", "character_abbreviation"=>"br", "card_back"=>"br", "icon_image"=>"br", "plaque"=>"brute.png", "health"=>"[]", "is_locked"=>"0"}, "commit"=>"Update Character class", "id"=>"1"}
+  [1m[36mCharacterClass Load (0.2ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+Redirected to http://localhost:3000/character_classes/1
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms | Allocations: 1570)
+
+
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:21:24 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (0.5ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1537)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms | Allocations: 2781)
+
+
+  
+ActionView::Template::Error (The asset "gloomhaven-Images/images/character-mats\n/brute.png" is not present in the asset pipeline.
+):
+    38: <p>
+    39:   <strong>Plaque:</strong>
+    40:   <%= @character_class.plaque %>
+    41:   <%= image_tag "gloomhaven-Images/images/character-mats
+    42: /#{@character_class.plaque}" %>
+    43: 
+    44: </p>
+  
+app/views/character_classes/show.html.erb:41
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:21:38 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (1.2ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1128)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 21.0ms | ActiveRecord: 1.2ms | Allocations: 6590)
+
+
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:23:39 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (3.5ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1459)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 21.2ms | ActiveRecord: 3.5ms | Allocations: 6919)
+
+
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:23:58 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (0.6ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1461)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 23.2ms | ActiveRecord: 0.6ms | Allocations: 6915)
+
+
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:24:16 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (2.3ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 11.4ms | Allocations: 2072)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 31.4ms | ActiveRecord: 2.3ms | Allocations: 7517)
+
+
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:29:44 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (0.7ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 21.8ms | Allocations: 5678)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 1.0ms | Allocations: 17630)
+
+
+  
+ActionView::Template::Error (The asset "CHARACTER_MAT_LOCATIONbrute-back" is not present in the asset pipeline.
+):
+    40:   <%= @character_class.plaque %>
+    41:   <% image_tag "gloomhaven-Images/images/character-mats/#{@character_class.plaque}" %>
+    42:   <%= image_tag "gloomhaven-Images/images/character-mats/#{@character_class.name.downcase}" %>
+    43:   <%= image_tag "CHARACTER_MAT_LOCATION#{@character_class.name.downcase}-back" %>
+    44: </p>
+    45: 
+    46: <p>
+  
+app/views/character_classes/show.html.erb:43
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:30:08 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (0.3ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 2154.9ms | Allocations: 581682)
+Completed 500 Internal Server Error in 2223ms (ActiveRecord: 4.3ms | Allocations: 596751)
+
+
+  
+ActionView::Template::Error (The asset "CHARACTER_MAT_LOCATIONbrute-back" is not present in the asset pipeline.
+):
+    40:   <%= @character_class.plaque %>
+    41:   <% image_tag "gloomhaven-Images/images/character-mats/#{@character_class.plaque}" %>
+    42:   <%= image_tag "gloomhaven-Images/images/character-mats/#{@character_class.name.downcase}" %>
+    43:   <%= image_tag "CHARACTER_MAT_LOCATION#{@character_class.name.downcase}-back" %>
+    44: </p>
+    45: 
+    46: <p>
+  
+app/views/character_classes/show.html.erb:43
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:30:32 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (0.4ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 16.6ms | Allocations: 5828)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.4ms | Allocations: 7858)
+
+
+  
+ActionView::Template::Error (The asset "CHARACTER_MAT_LOCATIONbrute-back" is not present in the asset pipeline.
+):
+    40:   <%= @character_class.plaque %>
+    41:   <% image_tag "gloomhaven-Images/images/character-mats/#{@character_class.plaque}" %>
+    42:   <%= image_tag "gloomhaven-Images/images/character-mats/#{@character_class.name.downcase}" %>
+    43:   <%= image_tag "CHARACTER_MAT_LOCATION#{@character_class.name.downcase}-back" %>
+    44: </p>
+    45: 
+    46: <p>
+  
+app/views/character_classes/show.html.erb:43
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:31:50 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (0.9ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 10.5ms | Allocations: 5687)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 4.1ms | Allocations: 17829)
+
+
+  
+ActionView::Template::Error (The asset "self.getCharacterMatLocation()brute-back" is not present in the asset pipeline.
+):
+    40:   <%= @character_class.plaque %>
+    41:   <% image_tag "gloomhaven-Images/images/character-mats/#{@character_class.plaque}" %>
+    42:   <%= image_tag "gloomhaven-Images/images/character-mats/#{@character_class.name.downcase}" %>
+    43:   <%= image_tag "self.getCharacterMatLocation()#{@character_class.name.downcase}-back" %>
+    44: </p>
+    45: 
+    46: <p>
+  
+app/views/character_classes/show.html.erb:43
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:32:35 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (1.4ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 14.4ms | Allocations: 2663)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.4ms | Allocations: 4652)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007f4d8d30e5a8>::CHARACTERMATLOCATION):
+    40:   <%= @character_class.plaque %>
+    41:   <% image_tag "gloomhaven-Images/images/character-mats/#{@character_class.plaque}" %>
+    42:   <%= image_tag "gloomhaven-Images/images/character-mats/#{@character_class.name.downcase}" %>
+    43:   <%= image_tag "#{CHARACTERMATLOCATION}#{@character_class.name.downcase}-back" %>
+    44: </p>
+    45: 
+    46: <p>
+  
+app/views/character_classes/show.html.erb:43
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:32:55 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (1.2ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 19.9ms | Allocations: 2656)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.2ms | Allocations: 4645)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007f4d8c5230d8>::CHARACTER_MAT_LOCATION):
+    40:   <%= @character_class.plaque %>
+    41:   <% image_tag "gloomhaven-Images/images/character-mats/#{@character_class.plaque}" %>
+    42:   <%= image_tag "gloomhaven-Images/images/character-mats/#{@character_class.name.downcase}" %>
+    43:   <%= image_tag "#{CHARACTER_MAT_LOCATION}#{@character_class.name.downcase}-back" %>
+    44: </p>
+    45: 
+    46: <p>
+  
+app/views/character_classes/show.html.erb:43
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:33:26 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (4.1ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 378.0ms | Allocations: 91563)
+Completed 500 Internal Server Error in 406ms (ActiveRecord: 4.1ms | Allocations: 93575)
+
+
+  
+ActionView::Template::Error (undefined method `getCharacterMatLocation' for #<#<Class:0x00007f4d8d917be8>:0x00007f4d8d914948>):
+    40:   <%= @character_class.plaque %>
+    41:   <% image_tag "gloomhaven-Images/images/character-mats/#{@character_class.plaque}" %>
+    42:   <%= image_tag "gloomhaven-Images/images/character-mats/#{@character_class.name.downcase}" %>
+    43:   <%= image_tag "#{self.getCharacterMatLocation}#{@character_class.name.downcase}-back" %>
+    44: </p>
+    45: 
+    46: <p>
+  
+app/views/character_classes/show.html.erb:43
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:35:51 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (0.3ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2792)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 5.8ms | Allocations: 14859)
+
+
+  
+ActionView::Template::Error (The asset "gloomhaven-Images/images/character-mats/Brute-back" is not present in the asset pipeline.
+):
+    40:   <%= @character_class.plaque %>
+    41:   <% image_tag "gloomhaven-Images/images/character-mats/#{@character_class.plaque}" %>
+    42:   <%= image_tag "gloomhaven-Images/images/character-mats/#{@character_class.name.downcase}" %>
+    43:   <%= image_tag @character_class.getCharacterMatFrontLocation %>
+    44:   <%= image_tag @character_class.getCharacterMatBackLocation %>
+    45: </p>
+    46: 
+  
+app/views/character_classes/show.html.erb:43
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:36:17 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (0.2ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 9.4ms | Allocations: 2026)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 20.1ms | ActiveRecord: 2.7ms | Allocations: 17337)
+
+
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:36:36 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (0.5ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1623)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 19.5ms | ActiveRecord: 0.5ms | Allocations: 7080)
+
+
+Started GET "/character_classes/1/edit" for ::1 at 2020-10-01 11:37:30 -0700
+Processing by CharacterClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (0.5ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/edit.html.erb within layouts/application
+  Rendered character_classes/_form.html.erb (Duration: 23.5ms | Allocations: 10101)
+  Rendered character_classes/edit.html.erb within layouts/application (Duration: 25.4ms | Allocations: 10517)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 35.3ms | ActiveRecord: 0.5ms | Allocations: 15144)
+
+
+Started PATCH "/character_classes/1" for ::1 at 2020-10-01 11:37:53 -0700
+Processing by CharacterClassesController#update as HTML
+  Parameters: {"authenticity_token"=>"MYS8GRCirQdjRMnOr6qRkwa2vIchi2zNKryS9nlE3EJTIm13nxTCDU853xxHKqWiv4Yq0Gd3WSoI7Pvms+jgZQ==", "character_class"=>{"name"=>"Brute", "hand_size"=>"10", "symbol"=>"br", "image"=>"br", "character_abbreviation"=>"br", "card_back"=>"br", "icon_image"=>"br", "plaque"=>"brute.png", "health"=>"[10,12,14,16,18,20,22,24,26,28]", "is_locked"=>"0"}, "commit"=>"Update Character class", "id"=>"1"}
+  [1m[36mCharacterClass Load (0.4ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/character_classes_controller.rb:44:in `block in update'
+  [1m[36mCharacterClass Update (0.6ms)[0m  [1m[33mUPDATE "character_classes" SET "health" = $1, "updated_at" = $2 WHERE "character_classes"."id" = $3[0m  [["health", "{12,14,16,18,20,22,24,26}"], ["updated_at", "2020-10-01 18:37:53.407592"], ["id", 1]]
+  ↳ app/controllers/character_classes_controller.rb:44:in `block in update'
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/character_classes_controller.rb:44:in `block in update'
+Redirected to http://localhost:3000/character_classes/1
+Completed 302 Found in 21ms (ActiveRecord: 5.7ms | Allocations: 4128)
+
+
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:37:53 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (2.4ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 19.6ms | ActiveRecord: 2.4ms | Allocations: 5816)
+
+
+Started GET "/character_classes/1/edit" for ::1 at 2020-10-01 11:38:07 -0700
+Processing by CharacterClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (0.8ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/edit.html.erb within layouts/application
+  Rendered character_classes/_form.html.erb (Duration: 6.3ms | Allocations: 2688)
+  Rendered character_classes/edit.html.erb within layouts/application (Duration: 7.0ms | Allocations: 2819)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 18.1ms | ActiveRecord: 0.8ms | Allocations: 7396)
+
+
+Started GET "/character_classes" for ::1 at 2020-10-01 11:38:10 -0700
+Processing by CharacterClassesController#index as HTML
+  Rendering character_classes/index.html.erb within layouts/application
+  [1m[36mCharacterClass Load (1.1ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes"[0m
+  ↳ app/views/character_classes/index.html.erb:23
+  Rendered character_classes/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1311)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 1.1ms | Allocations: 5424)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2204622914594959530)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCharacterClasses (20201001163844)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.5ms)[0m  [1m[35mDROP TABLE "character_classes"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201001163844"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(2204622914594959530)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2204622914594959530)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCharacterClasses (20201001163844)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (35.2ms)[0m  [1m[35mCREATE TABLE "character_classes" ("id" bigserial primary key, "name" character varying, "hand_size" integer, "symbol" character varying, "image" character varying, "character_abbreviation" character varying, "card_back" character varying, "icon_image" character varying, "plaque" character varying, "health" integer[] DEFAULT '{}', "is_locked" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201001163844"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (5.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2204622914594959530)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/character_classes" for ::1 at 2020-10-01 11:40:58 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharacterClassesController#index as HTML
+  Rendering character_classes/index.html.erb within layouts/application
+  [1m[36mCharacterClass Load (2.1ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes"[0m
+  ↳ app/views/character_classes/index.html.erb:23
+  Rendered character_classes/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 2431)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1672ms (Views: 1655.0ms | ActiveRecord: 6.0ms | Allocations: 584667)
+
+
+Started GET "/character_classes/new" for ::1 at 2020-10-01 11:41:01 -0700
+Processing by CharacterClassesController#new as HTML
+  Rendering character_classes/new.html.erb within layouts/application
+  Rendered character_classes/_form.html.erb (Duration: 18.1ms | Allocations: 6388)
+  Rendered character_classes/new.html.erb within layouts/application (Duration: 23.7ms | Allocations: 6768)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 30.1ms | ActiveRecord: 4.0ms | Allocations: 20451)
+
+
+Started POST "/character_classes" for ::1 at 2020-10-01 11:41:33 -0700
+Processing by CharacterClassesController#create as HTML
+  Parameters: {"authenticity_token"=>"PITIn9As+85/rwElSCGYmx2V7FOlzZmdxSd5tm29MP2LO/wc3gI1Q5Gsr3r2pXaxhcD/+mFQ8zQ7q2SfZiqa8w==", "character_class"=>{"name"=>"Brute", "hand_size"=>"10", "symbol"=>"br", "image"=>"br", "character_abbreviation"=>"br", "card_back"=>"br", "icon_image"=>"br", "plaque"=>"", "health"=>"[10,12,14,16,18,20,22,24,26,28]", "is_locked"=>"0"}, "commit"=>"Create Character class"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/character_classes_controller.rb:30:in `block in create'
+  [1m[36mCharacterClass Create (1.0ms)[0m  [1m[32mINSERT INTO "character_classes" ("name", "hand_size", "symbol", "image", "character_abbreviation", "card_back", "icon_image", "plaque", "health", "is_locked", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Brute"], ["hand_size", 10], ["symbol", "br"], ["image", "br"], ["character_abbreviation", "br"], ["card_back", "br"], ["icon_image", "br"], ["plaque", ""], ["health", "{12,14,16,18,20,22,24,26}"], ["is_locked", false], ["created_at", "2020-10-01 18:41:33.922644"], ["updated_at", "2020-10-01 18:41:33.922644"]]
+  ↳ app/controllers/character_classes_controller.rb:30:in `block in create'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/character_classes_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/character_classes/1
+Completed 302 Found in 21ms (ActiveRecord: 2.2ms | Allocations: 3606)
+
+
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:41:33 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (0.9ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1851)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 16.8ms | ActiveRecord: 1.9ms | Allocations: 7290)
+
+
+Started GET "/character_classes/1/edit" for ::1 at 2020-10-01 11:41:45 -0700
+Processing by CharacterClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (2.4ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/edit.html.erb within layouts/application
+  Rendered character_classes/_form.html.erb (Duration: 9.1ms | Allocations: 2708)
+  Rendered character_classes/edit.html.erb within layouts/application (Duration: 13.2ms | Allocations: 2982)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 25.3ms | ActiveRecord: 2.4ms | Allocations: 7698)
+
+
+Started PATCH "/character_classes/1" for ::1 at 2020-10-01 11:41:50 -0700
+Processing by CharacterClassesController#update as HTML
+  Parameters: {"authenticity_token"=>"1ZhPmeAwBo/anPuEkfWlwVRSu73YkDWDH/5eQWiLsme3Pp73b4Zphfbh7VZ5dZHw7WIt6p5sAGQ9rjdRoieOQA==", "character_class"=>{"name"=>"Brute", "hand_size"=>"10", "symbol"=>"br", "image"=>"br", "character_abbreviation"=>"br", "card_back"=>"br", "icon_image"=>"br", "plaque"=>"", "health"=>"[12, 14, 16, 18, 20, 22, 24, 26,28]", "is_locked"=>"0"}, "commit"=>"Update Character class", "id"=>"1"}
+  [1m[36mCharacterClass Load (1.2ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/character_classes_controller.rb:44:in `block in update'
+  [1m[36mCharacterClass Update (0.6ms)[0m  [1m[33mUPDATE "character_classes" SET "health" = $1, "updated_at" = $2 WHERE "character_classes"."id" = $3[0m  [["health", "{14,16,18,20,22,24,26}"], ["updated_at", "2020-10-01 18:41:50.397093"], ["id", 1]]
+  ↳ app/controllers/character_classes_controller.rb:44:in `block in update'
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/character_classes_controller.rb:44:in `block in update'
+Redirected to http://localhost:3000/character_classes/1
+Completed 302 Found in 22ms (ActiveRecord: 6.8ms | Allocations: 3953)
+
+
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:41:50 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (0.7ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1280)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 15.1ms | ActiveRecord: 0.7ms | Allocations: 5813)
+
+
+Started GET "/character_classes/1/edit" for ::1 at 2020-10-01 11:42:00 -0700
+Processing by CharacterClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (0.4ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/edit.html.erb within layouts/application
+  Rendered character_classes/_form.html.erb (Duration: 5.8ms | Allocations: 2677)
+  Rendered character_classes/edit.html.erb within layouts/application (Duration: 6.7ms | Allocations: 2809)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 14.3ms | ActiveRecord: 0.4ms | Allocations: 7403)
+
+
+Started PATCH "/character_classes/1" for ::1 at 2020-10-01 11:42:05 -0700
+Processing by CharacterClassesController#update as HTML
+  Parameters: {"authenticity_token"=>"MSzH1I3VbZdJVjIn6Ij/Yuqx6E4CJIZDH1Vkp3R1LKJTiha6AmMCnWUrJPUACMtTU4F+GUTYs6Q9BQ23vtkQhQ==", "character_class"=>{"name"=>"Brute", "hand_size"=>"10", "symbol"=>"br", "image"=>"br", "character_abbreviation"=>"br", "card_back"=>"br", "icon_image"=>"br", "plaque"=>"", "health"=>"[14, 16, 18, 20, 22, 24, 26, 28]", "is_locked"=>"0"}, "commit"=>"Update Character class", "id"=>"1"}
+  [1m[36mCharacterClass Load (0.7ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/character_classes_controller.rb:44:in `block in update'
+  [1m[36mCharacterClass Update (1.0ms)[0m  [1m[33mUPDATE "character_classes" SET "health" = $1, "updated_at" = $2 WHERE "character_classes"."id" = $3[0m  [["health", "{16,18,20,22,24,26}"], ["updated_at", "2020-10-01 18:42:05.641696"], ["id", 1]]
+  ↳ app/controllers/character_classes_controller.rb:44:in `block in update'
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/character_classes_controller.rb:44:in `block in update'
+Redirected to http://localhost:3000/character_classes/1
+Completed 302 Found in 21ms (ActiveRecord: 6.5ms | Allocations: 3891)
+
+
+Started GET "/character_classes/1" for ::1 at 2020-10-01 11:42:05 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (0.4ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1275)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 14.1ms | ActiveRecord: 0.4ms | Allocations: 5798)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2204622914594959530)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCharacterClasses (20201001163844)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "character_classes"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201001163844"]]
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(2204622914594959530)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2204622914594959530)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCharacterClasses (20201001163844)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (20.5ms)[0m  [1m[35mCREATE TABLE "character_classes" ("id" bigserial primary key, "name" character varying, "hand_size" integer, "symbol" character varying, "image" character varying, "character_abbreviation" character varying, "card_back" character varying, "icon_image" character varying, "plaque" character varying, "health" text[] DEFAULT '{}', "is_locked" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201001163844"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2204622914594959530)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/character_classes/" for ::1 at 2020-10-01 12:03:37 -0700
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharacterClassesController#index as HTML
+  Rendering character_classes/index.html.erb within layouts/application
+  [1m[36mCharacterClass Load (1.1ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes"[0m
+  ↳ app/views/character_classes/index.html.erb:23
+  Rendered character_classes/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 2465)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3856ms (Views: 3821.7ms | ActiveRecord: 5.1ms | Allocations: 584664)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacterClass Create (1.4ms)[0m  [1m[32mINSERT INTO "character_classes" ("name", "hand_size", "symbol", "image", "character_abbreviation", "card_back", "icon_image", "health", "is_locked", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "Brute"], ["hand_size", 10], ["symbol", "br"], ["image", ""], ["character_abbreviation", "br"], ["card_back", "br"], ["icon_image", ""], ["health", "{10,12,14,16,18,20,22,24,26,28}"], ["is_locked", false], ["created_at", "2020-10-01 19:07:26.828727"], ["updated_at", "2020-10-01 19:07:26.828727"]]
+  [1m[35m (33.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/character_classes/" for ::1 at 2020-10-01 12:09:27 -0700
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharacterClassesController#index as HTML
+  Rendering character_classes/index.html.erb within layouts/application
+  [1m[36mCharacterClass Load (1.7ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes"[0m
+  ↳ app/views/character_classes/index.html.erb:23
+  Rendered character_classes/index.html.erb within layouts/application (Duration: 125.6ms | Allocations: 12020)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3748ms (Views: 3692.5ms | ActiveRecord: 24.9ms | Allocations: 594267)
+
+
+Started GET "/character_classes/1" for ::1 at 2020-10-01 12:09:36 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (1.5ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1868)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 79ms (Views: 62.6ms | ActiveRecord: 2.0ms | Allocations: 7626)
+
+
+Started GET "/character_classes/1" for ::1 at 2020-10-01 14:22:54 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 832)
+
+
+  
+SyntaxError (/home/meg/rails/gloomhavencardmanager/GloomhavenPartyManager/app/models/character_class.rb:11: syntax error, unexpected unary+, expecting keyword_end
+...aracter_abbreviation.downcase +"-back"
+...                              ^):
+  
+app/models/character_class.rb:11: syntax error, unexpected unary+, expecting keyword_end
+app/models/character_class.rb:11: syntax error, unexpected unary+, expecting keyword_end
+app/models/character_class.rb:11: syntax error, unexpected unary+, expecting keyword_end
+app/controllers/character_classes_controller.rb:67:in `set_character_class'
+Started GET "/character_classes/1" for ::1 at 2020-10-01 15:31:36 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (5.0ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 24.7ms | Allocations: 1693)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 177ms (Views: 62.7ms | ActiveRecord: 5.6ms | Allocations: 17152)
+
+
+Started GET "/character_classes/1" for ::1 at 2020-10-01 15:31:57 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (2.0ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 6519.2ms | Allocations: 631242)
+Completed 500 Internal Server Error in 6596ms (ActiveRecord: 2.0ms | Allocations: 633229)
+
+
+  
+ActionView::Template::Error (gloomhaven-Images/images/character-ability-cards//BR/br-back.png):
+    27: 
+    28: <p>
+    29:   <strong>Card back:</strong>
+    30:   <%= image_tag @character_class.getCharacterCardBack %>
+    31: </p>
+    32: 
+    33: <p>
+  
+app/views/character_classes/show.html.erb:30
+Started GET "/character_classes/1" for ::1 at 2020-10-01 15:32:21 -0700
+Processing by CharacterClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterClass Load (1.6ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_classes_controller.rb:67:in `set_character_class'
+  Rendering character_classes/show.html.erb within layouts/application
+  Rendered character_classes/show.html.erb within layouts/application (Duration: 20.3ms | Allocations: 2110)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 223ms (Views: 66.1ms | ActiveRecord: 36.8ms | Allocations: 17431)
+
+

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Character Classes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Hand size</th>
+      <th>Symbol</th>
+      <th>Image</th>
+      <th>Character abbreviation</th>
+      <th>Card back</th>
+      <th>Icon image</th>
+      <th>Plaque</th>
+      <th>Health</th>
+      <th>Is locked</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @character_classes.each do |character_class| %>
+      <tr>
+        <td><%= character_class.name %></td>
+        <td><%= character_class.hand_size %></td>
+        <td><%= character_class.symbol %></td>
+        <td><%= character_class.image %></td>
+        <td><%= character_class.character_abbreviation %></td>
+        <td><%= character_class.card_back %></td>
+        <td><%= character_class.icon_image %></td>
+        <td><%= character_class.plaque %></td>
+        <td><%= character_class.health %></td>
+        <td><%= character_class.is_locked %></td>
+        <td><%= link_to 'Show', character_class %></td>
+        <td><%= link_to 'Edit', edit_character_class_path(character_class) %></td>
+        <td><%= link_to 'Destroy', character_class, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Character Class', new_character_class_path %>

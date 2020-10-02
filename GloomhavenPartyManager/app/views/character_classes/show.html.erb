@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @character_class.name %>
+</p>
+
+<p>
+  <strong>Hand size:</strong>
+  <%= @character_class.hand_size %>
+</p>
+
+<p>
+  <strong>Symbol:</strong>
+  <%= @character_class.symbol %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @character_class.image %>
+</p>
+
+<p>
+  <strong>Character abbreviation:</strong>
+  <%= @character_class.character_abbreviation %>
+</p>
+
+<p>
+  <strong>Card back:</strong>
+  <%= image_tag @character_class.getCharacterCardBack %>
+</p>
+
+<p>
+  <strong>Icon image:</strong>
+  <%= @character_class.icon_image %>
+</p>
+
+<p>
+  <strong>Plaque:</strong>
+  <%= image_tag @character_class.getCharacterMatFrontLocation %>
+  <%= image_tag @character_class.getCharacterMatBackLocation %>
+</p>
+
+<p>
+  <strong>Health:</strong>
+  <%= @character_class.health %>
+</p>
+
+<p>
+  <strong>Is locked:</strong>
+  <%= @character_class.is_locked %>
+</p>
+
+<%= link_to 'Edit', edit_character_class_path(@character_class) %> |
+<%= link_to 'Back', character_classes_path %>

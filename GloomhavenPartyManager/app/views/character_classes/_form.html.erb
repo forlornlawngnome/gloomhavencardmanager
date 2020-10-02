@@ -1,0 +1,67 @@
+<%= form_with(model: character_class, local: true) do |form| %>
+  <% if character_class.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(character_class.errors.count, "error") %> prohibited this character_class from being saved:</h2>
+
+      <ul>
+        <% character_class.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hand_size %>
+    <%= form.number_field :hand_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :symbol %>
+    <%= form.text_field :symbol %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :character_abbreviation %>
+    <%= form.text_field :character_abbreviation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :card_back %>
+    <%= form.text_field :card_back %>
+  </div>
+
+  <div class="field">
+    <%= form.label :icon_image %>
+    <%= form.text_field :icon_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :plaque %>
+    <%= form.text_field :plaque %>
+  </div>
+
+  <div class="field">
+    <%= form.label :health %>
+    <%= form.text_area :health %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_locked %>
+    <%= form.check_box :is_locked %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

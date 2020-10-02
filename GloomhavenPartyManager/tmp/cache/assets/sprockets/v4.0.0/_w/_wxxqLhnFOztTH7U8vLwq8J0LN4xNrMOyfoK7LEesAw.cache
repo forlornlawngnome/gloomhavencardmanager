@@ -1,0 +1,20 @@
+{:uriI"èfile://app/assets/images/gloomhaven-Images/bower.json?type=application/json&id=a06128330766c360b29c7e7eb5e18e2e09c7d603fb8525eb834f8da761d4dd98:ET:load_pathI"app/assets/images;T:filenameI"3app/assets/images/gloomhaven-Images/bower.json;T:	nameI"gloomhaven-Images/bower;T:logical_pathI"!gloomhaven-Images/bower.json;T:content_typeI"application/json;T:sourceI"Ä{
+  "name": "gloomhaven",
+  "version": "0.1.0",
+  "homepage": "https://github.com/any2cards/gloomhaven",
+  "authors": [
+    "William Habush <any2cards@yahoo.com>",
+	"Guido Hansen <sadgit@penultimate.de>"
+  ],
+  "description": "An easy-to-use collection of data and images from Gloomhaven by Cephalofair Games.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "package.json"
+  ]
+}
+;T:metadata{
+:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Afile-digest://app/assets/images/gloomhaven-Images/bower.json;TTF:charsetI"
+utf-8;F:digest"%Çëu£©{ ﬁ@§ ™=„5◊sÅÓ’·o©*¢§“:lengthiÄ:environment_versionI"1.0;T:dependencies_digest"%©°«0$kwõÃ<}ÂÆL`uô√‘êp?›G=Î“8:idI"Ea06128330766c360b29c7e7eb5e18e2e09c7d603fb8525eb834f8da761d4dd98;F
