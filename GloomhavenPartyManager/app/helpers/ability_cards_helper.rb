@@ -1,0 +1,2 @@
+module AbilityCardsHelper
+end

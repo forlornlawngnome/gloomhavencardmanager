@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ability_card.name %>
+</p>
+
+<p>
+  <strong>Initiative:</strong>
+  <%= @ability_card.initiative %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @ability_card.level %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @ability_card.image %>
+  <%= image_tag @ability_card.getCardImage%>
+</p>
+
+<p>
+  <strong>Character class:</strong>
+  <%= @ability_card.character_class_id %>
+</p>
+
+<%= link_to 'Edit', edit_ability_card_path(@ability_card) %> |
+<%= link_to 'Back', ability_cards_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  initiative: 1
+  level: 1
+  image: MyString
+  character_class: one
+
+two:
+  name: MyString
+  initiative: 1
+  level: 1
+  image: MyString
+  character_class: two
