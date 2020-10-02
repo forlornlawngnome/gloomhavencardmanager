@@ -1,0 +1,3 @@
+[submodule "GloomhavenPartyManager/app/assets/images/gloomhaven-Images"]
+	path = GloomhavenPartyManager/app/assets/images/gloomhaven-Images
+	url = git@github.com:forlornlawngnome/gloomhaven-Images.git
