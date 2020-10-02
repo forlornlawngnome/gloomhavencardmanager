@@ -1,6 +1,9 @@
 class CharacterClass < ApplicationRecord
 	CHARACTER_MAT = "gloomhaven-Images/images/character-mats/"
 	CHARACTER_CARD_BACK = "gloomhaven-Images/images/character-ability-cards/"
+	
+	has_many :ability_cards
+
 	def getCharacterMatFrontLocation
 		return CHARACTER_MAT + self.name.downcase
 	end
