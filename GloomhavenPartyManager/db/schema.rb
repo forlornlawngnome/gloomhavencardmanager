@@ -10,21 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_02_145411) do
+ActiveRecord::Schema.define(version: 2020_10_01_163844) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "ability_cards", force: :cascade do |t|
-    t.string "name"
-    t.integer "initiative"
-    t.integer "level"
-    t.string "image"
-    t.bigint "character_class_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["character_class_id"], name: "index_ability_cards_on_character_class_id"
-  end
 
   create_table "character_classes", force: :cascade do |t|
     t.string "name"
@@ -49,5 +38,4 @@ ActiveRecord::Schema.define(version: 2020_10_02_145411) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "ability_cards", "character_classes"
 end

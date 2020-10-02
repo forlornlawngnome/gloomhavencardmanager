@@ -6,6 +6,12 @@ one:
   level: 1
   image: MyString
   character_class: one
+  active: false
+  counter: 1
+  max_counter: 1
+  status: MyString
+  available: false
+  chosen: false
 
 two:
   name: MyString
@@ -13,3 +19,9 @@ two:
   level: 1
   image: MyString
   character_class: two
+  active: false
+  counter: 1
+  max_counter: 1
+  status: MyString
+  available: false
+  chosen: false

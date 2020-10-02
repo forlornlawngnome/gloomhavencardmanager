@@ -10,6 +10,12 @@
       <th>Level</th>
       <th>Image</th>
       <th>Character class</th>
+      <th>Active</th>
+      <th>Counter</th>
+      <th>Max counter</th>
+      <th>Status</th>
+      <th>Available</th>
+      <th>Chosen</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,6 +28,12 @@
         <td><%= ability_card.level %></td>
         <td><%= ability_card.image %></td>
         <td><%= ability_card.character_class_id %></td>
+        <td><%= ability_card.active %></td>
+        <td><%= ability_card.counter %></td>
+        <td><%= ability_card.max_counter %></td>
+        <td><%= ability_card.status %></td>
+        <td><%= ability_card.available %></td>
+        <td><%= ability_card.chosen %></td>
         <td><%= link_to 'Show', ability_card %></td>
         <td><%= link_to 'Edit', edit_ability_card_path(ability_card) %></td>
         <td><%= link_to 'Destroy', ability_card, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -17,7 +17,7 @@ class AbilityCardsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create ability_card" do
     assert_difference('AbilityCard.count') do
-      post ability_cards_url, params: { ability_card: { character_class_id: @ability_card.character_class_id, image: @ability_card.image, initiative: @ability_card.initiative, level: @ability_card.level, name: @ability_card.name } }
+      post ability_cards_url, params: { ability_card: { active: @ability_card.active, available: @ability_card.available, character_class_id: @ability_card.character_class_id, chosen: @ability_card.chosen, counter: @ability_card.counter, image: @ability_card.image, initiative: @ability_card.initiative, level: @ability_card.level, max_counter: @ability_card.max_counter, name: @ability_card.name, status: @ability_card.status } }
     end
 
     assert_redirected_to ability_card_url(AbilityCard.last)
@@ -34,7 +34,7 @@ class AbilityCardsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update ability_card" do
-    patch ability_card_url(@ability_card), params: { ability_card: { character_class_id: @ability_card.character_class_id, image: @ability_card.image, initiative: @ability_card.initiative, level: @ability_card.level, name: @ability_card.name } }
+    patch ability_card_url(@ability_card), params: { ability_card: { active: @ability_card.active, available: @ability_card.available, character_class_id: @ability_card.character_class_id, chosen: @ability_card.chosen, counter: @ability_card.counter, image: @ability_card.image, initiative: @ability_card.initiative, level: @ability_card.level, max_counter: @ability_card.max_counter, name: @ability_card.name, status: @ability_card.status } }
     assert_redirected_to ability_card_url(@ability_card)
   end
 

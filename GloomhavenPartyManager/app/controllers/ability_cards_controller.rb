@@ -69,6 +69,6 @@ class AbilityCardsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def ability_card_params
-      params.require(:ability_card).permit(:name, :initiative, :level, :image, :character_class_id)
+      params.require(:ability_card).permit(:name, :initiative, :level, :image, :character_class_id, :active, :counter, :max_counter, :status, :available, :chosen)
     end
 end

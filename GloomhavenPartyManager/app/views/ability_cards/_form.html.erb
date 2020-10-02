@@ -33,7 +33,37 @@
 
   <div class="field">
     <%= form.label :character_class_id %>
-     <%= form.collection_select :character_class_id, CharacterClass.all, :id, :name %>
+    <%= form.text_field :character_class_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :active %>
+    <%= form.check_box :active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :counter %>
+    <%= form.number_field :counter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_counter %>
+    <%= form.number_field :max_counter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :available %>
+    <%= form.check_box :available %>
+  </div>
+
+  <div class="field">
+    <%= form.label :chosen %>
+    <%= form.check_box :chosen %>
   </div>
 
   <div class="actions">

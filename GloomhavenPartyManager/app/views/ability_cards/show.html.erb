@@ -18,12 +18,41 @@
 <p>
   <strong>Image:</strong>
   <%= @ability_card.image %>
-  <%= image_tag @ability_card.getCardImage%>
 </p>
 
 <p>
   <strong>Character class:</strong>
   <%= @ability_card.character_class_id %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @ability_card.active %>
+</p>
+
+<p>
+  <strong>Counter:</strong>
+  <%= @ability_card.counter %>
+</p>
+
+<p>
+  <strong>Max counter:</strong>
+  <%= @ability_card.max_counter %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @ability_card.status %>
+</p>
+
+<p>
+  <strong>Available:</strong>
+  <%= @ability_card.available %>
+</p>
+
+<p>
+  <strong>Chosen:</strong>
+  <%= @ability_card.chosen %>
 </p>
 
 <%= link_to 'Edit', edit_ability_card_path(@ability_card) %> |
