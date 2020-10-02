@@ -1,0 +1,61 @@
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2204622914594959530)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAbilityCards (20201002150543)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "ability_cards" ("id" bigserial primary key, "name" character varying, "initiative" integer, "level" integer, "image" character varying, "character_class_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_f792e480ce"
+FOREIGN KEY ("character_class_id")
+  REFERENCES "character_classes" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2204622914594959530)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2204622914594959530)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2204622914594959530)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ability_cards/1" for ::1 at 2020-10-02 08:15:35 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AbilityCardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAbilityCard Load (2.2ms)[0m  [1m[34mSELECT "ability_cards".* FROM "ability_cards" WHERE "ability_cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ability_cards_controller.rb:67:in `set_ability_card'
+  Rendering ability_cards/show.html.erb within layouts/application
+  Rendered ability_cards/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 665)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/meg/rails/gloomhavencardmanager/GloomhavenPartyManager/public/packs
+[Webpacker] Hash: 1352ea869763294cdcc5
+Version: webpack 4.44.2
+Time: 10643ms
+Built at: 10/02/2020 8:15:47 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-c43766093276c30cb49e.js   1.37 MiB  application  [emitted] [immutable]  application
+js/application-c43766093276c30cb49e.js.map   1.51 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-c43766093276c30cb49e.js js/application-c43766093276c30cb49e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 887 bytes {application} [built]
+[./app/javascript/src/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/src/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/src/application.scss 568 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 7 hidden modules
+
+Completed 200 OK in 12533ms (Views: 12482.2ms | ActiveRecord: 11.8ms | Allocations: 18511)
+
+
+Started GET "/ability_cards/1" for ::1 at 2020-10-02 08:16:34 -0700
+Processing by AbilityCardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAbilityCard Load (0.3ms)[0m  [1m[34mSELECT "ability_cards".* FROM "ability_cards" WHERE "ability_cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ability_cards_controller.rb:67:in `set_ability_card'
+  Rendering ability_cards/show.html.erb within layouts/application
+  [1m[36mCharacterClass Load (0.9ms)[0m  [1m[34mSELECT "character_classes".* FROM "character_classes" WHERE "character_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/ability_card.rb:7:in `getCardImage'
+  Rendered ability_cards/show.html.erb within layouts/application (Duration: 18909.6ms | Allocations: 2962110)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18936ms (Views: 18914.2ms | ActiveRecord: 8.3ms | Allocations: 2972914)
+
+
