@@ -1,0 +1,1 @@
+json.partial! "ability_cards_enhancements/ability_cards_enhancement", ability_cards_enhancement: @ability_cards_enhancement

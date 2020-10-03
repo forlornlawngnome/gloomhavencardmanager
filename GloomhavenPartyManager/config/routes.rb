@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :attack_cards_perks
+  resources :attack_cards
+  resources :perks
+  resources :ability_cards_enhancements
   resources :enhancements
   resources :ability_cards
   resources :character_classes

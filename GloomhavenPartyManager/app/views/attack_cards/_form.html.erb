@@ -1,0 +1,42 @@
+<%= form_with(model: attack_card, local: true) do |form| %>
+  <% if attack_card.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(attack_card.errors.count, "error") %> prohibited this attack_card from being saved:</h2>
+
+      <ul>
+        <% attack_card.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :value %>
+    <%= form.text_field :value %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reshuffle %>
+    <%= form.check_box :reshuffle %>
+  </div>
+
+  <div class="field">
+    <%= form.label :character_class_id %>
+    <%= form.collection_select :character_class_id, CharacterClass.all, :id, :name, prompt:true %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

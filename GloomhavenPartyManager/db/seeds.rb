@@ -12,3 +12,5 @@ ability_card = AbilityCard.create(name: "Balanced Measure", initiative: 77, leve
 
 poison = Enhancement.create(description: "Poison")
 
+attack_card_plus_1 = AttackCard.create(name: "Plus 1", image:"am-p-07", value:"1", reshuffle: false, character_class: nil)
+attack_card_pierce = AttackCard.create(name: "Rolling Pierce 3", image:"am-br-01", value:"3", reshuffle: false, character_class: brute)

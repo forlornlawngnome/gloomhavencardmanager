@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Attack Cards Perks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attack card</th>
+      <th>Perk</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @attack_cards_perks.each do |attack_cards_perk| %>
+      <tr>
+        <td><%= attack_cards_perk.attack_card_id %></td>
+        <td><%= attack_cards_perk.perk_id %></td>
+        <td><%= link_to 'Show', attack_cards_perk %></td>
+        <td><%= link_to 'Edit', edit_attack_cards_perk_path(attack_cards_perk) %></td>
+        <td><%= link_to 'Destroy', attack_cards_perk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Attack Cards Perk', new_attack_cards_perk_path %>

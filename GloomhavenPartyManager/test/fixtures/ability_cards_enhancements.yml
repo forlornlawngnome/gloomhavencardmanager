@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ability_card: one
+  enhancement: one
+  is_top: false
+
+two:
+  ability_card: two
+  enhancement: two
+  is_top: false

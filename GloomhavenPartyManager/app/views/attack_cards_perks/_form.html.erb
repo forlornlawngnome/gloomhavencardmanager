@@ -1,0 +1,28 @@
+<%= form_with(model: attack_cards_perk, local: true) do |form| %>
+  <% if attack_cards_perk.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(attack_cards_perk.errors.count, "error") %> prohibited this attack_cards_perk from being saved:</h2>
+
+      <ul>
+        <% attack_cards_perk.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :attack_card_id %>
+    <%= form.collection_select :attack_card_id, AttackCard.all, :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :perk_id %>
+    <%= form.collection_select :perk_id, Perk.all, :id, :description%>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

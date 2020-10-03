@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @attack_card.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @attack_card.image %>
+  <%= image_tag @attack_card.getImage%>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @attack_card.value %>
+</p>
+
+<p>
+  <strong>Reshuffle:</strong>
+  <%= @attack_card.reshuffle %>
+</p>
+
+<p>
+  <strong>Character class:</strong>
+  <%= @attack_card.character_class_id %>
+</p>
+
+<%= link_to 'Edit', edit_attack_card_path(@attack_card) %> |
+<%= link_to 'Back', attack_cards_path %>

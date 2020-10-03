@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ability Cards Enhancements</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ability card</th>
+      <th>Enhancement</th>
+      <th>Is top</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ability_cards_enhancements.each do |ability_cards_enhancement| %>
+      <tr>
+        <td><%= ability_cards_enhancement.ability_card_id %></td>
+        <td><%= ability_cards_enhancement.enhancement_id %></td>
+        <td><%= ability_cards_enhancement.is_top %></td>
+        <td><%= link_to 'Show', ability_cards_enhancement %></td>
+        <td><%= link_to 'Edit', edit_ability_cards_enhancement_path(ability_cards_enhancement) %></td>
+        <td><%= link_to 'Destroy', ability_cards_enhancement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ability Cards Enhancement', new_ability_cards_enhancement_path %>

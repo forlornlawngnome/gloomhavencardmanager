@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  count: 1
+  character_class: one
+  effects: 1
+
+two:
+  description: MyString
+  count: 1
+  character_class: two
+  effects: 1

@@ -1,8 +1,13 @@
 class CharacterClass < ApplicationRecord
+	validates :name, uniqueness: true
+
 	CHARACTER_MAT = "gloomhaven-Images/images/character-mats/"
 	CHARACTER_CARD_BACK = "gloomhaven-Images/images/character-ability-cards/"
 	
 	has_many :ability_cards
+	has_many :enhancements, through: :ability_cards
+	has_many :perks
+	has_many :attack_cards
 
 	def getCharacterMatFrontLocation
 		return CHARACTER_MAT + self.name.downcase

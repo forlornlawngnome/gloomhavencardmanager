@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ability card:</strong>
+  <%= @ability_cards_enhancement.ability_card_id %>
+</p>
+
+<p>
+  <strong>Enhancement:</strong>
+  <%= @ability_cards_enhancement.enhancement_id %>
+</p>
+
+<p>
+  <strong>Is top:</strong>
+  <%= @ability_cards_enhancement.is_top %>
+</p>
+
+<%= link_to 'Edit', edit_ability_cards_enhancement_path(@ability_cards_enhancement) %> |
+<%= link_to 'Back', ability_cards_enhancements_path %>
