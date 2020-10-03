@@ -116,6 +116,7 @@ ActiveRecord::Schema.define(version: 2020_10_03_125254) do
     t.boolean "is_immobilize"
     t.boolean "is_disarm"
     t.boolean "is_muddle"
+    t.json "attack_deck_draw_order"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["character_id"], name: "index_character_scenarios_on_character_id"

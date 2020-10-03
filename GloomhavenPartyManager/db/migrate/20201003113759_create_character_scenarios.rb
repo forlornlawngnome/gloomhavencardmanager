@@ -14,7 +14,7 @@ class CreateCharacterScenarios < ActiveRecord::Migration[6.0]
       t.boolean :is_immobilize
       t.boolean :is_disarm
       t.boolean :is_muddle
-      t.integer :attack_deck_draw_order, array: true
+      t.json :attack_deck_draw_order
 
       t.timestamps
     end
