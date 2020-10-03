@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_03_004332) do
+ActiveRecord::Schema.define(version: 2020_10_03_011637) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,6 +77,25 @@ ActiveRecord::Schema.define(version: 2020_10_03_004332) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "characters", force: :cascade do |t|
+    t.string "name"
+    t.bigint "character_class_id", null: false
+    t.integer "level"
+    t.boolean "is_active"
+    t.bigint "player_id", null: false
+    t.integer "experience"
+    t.integer "gold"
+    t.text "notes"
+    t.string "personal_quest"
+    t.integer "check_marks"
+    t.bigint "party_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["character_class_id"], name: "index_characters_on_character_class_id"
+    t.index ["party_id"], name: "index_characters_on_party_id"
+    t.index ["player_id"], name: "index_characters_on_player_id"
+  end
+
   create_table "enhancements", force: :cascade do |t|
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
@@ -101,11 +120,21 @@ ActiveRecord::Schema.define(version: 2020_10_03_004332) do
     t.index ["character_class_id"], name: "index_perks_on_character_class_id"
   end
 
+  create_table "players", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   add_foreign_key "ability_cards", "character_classes"
   add_foreign_key "ability_cards_enhancements", "ability_cards"
   add_foreign_key "ability_cards_enhancements", "enhancements"
   add_foreign_key "attack_cards", "character_classes"
   add_foreign_key "attack_cards_perks", "attack_cards"
   add_foreign_key "attack_cards_perks", "perks"
+  add_foreign_key "characters", "character_classes"
+  add_foreign_key "characters", "parties"
+  add_foreign_key "characters", "players"
   add_foreign_key "perks", "character_classes"
 end

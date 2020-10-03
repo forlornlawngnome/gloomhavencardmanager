@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @character.name %>
+</p>
+
+<p>
+  <strong>Character class:</strong>
+  <%= @character.character_class_id %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @character.level %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @character.is_active %>
+</p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @character.player_id %>
+</p>
+
+<p>
+  <strong>Experience:</strong>
+  <%= @character.experience %>
+</p>
+
+<p>
+  <strong>Gold:</strong>
+  <%= @character.gold %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @character.notes %>
+</p>
+
+<p>
+  <strong>Personal quest:</strong>
+  <%= @character.personal_quest %>
+  <%= image_tag @character.getQuestImage %>
+</p>
+
+<p>
+  <strong>Check marks:</strong>
+  <%= @character.check_marks %>
+</p>
+
+<p>
+  <strong>Party:</strong>
+  <%= @character.party_id %>
+</p>
+
+<%= link_to 'Edit', edit_character_path(@character) %> |
+<%= link_to 'Back', characters_path %>

@@ -1,0 +1,72 @@
+<%= form_with(model: character, local: true) do |form| %>
+  <% if character.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(character.errors.count, "error") %> prohibited this character from being saved:</h2>
+
+      <ul>
+        <% character.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :character_class_id %>
+    <%= form.collection_select :character_class_id, CharacterClass.all, :id, :name, prompt: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :level %>
+    <%= form.number_field :level %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_active %>
+    <%= form.check_box :is_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :player_id %>
+    <%= form.collection_select :player_id, Player.all, :id, :name, prompt: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :experience %>
+    <%= form.number_field :experience %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gold %>
+    <%= form.number_field :gold %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_area :notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :personal_quest %>
+    <%= form.text_field :personal_quest %>
+  </div>
+
+  <div class="field">
+    <%= form.label :check_marks %>
+    <%= form.number_field :check_marks %>
+  </div>
+
+  <div class="field">
+    <%= form.label :party_id %>
+    <%= form.collection_select :party_id, Party.all, :id, :name, prompt: true %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

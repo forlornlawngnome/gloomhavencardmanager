@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Characters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Character class</th>
+      <th>Level</th>
+      <th>Is active</th>
+      <th>Player</th>
+      <th>Experience</th>
+      <th>Gold</th>
+      <th>Notes</th>
+      <th>Personal quest</th>
+      <th>Check marks</th>
+      <th>Party</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @characters.each do |character| %>
+      <tr>
+        <td><%= character.name %></td>
+        <td><%= character.character_class_id %></td>
+        <td><%= character.level %></td>
+        <td><%= character.is_active %></td>
+        <td><%= character.player_id %></td>
+        <td><%= character.experience %></td>
+        <td><%= character.gold %></td>
+        <td><%= character.notes %></td>
+        <td><%= character.personal_quest %></td>
+        <td><%= character.check_marks %></td>
+        <td><%= character.party_id %></td>
+        <td><%= link_to 'Show', character %></td>
+        <td><%= link_to 'Edit', edit_character_path(character) %></td>
+        <td><%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Character', new_character_path %>

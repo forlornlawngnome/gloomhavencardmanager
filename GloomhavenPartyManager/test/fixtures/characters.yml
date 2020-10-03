@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  character_class: one
+  level: 1
+  is_active: false
+  player: one
+  experience: 1
+  gold: 1
+  notes: MyText
+  personal_quest: MyString
+  check_marks: 1
+  party: one
+
+two:
+  name: MyString
+  character_class: two
+  level: 1
+  is_active: false
+  player: two
+  experience: 1
+  gold: 1
+  notes: MyText
+  personal_quest: MyString
+  check_marks: 1
+  party: two

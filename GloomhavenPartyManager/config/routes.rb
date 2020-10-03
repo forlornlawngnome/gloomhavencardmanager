@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :characters
+  resources :players
   resources :attack_cards_perks
   resources :attack_cards
   resources :perks
