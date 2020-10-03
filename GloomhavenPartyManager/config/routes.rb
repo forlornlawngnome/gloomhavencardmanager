@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :character_scenarios
+  resources :scenarios
   resources :items
   resources :characters
   resources :players

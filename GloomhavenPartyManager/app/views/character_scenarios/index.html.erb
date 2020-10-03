@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Character Scenarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Character</th>
+      <th>Scenario</th>
+      <th>Health</th>
+      <th>Experience</th>
+      <th>Gold</th>
+      <th>Is poison</th>
+      <th>Is stun</th>
+      <th>Is invisible</th>
+      <th>Is strengthen</th>
+      <th>Is wound</th>
+      <th>Is immobilize</th>
+      <th>Is disarm</th>
+      <th>Is muddle</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @character_scenarios.each do |character_scenario| %>
+      <tr>
+        <td><%= character_scenario.character_id %></td>
+        <td><%= character_scenario.scenario_id %></td>
+        <td><%= character_scenario.health %></td>
+        <td><%= character_scenario.experience %></td>
+        <td><%= character_scenario.gold %></td>
+        <td><%= character_scenario.is_poison %></td>
+        <td><%= character_scenario.is_stun %></td>
+        <td><%= character_scenario.is_invisible %></td>
+        <td><%= character_scenario.is_strengthen %></td>
+        <td><%= character_scenario.is_wound %></td>
+        <td><%= character_scenario.is_immobilize %></td>
+        <td><%= character_scenario.is_disarm %></td>
+        <td><%= character_scenario.is_muddle %></td>
+        <td><%= link_to 'Show', character_scenario %></td>
+        <td><%= link_to 'Edit', edit_character_scenario_path(character_scenario) %></td>
+        <td><%= link_to 'Destroy', character_scenario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Character Scenario', new_character_scenario_path %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_03_021941) do
+ActiveRecord::Schema.define(version: 2020_10_03_113759) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,26 @@ ActiveRecord::Schema.define(version: 2020_10_03_021941) do
     t.boolean "is_locked"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "character_scenarios", force: :cascade do |t|
+    t.bigint "character_id", null: false
+    t.bigint "scenario_id", null: false
+    t.integer "health"
+    t.integer "experience"
+    t.integer "gold"
+    t.boolean "is_poison"
+    t.boolean "is_stun"
+    t.boolean "is_invisible"
+    t.boolean "is_strengthen"
+    t.boolean "is_wound"
+    t.boolean "is_immobilize"
+    t.boolean "is_disarm"
+    t.boolean "is_muddle"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["character_id"], name: "index_character_scenarios_on_character_id"
+    t.index ["scenario_id"], name: "index_character_scenarios_on_scenario_id"
   end
 
   create_table "characters", force: :cascade do |t|
@@ -144,15 +164,27 @@ ActiveRecord::Schema.define(version: 2020_10_03_021941) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "scenarios", force: :cascade do |t|
+    t.string "name"
+    t.integer "number"
+    t.bigint "party_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["party_id"], name: "index_scenarios_on_party_id"
+  end
+
   add_foreign_key "ability_cards", "character_classes"
   add_foreign_key "ability_cards_enhancements", "ability_cards"
   add_foreign_key "ability_cards_enhancements", "enhancements"
   add_foreign_key "attack_cards", "character_classes"
   add_foreign_key "attack_cards_perks", "attack_cards"
   add_foreign_key "attack_cards_perks", "perks"
+  add_foreign_key "character_scenarios", "characters"
+  add_foreign_key "character_scenarios", "scenarios"
   add_foreign_key "characters", "character_classes"
   add_foreign_key "characters", "parties"
   add_foreign_key "characters", "players"
   add_foreign_key "items", "characters"
   add_foreign_key "perks", "character_classes"
+  add_foreign_key "scenarios", "parties"
 end

@@ -1869,3 +1869,135 @@ Processing by ItemsController#show as HTML
 Completed 200 OK in 22ms (Views: 14.9ms | ActiveRecord: 0.5ms | Allocations: 3927)
 
 
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2204622914594959530)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateScenarios (20201003111618)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "scenarios" ("id" bigserial primary key, "name" character varying, "number" integer, "party_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b19bf7fd15"
+FOREIGN KEY ("party_id")
+  REFERENCES "parties" ("id")
+)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE  INDEX  "index_scenarios_on_party_id" ON "scenarios"  ("party_id")[0m
+  [1m[36mprimary::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201003111618"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2204622914594959530)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/scenarios" for ::1 at 2020-10-03 04:20:26 -0700
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ScenariosController#index as HTML
+  Rendering scenarios/index.html.erb within layouts/application
+  [1m[36mScenario Load (1.1ms)[0m  [1m[34mSELECT "scenarios".* FROM "scenarios"[0m
+  ↳ app/views/scenarios/index.html.erb:16
+  Rendered scenarios/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 1483)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 29.4ms | ActiveRecord: 5.2ms | Allocations: 5785)
+
+
+Started GET "/scenarios/new" for ::1 at 2020-10-03 04:20:29 -0700
+Processing by ScenariosController#new as HTML
+  Rendering scenarios/new.html.erb within layouts/application
+  [1m[36mParty Load (0.6ms)[0m  [1m[34mSELECT "parties".* FROM "parties"[0m
+  ↳ app/views/scenarios/_form.html.erb:26
+  Rendered scenarios/_form.html.erb (Duration: 28.6ms | Allocations: 7890)
+  Rendered scenarios/new.html.erb within layouts/application (Duration: 30.8ms | Allocations: 8255)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 34.1ms | ActiveRecord: 6.1ms | Allocations: 14929)
+
+
+Started POST "/scenarios" for ::1 at 2020-10-03 04:20:36 -0700
+Processing by ScenariosController#create as HTML
+  Parameters: {"authenticity_token"=>"manrOOp0QoeCWLIqUJm7PdPGpqrdGvHllC7BKkUDbF7rAZzMqbb3qm9068pC2/H/Wp24jk/cSK6zXHazXISKAQ==", "scenario"=>{"name"=>"Test scenario", "number"=>"1", "party_id"=>"1"}, "commit"=>"Create Scenario"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/scenarios_controller.rb:30:in `block in create'
+  [1m[36mParty Load (0.5ms)[0m  [1m[34mSELECT "parties".* FROM "parties" WHERE "parties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/scenarios_controller.rb:30:in `block in create'
+  [1m[36mScenario Create (2.1ms)[0m  [1m[32mINSERT INTO "scenarios" ("name", "number", "party_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Test scenario"], ["number", 1], ["party_id", 1], ["created_at", "2020-10-03 11:20:36.047884"], ["updated_at", "2020-10-03 11:20:36.047884"]]
+  ↳ app/controllers/scenarios_controller.rb:30:in `block in create'
+  [1m[35m (81.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/scenarios_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/scenarios/1
+Completed 302 Found in 109ms (ActiveRecord: 84.1ms | Allocations: 5182)
+
+
+Started GET "/scenarios/1" for ::1 at 2020-10-03 04:20:36 -0700
+Processing by ScenariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mScenario Load (0.4ms)[0m  [1m[34mSELECT "scenarios".* FROM "scenarios" WHERE "scenarios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/scenarios_controller.rb:67:in `set_scenario'
+  Rendering scenarios/show.html.erb within layouts/application
+  Rendered scenarios/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 293)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 17.7ms | ActiveRecord: 0.4ms | Allocations: 3727)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2204622914594959530)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCharacterScenarios (20201003113759)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (31.3ms)[0m  [1m[35mCREATE TABLE "character_scenarios" ("id" bigserial primary key, "character_id" bigint NOT NULL, "scenario_id" bigint NOT NULL, "health" integer, "experience" integer, "gold" integer, "is_poison" boolean, "is_stun" boolean, "is_invisible" boolean, "is_strengthen" boolean, "is_wound" boolean, "is_immobilize" boolean, "is_disarm" boolean, "is_muddle" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_9e425454c0"
+FOREIGN KEY ("character_id")
+  REFERENCES "characters" ("id")
+, CONSTRAINT "fk_rails_039f7b057e"
+FOREIGN KEY ("scenario_id")
+  REFERENCES "scenarios" ("id")
+)[0m
+  [1m[35m (10.8ms)[0m  [1m[35mCREATE  INDEX  "index_character_scenarios_on_character_id" ON "character_scenarios"  ("character_id")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_character_scenarios_on_scenario_id" ON "character_scenarios"  ("scenario_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201003113759"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2204622914594959530)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/character_scenarios" for ::1 at 2020-10-03 04:42:56 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharacterScenariosController#index as HTML
+  Rendering character_scenarios/index.html.erb within layouts/application
+  [1m[36mCharacterScenario Load (1.0ms)[0m  [1m[34mSELECT "character_scenarios".* FROM "character_scenarios"[0m
+  ↳ app/views/character_scenarios/index.html.erb:26
+  Rendered character_scenarios/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2190)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 18.6ms | ActiveRecord: 3.5ms | Allocations: 6765)
+
+
+Started GET "/character_scenarios/new" for ::1 at 2020-10-03 04:42:58 -0700
+Processing by CharacterScenariosController#new as HTML
+  Rendering character_scenarios/new.html.erb within layouts/application
+  [1m[36mCharacter Load (0.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/character_scenarios/_form.html.erb:16
+  [1m[36mScenario Load (0.7ms)[0m  [1m[34mSELECT "scenarios".* FROM "scenarios"[0m
+  ↳ app/views/character_scenarios/_form.html.erb:21
+  Rendered character_scenarios/_form.html.erb (Duration: 60.7ms | Allocations: 25127)
+  Rendered character_scenarios/new.html.erb within layouts/application (Duration: 63.0ms | Allocations: 25491)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 101ms (Views: 69.1ms | ActiveRecord: 4.6ms | Allocations: 39270)
+
+
+Started POST "/character_scenarios" for ::1 at 2020-10-03 04:43:08 -0700
+Processing by CharacterScenariosController#create as HTML
+  Parameters: {"authenticity_token"=>"mAqAuf5Z3yDZLawCaBYzMisZLhbRntaOE9Awq1N7GsHTgry7MUFdEiaOSNT+vaaPEZT/nuK1n9YA43LshJBWBQ==", "character_scenario"=>{"character_id"=>"1", "scenario_id"=>"1", "health"=>"14", "experience"=>"0", "gold"=>"0", "is_poison"=>"0", "is_stun"=>"0", "is_invisible"=>"0", "is_strengthen"=>"0", "is_wound"=>"0", "is_immobilize"=>"0", "is_disarm"=>"0", "is_muddle"=>"0"}, "commit"=>"Create Character scenario"}
+  [1m[35m (6.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/character_scenarios_controller.rb:30:in `block in create'
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_scenarios_controller.rb:30:in `block in create'
+  [1m[36mScenario Load (1.7ms)[0m  [1m[34mSELECT "scenarios".* FROM "scenarios" WHERE "scenarios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_scenarios_controller.rb:30:in `block in create'
+  [1m[36mCharacterScenario Create (4.0ms)[0m  [1m[32mINSERT INTO "character_scenarios" ("character_id", "scenario_id", "health", "experience", "gold", "is_poison", "is_stun", "is_invisible", "is_strengthen", "is_wound", "is_immobilize", "is_disarm", "is_muddle", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["character_id", 1], ["scenario_id", 1], ["health", 14], ["experience", 0], ["gold", 0], ["is_poison", false], ["is_stun", false], ["is_invisible", false], ["is_strengthen", false], ["is_wound", false], ["is_immobilize", false], ["is_disarm", false], ["is_muddle", false], ["created_at", "2020-10-03 11:43:08.304043"], ["updated_at", "2020-10-03 11:43:08.304043"]]
+  ↳ app/controllers/character_scenarios_controller.rb:30:in `block in create'
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/character_scenarios_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/character_scenarios/1
+Completed 302 Found in 50ms (ActiveRecord: 15.5ms | Allocations: 7346)
+
+
+Started GET "/character_scenarios/1" for ::1 at 2020-10-03 04:43:08 -0700
+Processing by CharacterScenariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterScenario Load (0.9ms)[0m  [1m[34mSELECT "character_scenarios".* FROM "character_scenarios" WHERE "character_scenarios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_scenarios_controller.rb:67:in `set_character_scenario'
+  Rendering character_scenarios/show.html.erb within layouts/application
+  Rendered character_scenarios/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 555)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 11.9ms | ActiveRecord: 0.9ms | Allocations: 4014)
+
+

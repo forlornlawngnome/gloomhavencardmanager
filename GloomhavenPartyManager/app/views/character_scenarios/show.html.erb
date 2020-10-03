@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Character:</strong>
+  <%= @character_scenario.character_id %>
+</p>
+
+<p>
+  <strong>Scenario:</strong>
+  <%= @character_scenario.scenario_id %>
+</p>
+
+<p>
+  <strong>Health:</strong>
+  <%= @character_scenario.health %>
+</p>
+
+<p>
+  <strong>Experience:</strong>
+  <%= @character_scenario.experience %>
+</p>
+
+<p>
+  <strong>Gold:</strong>
+  <%= @character_scenario.gold %>
+</p>
+
+<p>
+  <strong>Is poison:</strong>
+  <%= @character_scenario.is_poison %>
+</p>
+
+<p>
+  <strong>Is stun:</strong>
+  <%= @character_scenario.is_stun %>
+</p>
+
+<p>
+  <strong>Is invisible:</strong>
+  <%= @character_scenario.is_invisible %>
+</p>
+
+<p>
+  <strong>Is strengthen:</strong>
+  <%= @character_scenario.is_strengthen %>
+</p>
+
+<p>
+  <strong>Is wound:</strong>
+  <%= @character_scenario.is_wound %>
+</p>
+
+<p>
+  <strong>Is immobilize:</strong>
+  <%= @character_scenario.is_immobilize %>
+</p>
+
+<p>
+  <strong>Is disarm:</strong>
+  <%= @character_scenario.is_disarm %>
+</p>
+
+<p>
+  <strong>Is muddle:</strong>
+  <%= @character_scenario.is_muddle %>
+</p>
+
+<%= link_to 'Edit', edit_character_scenario_path(@character_scenario) %> |
+<%= link_to 'Back', character_scenarios_path %>
