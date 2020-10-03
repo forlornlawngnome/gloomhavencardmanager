@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :rounds
   resources :character_scenarios
   resources :scenarios
   resources :items

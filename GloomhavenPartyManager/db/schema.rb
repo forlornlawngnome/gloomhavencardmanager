@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_03_113759) do
+ActiveRecord::Schema.define(version: 2020_10_03_114611) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -164,6 +164,14 @@ ActiveRecord::Schema.define(version: 2020_10_03_113759) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "rounds", force: :cascade do |t|
+    t.integer "number"
+    t.bigint "scenario_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["scenario_id"], name: "index_rounds_on_scenario_id"
+  end
+
   create_table "scenarios", force: :cascade do |t|
     t.string "name"
     t.integer "number"
@@ -186,5 +194,6 @@ ActiveRecord::Schema.define(version: 2020_10_03_113759) do
   add_foreign_key "characters", "players"
   add_foreign_key "items", "characters"
   add_foreign_key "perks", "character_classes"
+  add_foreign_key "rounds", "scenarios"
   add_foreign_key "scenarios", "parties"
 end

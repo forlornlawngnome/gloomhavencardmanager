@@ -2001,3 +2001,65 @@ Processing by CharacterScenariosController#show as HTML
 Completed 200 OK in 23ms (Views: 11.9ms | ActiveRecord: 0.9ms | Allocations: 4014)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2204622914594959530)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRounds (20201003114611)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "rounds" ("id" bigserial primary key, "number" integer, "scenario_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_3e5bc506fc"
+FOREIGN KEY ("scenario_id")
+  REFERENCES "scenarios" ("id")
+)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_rounds_on_scenario_id" ON "rounds"  ("scenario_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201003114611"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2204622914594959530)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/rounds" for ::1 at 2020-10-03 04:48:20 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RoundsController#index as HTML
+  Rendering rounds/index.html.erb within layouts/application
+  [1m[36mRound Load (1.6ms)[0m  [1m[34mSELECT "rounds".* FROM "rounds"[0m
+  ↳ app/views/rounds/index.html.erb:15
+  Rendered rounds/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1274)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 13.2ms | ActiveRecord: 3.2ms | Allocations: 5570)
+
+
+Started GET "/rounds/new" for ::1 at 2020-10-03 04:48:22 -0700
+Processing by RoundsController#new as HTML
+  Rendering rounds/new.html.erb within layouts/application
+  [1m[36mScenario Load (0.8ms)[0m  [1m[34mSELECT "scenarios".* FROM "scenarios"[0m
+  ↳ app/views/rounds/_form.html.erb:21
+  Rendered rounds/_form.html.erb (Duration: 54.3ms | Allocations: 8395)
+  Rendered rounds/new.html.erb within layouts/application (Duration: 57.0ms | Allocations: 8760)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 81ms (Views: 61.8ms | ActiveRecord: 7.1ms | Allocations: 14764)
+
+
+Started POST "/rounds" for ::1 at 2020-10-03 04:48:27 -0700
+Processing by RoundsController#create as HTML
+  Parameters: {"authenticity_token"=>"8mGwoxTMdZ6PJt4PovaIXmZojWjDd4UWbE+e/Rf9gNXRV6PT6poZMUEqVxsFQkpefnFMDFXkzWIWE9c/6qSXeg==", "round"=>{"number"=>"1", "scenario_id"=>"1"}, "commit"=>"Create Round"}
+  [1m[35m (4.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/rounds_controller.rb:30:in `block in create'
+  [1m[36mScenario Load (0.3ms)[0m  [1m[34mSELECT "scenarios".* FROM "scenarios" WHERE "scenarios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rounds_controller.rb:30:in `block in create'
+  [1m[36mRound Create (2.6ms)[0m  [1m[32mINSERT INTO "rounds" ("number", "scenario_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["number", 1], ["scenario_id", 1], ["created_at", "2020-10-03 11:48:27.331846"], ["updated_at", "2020-10-03 11:48:27.331846"]]
+  ↳ app/controllers/rounds_controller.rb:30:in `block in create'
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/rounds_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/rounds/1
+Completed 302 Found in 31ms (ActiveRecord: 10.5ms | Allocations: 5121)
+
+
+Started GET "/rounds/1" for ::1 at 2020-10-03 04:48:27 -0700
+Processing by RoundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRound Load (0.5ms)[0m  [1m[34mSELECT "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rounds_controller.rb:67:in `set_round'
+  Rendering rounds/show.html.erb within layouts/application
+  Rendered rounds/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 272)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 11.9ms | ActiveRecord: 0.5ms | Allocations: 3707)
+
+
