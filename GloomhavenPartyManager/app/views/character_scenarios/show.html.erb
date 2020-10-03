@@ -65,5 +65,12 @@
   <%= @character_scenario.is_muddle %>
 </p>
 
+<p>
+  <strong>Attack Card Draw Order</strong>
+  <%= @character_scenario.attack_deck_draw_order %>
+</p>
+
+
+
 <%= link_to 'Edit', edit_character_scenario_path(@character_scenario) %> |
 <%= link_to 'Back', character_scenarios_path %>

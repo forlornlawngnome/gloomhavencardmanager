@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Active Attack Cards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attack card</th>
+      <th>Character</th>
+      <th>Is drawn</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @active_attack_cards.each do |active_attack_card| %>
+      <tr>
+        <td><%= active_attack_card.attack_card_id %></td>
+        <td><%= active_attack_card.character_id %></td>
+        <td><%= active_attack_card.is_drawn %></td>
+        <td><%= link_to 'Show', active_attack_card %></td>
+        <td><%= link_to 'Edit', edit_active_attack_card_path(active_attack_card) %></td>
+        <td><%= link_to 'Destroy', active_attack_card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Active Attack Card', new_active_attack_card_path %>

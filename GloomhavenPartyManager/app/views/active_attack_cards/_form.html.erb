@@ -1,0 +1,32 @@
+<%= form_with(model: active_attack_card, local: true) do |form| %>
+  <% if active_attack_card.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(active_attack_card.errors.count, "error") %> prohibited this active_attack_card from being saved:</h2>
+
+      <ul>
+        <% active_attack_card.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :attack_card_id %>
+    <%= form.collection_select :attack_card_id, AttackCard.all, :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :character_id %>
+    <%= form.collection_select :character_id, Character.all, :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_drawn %>
+    <%= form.check_box :is_drawn %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

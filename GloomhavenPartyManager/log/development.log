@@ -2223,3 +2223,159 @@ Processing by CharacterRoundsController#show as HTML
 Completed 200 OK in 21ms (Views: 12.4ms | ActiveRecord: 1.1ms | Allocations: 3820)
 
 
+Started GET "/active_attack_cards" for ::1 at 2020-10-03 05:53:55 -0700
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.3) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.3) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2204622914594959530)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveAttackCards (20201003125254)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "active_attack_cards" ("id" bigserial primary key, "attack_card_id" bigint NOT NULL, "character_id" bigint NOT NULL, "is_drawn" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_60df10c67f"
+FOREIGN KEY ("attack_card_id")
+  REFERENCES "attack_cards" ("id")
+, CONSTRAINT "fk_rails_164038ce15"
+FOREIGN KEY ("character_id")
+  REFERENCES "characters" ("id")
+)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_active_attack_cards_on_attack_card_id" ON "active_attack_cards"  ("attack_card_id")[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE  INDEX  "index_active_attack_cards_on_character_id" ON "active_attack_cards"  ("character_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201003125254"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2204622914594959530)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/active_attack_cards" for ::1 at 2020-10-03 05:54:18 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ActiveAttackCardsController#index as HTML
+  Rendering active_attack_cards/index.html.erb within layouts/application
+  [1m[36mActiveAttackCard Load (1.6ms)[0m  [1m[34mSELECT "active_attack_cards".* FROM "active_attack_cards"[0m
+  ↳ app/views/active_attack_cards/index.html.erb:16
+  Rendered active_attack_cards/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 1481)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 30.9ms | ActiveRecord: 8.0ms | Allocations: 6088)
+
+
+Started GET "/active_attack_cards/new" for ::1 at 2020-10-03 05:54:21 -0700
+Processing by ActiveAttackCardsController#new as HTML
+  Rendering active_attack_cards/new.html.erb within layouts/application
+  [1m[36mAttackCard Load (1.0ms)[0m  [1m[34mSELECT "attack_cards".* FROM "attack_cards"[0m
+  ↳ app/views/active_attack_cards/_form.html.erb:16
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/active_attack_cards/_form.html.erb:21
+  Rendered active_attack_cards/_form.html.erb (Duration: 114.7ms | Allocations: 25397)
+  Rendered active_attack_cards/new.html.erb within layouts/application (Duration: 116.5ms | Allocations: 25761)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 143ms (Views: 115.3ms | ActiveRecord: 13.1ms | Allocations: 32519)
+
+
+Started POST "/active_attack_cards" for ::1 at 2020-10-03 05:54:38 -0700
+Processing by ActiveAttackCardsController#create as HTML
+  Parameters: {"authenticity_token"=>"UFO/OcgiYJD485B3EUNUwZt4WSgoKebhkc82WHKgTLKNLcKfJKl6ae+gYr54/ysHMD6Wk+KtHhiaSpPu0db8Rw==", "active_attack_card"=>{"attack_card_id"=>"1", "character_id"=>"1", "is_drawn"=>"0"}, "commit"=>"Create Active attack card"}
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/active_attack_cards_controller.rb:30:in `block in create'
+  [1m[36mAttackCard Load (0.5ms)[0m  [1m[34mSELECT "attack_cards".* FROM "attack_cards" WHERE "attack_cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/active_attack_cards_controller.rb:30:in `block in create'
+  [1m[36mCharacter Load (1.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/active_attack_cards_controller.rb:30:in `block in create'
+  [1m[36mActiveAttackCard Create (1.7ms)[0m  [1m[32mINSERT INTO "active_attack_cards" ("attack_card_id", "character_id", "is_drawn", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["attack_card_id", 1], ["character_id", 1], ["is_drawn", false], ["created_at", "2020-10-03 12:54:38.632322"], ["updated_at", "2020-10-03 12:54:38.632322"]]
+  ↳ app/controllers/active_attack_cards_controller.rb:30:in `block in create'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/active_attack_cards_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/active_attack_cards/1
+Completed 302 Found in 44ms (ActiveRecord: 7.5ms | Allocations: 7014)
+
+
+Started GET "/active_attack_cards/1" for ::1 at 2020-10-03 05:54:38 -0700
+Processing by ActiveAttackCardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mActiveAttackCard Load (0.9ms)[0m  [1m[34mSELECT "active_attack_cards".* FROM "active_attack_cards" WHERE "active_attack_cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/active_attack_cards_controller.rb:67:in `set_active_attack_card'
+  Rendering active_attack_cards/show.html.erb within layouts/application
+  Rendered active_attack_cards/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 297)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 13.6ms | ActiveRecord: 0.9ms | Allocations: 3727)
+
+
+Started POST "/active_attack_cards" for ::1 at 2020-10-03 05:54:42 -0700
+Processing by ActiveAttackCardsController#create as HTML
+  Parameters: {"authenticity_token"=>"kQpHDXmfNS5WhNP4BVY42/A7ac6zYNkCM1yOFDIVr4TXCPfg0Iho6iFtscLbgBWC2tmpoaK1JTSGtTwL41aWCA==", "active_attack_card"=>{"attack_card_id"=>"1", "character_id"=>"1", "is_drawn"=>"0"}, "commit"=>"Create Active attack card"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/active_attack_cards_controller.rb:30:in `block in create'
+  [1m[36mAttackCard Load (0.7ms)[0m  [1m[34mSELECT "attack_cards".* FROM "attack_cards" WHERE "attack_cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/active_attack_cards_controller.rb:30:in `block in create'
+  [1m[36mCharacter Load (0.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/active_attack_cards_controller.rb:30:in `block in create'
+  [1m[36mActiveAttackCard Create (1.6ms)[0m  [1m[32mINSERT INTO "active_attack_cards" ("attack_card_id", "character_id", "is_drawn", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["attack_card_id", 1], ["character_id", 1], ["is_drawn", false], ["created_at", "2020-10-03 12:54:42.768386"], ["updated_at", "2020-10-03 12:54:42.768386"]]
+  ↳ app/controllers/active_attack_cards_controller.rb:30:in `block in create'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/active_attack_cards_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/active_attack_cards/2
+Completed 302 Found in 49ms (ActiveRecord: 4.5ms | Allocations: 5447)
+
+
+Started GET "/active_attack_cards/2" for ::1 at 2020-10-03 05:54:42 -0700
+Processing by ActiveAttackCardsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mActiveAttackCard Load (0.4ms)[0m  [1m[34mSELECT "active_attack_cards".* FROM "active_attack_cards" WHERE "active_attack_cards"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/active_attack_cards_controller.rb:67:in `set_active_attack_card'
+  Rendering active_attack_cards/show.html.erb within layouts/application
+  Rendered active_attack_cards/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 91)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 3263)
+
+
+Started GET "/active_attack_cards" for ::1 at 2020-10-03 05:54:48 -0700
+Processing by ActiveAttackCardsController#index as HTML
+  Rendering active_attack_cards/index.html.erb within layouts/application
+  [1m[36mActiveAttackCard Load (0.3ms)[0m  [1m[34mSELECT "active_attack_cards".* FROM "active_attack_cards"[0m
+  ↳ app/views/active_attack_cards/index.html.erb:16
+  Rendered active_attack_cards/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 963)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.3ms | Allocations: 3527)
+
+

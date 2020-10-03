@@ -69,6 +69,6 @@ class CharacterScenariosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def character_scenario_params
-      params.require(:character_scenario).permit(:character_id, :scenario_id, :health, :experience, :gold, :is_poison, :is_stun, :is_invisible, :is_strengthen, :is_wound, :is_immobilize, :is_disarm, :is_muddle)
+      params.require(:character_scenario).permit(:character_id, :scenario_id, :health, :experience, :gold, :is_poison, :is_stun, :is_invisible, :is_strengthen, :is_wound, :is_immobilize, :is_disarm, :is_muddle, :attack_deck_draw_order)
     end
 end

@@ -10,6 +10,7 @@ class Character < ApplicationRecord
   has_many :scenarios, through: :character_scenarios
   has_many :character_rounds
   has_many :rounds, through: :character_rounds
+  has_many :active_attack_cards
 
   PERSONAL_QUEST_LOCATION = "gloomhaven-Images/images/personal-goals/"
 

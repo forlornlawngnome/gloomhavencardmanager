@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :active_attack_cards
   resources :character_rounds
   resources :rounds
   resources :character_scenarios

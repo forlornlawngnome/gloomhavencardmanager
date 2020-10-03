@@ -9,7 +9,8 @@
 party = Party.create(name: "Gloomservice", reputation: 14, prosperity: 4)
 brute = CharacterClass.create(name: "Brute", hand_size: 10, symbol: "br", image: "", character_abbreviation: "br", card_back: "br", icon_image: "", health: [10,12,14,16,18,20,22,24,26,28], is_locked: false)
 
-ability_card = AbilityCard.create(name: "Balanced Measure", initiative: 77, level: 0, image: "balanced-measure", character_class: brute, active: true, counter: 0, max_counter:0, status: "Available", chosen:false)
+ability_card = AbilityCard.create(name: "Balanced Measure", initiative: 77, level: 0, image: "balanced-measure", character_class: brute, active: true, counter: 0, max_counter:0, status: "Available", chosen:true)
+ability_card2 = AbilityCard.create(name: "Other Card", initiative: 60, level: 1, image: "balanced-measure", character_class: brute, active: true, counter: 0, max_counter:2, status: "Available", chosen:true)
 
 poison = Enhancement.create(description: "Poison")
 
@@ -24,3 +25,21 @@ attackcard_perk = AttackCardsPerk.create(attack_card: attack_card_pierce, perk: 
 test_player = Player.create(name: "test User", email: "Test@user.org")
 
 etude = Character.create(name: "Etude", character_class: brute, level: 8, is_active: true, player: test_player, experience: 250, gold: 75, notes: "10 vermling", personal_quest: "", check_marks: 3, party: party)
+
+boots = Item.create(name: "Boots of Striding", number: 1, image: "boots-of-striding", character: etude,
+	is_active: true, counter: 0, max_counter: 0, usage_state: "Spent", used: false, item_type: "boots", negative_effects: "None" )
+
+test_scenario = Scenario.create(name: "Test Scenario", number: 1, party: party)
+
+etude_scenarios = CharacterScenario.create(character: etude, scenario: test_scenario, health: 0, experience: 0,
+	gold: 0, is_poison: false, is_stun: false, is_invisible: false, is_strengthen: false, is_wound: false, is_immobilize: false, is_disarm: false, is_muddle: false)
+
+round1 = Round.create(number: 1, scenario:test_scenario)
+round2 = Round.create(number: 2, scenario:test_scenario)
+
+etude_r1 = CharacterRound.create(round: round1, character_scenario: etude_scenarios, cards_1: ability_card, card_2: ability_card2, short_rest: false, long_rest: false)
+
+
+etude_attack_card1 = ActiveAttackCards.create(attack_card: attack_card_plus_1, character: etude)
+etude_attack_card2 = ActiveAttackCards.create(attack_card: attack_card_plus_1, character: etude)
+etude_attack_card3 = ActiveAttackCards.create(attack_card: attack_card_pierce, character: etude)

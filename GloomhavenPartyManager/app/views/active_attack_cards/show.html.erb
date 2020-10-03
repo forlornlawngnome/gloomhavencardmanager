@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Attack card:</strong>
+  <%= @active_attack_card.attack_card_id %>
+</p>
+
+<p>
+  <strong>Character:</strong>
+  <%= @active_attack_card.character_id %>
+</p>
+
+<p>
+  <strong>Is drawn:</strong>
+  <%= @active_attack_card.is_drawn %>
+</p>
+
+<%= link_to 'Edit', edit_active_attack_card_path(@active_attack_card) %> |
+<%= link_to 'Back', active_attack_cards_path %>

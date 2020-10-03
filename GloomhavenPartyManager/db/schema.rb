@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_03_115434) do
+ActiveRecord::Schema.define(version: 2020_10_03_125254) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,16 @@ ActiveRecord::Schema.define(version: 2020_10_03_115434) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["ability_card_id"], name: "index_ability_cards_enhancements_on_ability_card_id"
     t.index ["enhancement_id"], name: "index_ability_cards_enhancements_on_enhancement_id"
+  end
+
+  create_table "active_attack_cards", force: :cascade do |t|
+    t.bigint "attack_card_id", null: false
+    t.bigint "character_id", null: false
+    t.boolean "is_drawn"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["attack_card_id"], name: "index_active_attack_cards_on_attack_card_id"
+    t.index ["character_id"], name: "index_active_attack_cards_on_character_id"
   end
 
   create_table "attack_cards", force: :cascade do |t|
@@ -199,6 +209,8 @@ ActiveRecord::Schema.define(version: 2020_10_03_115434) do
   add_foreign_key "ability_cards", "character_classes"
   add_foreign_key "ability_cards_enhancements", "ability_cards"
   add_foreign_key "ability_cards_enhancements", "enhancements"
+  add_foreign_key "active_attack_cards", "attack_cards"
+  add_foreign_key "active_attack_cards", "characters"
   add_foreign_key "attack_cards", "character_classes"
   add_foreign_key "attack_cards_perks", "attack_cards"
   add_foreign_key "attack_cards_perks", "perks"
