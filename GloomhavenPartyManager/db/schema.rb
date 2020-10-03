@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_03_114611) do
+ActiveRecord::Schema.define(version: 2020_10_03_115434) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,21 @@ ActiveRecord::Schema.define(version: 2020_10_03_114611) do
     t.boolean "is_locked"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "character_rounds", force: :cascade do |t|
+    t.bigint "round_id", null: false
+    t.bigint "character_scenario_id", null: false
+    t.bigint "card_1_id"
+    t.bigint "card_2_id"
+    t.boolean "short_rest"
+    t.boolean "long_rest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["card_1_id"], name: "index_character_rounds_on_card_1_id"
+    t.index ["card_2_id"], name: "index_character_rounds_on_card_2_id"
+    t.index ["character_scenario_id"], name: "index_character_rounds_on_character_scenario_id"
+    t.index ["round_id"], name: "index_character_rounds_on_round_id"
   end
 
   create_table "character_scenarios", force: :cascade do |t|
@@ -187,6 +202,10 @@ ActiveRecord::Schema.define(version: 2020_10_03_114611) do
   add_foreign_key "attack_cards", "character_classes"
   add_foreign_key "attack_cards_perks", "attack_cards"
   add_foreign_key "attack_cards_perks", "perks"
+  add_foreign_key "character_rounds", "ability_cards", column: "card_1_id"
+  add_foreign_key "character_rounds", "ability_cards", column: "card_2_id"
+  add_foreign_key "character_rounds", "character_scenarios"
+  add_foreign_key "character_rounds", "rounds"
   add_foreign_key "character_scenarios", "characters"
   add_foreign_key "character_scenarios", "scenarios"
   add_foreign_key "characters", "character_classes"

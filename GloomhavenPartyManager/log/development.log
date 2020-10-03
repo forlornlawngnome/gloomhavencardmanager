@@ -2063,3 +2063,163 @@ Processing by RoundsController#show as HTML
 Completed 200 OK in 20ms (Views: 11.9ms | ActiveRecord: 0.5ms | Allocations: 3707)
 
 
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2204622914594959530)[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCharacterRounds (20201003115434)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (54.9ms)[0m  [1m[35mCREATE TABLE "character_rounds" ("id" bigserial primary key, "round_id" bigint NOT NULL, "character_scenario_id" bigint NOT NULL, "card_1_id" bigint, "card_2_id" bigint, "short_rest" boolean, "long_rest" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_3711c60bc0"
+FOREIGN KEY ("round_id")
+  REFERENCES "rounds" ("id")
+, CONSTRAINT "fk_rails_b24ba8beaa"
+FOREIGN KEY ("character_scenario_id")
+  REFERENCES "character_scenarios" ("id")
+)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_character_rounds_on_round_id" ON "character_rounds"  ("round_id")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_character_rounds_on_character_scenario_id" ON "character_rounds"  ("character_scenario_id")[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_character_rounds_on_card_1_id" ON "character_rounds"  ("card_1_id")[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE  INDEX  "index_character_rounds_on_card_2_id" ON "character_rounds"  ("card_2_id")[0m
+  [1m[35m (4.2ms)[0m  [1m[35mALTER TABLE "character_rounds" ADD CONSTRAINT "fk_rails_faca1629ee"
+FOREIGN KEY ("card_1")
+  REFERENCES "ability_cards" ("id")
+[0m
+  [1m[35m (2.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(2204622914594959530)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2204622914594959530)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCharacterRounds (20201003115434)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.2ms)[0m  [1m[35mCREATE TABLE "character_rounds" ("id" bigserial primary key, "round_id" bigint NOT NULL, "character_scenario_id" bigint NOT NULL, "card_1_id" bigint, "card_2_id" bigint, "short_rest" boolean, "long_rest" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_3711c60bc0"
+FOREIGN KEY ("round_id")
+  REFERENCES "rounds" ("id")
+, CONSTRAINT "fk_rails_b24ba8beaa"
+FOREIGN KEY ("character_scenario_id")
+  REFERENCES "character_scenarios" ("id")
+, CONSTRAINT "fk_rails_ce9d4b8640"
+FOREIGN KEY ("card_1_id")
+  REFERENCES "ability_cards" ("id")
+, CONSTRAINT "fk_rails_a37f77c586"
+FOREIGN KEY ("card_2_id")
+  REFERENCES "ability_cards" ("id")
+)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE  INDEX  "index_character_rounds_on_round_id" ON "character_rounds"  ("round_id")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_character_rounds_on_character_scenario_id" ON "character_rounds"  ("character_scenario_id")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_character_rounds_on_card_1_id" ON "character_rounds"  ("card_1_id")[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_character_rounds_on_card_2_id" ON "character_rounds"  ("card_2_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201003115434"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2204622914594959530)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/character_rounds" for ::1 at 2020-10-03 05:04:07 -0700
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharacterRoundsController#index as HTML
+  Rendering character_rounds/index.html.erb within layouts/application
+  [1m[36mCharacterRound Load (1.3ms)[0m  [1m[34mSELECT "character_rounds".* FROM "character_rounds"[0m
+  ↳ app/views/character_rounds/index.html.erb:19
+  Rendered character_rounds/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1682)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 19.6ms | ActiveRecord: 3.8ms | Allocations: 6711)
+
+
+Started GET "/character_rounds/new" for ::1 at 2020-10-03 05:04:10 -0700
+Processing by CharacterRoundsController#new as HTML
+  Rendering character_rounds/new.html.erb within layouts/application
+  Rendered character_rounds/_form.html.erb (Duration: 10.4ms | Allocations: 2516)
+  Rendered character_rounds/new.html.erb within layouts/application (Duration: 12.3ms | Allocations: 2882)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 18.1ms | ActiveRecord: 3.0ms | Allocations: 11789)
+
+
+Started GET "/character_rounds/new" for ::1 at 2020-10-03 05:05:39 -0700
+Processing by CharacterRoundsController#new as HTML
+  Rendering character_rounds/new.html.erb within layouts/application
+  [1m[36mRound Load (1.2ms)[0m  [1m[34mSELECT "rounds".* FROM "rounds"[0m
+  ↳ app/views/character_rounds/_form.html.erb:16
+  Rendered character_rounds/_form.html.erb (Duration: 34.1ms | Allocations: 10287)
+  Rendered character_rounds/new.html.erb within layouts/application (Duration: 35.2ms | Allocations: 10629)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 1.2ms | Allocations: 12100)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 4..6)):
+    18: 
+    19:   <div class="field">
+    20:     <%= form.label :character_scenario_id %>
+    21:     <%= form.collection_select :character_scenario_id, :id, :display %>
+    22:   </div>
+    23: 
+    24:   <div class="field">
+  
+app/views/character_rounds/_form.html.erb:21
+app/views/character_rounds/_form.html.erb:1
+app/views/character_rounds/new.html.erb:3
+Started GET "/character_rounds/new" for ::1 at 2020-10-03 05:06:15 -0700
+Processing by CharacterRoundsController#new as HTML
+  Rendering character_rounds/new.html.erb within layouts/application
+  [1m[36mRound Load (0.4ms)[0m  [1m[34mSELECT "rounds".* FROM "rounds"[0m
+  ↳ app/views/character_rounds/_form.html.erb:16
+  [1m[36mCharacterScenario Load (0.6ms)[0m  [1m[34mSELECT "character_scenarios".* FROM "character_scenarios"[0m
+  ↳ app/views/character_rounds/_form.html.erb:21
+  [1m[36mScenario Load (0.8ms)[0m  [1m[34mSELECT "scenarios".* FROM "scenarios" WHERE "scenarios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/character_scenario.rb:6:in `display'
+  [1m[36mCharacter Load (1.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/character_scenario.rb:6:in `display'
+  [1m[36mAbilityCard Load (0.9ms)[0m  [1m[34mSELECT "ability_cards".* FROM "ability_cards"[0m
+  ↳ app/views/character_rounds/_form.html.erb:26
+  [1m[36mCACHE AbilityCard Load (0.0ms)[0m  [1m[34mSELECT "ability_cards".* FROM "ability_cards"[0m
+  ↳ app/views/character_rounds/_form.html.erb:31
+  Rendered character_rounds/_form.html.erb (Duration: 206.0ms | Allocations: 57349)
+  Rendered character_rounds/new.html.erb within layouts/application (Duration: 208.2ms | Allocations: 57712)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 224ms (Views: 202.0ms | ActiveRecord: 19.9ms | Allocations: 61236)
+
+
+Started GET "/character_rounds/new" for ::1 at 2020-10-03 05:06:35 -0700
+Processing by CharacterRoundsController#new as HTML
+  Rendering character_rounds/new.html.erb within layouts/application
+  [1m[36mRound Load (1.8ms)[0m  [1m[34mSELECT "rounds".* FROM "rounds"[0m
+  ↳ app/views/character_rounds/_form.html.erb:16
+  [1m[36mCharacterScenario Load (0.6ms)[0m  [1m[34mSELECT "character_scenarios".* FROM "character_scenarios"[0m
+  ↳ app/views/character_rounds/_form.html.erb:21
+  [1m[36mScenario Load (3.3ms)[0m  [1m[34mSELECT "scenarios".* FROM "scenarios" WHERE "scenarios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/character_scenario.rb:6:in `display'
+  [1m[36mCharacter Load (0.8ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/character_scenario.rb:6:in `display'
+  [1m[36mAbilityCard Load (1.1ms)[0m  [1m[34mSELECT "ability_cards".* FROM "ability_cards"[0m
+  ↳ app/views/character_rounds/_form.html.erb:26
+  [1m[36mCACHE AbilityCard Load (0.0ms)[0m  [1m[34mSELECT "ability_cards".* FROM "ability_cards"[0m
+  ↳ app/views/character_rounds/_form.html.erb:31
+  Rendered character_rounds/_form.html.erb (Duration: 44.5ms | Allocations: 6971)
+  Rendered character_rounds/new.html.erb within layouts/application (Duration: 47.2ms | Allocations: 7334)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 51.6ms | ActiveRecord: 7.6ms | Allocations: 10953)
+
+
+Started POST "/character_rounds" for ::1 at 2020-10-03 05:06:45 -0700
+Processing by CharacterRoundsController#create as HTML
+  Parameters: {"authenticity_token"=>"b/MHBxllNCoRpydN44urjQm0gjX2X2lZS6j3+hhk0Gwp8bfqsHJp7mZORXc9XYbUI1ZCWueKlW/+QUXlySfp4A==", "character_round"=>{"round_id"=>"1", "character_scenario_id"=>"1", "card_1_id"=>"1", "card_2_id"=>"1", "short_rest"=>"0", "long_rest"=>"0"}, "commit"=>"Create Character round"}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/character_rounds_controller.rb:30:in `block in create'
+  [1m[36mRound Load (0.6ms)[0m  [1m[34mSELECT "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_rounds_controller.rb:30:in `block in create'
+  [1m[36mCharacterScenario Load (1.8ms)[0m  [1m[34mSELECT "character_scenarios".* FROM "character_scenarios" WHERE "character_scenarios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_rounds_controller.rb:30:in `block in create'
+  [1m[36mCharacterRound Create (3.7ms)[0m  [1m[32mINSERT INTO "character_rounds" ("round_id", "character_scenario_id", "card_1_id", "card_2_id", "short_rest", "long_rest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["round_id", 1], ["character_scenario_id", 1], ["card_1_id", 1], ["card_2_id", 1], ["short_rest", false], ["long_rest", false], ["created_at", "2020-10-03 12:06:45.899005"], ["updated_at", "2020-10-03 12:06:45.899005"]]
+  ↳ app/controllers/character_rounds_controller.rb:30:in `block in create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/character_rounds_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/character_rounds/1
+Completed 302 Found in 45ms (ActiveRecord: 7.9ms | Allocations: 7080)
+
+
+Started GET "/character_rounds/1" for ::1 at 2020-10-03 05:06:45 -0700
+Processing by CharacterRoundsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharacterRound Load (1.1ms)[0m  [1m[34mSELECT "character_rounds".* FROM "character_rounds" WHERE "character_rounds"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/character_rounds_controller.rb:67:in `set_character_round'
+  Rendering character_rounds/show.html.erb within layouts/application
+  Rendered character_rounds/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 374)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 12.4ms | ActiveRecord: 1.1ms | Allocations: 3820)
+
+

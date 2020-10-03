@@ -3,6 +3,9 @@ class AbilityCard < ApplicationRecord
 	has_many :ability_cards_enhancements
 	has_many :enhancements, through: :ability_cards_enhancements
 
+	has_many :card_1, class_name: 'CharacterRound', foreign_key: :card_1_id
+	has_many :card_2, class_name: 'CharacterRound', foreign_key: :card_2_id
+
 	validates :name, uniqueness: true
 
 	CARD_IMAGE = "gloomhaven-Images/images/character-ability-cards/"

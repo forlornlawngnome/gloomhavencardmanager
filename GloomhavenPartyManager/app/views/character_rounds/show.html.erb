@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Round:</strong>
+  <%= @character_round.round_id %>
+</p>
+
+<p>
+  <strong>Character scenario:</strong>
+  <%= @character_round.character_scenario_id %>
+</p>
+
+<p>
+  <strong>Card 1:</strong>
+  <%= @character_round.card_1_id %>
+</p>
+
+<p>
+  <strong>Card 2:</strong>
+  <%= @character_round.card_2_id %>
+</p>
+
+<p>
+  <strong>Short rest:</strong>
+  <%= @character_round.short_rest %>
+</p>
+
+<p>
+  <strong>Long rest:</strong>
+  <%= @character_round.long_rest %>
+</p>
+
+<%= link_to 'Edit', edit_character_round_path(@character_round) %> |
+<%= link_to 'Back', character_rounds_path %>

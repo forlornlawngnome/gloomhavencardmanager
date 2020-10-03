@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Character Rounds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Round</th>
+      <th>Character scenario</th>
+      <th>Card 1</th>
+      <th>Card 2</th>
+      <th>Short rest</th>
+      <th>Long rest</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @character_rounds.each do |character_round| %>
+      <tr>
+        <td><%= character_round.round_id %></td>
+        <td><%= character_round.character_scenario_id %></td>
+        <td><%= character_round.card_1_id %></td>
+        <td><%= character_round.card_2_id %></td>
+        <td><%= character_round.short_rest %></td>
+        <td><%= character_round.long_rest %></td>
+        <td><%= link_to 'Show', character_round %></td>
+        <td><%= link_to 'Edit', edit_character_round_path(character_round) %></td>
+        <td><%= link_to 'Destroy', character_round, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Character Round', new_character_round_path %>
