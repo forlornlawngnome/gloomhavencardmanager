@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @item.name %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @item.number %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @item.image %>
+</p>
+
+<p>
+  <strong>Character:</strong>
+  <%= image_tag @item.getImage %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @item.is_active %>
+</p>
+
+<p>
+  <strong>Counter:</strong>
+  <%= @item.counter %>
+</p>
+
+<p>
+  <strong>Counter max:</strong>
+  <%= @item.counter_max %>
+</p>
+
+<p>
+  <strong>Usage state:</strong>
+  <%= @item.usage_state %>
+</p>
+
+<p>
+  <strong>Used:</strong>
+  <%= @item.used %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @item.item_type %>
+</p>
+
+<p>
+  <strong>Negative effects:</strong>
+  <%= @item.negative_effects %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

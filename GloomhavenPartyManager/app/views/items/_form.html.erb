@@ -1,0 +1,72 @@
+<%= form_with(model: item, local: true) do |form| %>
+  <% if item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+      <ul>
+        <% item.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number %>
+    <%= form.number_field :number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :character_id %>
+    <%= form.collection_select :character_id, Character.all, :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_active %>
+    <%= form.check_box :is_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :counter %>
+    <%= form.number_field :counter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :counter_max %>
+    <%= form.number_field :counter_max %>
+  </div>
+
+  <div class="field">
+    <%= form.label :usage_state %>
+    <%= form.text_field :usage_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :used %>
+    <%= form.check_box :used %>
+  </div>
+
+  <div class="field">
+    <%= form.label :item_type %>
+    <%= form.text_field :item_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :negative_effects %>
+    <%= form.text_field :negative_effects %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

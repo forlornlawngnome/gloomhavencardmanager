@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_03_011637) do
+ActiveRecord::Schema.define(version: 2020_10_03_021941) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -102,6 +102,23 @@ ActiveRecord::Schema.define(version: 2020_10_03_011637) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "items", force: :cascade do |t|
+    t.string "name"
+    t.integer "number"
+    t.string "image"
+    t.bigint "character_id", null: false
+    t.boolean "is_active"
+    t.integer "counter"
+    t.integer "counter_max"
+    t.string "usage_state"
+    t.boolean "used"
+    t.string "item_type"
+    t.string "negative_effects"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["character_id"], name: "index_items_on_character_id"
+  end
+
   create_table "parties", force: :cascade do |t|
     t.string "name"
     t.integer "reputation"
@@ -136,5 +153,6 @@ ActiveRecord::Schema.define(version: 2020_10_03_011637) do
   add_foreign_key "characters", "character_classes"
   add_foreign_key "characters", "parties"
   add_foreign_key "characters", "players"
+  add_foreign_key "items", "characters"
   add_foreign_key "perks", "character_classes"
 end

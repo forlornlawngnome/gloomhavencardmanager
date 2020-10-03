@@ -5,6 +5,7 @@ class Character < ApplicationRecord
 
   has_many :perks, through: :character_class
   has_many :ability_cards, through: :character_class
+  has_many :items
 
   PERSONAL_QUEST_LOCATION = "gloomhaven-Images/images/personal-goals/"
 

@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  number: 1
+  image: MyString
+  character: one
+  is_active: false
+  counter: 1
+  counter_max: 1
+  usage_state: MyString
+  used: false
+  type: 
+  negative_effects: MyString
+
+two:
+  name: MyString
+  number: 1
+  image: MyString
+  character: two
+  is_active: false
+  counter: 1
+  counter_max: 1
+  usage_state: MyString
+  used: false
+  type: 
+  negative_effects: MyString
