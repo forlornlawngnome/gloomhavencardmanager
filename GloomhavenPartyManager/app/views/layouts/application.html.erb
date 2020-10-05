@@ -16,14 +16,18 @@
       <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
           <li class="menu-text">Gloomhaven Card Manager</li>
-          <li class="menu-text"><%=Party.all.first.name%></li>
-          <li><a href="#">Home</a></li>
+
+          <li><%=link_to "Home", root_path%></li>
           <li><a href="#">Start Game</a></li>
         </ul>
       </div>
       <div class="top-bar-right">
         <ul class="menu">
-          <li><a href="#">Login/Logout</a></li>
+          <%if logged_in?%>
+            <li><%=link_to "Log Out", logout_path%></li>
+          <%else%>
+            <%= google_sign_in_button 'Sign in with Google', proceed_to: create_login_url, class: "button" %>
+          <%end%>
         </ul>
       </div>
     </div>
