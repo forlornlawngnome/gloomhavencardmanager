@@ -1,20 +1,0 @@
-{:uriI"‘file://app/assets/images/gloomhaven-Images/package.json?type=application/json&id=eb78e19714d58465bfc0154304683aad09cdc79a98d7bcbb8276e94c358e4c99:ET:load_pathI"app/assets/images;T:filenameI"5app/assets/images/gloomhaven-Images/package.json;T:	nameI"gloomhaven-Images/package;T:logical_pathI"#gloomhaven-Images/package.json;T:content_typeI"application/json;T:sourceI"î{
-  "name": "gloomhaven",
-  "version": "0.1.0",
-  "description": "An easy-to-use collection of data and images from Gloomhaven by Cephalofair Games.",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/any2cards/gloomhaven"
-  },
-  "author": "William Habush <any2cards@yahoo.com> and Guido Hansen <sadgit@penultimate.de>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/any2cards/gloomhaven/issues"
-  },
-  "homepage": "https://github.com/any2cards/gloomhaven"
-}
-;T:metadata{
-:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Cfile-digest://app/assets/images/gloomhaven-Images/package.json;TTF:charsetI"
-utf-8;F:digest"%t‘ÏÊ’?¼~(¾gnLV>îVˆ¡-ëö*ÃcQAœY}:lengthiî:environment_versionI"1.0;T:dependencies_digest"%sÚlÂ9Ä-E«S?µ*®,*kBdÀiˆ5y¿:idI"Eeb78e19714d58465bfc0154304683aad09cdc79a98d7bcbb8276e94c358e4c99;F
