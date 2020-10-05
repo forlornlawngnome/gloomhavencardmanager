@@ -5,12 +5,29 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <% stylesheet_pack_tag 'stylesheets' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   </head>
 
   <body>
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text">Gloomhaven Card Manager</li>
+          <li class="menu-text"><%=Party.all.first.name%></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Start Game</a></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><a href="#">Login/Logout</a></li>
+        </ul>
+      </div>
+    </div>
+
     <%= yield %>
   </body>
 </html>
