@@ -12,12 +12,18 @@
   </head>
 
   <body>
+
     <div class="top-bar">
       <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
-          <li class="menu-text">Gloomhaven Card Manager</li>
+          <%if party_chosen?%>
+            <li class="menu-text"><%=active_party.name.titleize%></li>
+          <%else%>
+            <li class="menu-text">Gloomhaven Card Manager</li>
+          <%end%>
 
           <li><%=link_to "Home", root_path%></li>
+          <li><%=link_to "Select a Party", party_select_path%></li>
           <li><a href="#">Start Game</a></li>
         </ul>
       </div>
@@ -31,7 +37,13 @@
         </ul>
       </div>
     </div>
-
-    <%= yield %>
+    <div class="grid-container fluid">
+      <%if notice%>
+        <div class="callout success">
+          <p id="notice"><%= notice %></p>
+        </div>
+      <%end%>
+      <%= yield %>
+    </div>
   </body>
 </html>

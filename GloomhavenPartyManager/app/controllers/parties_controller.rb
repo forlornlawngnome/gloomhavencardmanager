@@ -15,10 +15,14 @@ class PartiesController < ApplicationController
   # GET /parties/new
   def new
     @party = Party.new
+    @party.players_parties.build
   end
 
   # GET /parties/1/edit
   def edit
+  end
+
+  def party_select
   end
 
   # POST /parties
@@ -69,6 +73,6 @@ class PartiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def party_params
-      params.require(:party).permit(:name, :reputation, :prosperity)
+      params.require(:party).permit(:name, :reputation, :prosperity, players_parties_attributes: [:player_id])
     end
 end

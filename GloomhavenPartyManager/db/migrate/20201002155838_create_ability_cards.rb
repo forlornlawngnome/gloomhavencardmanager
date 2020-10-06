@@ -12,6 +12,7 @@ class CreateAbilityCards < ActiveRecord::Migration[6.0]
       t.string :status
       t.boolean :available
       t.boolean :chosen
+      t.references :party, null: false, foreign_key: true
 
       t.timestamps
     end

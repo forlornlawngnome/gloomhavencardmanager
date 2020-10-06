@@ -4,7 +4,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.string :name
       t.integer :number
       t.string :image
-      t.references :character, null: false, foreign_key: true
+      t.references :character, null: true, foreign_key: true
       t.boolean :is_active
       t.integer :counter
       t.integer :counter_max
@@ -12,6 +12,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.boolean :used
       t.string :item_type
       t.string :negative_effects
+      t.references :party, null: false, foreign_key: true
 
       t.timestamps
     end

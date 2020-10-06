@@ -1,6 +1,6 @@
 <%= form_with(model: party, local: true) do |form| %>
   <% if party.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="callout alert">
       <h2><%= pluralize(party.errors.count, "error") %> prohibited this party from being saved:</h2>
 
       <ul>
@@ -18,12 +18,18 @@
 
   <div class="field">
     <%= form.label :reputation %>
-    <%= form.number_field :reputation %>
+    <%= form.number_field :reputation, value: 0%>
   </div>
 
   <div class="field">
     <%= form.label :prosperity %>
-    <%= form.text_field :prosperity %>
+    <%= form.text_field :prosperity, value: 0 %>
+  </div>
+
+  <div class="field">
+    <%= form.fields_for :players_parties do |f| %>
+      <%= f.hidden_field :player_id, value: current_player.id%>
+    <%end%>
   </div>
 
   <div class="actions">

@@ -1,4 +1,5 @@
 class CharacterScenario < ApplicationRecord
+	acts_as_tenant(:party)
   belongs_to :character
   belongs_to :scenario
 

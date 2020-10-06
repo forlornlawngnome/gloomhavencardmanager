@@ -1,8 +1,11 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
-
-<% if logged_in? %>
-    <h1>You are Logged In, <%= current_player.name %></h1>
-<%end%>
-<%= google_sign_in_button 'Sign in with my Google account', proceed_to: create_login_url %>
-
+<div class="grid-x">
+	<% if logged_in? %>
+	    <h1>You are Logged In, <%= current_player.name %></h1>
+	<%else%>
+		<br />
+		<div class="cell small-1 medium-8 float-center">
+			<h2> Welcome to Gloomhaven Card Manager</h2>
+			<%= google_sign_in_button 'Please sign in with Google!', proceed_to: create_login_url, class: "button float-center" %>
+		<div>
+	<%end%>
+</div>

@@ -1,4 +1,5 @@
 class Perk < ApplicationRecord
+	acts_as_tenant(:party)
   belongs_to :character_class
   
   has_many :attack_cards_perks

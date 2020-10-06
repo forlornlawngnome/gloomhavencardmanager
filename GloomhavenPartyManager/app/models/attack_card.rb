@@ -1,4 +1,5 @@
 class AttackCard < ApplicationRecord
+	acts_as_tenant(:party)
 	belongs_to :character_class, optional: true
 	has_many :attack_cards_perks
 	has_many :parks, through: :attack_cards_perks

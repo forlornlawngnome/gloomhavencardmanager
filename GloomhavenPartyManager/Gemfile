@@ -58,3 +58,4 @@ gem 'autoprefixer-rails'
 
 gem 'google_sign_in'
 
+gem 'acts_as_tenant'

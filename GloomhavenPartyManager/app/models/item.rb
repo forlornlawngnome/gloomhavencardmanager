@@ -1,5 +1,6 @@
 class Item < ApplicationRecord
-  belongs_to :character
+  acts_as_tenant(:party)
+  belongs_to :character, optional: true
 
   IMAGE_LOCATION = "gloomhaven-Images/images/items/"
 

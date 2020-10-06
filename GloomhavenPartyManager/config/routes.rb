@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :players_parties
   get 'welcome/index'
   resources :active_attack_cards
   resources :character_rounds
@@ -21,6 +22,8 @@ Rails.application.routes.draw do
   get 'login', to: 'logins#new'
   get 'login/create', to: 'logins#create', as: :create_login
   get 'logout', to: 'logins#destroy', as: :logout
+
+  get 'party_select', to: 'parties#party_select', as: :party_select
 
   root 'welcome#index'
 end

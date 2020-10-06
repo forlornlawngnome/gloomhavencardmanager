@@ -1,0 +1,32 @@
+<h2>Choose a Party:</h2>
+<div class="grid-x grid-margin-x">
+	<%current_player.parties.each do |party|%>
+		<div class="cell small-12 medium-6 large-4  flex-container auto">
+			<div class="card">
+			  <div class="callout primary">
+			    <h4><%=party.name.titleize%></h4>
+			  </div>
+			  <div class="card-section">
+			    <p><b>Scenarios Complete:</b> <%=party.scenarios.count%></p>
+			    <p><b>Characters:</b> 
+			    	<%party.characters.active.each do |character|%>
+			    		<li><%=character.name%> </li>
+			    	<%end%>
+			    </p>
+			  </div>
+			  #TODO
+		    <div class="card-section grid-x align-bottom">
+		    	<%=link_to "Select Party", root_url, class: "button large expanded"%>
+		    </div>
+			</div>
+		</div>
+	<%end%>
+	<div class="cell small-12  medium-6 large-4 flex-container auto">
+		<div class="card">
+			  <div class="card-section">
+			    <p> <%=link_to "Create a New Party!", new_party_path%></p>
+			  </div>
+			</div>
+	</div>
+</div>
+

@@ -5,6 +5,7 @@ class CreatePerks < ActiveRecord::Migration[6.0]
       t.integer :count
       t.references :character_class, null: false, foreign_key: true
       t.integer :effects
+      t.references :party, null: false, foreign_key: true
 
       t.timestamps
     end

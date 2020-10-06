@@ -15,6 +15,7 @@ class CreateCharacterScenarios < ActiveRecord::Migration[6.0]
       t.boolean :is_disarm
       t.boolean :is_muddle
       t.json :attack_deck_draw_order
+      t.references :party, null: false, foreign_key: true
 
       t.timestamps
     end

@@ -1,7 +1,35 @@
 class ApplicationController < ActionController::Base
+	set_current_tenant_through_filter
+	before_action :choose_party
+
 	before_action :authorized
+	helper_method :active_party
+	helper_method :party_chosen?
 	helper_method :current_player
 	helper_method :logged_in?
+
+
+	def choose_party
+		if logged_in?
+			if current_player.parties.count > 1
+				current_party = Party.find_by(id: session[:party_id]) 
+		    	set_current_tenant(current_party)
+			else
+				current_party = current_player.parties.first 
+		    	set_current_tenant(current_party)
+			end
+		end
+	    
+	end
+
+	def active_party
+		##TODO undo hardcoding
+		session[:party_id] = nil
+		Party.find_by(id: session[:party_id]) 
+	end
+	def party_chosen?
+		!active_party.nil?
+	end
 
 	def current_player
 	    Player.find_by(id: session[:player_id])  

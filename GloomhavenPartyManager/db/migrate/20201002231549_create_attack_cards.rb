@@ -6,6 +6,7 @@ class CreateAttackCards < ActiveRecord::Migration[6.0]
       t.string :value
       t.boolean :reshuffle
       t.references :character_class, foreign_key: true
+      t.references :party, null: false, foreign_key: true
 
       t.timestamps
     end
