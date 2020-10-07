@@ -1,6 +1,5 @@
 class PlayersParty < ApplicationRecord
-	acts_as_tenant(:party)
-
+	validates_uniqueness_of :player_id, scope: :party_id
   belongs_to :player
   belongs_to :party
 end

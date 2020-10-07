@@ -13,18 +13,16 @@ class ApplicationController < ActionController::Base
 		if logged_in?
 			if current_player.parties.count > 1
 				current_party = Party.find_by(id: session[:party_id]) 
-		    	set_current_tenant(current_party)
+		    set_current_tenant(current_party)
 			else
 				current_party = current_player.parties.first 
-		    	set_current_tenant(current_party)
+		    set_current_tenant(current_party)
 			end
 		end
 	    
 	end
 
 	def active_party
-		##TODO undo hardcoding
-		session[:party_id] = nil
 		Party.find_by(id: session[:party_id]) 
 	end
 	def party_chosen?

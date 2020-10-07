@@ -15,6 +15,7 @@ class LoginsController < ApplicationController
 
   def destroy
     session[:player_id] = nil
+    session[:party_id] = nil
     redirect_to root_url, notice: "Logged out!"
   end
 

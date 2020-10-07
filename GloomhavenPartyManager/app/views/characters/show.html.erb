@@ -43,7 +43,7 @@
 <p>
   <strong>Personal quest:</strong>
   <%= @character.personal_quest %>
-  <%= image_tag @character.getQuestImage %>
+  <%= image_tag @character.getQuestImage rescue ""%>
 </p>
 
 <p>

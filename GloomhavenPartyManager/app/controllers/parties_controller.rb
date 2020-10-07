@@ -1,5 +1,6 @@
 class PartiesController < ApplicationController
   before_action :set_party, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authorized, only: [:create, :selected, :party_select]
 
   # GET /parties
   # GET /parties.json
@@ -23,6 +24,11 @@ class PartiesController < ApplicationController
   end
 
   def party_select
+  end
+  def selected
+    party = Party.find_by id:  params[:party_id]
+    session[:party_id] = party.id
+    redirect_to root_url
   end
 
   # POST /parties

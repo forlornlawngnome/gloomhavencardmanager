@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get 'logout', to: 'logins#destroy', as: :logout
 
   get 'party_select', to: 'parties#party_select', as: :party_select
+  post 'party_selected', to: 'parties#selected', as: :select_party
 
   root 'welcome#index'
 end
