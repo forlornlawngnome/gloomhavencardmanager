@@ -8,6 +8,7 @@
       <th>Name</th>
       <th>Number</th>
       <th>Party</th>
+      <th>Active</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
         <td><%= scenario.name %></td>
         <td><%= scenario.number %></td>
         <td><%= scenario.party_id %></td>
+        <td><%= scenario.active%></td>
         <td><%= link_to 'Show', scenario %></td>
         <td><%= link_to 'Edit', edit_scenario_path(scenario) %></td>
         <td><%= link_to 'Destroy', scenario, method: :delete, data: { confirm: 'Are you sure?' } %></td>

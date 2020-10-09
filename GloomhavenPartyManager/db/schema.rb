@@ -233,6 +233,7 @@ ActiveRecord::Schema.define(version: 2020_10_05_192650) do
   create_table "scenarios", force: :cascade do |t|
     t.string "name"
     t.integer "number"
+    t.boolean "active"
     t.bigint "party_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

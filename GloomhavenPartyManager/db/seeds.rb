@@ -29,7 +29,7 @@ etude = Character.create(name: "Etude", character_class: brute, level: 8, is_act
 boots = Item.create(name: "Boots of Striding", number: 1, image: "boots-of-striding", character: etude,
 	is_active: true, counter: 0, counter_max: 0, usage_state: "Spent", used: false, item_type: "boots", negative_effects: "None" , party: party)
 
-test_scenario = Scenario.create(name: "Test Scenario", number: 1, party: party)
+test_scenario = Scenario.create(name: "Test Scenario", number: 1, party: party, active: true)
 PlayersParty.create(player: test_player, party: party)
 
 etude_scenarios = CharacterScenario.create(character: etude, scenario: test_scenario, health: 0, experience: 0,

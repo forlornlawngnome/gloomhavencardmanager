@@ -69,6 +69,6 @@ class ScenariosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def scenario_params
-      params.require(:scenario).permit(:name, :number, :party_id)
+      params.require(:scenario).permit(:name, :number, :party_id, :active)
     end
 end

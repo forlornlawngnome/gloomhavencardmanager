@@ -19,7 +19,7 @@
           <%if party_chosen?%>
             <li><b><%=link_to active_party.name.titleize, root_path%></b></li>
           <%else%>
-            <li><b><%=link_to Gloomhaven Card Manager, root_path%></b></li>
+            <li><b><%=link_to "Gloomhaven Card Manager", root_path%></b></li>
           <%end%>
           <li><%=link_to "Select a Party", party_select_path%></li>
           <li><a href="#">Start Game</a></li>
