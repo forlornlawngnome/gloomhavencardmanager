@@ -17,12 +17,10 @@
       <div class="top-bar-left">
         <ul class=" menu">
           <%if party_chosen?%>
-            <li class="menu-text"><%=active_party.name.titleize%></li>
+            <li><b><%=link_to active_party.name.titleize, root_path%></b></li>
           <%else%>
-            <li class="menu-text">Gloomhaven Card Manager</li>
+            <li><b><%=link_to Gloomhaven Card Manager, root_path%></b></li>
           <%end%>
-
-          <li><%=link_to "Home", root_path%></li>
           <li><%=link_to "Select a Party", party_select_path%></li>
           <li><a href="#">Start Game</a></li>
         </ul>

@@ -8,8 +8,10 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
+
 import "foundation-sites"
 require("src/application")
+require.context('../images', true)
 
 $(document).on('turbolinks:load', function() {
   $(document).foundation()
