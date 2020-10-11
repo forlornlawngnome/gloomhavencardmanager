@@ -1,8 +1,24 @@
 class CharactersController < ApplicationController
-  before_action :set_character, only: [:show, :edit, :update, :destroy]
+  before_action :set_character, only: [:show, :edit, :update, :destroy, :setup, :levelup, :play, :manage]
 
   # GET /characters
   # GET /characters.json
+  def setup
+  end
+  def levelup
+  end
+  def play
+  end
+  def manage
+  end
+  def choose
+  end
+  def selected
+    character = Character.find_by id: params[:character_id]
+    session[:character_id] = character.id
+    redirect_to root_url
+  end
+
   def index
     @characters = Character.all
   end

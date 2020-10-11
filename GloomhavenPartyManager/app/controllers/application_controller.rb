@@ -4,8 +4,11 @@ class ApplicationController < ActionController::Base
 
 	before_action :authorized
 	helper_method :active_party
+	helper_method :active_scenario
+	helper_method :active_character
 	helper_method :party_chosen?
 	helper_method :current_player
+	helper_method :character_chosen?
 	helper_method :logged_in?
 
 
@@ -25,8 +28,21 @@ class ApplicationController < ActionController::Base
 	def active_party
 		Party.find_by(id: session[:party_id]) 
 	end
+	def active_character
+		Character.find_by(id: session[:character_id]) 
+	end
+	def active_scenario
+		if active_party and active_party.active_scenario
+			return active_party.active_scenario
+		else
+			return nil
+		end
+	end
 	def party_chosen?
 		!active_party.nil?
+	end
+	def character_chosen?
+		!active_character.nil?
 	end
 
 	def current_player

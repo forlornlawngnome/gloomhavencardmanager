@@ -1,6 +1,12 @@
 class ScenariosController < ApplicationController
-  before_action :set_scenario, only: [:show, :edit, :update, :destroy]
+  before_action :set_scenario, only: [:show, :edit, :update, :destroy, :play, :reset_characters]
 
+  def play
+  end
+  def reset_characters
+    @scenario.initialize_characters
+    redirect_to play_scenario_path @scenario
+  end
   # GET /scenarios
   # GET /scenarios.json
   def index
@@ -28,7 +34,7 @@ class ScenariosController < ApplicationController
 
     respond_to do |format|
       if @scenario.save
-        format.html { redirect_to @scenario, notice: 'Scenario was successfully created.' }
+        format.html { redirect_to play_scenario_path @scenario, notice: 'Scenario was successfully created.' }
         format.json { render :show, status: :created, location: @scenario }
       else
         format.html { render :new }
@@ -69,6 +75,6 @@ class ScenariosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def scenario_params
-      params.require(:scenario).permit(:name, :number, :party_id, :active)
+      params.require(:scenario).permit(:name, :number, :party_id, :active, character_ids: [])
     end
 end

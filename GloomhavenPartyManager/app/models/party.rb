@@ -6,4 +6,8 @@ class Party < ApplicationRecord
 
 	accepts_nested_attributes_for :players_parties, allow_destroy: true
 
+	def active_scenario
+		scenarios.active.first
+	end
+
 end

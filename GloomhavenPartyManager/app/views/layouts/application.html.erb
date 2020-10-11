@@ -22,7 +22,12 @@
             <li><b><%=link_to "Gloomhaven Card Manager", root_path%></b></li>
           <%end%>
           <li><%=link_to "Select a Party", party_select_path%></li>
-          <li><a href="#">Start Game</a></li>
+          <%if active_scenario.nil?%>
+            <li><%=link_to "Start Game", new_scenario_path%></li>
+          <%else%>
+            <li><%=link_to "Play Scenario", play_scenario_path(active_scenario)%></li>
+          <%end%>
+          <li><%=link_to "Manage Characters", choose_characters_path%></li>
         </ul>
       </div>
       <div class="top-bar-right">

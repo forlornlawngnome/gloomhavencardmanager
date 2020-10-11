@@ -1,0 +1,43 @@
+<%if @scenario.started%>
+	<h3><%=@scenario.display%><small> Round <%=@scenario.current_round%></small></h3>
+	<div class="grid-x grid-margin-x align-spaced">
+		<%=link_to "Next Round", reset_characters_scenario_path(@scenario),method: :put, class: "cell small-12 medium-3 button success"%>
+		<%=link_to "Finish Scenario", reset_characters_scenario_path(@scenario),method: :put, class: "cell small-12 medium-3 button warning"%>
+	</div>
+
+	<%@scenario.character_scenarios.each do |character_s|%>
+		<%character = character_s.character%>
+		<%=character.name%> - <%= character.character_class.name%><br />
+		Health: <%=character_s.health%><br />
+		Gold: <%=character_s.gold%><br />
+	<%end%>
+<%else%>
+	<h3><%=@scenario.display%></h3>
+	<div class="grid-x grid-margin-x align-spaced">
+		<%=link_to "Reset Characters", reset_characters_scenario_path(@scenario),method: :put, class: "cell small-12 medium-4 button", title: "Add one of each party's active characters to the scenario"%>
+		<%=form_with url: scenario_new_rounds_path, class: "cell small-12 medium-4" do |form|%>
+			<%=form.submit "Start Scenario", class: "button expanded success"%>
+		<%end%>
+	</div>
+	<div class="cell grid-x grid-margin-x">
+		<%@scenario.character_scenarios.each do |character_s|%>
+			<%character = character_s.character%>
+			<div class="card cell small-12 medium-6 flex-container">
+				<div class="card-section callout text-center" style="margin: 0;">
+					<div class="cell grid-x grid-margin-x align-justify">
+						<div class="cell auto text-left">
+					    <b><%=character.name%></b><br />
+							Health: <%=character_s.health%><br />
+						</div>
+						<div class="cell auto text-right">
+							<%=link_to "<i class=\"fas fa-trash-alt\ fa-3x\"></i>".html_safe, character_s, title: "Remove character from the scenario", method: :delete, data: { confirm: 'Are you sure?' } %>
+						</div>
+					</div>
+			  </div>
+			  <%=link_to setup_character_path character, title: "Go to character's setup page" do%>
+			    <%= image_tag character.character_class.getCharacterMatFrontLocation%>
+			  <%end%>
+			</div>
+		<%end%>
+	</div>
+<%end%>

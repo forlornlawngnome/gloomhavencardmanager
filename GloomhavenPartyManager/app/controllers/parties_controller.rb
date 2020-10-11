@@ -28,7 +28,7 @@ class PartiesController < ApplicationController
   def selected
     party = Party.find_by id:  params[:party_id]
     session[:party_id] = party.id
-    redirect_to root_url
+    redirect_to choose_characters_path
   end
 
   # POST /parties

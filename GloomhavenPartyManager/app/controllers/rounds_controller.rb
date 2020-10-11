@@ -1,6 +1,8 @@
 class RoundsController < ApplicationController
   before_action :set_round, only: [:show, :edit, :update, :destroy]
 
+  def scenario_new
+  end
   # GET /rounds
   # GET /rounds.json
   def index

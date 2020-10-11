@@ -1,17 +1,22 @@
 <div class="grid-x grid-padding-y">
 	<% if logged_in? %>
+		<div class="cell small-12">
+			<%if active_party.active_scenario%>
+				<%=link_to "Enter #{active_scenario.name}",  play_scenario_path(active_scenario), class: "button expanded"%>
+			<%else%>
+				<%=link_to "Start a new Scenario", new_scenario_path, class: "button expanded"%>
+			<%end%>
+		</div>
 		<div class="cell">
-			<h3>Active Scenarios</h3>
-			<ul>
-				<%active_party.scenarios.active.each do |scenario|%>
-					<li><%=scenario.name%></li>
-				<%end%>
-				<li><%=link_to "Start a new Scenario", new_scenario_path%></li>
-			</ul>
-			<hr />
 			<h5>Choose your Character or <%=link_to "switch parties", party_select_path%></h5>
 			<div class="grid-x grid-margin-x">
 				<%current_player.characters.each do |character|%>
+					<%link_path = ""%>
+					<%if active_scenario.nil?%>
+						<%link_path = character_manage_path%>
+					<%else%>
+						<%link_path = ""%>
+					<%end%>
 					<%=link_to character, class:"cell small-12 medium-6 flex-container auto"  do%>
 						<div class="card">
 						  <div class="">
