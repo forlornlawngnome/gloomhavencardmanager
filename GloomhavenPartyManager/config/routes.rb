@@ -17,12 +17,13 @@ Rails.application.routes.draw do
   resources :items
   resources :characters do
     member do
-      get 'setup'
+     
       get 'levelup'
       get 'play' 
       get 'manage'
     end
     collection do 
+      get 'setup'
       get 'choose'
     end
   end

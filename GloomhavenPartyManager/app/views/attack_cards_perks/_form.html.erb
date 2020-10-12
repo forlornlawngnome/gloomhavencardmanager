@@ -21,6 +21,10 @@
     <%= form.collection_select :perk_id, Perk.all, :id, :description%>
   </div>
 
+  <div class="field">
+    <%= form.label :effects %>
+    <%= form.number_field :effects%>
+  </div>
 
   <div class="actions">
     <%= form.submit %>

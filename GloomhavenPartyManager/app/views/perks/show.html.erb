@@ -6,7 +6,7 @@
 </p>
 
 <p>
-  <strong>Count:</strong>
+  <strong>Total Available Count:</strong>
   <%= @perk.count %>
 </p>
 
@@ -16,9 +16,10 @@
 </p>
 
 <p>
-  <strong>Effects:</strong>
-  <%= @perk.effects %>
+  <strong># Applied:</strong>
+  <%= @party.applied %>
 </p>
+
 
 <%= link_to 'Edit', edit_perk_path(@perk) %> |
 <%= link_to 'Back', perks_path %>

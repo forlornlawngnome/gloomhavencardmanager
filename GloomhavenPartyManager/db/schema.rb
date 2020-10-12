@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 2020_10_05_192650) do
   create_table "attack_cards_perks", force: :cascade do |t|
     t.bigint "attack_card_id", null: false
     t.bigint "perk_id", null: false
+    t.integer "effect"
     t.bigint "party_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -84,6 +85,7 @@ ActiveRecord::Schema.define(version: 2020_10_05_192650) do
 
   create_table "character_classes", force: :cascade do |t|
     t.string "name"
+    t.string "nickname"
     t.integer "hand_size"
     t.string "symbol"
     t.string "image"
@@ -158,10 +160,9 @@ ActiveRecord::Schema.define(version: 2020_10_05_192650) do
 
   create_table "enhancements", force: :cascade do |t|
     t.string "description"
-    t.bigint "party_id", null: false
+    t.integer "cost"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["party_id"], name: "index_enhancements_on_party_id"
   end
 
   create_table "items", force: :cascade do |t|
@@ -196,6 +197,7 @@ ActiveRecord::Schema.define(version: 2020_10_05_192650) do
     t.integer "count"
     t.bigint "character_class_id", null: false
     t.integer "effects"
+    t.integer "applied"
     t.bigint "party_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -264,7 +266,6 @@ ActiveRecord::Schema.define(version: 2020_10_05_192650) do
   add_foreign_key "characters", "character_classes"
   add_foreign_key "characters", "parties"
   add_foreign_key "characters", "players"
-  add_foreign_key "enhancements", "parties"
   add_foreign_key "items", "characters"
   add_foreign_key "items", "parties"
   add_foreign_key "perks", "character_classes"

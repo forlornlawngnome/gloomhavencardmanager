@@ -69,6 +69,6 @@ class AttackCardsPerksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def attack_cards_perk_params
-      params.require(:attack_cards_perk).permit(:attack_card_id, :perk_id)
+      params.require(:attack_cards_perk).permit(:attack_card_id, :perk_id, :effect)
     end
 end

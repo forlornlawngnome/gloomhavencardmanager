@@ -8,6 +8,8 @@
 			  </div>
 			  <div class="card-section">
 			    <p><b>Scenarios Complete:</b> <%=party.scenarios.count%></p>
+			    <p><b>Prosperity:</b> <%=party.prosperity%></p>
+			    <p><b>Reputaiton:</b> <%=party.reputation%></p>
 			    <p><b>Characters:</b> 
 			    	<%party.characters.active.each do |character|%>
 			    		<dd><%=character.name%> </dd>

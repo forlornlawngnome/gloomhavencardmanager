@@ -69,6 +69,6 @@ class PerksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def perk_params
-      params.require(:perk).permit(:description, :count, :character_class_id, :effects)
+      params.require(:perk).permit(:description, :count, :character_class_id, :applied)
     end
 end

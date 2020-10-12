@@ -1,7 +1,7 @@
 <h5>Choose your Character or Create a New One</h5>
-<div class="grid-x grid-margin-x">
+<div class="grid-x grid-margin-x align-spaced">
 	<%current_player.characters.each do |character|%>
-		<div class="cell small-12 medium-6 flex-container auto">
+		<div class="cell small-12 medium-5 flex-container auto">
 			<div class="card">
 			  <div class="">
 			    <%= image_tag character.character_class.getCharacterMatFrontLocation%>
@@ -20,8 +20,7 @@
 	<%end%>
 	<div class="cell small-12  medium-6 large-4 flex-container auto">
 		<div class="card">
-			##TODO new character select options
-			<%= link_to new_character_path, class: "cell auto" do %>
+			<%= link_to setup_characters_path, class: "cell auto" do %>
 				<br /> <br />
 			  <div class="grid-x align-middle">
 			  	<span class="cell text-center">

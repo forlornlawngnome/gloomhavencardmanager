@@ -1,24 +1,31 @@
 class CharactersController < ApplicationController
-  before_action :set_character, only: [:show, :edit, :update, :destroy, :setup, :levelup, :play, :manage]
+  before_action :set_character, only: [:show, :edit, :update, :destroy, :levelup, :play, :manage]
 
-  # GET /characters
-  # GET /characters.json
+  
   def setup
+    #iniital setup of the character
   end
   def levelup
+    #level up the character (choose card, choose perk)
   end
   def play
+    #play the scenario
   end
   def manage
+    ##Setup deck for the scenario, buy/sell items, temple donate
   end
   def choose
+    #This is the page that they get to choose the active character on
   end
   def selected
+    #set the character selected in the session
     character = Character.find_by id: params[:character_id]
     session[:character_id] = character.id
     redirect_to root_url
   end
 
+  # GET /characters
+  # GET /characters.json
   def index
     @characters = Character.all
   end

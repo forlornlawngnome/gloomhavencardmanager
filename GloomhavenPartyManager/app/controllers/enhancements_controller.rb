@@ -69,6 +69,6 @@ class EnhancementsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def enhancement_params
-      params.require(:enhancement).permit(:description)
+      params.require(:enhancement).permit(:description, :cost)
     end
 end
