@@ -23,6 +23,7 @@ Rails.application.routes.draw do
       get 'manage'
     end
     collection do 
+      get 'select_class'
       get 'setup'
       get 'choose'
     end

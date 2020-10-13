@@ -2,14 +2,18 @@ class CharactersController < ApplicationController
   before_action :set_character, only: [:show, :edit, :update, :destroy, :levelup, :play, :manage]
 
   
-  def setup
-    #iniital setup of the character
+  def select_class
+    #page lets you select from the different characters
     ids = active_party.active_character_classes.pluck(:id)
     if ids.nil? or ids.empty?
       @available = CharacterClass.all
     else
       @available = CharacterClass.where("id not in (?)", ids)
     end
+  end
+  def setup
+    #Page to name character and select desired level
+    @character = Character.new(character_class_id: params[:character_class_id], level: active_party.prosperity)
   end
   def levelup
     #level up the character (choose card, choose perk)
