@@ -4,6 +4,12 @@ class CharactersController < ApplicationController
   
   def setup
     #iniital setup of the character
+    ids = active_party.active_character_classes.pluck(:id)
+    if ids.nil? or ids.empty?
+      @available = CharacterClass.all
+    else
+      @available = CharacterClass.where("id not in (?)", ids)
+    end
   end
   def levelup
     #level up the character (choose card, choose perk)

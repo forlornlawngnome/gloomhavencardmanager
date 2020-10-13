@@ -1,1 +1,27 @@
-setup initial character
+<h3>Choose a Class <small>Choose a card for more details</small></h3>
+<div class="grid-x grid-margin-x align-spaced">
+	<%@available.each do |char_class|%>
+		<%if !char_class.is_locked %>
+			<div class="cell small-12 medium-4 flex-container auto button" data-open="<%=char_class.file_formated_name%>" style="padding: 0">
+				<div class="card" style="margin:0">
+				  <%= image_tag char_class.getCharacterMatBackLocation%>
+				</div>
+			</div>
+			<div class="large reveal" id="<%=char_class.file_formated_name%>" data-reveal>
+				<div class="grid-x align-bottom align-spaced">
+					<div class="cell small-12 medium-4">
+			  		<h1><%=char_class.name.titleize%></h1>
+			  	</div>
+			  	<div class="cell small-12 medium-4">
+			  		<%=link_to "Choose Class", root_path, class: "button expanded"%>
+			  	</div>
+			  </div>
+			  <%= image_tag char_class.getCharacterMatFrontLocation, style: "width:100%"%>
+			  <%= image_tag char_class.getCharacterMatBackLocation, style: "width:100%"%>
+			  <button class="close-button" data-close aria-label="Close modal" type="button">
+			    <span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+		<%end%>
+	<%end%>
+</div>

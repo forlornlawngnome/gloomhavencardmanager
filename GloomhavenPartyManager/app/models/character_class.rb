@@ -10,12 +10,15 @@ class CharacterClass < ApplicationRecord
 	has_many :attack_cards
 
 	def getCharacterMatFrontLocation
-		return CHARACTER_MAT + self.name.downcase
+		return CHARACTER_MAT + "" + self.file_formated_name
 	end
 	def getCharacterMatBackLocation
-		return CHARACTER_MAT + self.name.downcase + "-back"
+		return CHARACTER_MAT + "" + self.file_formated_name + "-back"
 	end
 	def getCharacterCardBack
 		return "#{CHARACTER_CARD_BACK}#{self.character_abbreviation.upcase}/#{self.character_abbreviation.downcase}-back"
+	end
+	def file_formated_name
+		self.name.downcase.gsub(" ","-")
 	end
 end
