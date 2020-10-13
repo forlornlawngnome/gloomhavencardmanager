@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
 	helper_method :current_player
 	helper_method :character_chosen?
 	helper_method :logged_in?
+	helper_method :data
 
 
 	def choose_party

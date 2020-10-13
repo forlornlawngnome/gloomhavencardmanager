@@ -12,6 +12,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.boolean :used
       t.string :item_type
       t.string :negative_effects
+      t.integer :price
       t.references :party, null: false, foreign_key: true
 
       t.timestamps

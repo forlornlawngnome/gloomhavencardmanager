@@ -12,7 +12,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 1,
     "imageUrl": "/assets/cards/items/1-14/boots-of-striding.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 2,
@@ -27,7 +27,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 1,
     "imageUrl": "/assets/cards/items/1-14/winged-shoes.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 3,
@@ -42,7 +42,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 1,
     "imageUrl": "/assets/cards/items/1-14/hide-armor.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 4,
@@ -57,7 +57,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 1,
     "imageUrl": "/assets/cards/items/1-14/leather-armor.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 5,
@@ -72,7 +72,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 1,
     "imageUrl": "/assets/cards/items/1-14/cloak-of-invisibility.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 6,
@@ -87,7 +87,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 1,
     "imageUrl": "/assets/cards/items/1-14/eagle-eye-goggles.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 7,
@@ -102,7 +102,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 1,
     "imageUrl": "/assets/cards/items/1-14/iron-helmet.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 8,
@@ -117,7 +117,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 1,
     "imageUrl": "/assets/cards/items/1-14/heater-shield.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 9,
@@ -132,7 +132,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 1,
     "imageUrl": "/assets/cards/items/1-14/piercing-bow.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 10,
@@ -147,7 +147,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 1,
     "imageUrl": "/assets/cards/items/1-14/war-hammer.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 11,
@@ -162,7 +162,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 1,
     "imageUrl": "/assets/cards/items/1-14/poison-dagger.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 12,
@@ -177,7 +177,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 1,
     "imageUrl": "/assets/cards/items/1-14/minor-healing-potion.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 13,
@@ -192,7 +192,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 1,
     "imageUrl": "/assets/cards/items/1-14/minor-stamina-potion.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 14,
@@ -207,7 +207,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 1,
     "imageUrl": "/assets/cards/items/1-14/minor-power-potion.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 15,
@@ -223,7 +223,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 2,
     "imageUrl": "/assets/cards/items/15-21/boots-of-speed.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 16,
@@ -238,7 +238,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 2,
     "imageUrl": "/assets/cards/items/15-21/cloak-of-pockets.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 17,
@@ -253,7 +253,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 2,
     "imageUrl": "/assets/cards/items/15-21/empowering-talisman.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 18,
@@ -269,7 +269,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 2,
     "imageUrl": "/assets/cards/items/15-21/battle-axe.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 19,
@@ -284,7 +284,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 2,
     "imageUrl": "/assets/cards/items/15-21/weighted-net.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 20,
@@ -299,7 +299,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 2,
     "imageUrl": "/assets/cards/items/15-21/minor-mana-potion.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 21,
@@ -314,7 +314,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 2,
     "imageUrl": "/assets/cards/items/15-21/stun-powder.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 22,
@@ -329,7 +329,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 3,
     "imageUrl": "/assets/cards/items/22-28/heavy-greaves.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 23,
@@ -344,7 +344,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 3,
     "imageUrl": "/assets/cards/items/22-28/chainmail.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 24,
@@ -359,7 +359,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 3,
     "imageUrl": "/assets/cards/items/22-28/amulet-of-life.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 25,
@@ -374,7 +374,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 3,
     "imageUrl": "/assets/cards/items/22-28/jagged-sword.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 26,
@@ -389,7 +389,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 3,
     "imageUrl": "/assets/cards/items/22-28/long-spear.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 27,
@@ -404,7 +404,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 3,
     "imageUrl": "/assets/cards/items/22-28/major-healing-potion.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 28,
@@ -419,7 +419,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 3,
     "imageUrl": "/assets/cards/items/22-28/moon-earring.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 29,
@@ -434,7 +434,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 4,
     "imageUrl": "/assets/cards/items/29-35/comfortable-shoes.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 30,
@@ -449,7 +449,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 4,
     "imageUrl": "/assets/cards/items/29-35/studded-leather.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 31,
@@ -464,7 +464,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 4,
     "imageUrl": "/assets/cards/items/29-35/hawk-helm.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 32,
@@ -479,7 +479,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 4,
     "imageUrl": "/assets/cards/items/29-35/tower-shield.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 33,
@@ -495,7 +495,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 4,
     "imageUrl": "/assets/cards/items/29-35/volatile-bomb.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 34,
@@ -510,7 +510,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 4,
     "imageUrl": "/assets/cards/items/29-35/major-stamina-potion.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 35,
@@ -525,7 +525,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 4,
     "imageUrl": "/assets/cards/items/29-35/falcon-figurine.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 36,
@@ -540,7 +540,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 5,
     "imageUrl": "/assets/cards/items/36-42/boots-of-dashing.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 37,
@@ -555,7 +555,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 5,
     "imageUrl": "/assets/cards/items/36-42/robes-of-evocation.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 38,
@@ -570,7 +570,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 5,
     "imageUrl": "/assets/cards/items/36-42/heavy-basinet.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 39,
@@ -585,7 +585,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 5,
     "imageUrl": "/assets/cards/items/36-42/hooked-chain.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 40,
@@ -601,7 +601,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 5,
     "imageUrl": "/assets/cards/items/36-42/versatile-dagger.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 41,
@@ -616,7 +616,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 5,
     "imageUrl": "/assets/cards/items/36-42/major-power-potion.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 42,
@@ -632,7 +632,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 5,
     "imageUrl": "/assets/cards/items/36-42/ring-of-haste.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 43,
@@ -648,7 +648,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 6,
     "imageUrl": "/assets/cards/items/43-49/boots-of-quickness.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 44,
@@ -663,7 +663,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 6,
     "imageUrl": "/assets/cards/items/43-49/splintmail.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 45,
@@ -678,7 +678,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 6,
     "imageUrl": "/assets/cards/items/43-49/pendant-of-dark-pacts.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 46,
@@ -693,7 +693,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 6,
     "imageUrl": "/assets/cards/items/43-49/spiked-shield.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 47,
@@ -709,7 +709,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 6,
     "imageUrl": "/assets/cards/items/43-49/reaping-scythe.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 48,
@@ -724,7 +724,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 6,
     "imageUrl": "/assets/cards/items/43-49/major-mana-potion.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 49,
@@ -739,7 +739,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 6,
     "imageUrl": "/assets/cards/items/43-49/sun-earring.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 50,
@@ -754,7 +754,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 7,
     "imageUrl": "/assets/cards/items/50-56/steel-sabatons.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 51,
@@ -769,7 +769,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 7,
     "imageUrl": "/assets/cards/items/50-56/shadow-armor.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 52,
@@ -784,7 +784,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 7,
     "imageUrl": "/assets/cards/items/50-56/protective-charm.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 53,
@@ -799,7 +799,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 7,
     "imageUrl": "/assets/cards/items/50-56/black-knife.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 54,
@@ -814,7 +814,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 7,
     "imageUrl": "/assets/cards/items/50-56/staff-of-eminence.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 55,
@@ -829,7 +829,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 7,
     "imageUrl": "/assets/cards/items/50-56/super-healing-potion.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 56,
@@ -844,7 +844,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 7,
     "imageUrl": "/assets/cards/items/50-56/ring-of-brutality.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 57,
@@ -859,7 +859,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 8,
     "imageUrl": "/assets/cards/items/57-63/serene-sandals.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 58,
@@ -874,7 +874,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 8,
     "imageUrl": "/assets/cards/items/57-63/cloak-of-phasing.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 59,
@@ -889,7 +889,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 8,
     "imageUrl": "/assets/cards/items/57-63/telescopic-lens.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 60,
@@ -905,7 +905,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 8,
     "imageUrl": "/assets/cards/items/57-63/unstable-explosives.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 61,
@@ -920,7 +920,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 8,
     "imageUrl": "/assets/cards/items/57-63/wall-shield.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 62,
@@ -935,7 +935,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 8,
     "imageUrl": "/assets/cards/items/57-63/doom-powder.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 63,
@@ -950,7 +950,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 8,
     "imageUrl": "/assets/cards/items/57-63/lucky-eye.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 64,
@@ -965,7 +965,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 9,
     "imageUrl": "/assets/cards/items/64-151/boots-of-sprinting.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 65,
@@ -980,7 +980,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 9,
     "imageUrl": "/assets/cards/items/64-151/platemail.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 66,
@@ -995,7 +995,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 9,
     "imageUrl": "/assets/cards/items/64-151/mask-of-terror.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 67,
@@ -1010,7 +1010,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 9,
     "imageUrl": "/assets/cards/items/64-151/balanced-blade.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 68,
@@ -1025,7 +1025,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 9,
     "imageUrl": "/assets/cards/items/64-151/halberd.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 69,
@@ -1041,7 +1041,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 9,
     "imageUrl": "/assets/cards/items/64-151/star-earring.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 70,
@@ -1057,7 +1057,7 @@
     "sourceType": "ItemSource.Prosperity",
     "sourceId": 9,
     "imageUrl": "/assets/cards/items/64-151/second-chance-ring.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 71,
@@ -1072,7 +1072,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/boots-of-levitation.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 72,
@@ -1087,7 +1087,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/shoes-of-happiness.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 73,
@@ -1102,7 +1102,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/blinking-cape.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 74,
@@ -1117,7 +1117,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/swordedge-armor.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 75,
@@ -1132,7 +1132,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/circlet-of-elements.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 76,
@@ -1147,7 +1147,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/chain-hood.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 77,
@@ -1162,7 +1162,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/frigid-blade.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 78,
@@ -1177,7 +1177,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/storm-blade.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 79,
@@ -1192,7 +1192,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/inferno-blade.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 80,
@@ -1207,7 +1207,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/tremor-blade.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 81,
@@ -1222,7 +1222,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/brilliant-blade.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 82,
@@ -1237,7 +1237,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/night-blade.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 83,
@@ -1252,7 +1252,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/wand-of-frost.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 84,
@@ -1267,7 +1267,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/wand-of-storms.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 85,
@@ -1282,7 +1282,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/wand-of-infernos.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 86,
@@ -1297,7 +1297,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/wand-of-tremors.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 87,
@@ -1312,7 +1312,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/wand-of-brilliance.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 88,
@@ -1327,7 +1327,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/wand-of-darkness.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 89,
@@ -1342,7 +1342,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/minor-cure-potion.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 90,
@@ -1357,7 +1357,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/major-cure-potion.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 91,
@@ -1372,7 +1372,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/steel-ring.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 92,
@@ -1387,7 +1387,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/dampening-ring.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 93,
@@ -1402,7 +1402,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/scroll-of-power.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 94,
@@ -1417,7 +1417,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/scroll-of-healing.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 95,
@@ -1432,7 +1432,7 @@
     "sourceType": "ItemSource.RandomItemDesign",
     "sourceId": null,
     "imageUrl": "/assets/cards/items/64-151/scroll-of-stamina.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 96,
@@ -1447,15 +1447,13 @@
     "sourceType": "ItemSource.Treasure",
     "sourceId": 66,
     "imageUrl": "/assets/cards/items/64-151/rocket-boots.png",
-    "verified": false,
-    // source: "Scenario #66 (Treasure #36)",
-  },
+    "verified": false  },
   {
     "number": 97,
     "name": "Endurance Footwraps",
     "slot": "Slot.Legs",
     "price": 40,
-    "text": "If you move 4 or more hexes on your turn, perform a ""Heal 1, Self"" action.",
+    "text": "If you move 4 or more hexes on your turn, perform a 'Heal 1, Self' action.",
     "count": 1,
     "limit": "Limit.Unlimited",
     "uses": null,
@@ -1463,8 +1461,7 @@
     "sourceType": "ItemSource.Treasure",
     "sourceId": 38,
     "imageUrl": "/assets/cards/items/64-151/endurance-footwraps.png",
-    "verified": false,
-    // source: "Scenario #38 (Treasure #29)",
+    "verified": false
   },
   {
     "number": 98,
@@ -1479,8 +1476,7 @@
     "sourceType": "ItemSource.Treasure",
     "sourceId": 43,
     "imageUrl": "/assets/cards/items/64-151/drakescale-boots.png",
-    "verified": false,
-    // source: "Scenario #43 (Treasure #35)",
+    "verified": false
   },
   {
     "number": 99,
@@ -1488,7 +1484,7 @@
     "slot": "Slot.Legs",
     "price": 50,
     "text":
-      "Ignore the damaging effects of hazardous terrain and perform a ""Heal 2, Self"" action on any turn in which you have entered a hazardous terrain hex.",
+      "Ignore the damaging effects of hazardous terrain and perform a 'Heal 2, Self' action on any turn in which you have entered a hazardous terrain hex.",
     "count": 1,
     "limit": "Limit.Unlimited",
     "uses": null,
@@ -1496,8 +1492,7 @@
     "sourceType": "ItemSource.Treasure",
     "sourceId": 63,
     "imageUrl": "/assets/cards/items/64-151/magma-waders.png",
-    "verified": false,
-    // source: "Scenario #63 (Treasure #12)",
+    "verified": false
   },
   {
     "number": 100,
@@ -1512,8 +1507,7 @@
     "sourceType": "ItemSource.Treasure",
     "sourceId": 31,
     "imageUrl": "/assets/cards/items/64-151/robes-of-summoning.png",
-    "verified": false,
-    // source: "Scenario #31 (Treasure #69)",
+    "verified": false
   },
   {
     "number": 101,
@@ -1528,8 +1522,7 @@
     "sourceType": "ItemSource.Treasure",
     "sourceId": 6,
     "imageUrl": "/assets/cards/items/64-151/second-skin.png",
-    "verified": false,
-    // source: "Scenario #06 (Treasure #50)",
+    "verified": false
   },
   {
     "number": 102,
@@ -1541,11 +1534,10 @@
     "limit": "Limit.Consumed",
     "uses": null,
     "negativeCardsCount": null,
-    // source: "City Event 40",
     "sourceType": "ItemSource.CityEvent",
     "sourceId": 40,
     "imageUrl": "/assets/cards/items/64-151/sacrificial-robes.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 103,
@@ -1560,8 +1552,7 @@
     "sourceType": "ItemSource.Treasure",
     "sourceId": 34,
     "imageUrl": "/assets/cards/items/64-151/drakescale-armor.png",
-    "verified": false,
-    // source: "Scenario #34 (Treasure #23)",
+    "verified": false
   },
   {
     "number": 104,
@@ -1576,8 +1567,7 @@
     "sourceType": "ItemSource.Treasure",
     "sourceId": 40,
     "imageUrl": "/assets/cards/items/64-151/steam-armor.png",
-    "verified": false,
-    // source: "Scenario #40 (Treasure #47)",
+    "verified": false
   },
   {
     "number": 105,
@@ -1589,11 +1579,10 @@
     "limit": "Limit.Unlimited",
     "uses": null,
     "negativeCardsCount": null,
-    // source: "City Event 30",
     "sourceType": "ItemSource.CityEvent",
     "sourceId": 30,
     "imageUrl": "/assets/cards/items/64-151/flea-bitten-shawl.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 106,
@@ -1608,7 +1597,7 @@
     "sourceType": "ItemSource.RoadEvent",
     "sourceId": 5,
     "imageUrl": "/assets/cards/items/64-151/necklace-of-teeth.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 107,
@@ -1623,8 +1612,7 @@
     "sourceType": "ItemSource.Treasure",
     "sourceId": 3,
     "imageUrl": "/assets/cards/items/64-151/horned-helm.png",
-    "verified": false,
-    // source: "Scenario #03 (Treasure #65)",
+    "verified": false
   },
   {
     "number": 108,
@@ -1639,24 +1627,22 @@
     "sourceType": "ItemSource.Treasure",
     "sourceId": 25,
     "imageUrl": "/assets/cards/items/64-151/drakescale-helm.png",
-    "verified": false,
-    // source: "Scenario #25 (Treasure #58)",
+    "verified": false
   },
   {
     "number": 109,
     "name": "Thief's Hood",
     "slot": "Slot.Head",
     "price": 20,
-    "text": "During your ""Loot 1"" ability, perform a ""Loot 2"" ability instead.",
+    "text": "During your 'Loot 1' ability, perform a 'Loot 2' ability instead.",
     "count": 1,
     "limit": "Limit.Consumed",
     "uses": null,
     "negativeCardsCount": null,
-    // source: "City Event 62",
     "sourceType": "ItemSource.CityEvent",
     "sourceId": 62,
     "imageUrl": "/assets/cards/items/64-151/thiefs-hood.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 110,
@@ -1671,15 +1657,14 @@
     "sourceType": "ItemSource.Treasure",
     "sourceId": 82,
     "imageUrl": "/assets/cards/items/64-151/helm-of-the-mountain.png",
-    "verified": false,
-    // source: "Scenario #82 (Treasure #62)",
+    "verified": false
   },
   {
     "number": 111,
     "name": "Wave Crest",
     "slot": "Slot.Head",
     "price": 50,
-    "text": "When attacked, if Ice is Strong, perform a ""Push 2"" action targeting the attacker.",
+    "text": "When attacked, if Ice is Strong, perform a 'Push 2' action targeting the attacker.",
     "count": 1,
     "limit": "Limit.Unlimited",
     "uses": null,
@@ -1687,8 +1672,7 @@
     "sourceType": "ItemSource.Treasure",
     "sourceId": 64,
     "imageUrl": "/assets/cards/items/64-151/wave-crest.png",
-    "verified": false,
-    // source: "Scenario #64 (Treasure #09)",
+    "verified": false
   },
   {
     "number": 112,
@@ -1703,7 +1687,7 @@
     "sourceType": "ItemSource.ScenarioReward",
     "sourceId": 65,
     "imageUrl": "/assets/cards/items/64-151/ancient-drill.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 113,
@@ -1718,10 +1702,8 @@
     "negativeCardsCount": null,
     "sourceType": "ItemSource.Treasure",
     "sourceId": 20,
-    // "sourceType": "ItemSource.ScenarioReward",
-    // "sourceId": 11,
     "imageUrl": "/assets/cards/items/64-151/skullbane-axe.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 114,
@@ -1736,7 +1718,7 @@
     "sourceType": "ItemSource.ScenarioReward",
     "sourceId": 12,
     "imageUrl": "/assets/cards/items/64-151/staff-of-xorn.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 115,
@@ -1751,8 +1733,7 @@
     "sourceType": "ItemSource.Treasure",
     "sourceId": 82,
     "imageUrl": "/assets/cards/items/64-151/mountain-hammer.png",
-    "verified": false,
-    // source: "Scenario #82 (Treasure #62)",
+    "verified": false
   },
   {
     "number": 116,
@@ -1767,8 +1748,7 @@
     "sourceType": "ItemSource.Treasure",
     "sourceId": 23,
     "imageUrl": "/assets/cards/items/64-151/fueled-falchion.png",
-    "verified": false,
-    // source: "Scenario #23 (Treasure #72)",
+    "verified": false
   },
   {
     "number": 117,
@@ -1780,11 +1760,10 @@
     "limit": "Limit.Spent",
     "uses": null,
     "negativeCardsCount": null,
-    // source: "City Event 53\nRoad Event 53",
     "sourceType": "ItemSource.CityEvent",
     "sourceId": 53,
     "imageUrl": "/assets/cards/items/64-151/bloody-axe.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 118,
@@ -1796,11 +1775,10 @@
     "limit": "Limit.Spent",
     "uses": null,
     "negativeCardsCount": null,
-    // source: "City Event 57",
     "sourceType": "ItemSource.CityEvent",
     "sourceId": 57,
     "imageUrl": "/assets/cards/items/64-151/staff-of-elements.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 119,
@@ -1815,15 +1793,14 @@
     "sourceType": "ItemSource.ScenarioReward",
     "sourceId": 53,
     "imageUrl": "/assets/cards/items/64-151/skull-of-hatred.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 120,
     "name": "Staff of Summoning",
     "slot": "Slot.TwoHands",
     "price": 60,
-    "text":
-      "During your turn, a summoned ally within Range 3 performs a "Move 3" action with you controlling the action.",
+    "text": "During your turn, a summoned ally within Range 3 performs a 'Move 3' action with you controlling the action.",
     "count": 1,
     "limit": "Limit.Spent",
     "uses": null,
@@ -1831,7 +1808,7 @@
     "sourceType": "ItemSource.ScenarioReward",
     "sourceId": 95,
     "imageUrl": "/assets/cards/items/64-151/staff-of-summoning.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 121,
@@ -1846,7 +1823,7 @@
     "sourceType": "ItemSource.ScenarioReward",
     "sourceId": 88,
     "imageUrl": "/assets/cards/items/64-151/orb-of-dawn.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 122,
@@ -1861,8 +1838,7 @@
     "sourceType": "ItemSource.Treasure",
     "sourceId": 89,
     "imageUrl": "/assets/cards/items/64-151/orb-of-twilight.png",
-    "verified": false,
-    // source: "Scenario #89 (Treasure #27)",
+    "verified": false
   },
   {
     "number": 123,
@@ -1877,8 +1853,7 @@
     "sourceType": "ItemSource.Treasure",
     "sourceId": 4,
     "imageUrl": "/assets/cards/items/64-151/ring-of-skulls.png",
-    "verified": false,
-    // source: "Scenario #04 (Treasure #38)",
+    "verified": false
   },
   {
     "number": 124,
@@ -1894,8 +1869,7 @@
     "sourceType": "ItemSource.Treasure",
     "sourceId": 93,
     "imageUrl": "/assets/cards/items/64-151/doomed-compass.png",
-    "verified": false,
-    // source: "Scenario #93 (Treasure #54)",
+    "verified": false
   },
   {
     "number": 125,
@@ -1907,11 +1881,10 @@
     "limit": "Limit.Consumed",
     "uses": null,
     "negativeCardsCount": null,
-    // source: "City Event 03",
     "sourceType": "ItemSource.CityEvent",
     "sourceId": 3,
     "imageUrl": "/assets/cards/items/64-151/curious-gear.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 126,
@@ -1923,11 +1896,10 @@
     "limit": "Limit.Consumed",
     "uses": null,
     "negativeCardsCount": null,
-    // source: "City Event 43",
     "sourceType": "ItemSource.CityEvent",
     "sourceId": 43,
     "imageUrl": "/assets/cards/items/64-151/remote-spider.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 127,
@@ -1939,11 +1911,10 @@
     "limit": "Limit.Consumed",
     "uses": null,
     "negativeCardsCount": null,
-    // source: "City Event 61",
     "sourceType": "ItemSource.CityEvent",
     "sourceId": 61,
     "imageUrl": "/assets/cards/items/64-151/giant-remote-spider.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 128,
@@ -1958,15 +1929,14 @@
     "sourceType": "ItemSource.ScenarioReward",
     "sourceId": 85,
     "imageUrl": "/assets/cards/items/64-151/black-censer.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 129,
     "name": "Black Card",
     "slot": "Slot.SmallItem",
     "price": 75,
-    "text":
-      "During your turn, place a character token on an adjacent normal or elite enemy. You add +1 Attack to all your attacks targeting this enemy.",
+    "text": "During your turn, place a character token on an adjacent normal or elite enemy. You add +1 Attack to all your attacks targeting this enemy.",
     "count": 1,
     "limit": "Limit.Consumed",
     "uses": null,
@@ -1974,7 +1944,7 @@
     "sourceType": "ItemSource.RoadEvent",
     "sourceId": 51,
     "imageUrl": "/assets/cards/items/64-151/black-card.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 130,
@@ -1989,8 +1959,7 @@
     "sourceType": "ItemSource.Treasure",
     "sourceId": 81,
     "imageUrl": "/assets/cards/items/64-151/helix-ring.png",
-    "verified": false,
-    // source: "Scenario #81 (Treasure #68)",
+    "verified": false
   },
   {
     "number": 131,
@@ -2006,8 +1975,7 @@
     "sourceType": "ItemSource.Treasure",
     "sourceId": 79,
     "imageUrl": "/assets/cards/items/64-151/heart-of-the-betrayer.png",
-    "verified": false,
-    // source: "Scenario #79 (Treasure #52)",
+    "verified": false
   },
   {
     "number": 132,
@@ -2022,7 +1990,7 @@
     "sourceType": "ItemSource.ScenarioReward",
     "sourceId": 67,
     "imageUrl": "/assets/cards/items/64-151/power-core.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 133,
@@ -2037,7 +2005,7 @@
     "sourceType": "ItemSource.ScenarioReward",
     "sourceId": 84,
     "imageUrl": "/assets/cards/items/64-151/resonant-crystal.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 134,
@@ -2052,7 +2020,7 @@
     "sourceType": "ItemSource.SoloScenario",
     "sourceId": 1,
     "imageUrl": "/assets/cards/items/64-151/imposing-blade.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 135,
@@ -2067,7 +2035,7 @@
     "sourceType": "ItemSource.SoloScenario",
     "sourceId": 2,
     "imageUrl": "/assets/cards/items/64-151/focusing-ray.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 136,
@@ -2083,7 +2051,7 @@
     "sourceType": "ItemSource.SoloScenario",
     "sourceId": 3,
     "imageUrl": "/assets/cards/items/64-151/volatile-elixir.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 137,
@@ -2098,7 +2066,7 @@
     "sourceType": "ItemSource.SoloScenario",
     "sourceId": 4,
     "imageUrl": "/assets/cards/items/64-151/silent-stiletto.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 138,
@@ -2114,7 +2082,7 @@
     "sourceType": "ItemSource.SoloScenario",
     "sourceId": 5,
     "imageUrl": "/assets/cards/items/64-151/stone-charm.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 139,
@@ -2129,7 +2097,7 @@
     "sourceType": "ItemSource.SoloScenario",
     "sourceId": 6,
     "imageUrl": "/assets/cards/items/64-151/psychic-knife.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 140,
@@ -2144,7 +2112,7 @@
     "sourceType": "ItemSource.SoloScenario",
     "sourceId": 7,
     "imageUrl": "/assets/cards/items/64-151/sun-shield.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 141,
@@ -2159,7 +2127,7 @@
     "sourceType": "ItemSource.SoloScenario",
     "sourceId": 9,
     "imageUrl": "/assets/cards/items/64-151/utility-belt.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 142,
@@ -2174,7 +2142,7 @@
     "sourceType": "ItemSource.SoloScenario",
     "sourceId": 10,
     "imageUrl": "/assets/cards/items/64-151/phasing-idol.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 143,
@@ -2189,7 +2157,7 @@
     "sourceType": "ItemSource.SoloScenario",
     "sourceId": 11,
     "imageUrl": "/assets/cards/items/64-151/smoke-elixir.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 144,
@@ -2204,7 +2172,7 @@
     "sourceType": "ItemSource.SoloScenario",
     "sourceId": 12,
     "imageUrl": "/assets/cards/items/64-151/pendant-of-the-plague.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 145,
@@ -2219,7 +2187,7 @@
     "sourceType": "ItemSource.SoloScenario",
     "sourceId": 8,
     "imageUrl": "/assets/cards/items/64-151/mask-of-death.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 146,
@@ -2234,7 +2202,7 @@
     "sourceType": "ItemSource.SoloScenario",
     "sourceId": 13,
     "imageUrl": "/assets/cards/items/64-151/masters-lute.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 147,
@@ -2249,7 +2217,7 @@
     "sourceType": "ItemSource.SoloScenario",
     "sourceId": 14,
     "imageUrl": "/assets/cards/items/64-151/cloak-of-the-hunter.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 148,
@@ -2264,7 +2232,7 @@
     "sourceType": "ItemSource.SoloScenario",
     "sourceId": 15,
     "imageUrl": "/assets/cards/items/64-151/doctors-coat.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 149,
@@ -2279,7 +2247,7 @@
     "sourceType": "ItemSource.SoloScenario",
     "sourceId": 16,
     "imageUrl": "/assets/cards/items/64-151/elemental-boots.png",
-    "verified": false,
+    "verified": false
   },
   {
     "number": 150,
@@ -2295,6 +2263,6 @@
     "sourceType": "ItemSource.SoloScenario",
     "sourceId": 17,
     "imageUrl": "/assets/cards/items/64-151/staff-of-command.png",
-    "verified": false,
-  },
-];
+    "verified": false
+  }
+]
