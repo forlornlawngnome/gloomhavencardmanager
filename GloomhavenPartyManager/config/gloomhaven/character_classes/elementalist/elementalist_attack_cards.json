@@ -1,7 +1,56 @@
 [
+ 	{
+    "name": "Plus 0 Fire",
+    "image": "am-el-02",
+    "value": 0,
+    "reshuffle": false,
+    "count": 4
+  },
   {
-    "name": "Rolling Pierce 3",
-    "image": "am-br-01",
+    "name": "Plus 0 Ice",
+    "image": "am-el-06",
+    "value": 0,
+    "reshuffle": false,
+    "count": 4
+  },
+  {
+    "name": "Plus 0 Wind",
+    "image": "am-el-10",
+    "value": 0,
+    "reshuffle": false,
+    "count": 4
+  },
+  {
+    "name": "Plus 0 Earth",
+    "image": "am-el-14",
+    "value": 0,
+    "reshuffle": false,
+    "count": 4
+  },
+  {
+    "name": "Plus 1 Push 1",
+    "image": "am-el-18",
+    "value": 1,
+    "reshuffle": false,
+    "count": 2
+  },
+  {
+    "name": "Plus 1 Wound",
+    "image": "am-el-20",
+    "value": 1,
+    "reshuffle": false,
+    "count": 1
+  },
+  {
+    "name": "Plus 0 Stun",
+    "image": "am-el-21",
+    "value": 0,
+    "reshuffle": false,
+    "count": 1
+  },
+  {
+    "name": "Plus 0 Add Target",
+    "image": "am-el-22",
     "value": 0,
     "reshuffle": false,
     "count": 1
