@@ -1,10 +1,206 @@
 [
   {
-    "name": "Sweeping Blow",
-    "initiative": 64,
+    "name": "Formless Power",
+    "initiative": 45,
     "level": 1,
-    "image": "sweeping-blow",
+    "image": "formless-power",
     "counter_max": 0
   },
+  {
+    "name": "Raw Enhancement",
+    "initiative": 48,
+    "level": 1,
+    "image": "raw-enhancement",
+    "counter_max": 0
+  },
+  {
+    "name": "Ice Spikes",
+    "initiative": 40,
+    "level": 1,
+    "image": "ice-spikes",
+    "counter_max": 0
+  },
+  {
+    "name": "Pure Augmentation",
+    "initiative": 48,
+    "level": 1,
+    "image": "pure-augmentation",
+    "counter_max": 0
+  },
+  {
+    "name": "Shaping the Ether",
+    "initiative": 54,
+    "level": 1,
+    "image": "shaping-the-ether",
+    "counter_max": 0
+  },
+  {
+    "name": "Infernal Vortex",
+    "initiative": 17,
+    "level": 1,
+    "image": "infernal-vortex",
+    "counter_max": 0
+  },
+  {
+    "name": "Lava Eruption",
+    "initiative": 19,
+    "level": 1,
+    "image": "lava-eruption",
+    "counter_max": 0
+  },
+  {
+    "name": "Stoking Hail",
+    "initiative": 28,
+    "level": 1,
+    "image": "stoking-hail",
+    "counter_max": 0
+  },
+  {
+    "name": "Tremulant Cyclone",
+    "initiative": 26,
+    "level": 1,
+    "image": "tremulant-cyclone",
+    "counter_max": 0
+  },
+  {
+    "name": "Frigid Torrent",
+    "initiative": 35,
+    "level": 1,
+    "image": "frigid-torrent",
+    "counter_max": 0
+  },
+  {
+    "name": "Malleable Evocation",
+    "initiative": 50,
+    "level": 0,
+    "image": "malleable-evocation",
+    "counter_max": 0
+  },
+  {
+    "name": "Brilliant Flash",
+    "initiative": 67,
+    "level": 0,
+    "image": "brilliant-flash",
+    "counter_max": 0
+  },
+  {
+    "name": "Encompassing Shadow",
+    "initiative": 23,
+    "level": 0,
+    "image": "encompassing-shadow",
+    "counter_max": 0
+  },
+  {
+    "name": "Boiling Arc",
+    "initiative": 47,
+    "level": 2,
+    "image": "boiling-arc",
+    "counter_max": 0
+  },
+  {
+    "name": "Crystallizing Blast",
+    "initiative": 67,
+    "level": 2,
+    "image": "crystallizing-blast",
+    "counter_max": 0
+  },
+  {
+    "name": "Chain Lightning",
+    "initiative": 41,
+    "level": 3,
+    "image": "chain-lightning",
+    "counter_max": 0
+  },
+  {
+    "name": "Burial",
+    "initiative": 65,
+    "level": 3,
+    "image": "burial",
+    "counter_max": 0
+  },
+  {
+    "name": "Primal Duality",
+    "initiative": 15,
+    "level": 4,
+    "image": "primal-duality",
+    "counter_max": 0
+  },
+  {
+    "name": "Gravel Vortex",
+    "initiative": 62,
+    "level": 4,
+    "image": "gravel-vortex",
+    "counter_max": 0
+  },
+  {
+    "name": "Obsidian Shards",
+    "initiative": 36,
+    "level": 5,
+    "image": "obsidian-shards",
+    "counter_max": 0
+  },
+  {
+    "name": "Winter's Edge",
+    "initiative": 43,
+    "level": 5,
+    "image": "winters-edge",
+    "counter_max": 0
+  },
+  {
+    "name": "Simulacrum",
+    "initiative": 94,
+    "level": 6,
+    "image": "simulacrum",
+    "counter_max": 0
+  },
+  {
+    "name": "Eye of the Hurricate",
+    "initiative": 29,
+    "level": 6,
+    "image": "eye-of-the-hurricate",
+    "counter_max": 0
+  },
+  {
+    "name": "Pragmatic Reinforcement",
+    "initiative": 56,
+    "level": 7,
+    "image": "pragmatic-reinforcement",
+    "counter_max": 0
+  },
+  {
+    "name": "Vengeance",
+    "initiative": 22,
+    "level": 7,
+    "image": "vengeance",
+    "counter_max": 0
+  },
+  {
+    "name": "Elemental Aegis",
+    "initiative": 14,
+    "level": 8,
+    "image": "elemental-aegis",
+    "counter_max": 0
+  },
+  {
+    "name": "Volatile Consumption",
+    "initiative": 64,
+    "level": 8,
+    "image": "volatile-consumption",
+    "counter_max": 0
+  },
+  {
+    "name": "Etheral Manifestation",
+    "initiative": 98,
+    "level": 9,
+    "image": "etheral-manifestation",
+    "counter_max": 0
+  },
+  {
+    "name": "Eternal Equilibrium",
+    "initiative": 27,
+    "level": 9,
+    "image": "eternal-equilibrium",
+    "counter_max": 0
+  }
 ]
 
