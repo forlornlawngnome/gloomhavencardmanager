@@ -1,10 +1,38 @@
 [
   {
-    "name": "Rolling Pierce 3",
-    "image": "am-br-01",
+    "name": "Plus 2",
+    "image": "am-bt-01",
+    "value": 2,
+    "reshuffle": false,
+    "count": 2
+  },
+  {
+    "name": "Plus 1 Wound",
+    "image": "am-bt-02",
+    "value": 1,
+    "reshuffle": false,
+    "count": 2
+  },
+  {
+    "name": "Plus 1 Immobilize",
+    "image": "am-bt-04",
+    "value": 1,
+    "reshuffle": false,
+    "count": 2
+  },
+  {
+    "name": "Rolling Heal 1 Self",
+    "image": "am-bt-06",
     "value": 0,
     "reshuffle": false,
-    "count": 1
+    "count": 6
+  },
+  {
+    "name": "Rolling Earth",
+    "image": "am-bt-12",
+    "value": 0,
+    "reshuffle": false,
+    "count": 2
   },
 ]
 
