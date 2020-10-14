@@ -6,9 +6,9 @@
     [
     	{
     		"attack_card": "Minus 1",
-    		"effects": -2,
+    		"effects": -2
     	}
-    ],
+    ]
   },
   {
     "description": "Replace one -1 card with one +1 card",
@@ -17,13 +17,13 @@
     [
     	{
     		"attack_card": "Minus 1",
-    		"effects": -1,
+    		"effects": -1
     	},
     	{
     		"attack_card": "Plus 1",
-    		"effects": 1,
-    	},
-    ],
+    		"effects": 1
+    	}
+    ]
   },
   {
     "description": "Add two +1 cards",
@@ -32,9 +32,9 @@
     [
     	{
     		"attack_card": "Plus 1",
-    		"effects": 2,
+    		"effects": 2
     	}
-    ],
+    ]
   },
   {
     "description": "Add one +3 card",
@@ -43,9 +43,9 @@
     [
     	{
     		"attack_card": "Plus 3 1",
-    		"effects": 1,
+    		"effects": 1
     	}
-    ],
+    ]
   },
   {
     "description": "Add 3 rolling PUSH 1 cards",
@@ -54,9 +54,9 @@
     [
     	{
     		"attack_card": "Rolling Push 1",
-    		"effects": 3,
+    		"effects": 3
     	}
-    ],
+    ]
   },
   {
     "description": "Add two rolling PIERCE 3 cards",
@@ -65,9 +65,9 @@
     [
     	{
     		"attack_card": "Rolling Pierce 3",
-    		"effects": 2,
+    		"effects": 2
     	}
-    ],
+    ]
   },
   {
     "description": "Add one rolling STUN card",
@@ -76,9 +76,9 @@
     [
     	{
     		"attack_card": "Rolling Stun",
-    		"effects": 1,
+    		"effects": 1
     	}
-    ],
+    ]
   },
   {
     "description": "Add one rolling DISARM card and one rolling MUDDLE card",
@@ -87,13 +87,13 @@
     [
     	{
     		"attack_card": "Rolling Disarm",
-    		"effects": 1,
+    		"effects": 1
     	},
     	{
     		"attack_card": "Rolling Muddle",
-    		"effects": 1,
-    	},
-    ],
+    		"effects": 1
+    	}
+    ]
   },
   {
     "description": "Add one rolling ADD TARGET card",
@@ -102,9 +102,9 @@
     [
     	{
     		"attack_card": "Rolling Add Target",
-    		"effects": 1,
+    		"effects": 1
     	}
-    ],
+    ]
   },
   {
     "description": "Add one +1 SHEILD, Self card",
@@ -113,9 +113,9 @@
     [
     	{
     		"attack_card": "Plus 1 Shield Self",
-    		"effects": 1,
+    		"effects": 1
     	}
-    ],
+    ]
   },
   {
     "description": "Ignore negative item effects and add one +1 card",
@@ -124,9 +124,9 @@
     [
     	{
     		"attack_card": "Plus 1",
-    		"effects": 1,
+    		"effects": 1
     	}
-    ],
-  },
+    ]
+  }
 ]
 

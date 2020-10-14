@@ -4,203 +4,203 @@
     "initiative": 64,
     "level": 1,
     "image": "sweeping-blow",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Trample",
     "initiative": 72,
     "level": 1,
     "image": "trample",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Provoking Roar",
     "initiative": 10,
     "level": 1,
     "image": "provoking-roar",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Shield Bash",
     "initiative": 15,
     "level": 1,
     "image": "shield-bash",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Grab and Go",
     "initiative": 87,
     "level": 1,
     "image": "grab-and-go",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Eye for an Eye",
     "initiative": 18,
     "level": 1,
     "image": "eye-for-an-eye",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Warding Strength",
     "initiative": 32,
     "level": 1,
     "image": "warding-strength",
-    "counter_max": 6,
+    "counter_max": 6
   },
   {
     "name": "Overwhelming Assault",
     "initiative": 61,
     "level": 1,
     "image": "overwhelming-assault",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Spare Daggar",
     "initiative": 27,
     "level": 1,
     "image": "spare-daggar",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Leaping Cleave",
     "initiative": 54,
     "level": 1,
     "image": "leaping-cleave",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Skewer",
     "initiative": 35,
     "level": 0,
     "image": "skewer",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Wall of Doom",
     "initiative": 20,
     "level": 0,
     "image": "wall-of-doom",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Balanced Measure",
     "initiative": 77,
     "level": 0,
     "image": "balanced-measure",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Juggernaut",
     "initiative": 34,
     "level": 2,
     "image": "Juggernaut",
-    "counter_max": 3,
+    "counter_max": 3
   },
   {
     "name": "Fatal Advice",
     "initiative": 40,
     "level": 2,
     "image": "fatal-advice",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Hook and Chain",
     "initiative": 42,
     "level": 3,
     "image": "hook-and-chain",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Brute Force",
     "initiative": 51,
     "level": 3,
     "image": "brute-force",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Unstoppable Charge",
     "initiative": 86,
     "level": 4,
     "image": "unstoppable-charge",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Devastating Hack",
     "initiative": 27,
     "level": 4,
     "image": "devastating-hack",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Skirmishing Maneuver",
     "initiative": 29,
     "level": 5,
     "image": "skirmishing-maneuver",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Whirlwind",
     "initiative": 28,
     "level": 5,
     "image": "whirlwind",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Immovable Phalanx",
     "initiative": 17,
     "level": 6,
     "image": "immovable-phalanx",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Quietus",
     "initiative": 57,
     "level": 6,
     "image": "quietus",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Crippling Offensive",
     "initiative": 33,
     "level": 7,
     "image": "crippling-offensive",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Defensive Tactics",
     "initiative": 26,
     "level": 7,
     "image": "defensive-tactics",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Frenzied Onslaught",
     "initiative": 41,
     "level": 8,
     "image": "frenzied-onslaught",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Selfish Retribution",
     "initiative": 12,
     "level": 8,
     "image": "selfish-retribution",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "Face Your End",
     "initiative": 67,
     "level": 9,
     "image": "face-your-end",
-    "counter_max": 0,
+    "counter_max": 0
   },
   {
     "name": "King of the Hill",
     "initiative": 39,
     "level": 9,
     "image": "king-of-the-hill",
-    "counter_max": 0,
-  },
+    "counter_max": 0
+  }
 ]
 

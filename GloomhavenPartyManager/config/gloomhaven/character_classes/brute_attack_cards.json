@@ -4,63 +4,63 @@
     "image": "am-br-01",
     "value": 0,
     "reshuffle": false,
-    "count": 1,
+    "count": 1
   },
   {
     "name": "Rolling Stun",
     "image": "am-br-02",
     "value": 0,
     "reshuffle": false,
-    "count": 2,
+    "count": 2
   },
   {
     "name": "Rolling Disarm",
     "image": "am-br-04",
     "value": 0,
     "reshuffle": false,
-    "count": 1,
+    "count": 1
   },
   {
     "name": "Rolling Muddle",
     "image": "am-br-05",
     "value": 0,
     "reshuffle": false,
-    "count": 1,
+    "count": 1
   },
   {
     "name": "Rolling Add Target",
     "image": "am-br-06",
     "value": 0,
     "reshuffle": false,
-    "count": 2,
+    "count": 2
   },
   {
     "name": "Plus 1 Shield Self",
     "image": "am-br-08",
     "value": 1,
     "reshuffle": false,
-    "count": 1,
+    "count": 1
   },
   {
     "name": "Plus 3",
     "image": "am-br-15",
     "value": 3,
     "reshuffle": false,
-    "count": 1,
+    "count": 1
   },
   {
     "name": "Rolling Push 1",
     "image": "am-br-16",
     "value": 0,
     "reshuffle": false,
-    "count": 6,
+    "count": 6
   },
   {
     "name": "Rolling Pierce 3",
     "image": "am-br-22",
     "value": 0,
     "reshuffle": false,
-    "count": 1,
-  },
+    "count": 1
+  }
 ]
 
