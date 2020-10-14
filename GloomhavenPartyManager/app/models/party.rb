@@ -3,9 +3,11 @@ class Party < ApplicationRecord
 	has_many :character_classes, through: :characters
 	has_many :active_characters,-> { where(is_active: true)}, class_name: "Character"
 	has_many :active_character_classes, through: :active_characters,class_name: "CharacterClass", source: :character_class
+	has_many :attack_cards
 	has_many :scenarios
 	has_many :players_parties, dependent: :destroy
 	has_many :players, through: :players_parties
+	has_many :items
 
 	accepts_nested_attributes_for :players_parties, allow_destroy: true
 
@@ -18,12 +20,28 @@ class Party < ApplicationRecord
 	end
 
 	def initial_setup
+		create_items
+		create_base_attack_cards
+	end
+
+	def create_base_attack_cards
+		card_file_path = File.join(DATA_LOCATION, "base_attack_cards.json")
+		card_file = File.read(card_file_path)
+		cards = JSON.parse(card_file)
+		cards.each do |card|
+			new_card = self.attack_cards.build(name:  card["name"], image: card["image"], value: card["value"],
+				reshuffle: card["reshuffle"], count: card["count"])
+			new_card.save
+		end
+	end
+
+	def create_items
 		items_file_path = File.join(DATA_LOCATION, "items.json")
 		items_file = File.read(items_file_path)
 		items = JSON.parse(items_file)
 		items.each do |item|
 			count = item["count"]
-			for (1..count) do 
+			for i in 1..count 
 				new_item = self.items.build(number: item["number"], name:  item["number"], 
 					item_type: item["slot"],usage_state: item["limit"], 
 					negative_effects: item[:negativeCardsCount], counter_max: item["uses"], price: item["price"])

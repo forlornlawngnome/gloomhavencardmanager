@@ -69,6 +69,6 @@ class AttackCardsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def attack_card_params
-      params.require(:attack_card).permit(:name, :image, :value, :reshuffle, :character_class_id)
+      params.require(:attack_card).permit(:name, :image, :value, :reshuffle, :character_class_id, :count)
     end
 end

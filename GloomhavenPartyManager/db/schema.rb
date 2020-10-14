@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 2020_10_05_192650) do
     t.string "image"
     t.string "value"
     t.boolean "reshuffle"
+    t.integer "count"
     t.bigint "character_class_id"
     t.bigint "party_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -177,6 +178,7 @@ ActiveRecord::Schema.define(version: 2020_10_05_192650) do
     t.boolean "used"
     t.string "item_type"
     t.string "negative_effects"
+    t.integer "price"
     t.bigint "party_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
