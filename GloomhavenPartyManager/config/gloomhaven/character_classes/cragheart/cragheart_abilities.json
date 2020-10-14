@@ -1,10 +1,212 @@
 [
   {
-    "name": "Sweeping Blow",
-    "initiative": 64,
+    "name": "Opposing Strike",
+    "initiative": 46,
     "level": 1,
-    "image": "sweeping-blow",
+    "image": "opposing-strike",
+    "counter_max": 6
+  },
+  {
+    "name": "Crushing Grasp",
+    "initiative": 35,
+    "level": 1,
+    "image": "crushing-grasp",
     "counter_max": 0
   },
+  {
+    "name": "Avalanche",
+    "initiative": 75,
+    "level": 1,
+    "image": "avalanche",
+    "counter_max": 0
+  },
+  {
+    "name": "Rumbling Advance",
+    "initiative": 29,
+    "level": 1,
+    "image": "rumbling-advance",
+    "counter_max": 0
+  },
+  {
+    "name": "Massive Boulder",
+    "initiative": 87,
+    "level": 1,
+    "image": "Massive-Boulder",
+    "counter_max": 0
+  },
+  {
+    "name": "Backup Ammunition",
+    "initiative": 77,
+    "level": 1,
+    "image": "backup-ammunition",
+    "counter_max": 4
+  },
+  {
+    "name": "Rock Tunnel",
+    "initiative": 41,
+    "level": 1,
+    "image": "rock-tunnel",
+    "counter_max": 0
+  },
+  {
+    "name": "Unstable Upheaval",
+    "initiative": 13,
+    "level": 1,
+    "image": "unstable-upheaval",
+    "counter_max": 0
+  },
+  {
+    "name": "Crater",
+    "initiative": 61,
+    "level": 1,
+    "image": "crater",
+    "counter_max": 0
+  },
+  {
+    "name": "Dirt Tornado",
+    "initiative": 82,
+    "level": 1,
+    "image": "leaping-cleave",
+    "counter_max": 0
+  },
+  {
+    "name": "Earthen Clod",
+    "initiative": 38,
+    "level": 1,
+    "image": "earthen-clod",
+    "counter_max": 0
+  },
+  {
+    "name": "Heaving Swing",
+    "initiative": 57,
+    "level": 0,
+    "image": "heaving-swing",
+    "counter_max": 0
+  },
+  {
+    "name": "Forceful Storm",
+    "initiative": 53,
+    "level": 0,
+    "image": "forceful-storm",
+    "counter_max": 0
+  },
+  {
+    "name": "Nature's Lift",
+    "initiative": 64,
+    "level": 0,
+    "image": "natures-Lift",
+    "counter_max": 6
+  },
+  {
+    "name": "Explosive Punch",
+    "initiative": 28,
+    "level": 2,
+    "image": "explosive-punch",
+    "counter_max": 0
+  },
+  {
+    "name": "Sentient Growth",
+    "initiative": 78,
+    "level": 2,
+    "image": "sentient-growth",
+    "counter_max": 0
+  },
+  {
+    "name": "Clear the Way",
+    "initiative": 43,
+    "level": 3,
+    "image": "claer-the-way",
+    "counter_max": 0
+  },
+  {
+    "name": "Blunt Force",
+    "initiative": 21,
+    "level": 3,
+    "image": "blunt-force",
+    "counter_max": 0
+  },
+  {
+    "name": "Kinetic Assault",
+    "initiative": 19,
+    "level": 4,
+    "image": "kinetic-assault",
+    "counter_max": 0
+  },
+  {
+    "name": "Rock Slide",
+    "initiative": 81,
+    "level": 4,
+    "image": "rock-slide",
+    "counter_max": 0
+  },
+  {
+    "name": "Petrify",
+    "initiative": 47,
+    "level": 5,
+    "image": "Petrify",
+    "counter_max": 0
+  },
+  {
+    "name": "Stone Pummel",
+    "initiative": 32,
+    "level": 5,
+    "image": "stone-pummel",
+    "counter_max": 4
+  },
+  {
+    "name": "Dig Pit",
+    "initiative": 78,
+    "level": 6,
+    "image": "dig-pit",
+    "counter_max": 0
+  },
+  {
+    "name": "Cataclysm",
+    "initiative": 26,
+    "level": 6,
+    "image": "cataclysm",
+    "counter_max": 0
+  },
+  {
+    "name": "Meteor",
+    "initiative": 23,
+    "level": 7,
+    "image": "meteor",
+    "counter_max": 0
+  },
+  {
+    "name": "Brutal Momentum",
+    "initiative": 52,
+    "level": 7,
+    "image": "brutal-momentum",
+    "counter_max": 0
+  },
+  {
+    "name": "Rocky End",
+    "initiative": 37,
+    "level": 8,
+    "image": "rocky-end",
+    "counter_max": 0
+  },
+  {
+    "name": "Lumbering Bash",
+    "initiative": 85,
+    "level": 8,
+    "image": "lumbering-bash",
+    "counter_max": 5
+  },
+  {
+    "name": "Blind Destruction",
+    "initiative": 74,
+    "level": 9,
+    "image": "blind-destruction",
+    "counter_max": 0
+  },
+  {
+    "name": "Pulverize",
+    "initiative": 31,
+    "level": 9,
+    "image": "pulverize",
+    "counter_max": 0
+  }
 ]
-
