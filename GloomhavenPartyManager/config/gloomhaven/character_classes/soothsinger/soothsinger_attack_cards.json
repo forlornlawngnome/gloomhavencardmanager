@@ -1,10 +1,73 @@
 [
   {
-    "name": "Rolling Pierce 3",
-    "image": "am-br-01",
+    "name": "Plus 1 Immobilize",
+    "image": "am-ss-01",
+    "value": 1,
+    "reshuffle": false,
+    "count": 1
+  },
+  {
+    "name": "Plus 1 Disarm",
+    "image": "am-ss-02",
+    "value": 1,
+    "reshuffle": false,
+    "count": 1
+  },
+  {
+    "name": "Plus 2 Wound",
+    "image": "am-ss-03",
+    "value": 2,
+    "reshuffle": false,
+    "count": 1
+  },
+  {
+    "name": "Plus 2 Poison",
+    "image": "am-ss-04",
+    "value": 2,
+    "reshuffle": false,
+    "count": 1
+  },
+  {
+    "name": "Plus 2 Curse",
+    "image": "am-ss-05",
+    "value": 2,
+    "reshuffle": false,
+    "count": 1
+  },
+  {
+    "name": "Plus 3 Muddle",
+    "image": "am-ss-06",
+    "value": 3,
+    "reshuffle": false,
+    "count": 1
+  },
+  {
+    "name": "Plus 0 Stun",
+    "image": "am-ss-07",
     "value": 0,
     "reshuffle": false,
     "count": 1
+  },
+  {
+    "name": "Rolling Plus 1",
+    "image": "am-ss-08",
+    "value": 1,
+    "reshuffle": false,
+    "count": 3
+  },
+  {
+    "name": "Rolling Curse",
+    "image": "am-ss-11",
+    "value": 0,
+    "reshuffle": false,
+    "count": 4
+  },
+  {
+    "name": "Plus 4",
+    "image": "am-ss-15",
+    "value": 4,
+    "reshuffle": false,
+    "count": 2
   },
 ]
 

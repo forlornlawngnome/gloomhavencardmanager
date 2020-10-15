@@ -1,10 +1,198 @@
 [
-  {
-    "name": "Sweeping Blow",
-    "initiative": 64,
-    "level": 1,
-    "image": "sweeping-blow",
-    "counter_max": 0
-  },
+    {
+        "name": "Power Ballad",
+        "initiative": "19",
+        "level": "1",
+        "image": "power-ballad",
+        "counter_max": "0"
+    },
+    {
+        "name": "Song of Speed",
+        "initiative": "5",
+        "level": "1",
+        "image": "song-of-speed",
+        "counter_max": "0"
+    },
+    {
+        "name": "Defensive Ditty",
+        "initiative": "9",
+        "level": "1",
+        "image": "defensive-ditty",
+        "counter_max": "0"
+    },
+    {
+        "name": "Marching Beat",
+        "initiative": "32",
+        "level": "1",
+        "image": "marching-beat",
+        "counter_max": "0"
+    },
+    {
+        "name": "Throw Voice",
+        "initiative": "44",
+        "level": "1",
+        "image": "throw-voice",
+        "counter_max": "0"
+    },
+    {
+        "name": "Warding Dagger",
+        "initiative": "56",
+        "level": "1",
+        "image": "warding-dagger",
+        "counter_max": "0"
+    },
+    {
+        "name": "Tuning the Outcome",
+        "initiative": "78",
+        "level": "1",
+        "image": "tuning-the-outcome",
+        "counter_max": "0"
+    },
+    {
+        "name": "Singing Arrow",
+        "initiative": "89",
+        "level": "1",
+        "image": "singing-arrow",
+        "counter_max": "0"
+    },
+    {
+        "name": "Call to Action",
+        "initiative": "85",
+        "level": "1",
+        "image": "call-to-action",
+        "counter_max": "0"
+    },
+    {
+        "name": "Wistful Wounding",
+        "initiative": "16",
+        "level": "0",
+        "image": "wistful-wounding",
+        "counter_max": "0"
+    },
+    {
+        "name": "Unending Chant",
+        "initiative": "51",
+        "level": "0",
+        "image": "unending-chant",
+        "counter_max": "5"
+    },
+    {
+        "name": "Nimble Knife",
+        "initiative": "27",
+        "level": "0",
+        "image": "nimble-knife",
+        "counter_max": "0"
+    },
+    {
+        "name": "Soothing Lullaby",
+        "initiative": "11",
+        "level": "2",
+        "image": "soothing-lullaby",
+        "counter_max": "0"
+    },
+    {
+        "name": "Change Tempo",
+        "initiative": "91",
+        "level": "2",
+        "image": "change-tempo",
+        "counter_max": "0"
+    },
+    {
+        "name": "Echoing Aria",
+        "initiative": "8",
+        "level": "3",
+        "image": "echoing-aria",
+        "counter_max": "0"
+    },
+    {
+        "name": "Crippling Chorus",
+        "initiative": "62",
+        "level": "3",
+        "image": "crippling-chorus",
+        "counter_max": "0"
+    },
+    {
+        "name": "Disorienting Dirge",
+        "initiative": "14",
+        "level": "4",
+        "image": "disorienting-dirge",
+        "counter_max": "0"
+    },
+    {
+        "name": "Inspiring Anthem",
+        "initiative": "50",
+        "level": "4",
+        "image": "inspiring-anthem",
+        "counter_max": "0"
+    },
+    {
+        "name": "Melody and Harmony",
+        "initiative": "78",
+        "level": "5",
+        "image": "melody-and-harmony",
+        "counter_max": "0"
+    },
+    {
+        "name": "Mobilizing Measure",
+        "initiative": "6",
+        "level": "5",
+        "image": "mobilizing-measure",
+        "counter_max": "0"
+    },
+    {
+        "name": "Pull the Strings",
+        "initiative": "20",
+        "level": "6",
+        "image": "pull-the-strings",
+        "counter_max": "0"
+    },
+    {
+        "name": "Provoke Terror",
+        "initiative": "60",
+        "level": "6",
+        "image": "provoke-terror",
+        "counter_max": "0"
+    },
+    {
+        "name": "Nightmare Serenade",
+        "initiative": "13",
+        "level": "7",
+        "image": "nightmare-serenade",
+        "counter_max": "0"
+    },
+    {
+        "name": "Booming Proclamation",
+        "initiative": "65",
+        "level": "7",
+        "image": "booming-proclamation",
+        "counter_max": "0"
+    },
+    {
+        "name": "Tranquil Trill",
+        "initiative": "10",
+        "level": "8",
+        "image": "tranquil-trill",
+        "counter_max": "0"
+    },
+    {
+        "name": "Commanding Presence",
+        "initiative": "59",
+        "level": "8",
+        "image": "commanding-presence",
+        "counter_max": "0"
+    },
+    {
+        "name": "Captivating Performance",
+        "initiative": "25",
+        "level": "9",
+        "image": "captivating-performance",
+        "counter_max": "0"
+    },
+    {
+        "name": "Shadow Puppets",
+        "initiative": "52",
+        "level": "9",
+        "image": "shadow-puppets",
+        "counter_max": "0"
+    }
 ]
-
