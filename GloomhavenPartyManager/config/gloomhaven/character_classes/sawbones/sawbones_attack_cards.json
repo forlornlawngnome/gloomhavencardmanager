@@ -1,7 +1,42 @@
 [
   {
-    "name": "Rolling Pierce 3",
-    "image": "am-br-01",
+    "name": "Rolling Plus 2",
+    "image": "am-sb-02",
+    "value": 2,
+    "reshuffle": false,
+    "count": 2
+  },
+  {
+    "name": "Plus 1 Immobilize",
+    "image": "am-sb-03",
+    "value": 1,
+    "reshuffle": false,
+    "count": 2
+  },
+  {
+    "name": "Rolling Wound",
+    "image": "am-sb-05",
+    "value": 0,
+    "reshuffle": false,
+    "count": 4
+  },
+  {
+    "name": "Rolling Stun",
+    "image": "am-sb-09",
+    "value": 0,
+    "reshuffle": false,
+    "count": 1
+  },
+  {
+    "name": "Rolling Heal 3 Self",
+    "image": "am-sb-10",
+    "value": 0,
+    "reshuffle": false,
+    "count": 2
+  },
+  {
+    "name": "Plus Zero Refresh an Item",
+    "image": "am-sb-11",
     "value": 0,
     "reshuffle": false,
     "count": 1

@@ -1,10 +1,220 @@
 [
   {
-    "name": "Sweeping Blow",
-    "initiative": 64,
-    "level": 1,
-    "image": "sweeping-blow",
+    "name": "Medical Pack",
+    "initiative": 50,
+    "level": -1,
+    "image": "medical-pack",
     "counter_max": 0
   },
+  {
+    "name": "Large Medical Pack",
+    "initiative": 30,
+    "level": -1,
+    "image": "large-medical-pack",
+    "counter_max": 0
+  },
+  {
+    "name": "Mobile Response",
+    "initiative": 12,
+    "level": 1,
+    "image": "mobile-response",
+    "counter_max": 0
+  },
+  {
+    "name": "Battlefield Medicine",
+    "initiative": 83,
+    "level": 1,
+    "image": "battlefield-medicine",
+    "counter_max": 0
+  },
+  {
+    "name": "Syringe",
+    "initiative": 15,
+    "level": 1,
+    "image": "syringe",
+    "counter_max": 0
+  },
+  {
+    "name": "Curative Mixture",
+    "initiative": 19,
+    "level": 1,
+    "image": "curative-mixture",
+    "counter_max": 0
+  },
+  {
+    "name": "Booster Shot",
+    "initiative": 42,
+    "level": 1,
+    "image": "booster-shot",
+    "counter_max": 0
+  },
+  {
+    "name": "Hand of the Surgeon",
+    "initiative": 62,
+    "level": 1,
+    "image": "hand-of-the-surgeon",
+    "counter_max": 0
+  },
+  {
+    "name": "Bloody Saw",
+    "initiative": 25,
+    "level": 1,
+    "image": "bloody-saw",
+    "counter_max": 0
+  },
+  {
+    "name": "First Aid",
+    "initiative": 08,
+    "level": 1,
+    "image": "first-aid",
+    "counter_max": 0
+  },
+  {
+    "name": "Triage",
+    "initiative": 53,
+    "level": 1,
+    "image": "triage",
+    "counter_max": 4
+  },
+  {
+    "name": "Hold Back the Pain",
+    "initiative": 57,
+    "level": 1,
+    "image": "hold-back-the-pain",
+    "counter_max": 0
+  },
+  {
+    "name": "Teamwork",
+    "initiative": 89,
+    "level": 0,
+    "image": "teamwork",
+    "counter_max": 0
+  },
+  {
+    "name": "Vaccine",
+    "initiative": 44,
+    "level": 0,
+    "image": "vaccine",
+    "counter_max": 0
+  },
+  {
+    "name": "Prevention Is Key",
+    "initiative": 13,
+    "level": 0,
+    "image": "prevention-is-key",
+    "counter_max": 0
+  },
+  {
+    "name": "Precaution",
+    "initiative": 09,
+    "level": 2,
+    "image": "precaution",
+    "counter_max": 0
+  },
+  {
+    "name": "Hamstring",
+    "initiative": 62,
+    "level": 2,
+    "image": "hamstring",
+    "counter_max": 0
+  },
+  {
+    "name": "Regenerative Tissue",
+    "initiative": 46,
+    "level": 3,
+    "image": "regenerative-tissue",
+    "counter_max": 0
+  },
+  {
+    "name": "Vital Strike",
+    "initiative": 38,
+    "level": 3,
+    "image": "vital-strike",
+    "counter_max": 0
+  },
+  {
+    "name": "Blood Transfusion",
+    "initiative": 52,
+    "level": 4,
+    "image": "blood-transfusion",
+    "counter_max": 0
+  },
+  {
+    "name": "Do No Harm",
+    "initiative": 76,
+    "level": 4,
+    "image": "do-no-harm",
+    "counter_max": 0
+  },
+  {
+    "name": "Amputate",
+    "initiative": 86,
+    "level": 5,
+    "image": "amputate",
+    "counter_max": 0
+  },
+  {
+    "name": "Research the Cure",
+    "initiative": 40,
+    "level": 5,
+    "image": "research-the-cure",
+    "counter_max": 0
+  },
+  {
+    "name": "Euthanize",
+    "initiative": 27,
+    "level": 6,
+    "image": "euthanize",
+    "counter_max": 0
+  },
+  {
+    "name": "Prescription",
+    "initiative": 06,
+    "level": 6,
+    "image": "prescription",
+    "counter_max": 0
+  },
+  {
+    "name": "Master Physician",
+    "initiative": 49,
+    "level": 7,
+    "image": "master-physician",
+    "counter_max": 6
+  },
+  {
+    "name": "Surgeon's Satchel",
+    "initiative": 10,
+    "level": 7,
+    "image": "surgeons-satchel",
+    "counter_max": 0
+  },
+  {
+    "name": "Bedside Manner",
+    "initiative": 05,
+    "level": 8,
+    "image": "bedside-manner",
+    "counter_max": 0
+  },
+  {
+    "name": "Gentleman's Anger",
+    "initiative": 29,
+    "level": 8,
+    "image": "gentlemans-anger",
+    "counter_max": 0
+  },
+  {
+    "name": "Prep for Surgery",
+    "initiative": 22,
+    "level": 9,
+    "image": "prep-for-surgery",
+    "counter_max": 0
+  },
+  {
+    "name": "Grisly Trauma",
+    "initiative": 81,
+    "level": 9,
+    "image": "grisly-trauma",
+    "counter_max": 0
+  }
 ]
 
