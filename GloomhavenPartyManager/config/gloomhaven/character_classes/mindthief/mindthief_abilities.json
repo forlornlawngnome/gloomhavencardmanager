@@ -1,10 +1,205 @@
 [
-  {
-    "name": "Sweeping Blow",
-    "initiative": 64,
-    "level": 1,
-    "image": "sweeping-blow",
-    "counter_max": 0
-  },
+    {
+        "name": "The Mind's Weakness",
+        "initiative": "75",
+        "level": "1",
+        "image": "the-mind's-weakness",
+        "counter_max": "0"
+    },
+    {
+        "name": "Submissive Affliction",
+        "initiative": "48",
+        "level": "1",
+        "image": "submissive-affliction",
+        "counter_max": "0"
+    },
+    {
+        "name": "Gnawing Horde",
+        "initiative": "82",
+        "level": "1",
+        "image": "gnawing-horde",
+        "counter_max": "0"
+    },
+    {
+        "name": "Scurry",
+        "initiative": "20",
+        "level": "1",
+        "image": "scurry",
+        "counter_max": "0"
+    },
+    {
+        "name": "Fearsome Blade",
+        "initiative": "27",
+        "level": "1",
+        "image": "fearsome-blade",
+        "counter_max": "0"
+    },
+    {
+        "name": "Parasitic Influence",
+        "initiative": "71",
+        "level": "1",
+        "image": "parasitic-influence",
+        "counter_max": "0"
+    },
+    {
+        "name": "Feedback Loop",
+        "initiative": "79",
+        "level": "1",
+        "image": "feedback-loop",
+        "counter_max": "0"
+    },
+    {
+        "name": "Into the Night",
+        "initiative": "14",
+        "level": "1",
+        "image": "into-the-night",
+        "counter_max": "0"
+    },
+    {
+        "name": "Empathetic Assault",
+        "initiative": "11",
+        "level": "1",
+        "image": "empathetic-assault",
+        "counter_max": "0"
+    },
+    {
+        "name": "Perverse Edge",
+        "initiative": "8",
+        "level": "1",
+        "image": "perverse-edge",
+        "counter_max": "0"
+    },
+    {
+        "name": "Withering Claw",
+        "initiative": "77",
+        "level": "0",
+        "image": "withering-claw",
+        "counter_max": "0"
+    },
+    {
+        "name": "Possession",
+        "initiative": "51",
+        "level": "0",
+        "image": "possession",
+        "counter_max": "0"
+    },
+    {
+        "name": "Frigid Apparition",
+        "initiative": "29",
+        "level": "0",
+        "image": "frigid-apparition",
+        "counter_max": "0"
+    },
+    {
+        "name": "Wretched Creature",
+        "initiative": "84",
+        "level": "2",
+        "image": "wretched-creature",
+        "counter_max": "0"
+    },
+    {
+        "name": "Hostile Takeover",
+        "initiative": "9",
+        "level": "2",
+        "image": "hostile-takeover",
+        "counter_max": "0"
+    },
+    {
+        "name": "Brain Leech",
+        "initiative": "16",
+        "level": "3",
+        "image": "brain-leech",
+        "counter_max": "0"
+    },
+    {
+        "name": "Silent Scream",
+        "initiative": "73",
+        "level": "3",
+        "image": "silent-scream",
+        "counter_max": "0"
+    },
+    {
+        "name": "Pilfer",
+        "initiative": "68",
+        "level": "4",
+        "image": "pilfer",
+        "counter_max": "0"
+    },
+    {
+        "name": "Cranium Overload",
+        "initiative": "5",
+        "level": "4",
+        "image": "cranium-overload",
+        "counter_max": "0"
+    },
+    {
+        "name": "Frozen Mind",
+        "initiative": "81",
+        "level": "5",
+        "image": "frozen-mind",
+        "counter_max": "0"
+    },
+    {
+        "name": "Mass Hysteria",
+        "initiative": "12",
+        "level": "5",
+        "image": "mass-hysteria",
+        "counter_max": "0"
+    },
+    {
+        "name": "Dark Frenzy",
+        "initiative": "10",
+        "level": "6",
+        "image": "dark-frenzy",
+        "counter_max": "0"
+    },
+    {
+        "name": "Corrupting Embrace",
+        "initiative": "39",
+        "level": "6",
+        "image": "corrupting-embrace",
+        "counter_max": "0"
+    },
+    {
+        "name": "Vicious Blood",
+        "initiative": "83",
+        "level": "7",
+        "image": "vicious-blood",
+        "counter_max": "0"
+    },
+    {
+        "name": "Psychic Projection",
+        "initiative": "92",
+        "level": "7",
+        "image": "psychic-projection",
+        "counter_max": "0"
+    },
+    {
+        "name": "Shared Nightmare",
+        "initiative": "7",
+        "level": "8",
+        "image": "shared-nightmare",
+        "counter_max": "0"
+    },
+    {
+        "name": "Domination",
+        "initiative": "13",
+        "level": "8",
+        "image": "domination",
+        "counter_max": "0"
+    },
+    {
+        "name": "Many as One",
+        "initiative": "91",
+        "level": "9",
+        "image": "many-as-one",
+        "counter_max": "0"
+    },
+    {
+        "name": "Phantasmal Killer",
+        "initiative": "67",
+        "level": "9",
+        "image": "phantasmal-killer",
+        "counter_max": "0"
+    }
 ]
-

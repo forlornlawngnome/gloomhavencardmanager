@@ -1,10 +1,198 @@
 [
-  {
-    "name": "Sweeping Blow",
-    "initiative": 64,
-    "level": 1,
-    "image": "sweeping-blow",
-    "counter_max": 0
-  },
+    {
+        "name": "Single Out",
+        "initiative": "86",
+        "level": "1",
+        "image": "single-out",
+        "counter_max": "4"
+    },
+    {
+        "name": "Flanking Strike",
+        "initiative": "4",
+        "level": "1",
+        "image": "flanking-strike",
+        "counter_max": "0"
+    },
+    {
+        "name": "Smoke Bomb",
+        "initiative": "12",
+        "level": "1",
+        "image": "smoke-bomb",
+        "counter_max": "0"
+    },
+    {
+        "name": "Backstab",
+        "initiative": "6",
+        "level": "1",
+        "image": "backstab",
+        "counter_max": "0"
+    },
+    {
+        "name": "Thief's Knack",
+        "initiative": "23",
+        "level": "1",
+        "image": "thief's-knack",
+        "counter_max": "0"
+    },
+    {
+        "name": "Venom Shiv",
+        "initiative": "60",
+        "level": "1",
+        "image": "venom-shiv",
+        "counter_max": "0"
+    },
+    {
+        "name": "Throwing Knives",
+        "initiative": "10",
+        "level": "1",
+        "image": "throwing-knives",
+        "counter_max": "0"
+    },
+    {
+        "name": "Quick Hands",
+        "initiative": "64",
+        "level": "1",
+        "image": "quick-hands",
+        "counter_max": "0"
+    },
+    {
+        "name": "Special Mixture",
+        "initiative": "33",
+        "level": "1",
+        "image": "special-mixture",
+        "counter_max": "0"
+    },
+    {
+        "name": "Sinister Opportunity",
+        "initiative": "93",
+        "level": "0",
+        "image": "sinister-opportunity",
+        "counter_max": "0"
+    },
+    {
+        "name": "Trickster's Reversal",
+        "initiative": "9",
+        "level": "0",
+        "image": "trickster's-reversal",
+        "counter_max": "0"
+    },
+    {
+        "name": "Swift Bow",
+        "initiative": "36",
+        "level": "0",
+        "image": "swift-bow",
+        "counter_max": "0"
+    },
+    {
+        "name": "Open Wound",
+        "initiative": "11",
+        "level": "2",
+        "image": "open-wound",
+        "counter_max": "0"
+    },
+    {
+        "name": "Flintlock",
+        "initiative": "90",
+        "level": "2",
+        "image": "flintlock",
+        "counter_max": "0"
+    },
+    {
+        "name": "Hidden Daggers",
+        "initiative": "85",
+        "level": "3",
+        "image": "hidden-daggers",
+        "counter_max": "0"
+    },
+    {
+        "name": "Duelist's Advance",
+        "initiative": "16",
+        "level": "3",
+        "image": "duelist's-advance",
+        "counter_max": "0"
+    },
+    {
+        "name": "Flurry of Blades",
+        "initiative": "3",
+        "level": "4",
+        "image": "flurry-of-blades",
+        "counter_max": "0"
+    },
+    {
+        "name": "Gruesome Advantage",
+        "initiative": "62",
+        "level": "4",
+        "image": "gruesome-advantage",
+        "counter_max": "0"
+    },
+    {
+        "name": "Cull the Weak",
+        "initiative": "16",
+        "level": "5",
+        "image": "cull-the-weak",
+        "counter_max": "6"
+    },
+    {
+        "name": "Visage of the Inevitable",
+        "initiative": "88",
+        "level": "5",
+        "image": "visage-of-the-inevitable",
+        "counter_max": "0"
+    },
+    {
+        "name": "Crippling Poison",
+        "initiative": "30",
+        "level": "6",
+        "image": "crippling-poison",
+        "counter_max": "0"
+    },
+    {
+        "name": "Burning Oil",
+        "initiative": "95",
+        "level": "6",
+        "image": "burning-oil",
+        "counter_max": "0"
+    },
+    {
+        "name": "Stick to the Shadows",
+        "initiative": "26",
+        "level": "7",
+        "image": "stick-to-the-shadows",
+        "counter_max": "0"
+    },
+    {
+        "name": "Spring the Trap",
+        "initiative": "13",
+        "level": "7",
+        "image": "spring-the-trap",
+        "counter_max": "0"
+    },
+    {
+        "name": "Stiletto Storm",
+        "initiative": "80",
+        "level": "8",
+        "image": "stiletto-storm",
+        "counter_max": "0"
+    },
+    {
+        "name": "Pain's End",
+        "initiative": "38",
+        "level": "8",
+        "image": "pain's-end",
+        "counter_max": "0"
+    },
+    {
+        "name": "Long Con",
+        "initiative": "2",
+        "level": "9",
+        "image": "long-con",
+        "counter_max": "0"
+    },
+    {
+        "name": "Watch It Burn",
+        "initiative": "98",
+        "level": "9",
+        "image": "watch-it-burn",
+        "counter_max": "0"
+    }
 ]
-

@@ -1,10 +1,191 @@
 [
-  {
-    "name": "Sweeping Blow",
-    "initiative": 64,
-    "level": 1,
-    "image": "sweeping-blow",
-    "counter_max": 0
-  },
+    {
+        "name": "Freezing Nova",
+        "initiative": "21",
+        "level": "1",
+        "image": "freezing-nova",
+        "counter_max": "4"
+    },
+    {
+        "name": "Ride the Wind",
+        "initiative": "83",
+        "level": "1",
+        "image": "ride-the-wind",
+        "counter_max": "0"
+    },
+    {
+        "name": "Mana Bolt",
+        "initiative": "7",
+        "level": "1",
+        "image": "mana-bolt",
+        "counter_max": "0"
+    },
+    {
+        "name": "Reviving Ether",
+        "initiative": "80",
+        "level": "1",
+        "image": "reviving-ether",
+        "counter_max": "0"
+    },
+    {
+        "name": "Flame Strike",
+        "initiative": "36",
+        "level": "1",
+        "image": "flame-strike",
+        "counter_max": "0"
+    },
+    {
+        "name": "Frost Armor",
+        "initiative": "20",
+        "level": "1",
+        "image": "frost-armor",
+        "counter_max": "0"
+    },
+    {
+        "name": "Fire Orb",
+        "initiative": "69",
+        "level": "1",
+        "image": "fire-orb",
+        "counter_max": "0"
+    },
+    {
+        "name": "Impaling Eruption",
+        "initiative": "70",
+        "level": "1",
+        "image": "impaling-eruption",
+        "counter_max": "0"
+    },
+    {
+        "name": "Hardened Spikes",
+        "initiative": "26",
+        "level": "0",
+        "image": "hardened-spikes",
+        "counter_max": "0"
+    },
+    {
+        "name": "Crackling Air",
+        "initiative": "25",
+        "level": "0",
+        "image": "crackling-air",
+        "counter_max": "0"
+    },
+    {
+        "name": "Aid from the Ether",
+        "initiative": "91",
+        "level": "0",
+        "image": "aid-from-the-ether",
+        "counter_max": "0"
+    },
+    {
+        "name": "Icy Blast",
+        "initiative": "66",
+        "level": "2",
+        "image": "icy-blast",
+        "counter_max": "0"
+    },
+    {
+        "name": "Flashing Burst",
+        "initiative": "26",
+        "level": "2",
+        "image": "flashing-burst",
+        "counter_max": "0"
+    },
+    {
+        "name": "Cold Fire",
+        "initiative": "67",
+        "level": "3",
+        "image": "cold-fire",
+        "counter_max": "0"
+    },
+    {
+        "name": "Elemental Aid",
+        "initiative": "84",
+        "level": "3",
+        "image": "elemental-aid",
+        "counter_max": "0"
+    },
+    {
+        "name": "Spirit of Doom",
+        "initiative": "81",
+        "level": "4",
+        "image": "spirit-of-doom",
+        "counter_max": "0"
+    },
+    {
+        "name": "Forked Beam",
+        "initiative": "20",
+        "level": "4",
+        "image": "forked-beam",
+        "counter_max": "0"
+    },
+    {
+        "name": "Chromatic Explosion",
+        "initiative": "71",
+        "level": "5",
+        "image": "chromatic-explosion",
+        "counter_max": "0"
+    },
+    {
+        "name": "Engulfed in Flames",
+        "initiative": "44",
+        "level": "5",
+        "image": "engulfed-in-flames",
+        "counter_max": "6"
+    },
+    {
+        "name": "Frozen Night",
+        "initiative": "46",
+        "level": "6",
+        "image": "frozen-night",
+        "counter_max": "0"
+    },
+    {
+        "name": "Living Torch",
+        "initiative": "96",
+        "level": "6",
+        "image": "living-torch",
+        "counter_max": "0"
+    },
+    {
+        "name": "Twin Restoration",
+        "initiative": "75",
+        "level": "7",
+        "image": "twin-restoration",
+        "counter_max": "0"
+    },
+    {
+        "name": "Stone Fist",
+        "initiative": "62",
+        "level": "7",
+        "image": "stone-fist",
+        "counter_max": "0"
+    },
+    {
+        "name": "Zephyr Wings",
+        "initiative": "85",
+        "level": "8",
+        "image": "zephyr-wings",
+        "counter_max": "0"
+    },
+    {
+        "name": "Cold Front",
+        "initiative": "61",
+        "level": "8",
+        "image": "cold-front",
+        "counter_max": "0"
+    },
+    {
+        "name": "Black Hole",
+        "initiative": "41",
+        "level": "9",
+        "image": "black-hole",
+        "counter_max": "0"
+    },
+    {
+        "name": "Inferno",
+        "initiative": "19",
+        "level": "9",
+        "image": "inferno",
+        "counter_max": "0"
+    }
 ]
-

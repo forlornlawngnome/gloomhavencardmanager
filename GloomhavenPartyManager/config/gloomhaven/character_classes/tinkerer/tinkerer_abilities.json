@@ -1,10 +1,219 @@
 [
-  {
-    "name": "Sweeping Blow",
-    "initiative": 64,
-    "level": 1,
-    "image": "sweeping-blow",
-    "counter_max": 0
-  },
+    {
+        "name": "Reinvigorating Elixir",
+        "initiative": "37",
+        "level": "1",
+        "image": "reinvigorating-elixir",
+        "counter_max": "0"
+    },
+    {
+        "name": "Harmless Contraption",
+        "initiative": "74",
+        "level": "1",
+        "image": "harmless-contraption",
+        "counter_max": "0"
+    },
+    {
+        "name": "Proximity Mine",
+        "initiative": "62",
+        "level": "1",
+        "image": "proximity-mine",
+        "counter_max": "0"
+    },
+    {
+        "name": "Hook Gun",
+        "initiative": "72",
+        "level": "1",
+        "image": "hook-gun",
+        "counter_max": "0"
+    },
+    {
+        "name": "Toxic Bolt",
+        "initiative": "18",
+        "level": "1",
+        "image": "toxic-bolt",
+        "counter_max": "0"
+    },
+    {
+        "name": "Ink Bomb",
+        "initiative": "74",
+        "level": "1",
+        "image": "ink-bomb",
+        "counter_max": "0"
+    },
+    {
+        "name": "Enhancement Field",
+        "initiative": "61",
+        "level": "1",
+        "image": "enhancement-field",
+        "counter_max": "0"
+    },
+    {
+        "name": "Restorative Mist",
+        "initiative": "17",
+        "level": "1",
+        "image": "restorative-mist",
+        "counter_max": "0"
+    },
+    {
+        "name": "Energizing Tonic",
+        "initiative": "16",
+        "level": "1",
+        "image": "energizing-tonic",
+        "counter_max": "0"
+    },
+    {
+        "name": "Net Shooter",
+        "initiative": "19",
+        "level": "1",
+        "image": "net-shooter",
+        "counter_max": "0"
+    },
+    {
+        "name": "Flamethrower",
+        "initiative": "47",
+        "level": "1",
+        "image": "flamethrower",
+        "counter_max": "0"
+    },
+    {
+        "name": "Stun Shot",
+        "initiative": "20",
+        "level": "1",
+        "image": "stun-shot",
+        "counter_max": "0"
+    },
+    {
+        "name": "Volatile Concoction",
+        "initiative": "76",
+        "level": "0",
+        "image": "volatile-concoction",
+        "counter_max": "0"
+    },
+    {
+        "name": "Reviving Shock",
+        "initiative": "34",
+        "level": "0",
+        "image": "reviving-shock",
+        "counter_max": "0"
+    },
+    {
+        "name": "Potent Potables",
+        "initiative": "46",
+        "level": "0",
+        "image": "potent-potables",
+        "counter_max": "4"
+    },
+    {
+        "name": "Stamina Booster",
+        "initiative": "48",
+        "level": "2",
+        "image": "stamina-booster",
+        "counter_max": "0"
+    },
+    {
+        "name": "Disorienting Flash",
+        "initiative": "73",
+        "level": "2",
+        "image": "disorienting-flash",
+        "counter_max": "0"
+    },
+    {
+        "name": "Tinkerer's Tools",
+        "initiative": "26",
+        "level": "3",
+        "image": "tinkerer's-tools",
+        "counter_max": "0"
+    },
+    {
+        "name": "Crank Bow",
+        "initiative": "66",
+        "level": "3",
+        "image": "crank-bow",
+        "counter_max": "0"
+    },
+    {
+        "name": "Micro Bots",
+        "initiative": "22",
+        "level": "4",
+        "image": "micro-bots",
+        "counter_max": "0"
+    },
+    {
+        "name": "Dangerous Contraption",
+        "initiative": "84",
+        "level": "4",
+        "image": "dangerous-contraption",
+        "counter_max": "0"
+    },
+    {
+        "name": "Noxious Vials",
+        "initiative": "75",
+        "level": "5",
+        "image": "noxious-vials",
+        "counter_max": "0"
+    },
+    {
+        "name": "Disintegration Beam",
+        "initiative": "36",
+        "level": "5",
+        "image": "disintegration-beam",
+        "counter_max": "0"
+    },
+    {
+        "name": "Auto Turret",
+        "initiative": "34",
+        "level": "6",
+        "image": "auto-turret",
+        "counter_max": "5"
+    },
+    {
+        "name": "Gas Canister",
+        "initiative": "71",
+        "level": "6",
+        "image": "gas-canister",
+        "counter_max": "4"
+    },
+    {
+        "name": "Curative Aerosol",
+        "initiative": "21",
+        "level": "7",
+        "image": "curative-aerosol",
+        "counter_max": "0"
+    },
+    {
+        "name": "Murderous Contraption",
+        "initiative": "94",
+        "level": "7",
+        "image": "murderous-contraption",
+        "counter_max": "0"
+    },
+    {
+        "name": "Harsh Stimulants",
+        "initiative": "27",
+        "level": "8",
+        "image": "harsh-stimulants",
+        "counter_max": "0"
+    },
+    {
+        "name": "Jet Propulsion",
+        "initiative": "38",
+        "level": "8",
+        "image": "jet-propulsion",
+        "counter_max": "0"
+    },
+    {
+        "name": "Lethal Injection",
+        "initiative": "85",
+        "level": "9",
+        "image": "lethal-injection",
+        "counter_max": "0"
+    },
+    {
+        "name": "Chimeric Formula",
+        "initiative": "43",
+        "level": "9",
+        "image": "chimeric-formula",
+        "counter_max": "0"
+    }
 ]
-
