@@ -1,0 +1,198 @@
+[
+    {
+        "name": "Cloak of Shade",
+        "initiative": "13",
+        "level": "1",
+        "image": "cloak-of-shade",
+        "counter_max": "0"
+    },
+    {
+        "name": "Dancing Shadows",
+        "initiative": "9",
+        "level": "1",
+        "image": "dancing-shadows",
+        "counter_max": "0"
+    },
+    {
+        "name": "Spirit of the Night",
+        "initiative": "84",
+        "level": "1",
+        "image": "spirit-of-the-night",
+        "counter_max": "0"
+    },
+    {
+        "name": "Silent Force",
+        "initiative": "91",
+        "level": "1",
+        "image": "silent-force",
+        "counter_max": "0"
+    },
+    {
+        "name": "Black Knives",
+        "initiative": "44",
+        "level": "1",
+        "image": "black-knives",
+        "counter_max": "4"
+    },
+    {
+        "name": "Smoke Step",
+        "initiative": "28",
+        "level": "1",
+        "image": "smoke-step",
+        "counter_max": "0"
+    },
+    {
+        "name": "Enervating Wound",
+        "initiative": "77",
+        "level": "1",
+        "image": "enervating-wound",
+        "counter_max": "0"
+    },
+    {
+        "name": "Doomed Breeze",
+        "initiative": "15",
+        "level": "1",
+        "image": "doomed-breeze",
+        "counter_max": "0"
+    },
+    {
+        "name": "Empowering Void",
+        "initiative": "21",
+        "level": "1",
+        "image": "empowering-void",
+        "counter_max": "0"
+    },
+    {
+        "name": "Dark Cloud",
+        "initiative": "74",
+        "level": "0",
+        "image": "dark-cloud",
+        "counter_max": "0"
+    },
+    {
+        "name": "Concealed Dominance",
+        "initiative": "35",
+        "level": "0",
+        "image": "concealed-dominance",
+        "counter_max": "0"
+    },
+    {
+        "name": "Wings of the Night",
+        "initiative": "24",
+        "level": "0",
+        "image": "wings-of-the-night",
+        "counter_max": "4"
+    },
+    {
+        "name": "Prepare for the Kill",
+        "initiative": "7",
+        "level": "2",
+        "image": "prepare-for-the-kill",
+        "counter_max": "0"
+    },
+    {
+        "name": "Soulfire",
+        "initiative": "85",
+        "level": "2",
+        "image": "soulfire",
+        "counter_max": "0"
+    },
+    {
+        "name": "Armor of the Night",
+        "initiative": "23",
+        "level": "3",
+        "image": "armor-of-the-night",
+        "counter_max": "0"
+    },
+    {
+        "name": "Terror Blade",
+        "initiative": "17",
+        "level": "3",
+        "image": "terror-blade",
+        "counter_max": "0"
+    },
+    {
+        "name": "Grim Sustenance",
+        "initiative": "29",
+        "level": "4",
+        "image": "grim-sustenance",
+        "counter_max": "0"
+    },
+    {
+        "name": "Nightfall",
+        "initiative": "73",
+        "level": "4",
+        "image": "nightfall",
+        "counter_max": "3"
+    },
+    {
+        "name": "Black Arrow",
+        "initiative": "11",
+        "level": "5",
+        "image": "black-arrow",
+        "counter_max": "0"
+    },
+    {
+        "name": "Claws of the Night",
+        "initiative": "26",
+        "level": "5",
+        "image": "claws-of-the-night",
+        "counter_max": "4"
+    },
+    {
+        "name": "Swallowed by Fear",
+        "initiative": "90",
+        "level": "6",
+        "image": "swallowed-by-fear",
+        "counter_max": "0"
+    },
+    {
+        "name": "Unseen Dread",
+        "initiative": "5",
+        "level": "6",
+        "image": "unseen-dread",
+        "counter_max": "0"
+    },
+    {
+        "name": "Eyes of the Night",
+        "initiative": "35",
+        "level": "7",
+        "image": "eyes-of-the-night",
+        "counter_max": "0"
+    },
+    {
+        "name": "Quiet Frenzy",
+        "initiative": "19",
+        "level": "7",
+        "image": "quiet-frenzy",
+        "counter_max": "0"
+    },
+    {
+        "name": "Gloom Darts",
+        "initiative": "78",
+        "level": "8",
+        "image": "gloom-darts",
+        "counter_max": "0"
+    },
+    {
+        "name": "Lurking Ruin",
+        "initiative": "18",
+        "level": "8",
+        "image": "lurking-ruin",
+        "counter_max": "0"
+    },
+    {
+        "name": "Angel of Death",
+        "initiative": "38",
+        "level": "9",
+        "image": "angel-of-death",
+        "counter_max": "0"
+    },
+    {
+        "name": "Voice of the Night",
+        "initiative": "6",
+        "level": "9",
+        "image": "voice-of-the-night",
+        "counter_max": "5"
+    }
+]

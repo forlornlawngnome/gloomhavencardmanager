@@ -1,10 +1,198 @@
 [
-  {
-    "name": "Sweeping Blow",
-    "initiative": 64,
-    "level": 1,
-    "image": "sweeping-blow",
-    "counter_max": 0
-  },
+    {
+        "name": "Unending Dominance",
+        "initiative": "98",
+        "level": "1",
+        "image": "unending-dominance",
+        "counter_max": "0"
+    },
+    {
+        "name": "Living Night",
+        "initiative": "82",
+        "level": "1",
+        "image": "living-night",
+        "counter_max": "0"
+    },
+    {
+        "name": "Forged Ferocity",
+        "initiative": "96",
+        "level": "1",
+        "image": "forged-ferocity",
+        "counter_max": "0"
+    },
+    {
+        "name": "Wild Animation",
+        "initiative": "92",
+        "level": "1",
+        "image": "wild-animation",
+        "counter_max": "0"
+    },
+    {
+        "name": "Mighty Bond",
+        "initiative": "51",
+        "level": "1",
+        "image": "mighty-bond",
+        "counter_max": "0"
+    },
+    {
+        "name": "Unwavering Hand",
+        "initiative": "31",
+        "level": "1",
+        "image": "unwavering-hand",
+        "counter_max": "0"
+    },
+    {
+        "name": "Bonded Might",
+        "initiative": "61",
+        "level": "1",
+        "image": "bonded-might",
+        "counter_max": "0"
+    },
+    {
+        "name": "Biting Wind",
+        "initiative": "25",
+        "level": "1",
+        "image": "biting-wind",
+        "counter_max": "0"
+    },
+    {
+        "name": "Black Fire",
+        "initiative": "24",
+        "level": "1",
+        "image": "black-fire",
+        "counter_max": "0"
+    },
+    {
+        "name": "Volatile Flame",
+        "initiative": "94",
+        "level": "0",
+        "image": "volatile-flame",
+        "counter_max": "0"
+    },
+    {
+        "name": "Ethereal Vines",
+        "initiative": "30",
+        "level": "0",
+        "image": "ethereal-vines",
+        "counter_max": "0"
+    },
+    {
+        "name": "Leathery Wings",
+        "initiative": "90",
+        "level": "0",
+        "image": "leathery-wings",
+        "counter_max": "0"
+    },
+    {
+        "name": "Grasping the Void",
+        "initiative": "62",
+        "level": "2",
+        "image": "grasping-the-void",
+        "counter_max": "0"
+    },
+    {
+        "name": "Earthen Steed",
+        "initiative": "13",
+        "level": "2",
+        "image": "earthen-steed",
+        "counter_max": "0"
+    },
+    {
+        "name": "Tear the Fabric",
+        "initiative": "41",
+        "level": "3",
+        "image": "tear-the-fabric",
+        "counter_max": "0"
+    },
+    {
+        "name": "Oozing Manifestation",
+        "initiative": "86",
+        "level": "3",
+        "image": "oozing-manifestation",
+        "counter_max": "0"
+    },
+    {
+        "name": "Divided Mind",
+        "initiative": "55",
+        "level": "4",
+        "image": "divided-mind",
+        "counter_max": "0"
+    },
+    {
+        "name": "Living Mountain",
+        "initiative": "88",
+        "level": "4",
+        "image": "living-mountain",
+        "counter_max": "0"
+    },
+    {
+        "name": "Conjured Aid",
+        "initiative": "81",
+        "level": "5",
+        "image": "conjured-aid",
+        "counter_max": "0"
+    },
+    {
+        "name": "Strength in Numbers",
+        "initiative": "45",
+        "level": "5",
+        "image": "strength-in-numbers",
+        "counter_max": "0"
+    },
+    {
+        "name": "Endless Spikes",
+        "initiative": "97",
+        "level": "6",
+        "image": "endless-spikes",
+        "counter_max": "0"
+    },
+    {
+        "name": "Inexorable Momentum",
+        "initiative": "32",
+        "level": "6",
+        "image": "inexorable-momentum",
+        "counter_max": "0"
+    },
+    {
+        "name": "Negative Energy",
+        "initiative": "95",
+        "level": "7",
+        "image": "negative-energy",
+        "counter_max": "0"
+    },
+    {
+        "name": "Staff of Visions",
+        "initiative": "27",
+        "level": "7",
+        "image": "staff-of-visions",
+        "counter_max": "0"
+    },
+    {
+        "name": "Otherworldly Rage",
+        "initiative": "35",
+        "level": "8",
+        "image": "otherworldly-rage",
+        "counter_max": "0"
+    },
+    {
+        "name": "Intervening Apparitions",
+        "initiative": "68",
+        "level": "8",
+        "image": "intervening-apparitions",
+        "counter_max": "3"
+    },
+    {
+        "name": "Interplanar Mastery",
+        "initiative": "22",
+        "level": "9",
+        "image": "interplanar-mastery",
+        "counter_max": "0"
+    },
+    {
+        "name": "Horned Majesty",
+        "initiative": "80",
+        "level": "9",
+        "image": "horned-majesty",
+        "counter_max": "0"
+    }
 ]
-

@@ -1,10 +1,212 @@
 [
-  {
-    "name": "Sweeping Blow",
-    "initiative": 64,
-    "level": 1,
-    "image": "sweeping-blow",
-    "counter_max": 0
-  },
+    {
+        "name": "Vile Pestilence",
+        "initiative": "61",
+        "level": "1",
+        "image": "vile-pestilence",
+        "counter_max": "0"
+    },
+    {
+        "name": "Wretched Swarm",
+        "initiative": "84",
+        "level": "1",
+        "image": "wretched-swarm",
+        "counter_max": "0"
+    },
+    {
+        "name": "Foul Wind",
+        "initiative": "35",
+        "level": "1",
+        "image": "foul-wind",
+        "counter_max": "6"
+    },
+    {
+        "name": "Scattered Terror",
+        "initiative": "11",
+        "level": "1",
+        "image": "scattered-terror",
+        "counter_max": "0"
+    },
+    {
+        "name": "Spread the Plague",
+        "initiative": "27",
+        "level": "1",
+        "image": "spread-the-plague",
+        "counter_max": "0"
+    },
+    {
+        "name": "Biting Gnats",
+        "initiative": "47",
+        "level": "1",
+        "image": "biting-gnats",
+        "counter_max": "0"
+    },
+    {
+        "name": "Grasping Vermin",
+        "initiative": "69",
+        "level": "1",
+        "image": "grasping-vermin",
+        "counter_max": "0"
+    },
+    {
+        "name": "Gathering DOom",
+        "initiative": "76",
+        "level": "1",
+        "image": "gathering-doom",
+        "counter_max": "0"
+    },
+    {
+        "name": "Winged Congregation",
+        "initiative": "16",
+        "level": "1",
+        "image": "winged-congregation",
+        "counter_max": "0"
+    },
+    {
+        "name": "Creeping Curse",
+        "initiative": "72",
+        "level": "1",
+        "image": "creeping-curse",
+        "counter_max": "0"
+    },
+    {
+        "name": "Paralyzing Bite",
+        "initiative": "31",
+        "level": "1",
+        "image": "paralyzing-bite",
+        "counter_max": "0"
+    },
+    {
+        "name": "Epidemic",
+        "initiative": "43",
+        "level": "0",
+        "image": "epidemic",
+        "counter_max": "0"
+    },
+    {
+        "name": "Virulent Strain",
+        "initiative": "50",
+        "level": "0",
+        "image": "virulent-strain",
+        "counter_max": "0"
+    },
+    {
+        "name": "Blistering Vortex",
+        "initiative": "21",
+        "level": "0",
+        "image": "blistering-vortex",
+        "counter_max": "0"
+    },
+    {
+        "name": "Rot Maggots",
+        "initiative": "60",
+        "level": "2",
+        "image": "rot-maggots",
+        "counter_max": "0"
+    },
+    {
+        "name": "Under the Skin",
+        "initiative": "59",
+        "level": "2",
+        "image": "under-the-skin",
+        "counter_max": "0"
+    },
+    {
+        "name": "Fetid Flurry",
+        "initiative": "26",
+        "level": "3",
+        "image": "fetid-flurry",
+        "counter_max": "0"
+    },
+    {
+        "name": "Succumb to the Gift",
+        "initiative": "70",
+        "level": "3",
+        "image": "succumb-to-the-gift",
+        "counter_max": "0"
+    },
+    {
+        "name": "Nightmarish Affliction",
+        "initiative": "43",
+        "level": "4",
+        "image": "nightmarish-affliction",
+        "counter_max": "0"
+    },
+    {
+        "name": "Storm of Wings",
+        "initiative": "91",
+        "level": "4",
+        "image": "storm-of-wings",
+        "counter_max": "0"
+    },
+    {
+        "name": "Accelerated End",
+        "initiative": "62",
+        "level": "5",
+        "image": "accelerated-end",
+        "counter_max": "0"
+    },
+    {
+        "name": "Willing Sacrifice",
+        "initiative": "84",
+        "level": "5",
+        "image": "willing-sacrifice",
+        "counter_max": "0"
+    },
+    {
+        "name": "Stinging Cloud",
+        "initiative": "66",
+        "level": "6",
+        "image": "stinging-cloud",
+        "counter_max": "0"
+    },
+    {
+        "name": "Black Tides",
+        "initiative": "37",
+        "level": "6",
+        "image": "black-tides",
+        "counter_max": "0"
+    },
+    {
+        "name": "Airborne Toxin",
+        "initiative": "57",
+        "level": "7",
+        "image": "airborne-toxin",
+        "counter_max": "0"
+    },
+    {
+        "name": "Baneful Hex",
+        "initiative": "33",
+        "level": "7",
+        "image": "baneful-hex",
+        "counter_max": "0"
+    },
+    {
+        "name": "Grim Bargain",
+        "initiative": "46",
+        "level": "8",
+        "image": "grim-bargain",
+        "counter_max": "6"
+    },
+    {
+        "name": "Spreading Scourge",
+        "initiative": "71",
+        "level": "8",
+        "image": "spreading-scourge",
+        "counter_max": "0"
+    },
+    {
+        "name": "Convert the Flock",
+        "initiative": "29",
+        "level": "9",
+        "image": "convert-the-flock",
+        "counter_max": "0"
+    },
+    {
+        "name": "Mass Extinction",
+        "initiative": "94",
+        "level": "9",
+        "image": "mass-extinction",
+        "counter_max": "0"
+    }
 ]
-

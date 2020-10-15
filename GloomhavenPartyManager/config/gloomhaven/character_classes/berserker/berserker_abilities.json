@@ -1,10 +1,205 @@
 [
-  {
-    "name": "Sweeping Blow",
-    "initiative": 64,
-    "level": 1,
-    "image": "sweeping-blow",
-    "counter_max": 0
-  },
+    {
+        "name": "Defiance of Death",
+        "initiative": "31",
+        "level": "1",
+        "image": "defiance-of-death",
+        "counter_max": "3"
+    },
+    {
+        "name": "Furious Aid",
+        "initiative": "43",
+        "level": "1",
+        "image": "furious-aid",
+        "counter_max": "0"
+    },
+    {
+        "name": "Growing Rage",
+        "initiative": "85",
+        "level": "1",
+        "image": "growing-rage",
+        "counter_max": "0"
+    },
+    {
+        "name": "Blood Pact",
+        "initiative": "76",
+        "level": "1",
+        "image": "blood-pact",
+        "counter_max": "0"
+    },
+    {
+        "name": "Cauterize",
+        "initiative": "40",
+        "level": "1",
+        "image": "cauterize",
+        "counter_max": "4"
+    },
+    {
+        "name": "From the Brink",
+        "initiative": "24",
+        "level": "1",
+        "image": "from-the-brink",
+        "counter_max": "0"
+    },
+    {
+        "name": "Resolute Stand",
+        "initiative": "9",
+        "level": "1",
+        "image": "resolute-stand",
+        "counter_max": "0"
+    },
+    {
+        "name": "Bounce Back",
+        "initiative": "14",
+        "level": "1",
+        "image": "bounce-back",
+        "counter_max": "0"
+    },
+    {
+        "name": "Strength in Agony",
+        "initiative": "37",
+        "level": "1",
+        "image": "strength-in-agony",
+        "counter_max": "0"
+    },
+    {
+        "name": "Dazing Wound",
+        "initiative": "29",
+        "level": "1",
+        "image": "dazing-wound",
+        "counter_max": "0"
+    },
+    {
+        "name": "Unbridled Power",
+        "initiative": "67",
+        "level": "0",
+        "image": "unbridled-power",
+        "counter_max": "0"
+    },
+    {
+        "name": "Glass Hammer",
+        "initiative": "11",
+        "level": "0",
+        "image": "glass-hammer",
+        "counter_max": "0"
+    },
+    {
+        "name": "Numb the Pain",
+        "initiative": "35",
+        "level": "0",
+        "image": "numb-the-pain",
+        "counter_max": "0"
+    },
+    {
+        "name": "Reckless Offensive",
+        "initiative": "21",
+        "level": "2",
+        "image": "reckless-offensive",
+        "counter_max": "0"
+    },
+    {
+        "name": "Break the Chains",
+        "initiative": "53",
+        "level": "2",
+        "image": "break-the-chains",
+        "counter_max": "0"
+    },
+    {
+        "name": "Fatal Fury",
+        "initiative": "34",
+        "level": "3",
+        "image": "fatal-fury",
+        "counter_max": "0"
+    },
+    {
+        "name": "Spiked Armor",
+        "initiative": "16",
+        "level": "3",
+        "image": "spiked-armor",
+        "counter_max": "0"
+    },
+    {
+        "name": "Shiny Distraction",
+        "initiative": "8",
+        "level": "4",
+        "image": "shiny-distraction",
+        "counter_max": "0"
+    },
+    {
+        "name": "Flurry of Axes",
+        "initiative": "27",
+        "level": "4",
+        "image": "flurry-of-axes",
+        "counter_max": "0"
+    },
+    {
+        "name": "Final Fight",
+        "initiative": "89",
+        "level": "5",
+        "image": "final-fight",
+        "counter_max": "0"
+    },
+    {
+        "name": "Seeing Red",
+        "initiative": "22",
+        "level": "5",
+        "image": "seeing-red",
+        "counter_max": "0"
+    },
+    {
+        "name": "Unstoppable Destruction",
+        "initiative": "57",
+        "level": "6",
+        "image": "unstoppable-destruction",
+        "counter_max": "0"
+    },
+    {
+        "name": "Devil Horns",
+        "initiative": "31",
+        "level": "6",
+        "image": "devil-horns",
+        "counter_max": "0"
+    },
+    {
+        "name": "Careless Charge",
+        "initiative": "20",
+        "level": "7",
+        "image": "careless-charge",
+        "counter_max": "0"
+    },
+    {
+        "name": "Burning Hatred",
+        "initiative": "40",
+        "level": "7",
+        "image": "burning-hatred",
+        "counter_max": "0"
+    },
+    {
+        "name": "Vengeful Barrage",
+        "initiative": "38",
+        "level": "8",
+        "image": "vengeful-barrage",
+        "counter_max": "5"
+    },
+    {
+        "name": "Bone Breaker",
+        "initiative": "41",
+        "level": "8",
+        "image": "bone-breaker",
+        "counter_max": "0"
+    },
+    {
+        "name": "The Maw of Madness",
+        "initiative": "10",
+        "level": "9",
+        "image": "the-maw-of-madness",
+        "counter_max": "0"
+    },
+    {
+        "name": "Immortality",
+        "initiative": "33",
+        "level": "9",
+        "image": "immortality",
+        "counter_max": "5"
+    }
 ]
-

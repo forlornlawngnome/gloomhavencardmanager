@@ -1,10 +1,212 @@
 [
-  {
-    "name": "Sweeping Blow",
-    "initiative": 64,
-    "level": 1,
-    "image": "sweeping-blow",
-    "counter_max": 0
-  },
+    {
+        "name": "Defensive Stance",
+        "initiative": "65",
+        "level": "1",
+        "image": "defensive-stance",
+        "counter_max": "0"
+    },
+    {
+        "name": "Purifying Aura",
+        "initiative": "21",
+        "level": "1",
+        "image": "purifying-aura",
+        "counter_max": "5"
+    },
+    {
+        "name": "Lay on Hands",
+        "initiative": "90",
+        "level": "1",
+        "image": "lay-on-hands",
+        "counter_max": "0"
+    },
+    {
+        "name": "Holy Strike",
+        "initiative": "85",
+        "level": "1",
+        "image": "holy-strike",
+        "counter_max": "0"
+    },
+    {
+        "name": "Brilliant Prayer",
+        "initiative": "27",
+        "level": "1",
+        "image": "brilliant-prayer",
+        "counter_max": "0"
+    },
+    {
+        "name": "Empowering Command",
+        "initiative": "32",
+        "level": "1",
+        "image": "empowering-command",
+        "counter_max": "0"
+    },
+    {
+        "name": "Cautious Advance",
+        "initiative": "23",
+        "level": "1",
+        "image": "cautious-advance",
+        "counter_max": "0"
+    },
+    {
+        "name": "Protective Blessing",
+        "initiative": "61",
+        "level": "1",
+        "image": "protective-blessing",
+        "counter_max": "0"
+    },
+    {
+        "name": "Hammer Blow",
+        "initiative": "55",
+        "level": "1",
+        "image": "hammer-blow",
+        "counter_max": "0"
+    },
+    {
+        "name": "Tactical Order",
+        "initiative": "29",
+        "level": "1",
+        "image": "tactical-order",
+        "counter_max": "0"
+    },
+    {
+        "name": "Dazzling Charge",
+        "initiative": "57",
+        "level": "1",
+        "image": "dazzling-charge",
+        "counter_max": "0"
+    },
+    {
+        "name": "Glorious Bolt",
+        "initiative": "39",
+        "level": "0",
+        "image": "glorious-bolt",
+        "counter_max": "0"
+    },
+    {
+        "name": "Beacon of Light",
+        "initiative": "36",
+        "level": "0",
+        "image": "beacon-of-light",
+        "counter_max": "5"
+    },
+    {
+        "name": "Daybreak",
+        "initiative": "85",
+        "level": "0",
+        "image": "daybreak",
+        "counter_max": "0"
+    },
+    {
+        "name": "Unwavering Mandate",
+        "initiative": "72",
+        "level": "2",
+        "image": "unwavering-mandate",
+        "counter_max": "0"
+    },
+    {
+        "name": "Practical Plans",
+        "initiative": "56",
+        "level": "2",
+        "image": "practical-plans",
+        "counter_max": "0"
+    },
+    {
+        "name": "Mobilizing Axiom",
+        "initiative": "23",
+        "level": "3",
+        "image": "mobilizing-axiom",
+        "counter_max": "0"
+    },
+    {
+        "name": "Burning Flash",
+        "initiative": "51",
+        "level": "3",
+        "image": "burning-flash",
+        "counter_max": "0"
+    },
+    {
+        "name": "Righteous Strength",
+        "initiative": "18",
+        "level": "4",
+        "image": "righteous-strength",
+        "counter_max": "0"
+    },
+    {
+        "name": "Engulfing Radiance",
+        "initiative": "20",
+        "level": "4",
+        "image": "engulfing-radiance",
+        "counter_max": "0"
+    },
+    {
+        "name": "Path of Glory",
+        "initiative": "48",
+        "level": "5",
+        "image": "path-of-glory",
+        "counter_max": "0"
+    },
+    {
+        "name": "Scales of Justice",
+        "initiative": "68",
+        "level": "5",
+        "image": "scales-of-justice",
+        "counter_max": "0"
+    },
+    {
+        "name": "Illuminate the Target",
+        "initiative": "91",
+        "level": "6",
+        "image": "illuminate-the-target",
+        "counter_max": "0"
+    },
+    {
+        "name": "Supportive Chant",
+        "initiative": "11",
+        "level": "6",
+        "image": "supportive-chant",
+        "counter_max": "0"
+    },
+    {
+        "name": "Weapon of Purity",
+        "initiative": "73",
+        "level": "7",
+        "image": "weapon-of-purity",
+        "counter_max": "0"
+    },
+    {
+        "name": "Bright Aegis",
+        "initiative": "14",
+        "level": "7",
+        "image": "bright-aegis",
+        "counter_max": "0"
+    },
+    {
+        "name": "Inspiring Sanctity",
+        "initiative": "79",
+        "level": "8",
+        "image": "inspiring-sanctity",
+        "counter_max": "0"
+    },
+    {
+        "name": "Cleansing Force",
+        "initiative": "25",
+        "level": "8",
+        "image": "cleansing-force",
+        "counter_max": "0"
+    },
+    {
+        "name": "Divine Intervention",
+        "initiative": "9",
+        "level": "9",
+        "image": "divine-intervention",
+        "counter_max": "0"
+    },
+    {
+        "name": "Angelic Ascension",
+        "initiative": "87",
+        "level": "9",
+        "image": "angelic-ascension",
+        "counter_max": "4"
+    }
 ]
-

@@ -1,10 +1,198 @@
 [
-  {
-    "name": "Sweeping Blow",
-    "initiative": 64,
-    "level": 1,
-    "image": "sweeping-blow",
-    "counter_max": 0
-  },
+    {
+        "name": "Hastened Step",
+        "initiative": "26",
+        "level": "1",
+        "image": "hastened-step",
+        "counter_max": "0"
+    },
+    {
+        "name": "Sharpening Kit",
+        "initiative": "23",
+        "level": "1",
+        "image": "sharpening-kit",
+        "counter_max": "0"
+    },
+    {
+        "name": "Proficiency",
+        "initiative": "62",
+        "level": "1",
+        "image": "proficiency",
+        "counter_max": "0"
+    },
+    {
+        "name": "Cleaving Axe",
+        "initiative": "52",
+        "level": "1",
+        "image": "cleaving-axe",
+        "counter_max": "0"
+    },
+    {
+        "name": "Oversized Pack",
+        "initiative": "81",
+        "level": "1",
+        "image": "oversized-pack",
+        "counter_max": "0"
+    },
+    {
+        "name": "Restock",
+        "initiative": "73",
+        "level": "1",
+        "image": "restock",
+        "counter_max": "0"
+    },
+    {
+        "name": "Impaling Spear",
+        "initiative": "48",
+        "level": "1",
+        "image": "impaling-spear",
+        "counter_max": "0"
+    },
+    {
+        "name": "Iron Bulwark",
+        "initiative": "19",
+        "level": "1",
+        "image": "iron-bulwark",
+        "counter_max": "0"
+    },
+    {
+        "name": "Crippling Bow",
+        "initiative": "44",
+        "level": "1",
+        "image": "crippling-bow",
+        "counter_max": "0"
+    },
+    {
+        "name": "Crushing Hammer",
+        "initiative": "17",
+        "level": "0",
+        "image": "crushing-hammer",
+        "counter_max": "0"
+    },
+    {
+        "name": "Reserved Energy",
+        "initiative": "88",
+        "level": "0",
+        "image": "reserved-energy",
+        "counter_max": "0"
+    },
+    {
+        "name": "Scroll of Recall",
+        "initiative": "98",
+        "level": "0",
+        "image": "scroll-of-recall",
+        "counter_max": "0"
+    },
+    {
+        "name": "Reforge",
+        "initiative": "95",
+        "level": "2",
+        "image": "reforge",
+        "counter_max": "0"
+    },
+    {
+        "name": "Bladed Boomerang",
+        "initiative": "40",
+        "level": "2",
+        "image": "bladed-boomerang",
+        "counter_max": "0"
+    },
+    {
+        "name": "Scroll of Lightning",
+        "initiative": "77",
+        "level": "3",
+        "image": "scroll-of-lightning",
+        "counter_max": "0"
+    },
+    {
+        "name": "Continual Supply",
+        "initiative": "86",
+        "level": "3",
+        "image": "continual-supply",
+        "counter_max": "0"
+    },
+    {
+        "name": "Side Pouch",
+        "initiative": "84",
+        "level": "4",
+        "image": "side-pouch",
+        "counter_max": "0"
+    },
+    {
+        "name": "Giant Club",
+        "initiative": "61",
+        "level": "4",
+        "image": "giant-club",
+        "counter_max": "0"
+    },
+    {
+        "name": "Scroll of Judgment",
+        "initiative": "66",
+        "level": "5",
+        "image": "scroll-of-judgment",
+        "counter_max": "0"
+    },
+    {
+        "name": "Reinforced Steel",
+        "initiative": "12",
+        "level": "5",
+        "image": "reinforced-steel",
+        "counter_max": "0"
+    },
+    {
+        "name": "Quiver of Arrows",
+        "initiative": "31",
+        "level": "6",
+        "image": "quiver-of-arrows",
+        "counter_max": "0"
+    },
+    {
+        "name": "Catastrophic Bomb",
+        "initiative": "46",
+        "level": "6",
+        "image": "catastrophic-bomb",
+        "counter_max": "0"
+    },
+    {
+        "name": "Refreshment",
+        "initiative": "89",
+        "level": "7",
+        "image": "refreshment",
+        "counter_max": "0"
+    },
+    {
+        "name": "Scroll of Blizzards",
+        "initiative": "46",
+        "level": "7",
+        "image": "scroll-of-blizzards",
+        "counter_max": "0"
+    },
+    {
+        "name": "Fortified Position",
+        "initiative": "10",
+        "level": "8",
+        "image": "fortified-position",
+        "counter_max": "5"
+    },
+    {
+        "name": "Portable Ballista",
+        "initiative": "41",
+        "level": "8",
+        "image": "portable-ballista",
+        "counter_max": "0"
+    },
+    {
+        "name": "Scroll of Annihilation",
+        "initiative": "56",
+        "level": "9",
+        "image": "scroll-of-annihilation",
+        "counter_max": "0"
+    },
+    {
+        "name": "Bag of Holding",
+        "initiative": "91",
+        "level": "9",
+        "image": "bag-of-holding",
+        "counter_max": "0"
+    }
 ]
-
