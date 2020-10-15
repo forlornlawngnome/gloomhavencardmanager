@@ -1,9 +1,219 @@
 [
   {
-    "name": "Sweeping Blow",
-    "initiative": 64,
+    "name": "Felling Swoop",
+    "initiative": 75,
     "level": 1,
-    "image": "sweeping-blow",
+    "image": "felling-swoop",
+    "counter_max": 0
+  },
+  {
+    "name": "Foot Snare",
+    "initiative": 61,
+    "level": 1,
+    "image": "foot-snare",
+    "counter_max": 0
+  },
+  {
+    "name": "Frightening Curse",
+    "initiative": 37,
+    "level": 1,
+    "image": "frightening-curse",
+    "counter_max": 3
+  },
+  {
+    "name": "Crippling Noose",
+    "initiative": 57,
+    "level": 1,
+    "image": "crippling-noose",
+    "counter_max": 0
+  },
+  {
+    "name": "Solid Bow",
+    "initiative": 31,
+    "level": 1,
+    "image": "solid-bow",
+    "counter_max": 0
+  },
+  {
+    "name": "Race to the Grave",
+    "initiative": 09,
+    "level": 1,
+    "image": "race-to-the-grave",
+    "counter_max": 0
+  },
+  {
+    "name": "A Moment's Peace",
+    "initiative": 88,
+    "level": 1,
+    "image": "a-moments-peace",
+    "counter_max": 0
+  },
+  {
+    "name": "Multi-Pronged Assault",
+    "initiative": 14,
+    "level": 1,
+    "image": "multi-pronged-assault",
+    "counter_max": 0
+  },
+  {
+    "name": "Denotation",
+    "initiative": 54,
+    "level": 1,
+    "image": "denotation",
+    "counter_max": 0
+  },
+  {
+    "name": "Rain of Arrows",
+    "initiative": 33,
+    "level": 1,
+    "image": "rain-of-arrows",
+    "counter_max": 4
+  },
+  {
+    "name": "Swift Trickery",
+    "initiative": 11,
+    "level": 1,
+    "image": "swift-trickery",
+    "counter_max": 0
+  },
+  {
+    "name": "Vital Charge",
+    "initiative": 78,
+    "level": 1,
+    "image": "vital-charge",
+    "counter_max": 0
+  },
+  {
+    "name": "Sap Life",
+    "initiative": 14,
+    "level": 0,
+    "image": "sap-life",
+    "counter_max": 0
+  },
+  {
+    "name": "The Hunt Begins",
+    "initiative": 71,
+    "level": 0,
+    "image": "the-hunt-begins",
+    "counter_max": 0
+  },
+  {
+    "name": "Fresh Kill",
+    "initiative": 65,
+    "level": 0,
+    "image": "fresh-kill",
+    "counter_max": 0
+  },
+  {
+    "name": "Expose",
+    "initiative": 13,
+    "level": 2,
+    "image": "expose",
+    "counter_max": 0
+  },
+  {
+    "name": "Relentless Offensive",
+    "initiative": 52,
+    "level": 2,
+    "image": "relentless-offensive",
+    "counter_max": 0
+  },
+  {
+    "name": "Press the Attack",
+    "initiative": 10,
+    "level": 3,
+    "image": "press-the-attack",
+    "counter_max": 0
+  },
+  {
+    "name": "Darkened Skies",
+    "initiative": 25,
+    "level": 3,
+    "image": "darkened-skies",
+    "counter_max": 0
+  },
+  {
+    "name": "Flight of Flame",
+    "initiative": 53,
+    "level": 4,
+    "image": "flight-of-flame",
+    "counter_max": 0
+  },
+  {
+    "name": "Singular Focus",
+    "initiative": 28,
+    "level": 4,
+    "image": "singular-focus",
+    "counter_max": 0
+  },
+  {
+    "name": "Inescapable Fate",
+    "initiative": 97,
+    "level": 5,
+    "image": "inescapable-fate",
+    "counter_max": 3
+  },
+  {
+    "name": "Wild Command",
+    "initiative": 46,
+    "level": 5,
+    "image": "wild-command",
+    "counter_max": 0
+  },
+  {
+    "name": "Camouflage",
+    "initiative": 23,
+    "level": 6,
+    "image": "camouflage",
+    "counter_max": 0
+  },
+  {
+    "name": "Nature's Hunger",
+    "initiative": 82,
+    "level": 6,
+    "image": "natures-hunger",
+    "counter_max": 0
+  },
+  {
+    "name": "Crashing Wave",
+    "initiative": 22,
+    "level": 7,
+    "image": "crashing-wave",
+    "counter_max": 0
+  },
+  {
+    "name": "Impending End",
+    "initiative": 47,
+    "level": 7,
+    "image": "impending-end",
+    "counter_max": 0
+  },
+  {
+    "name": "Rising Momentum",
+    "initiative": 12,
+    "level": 8,
+    "image": "rising-momentum",
+    "counter_max": 0
+  },
+  {
+    "name": "Feral Instincts",
+    "initiative": 35,
+    "level": 8,
+    "image": "feral-instints",
+    "counter_max": 0
+  },
+  {
+    "name": "Predator and Prey",
+    "initiative": 86,
+    "level": 9,
+    "image": "predator-and-prey",
+    "counter_max": 0
+  },
+  {
+    "name": "Lead to Slaughter",
+    "initiative": 40,
+    "level": 9,
+    "image": "lead-to-slaughter",
     "counter_max": 0
   },
 ]
