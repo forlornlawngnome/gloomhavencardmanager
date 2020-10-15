@@ -1,14 +1,114 @@
 [
   {
-    "description": "Remove two -1 cards",
+    "description": "Remove four +0 cards",
     "count": 1,
     "attack_cards":
     [
     	{
-    		"attack_card": "Minus 1",
-    		"effects": -2
+    		"attack_card": "Zero",
+    		"effects": -4
     	}
     ]
   },
+  {
+    "description": "Replace one -1 card with one +1 card",
+    "count": 3,
+    "attack_cards":
+    [
+    	{
+    		"attack_card": "Minus 1",
+    		"effects": -1
+    	},
+    	{
+    		"attack_card": "Plus 1",
+    		"effects": 1
+    	}      
+    ]
+  },
+  {
+    "description": "Add one -2 card and two +2 cards",
+    "count": 1,
+    "attack_cards":
+    [
+    	{
+    		"attack_card": "Minus 2",
+    		"effects": 1
+    	},
+    	{
+    		"attack_card": "Plus 2",
+    		"effects": 2
+    	}      
+    ]
+  },
+  {
+    "description": "Add one +1 IMMOBILIZE card",
+    "count": 2,
+    "attack_cards":
+    [
+    	{
+    		"attack_card": "Plus 1 Immobilize",
+    		"effects": 1
+    	}     
+    ]
+  },
+  {
+    "description": "Add one +2 MUDDLE card",
+    "count": 2,
+    "attack_cards":
+    [
+    	{
+    		"attack_card": "Plus 2 Muddle",
+    		"effects": 1
+    	}     
+    ]
+  },
+  {
+    "description": "Add two rolling PUSH 2 cards",
+    "count": 1,
+    "attack_cards":
+    [
+    	{
+    		"attack_card": "Rolling Push",
+    		"effects": 2
+    	}     
+    ]
+  },
+  {
+    "description": "Add two rolling EARTH cards",
+    "count": 2,
+    "attack_cards":
+    [
+    	{
+    		"attack_card": "Rolling Earth",
+    		"effects": 2
+    	}     
+    ]
+  },
+  {
+    "description": "Add two rolling WIND cards",
+    "count": 1,
+    "attack_cards":
+    [
+    	{
+    		"attack_card": "Rolling Wind",
+    		"effects": 2
+    	}     
+    ]
+  },
+  {
+    "description": "Add two rolling WIND cards",
+    "count": 1,
+    "attack_cards":
+    [ 
+    ]
+  },
+  {
+    "description": "Ignore negative scenario effects",
+    "count": 1,
+    "attack_cards":
+    [  
+    ]
+  }
 ]
+
 
