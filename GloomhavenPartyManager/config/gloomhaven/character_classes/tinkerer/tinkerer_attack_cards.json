@@ -1,10 +1,52 @@
 [
   {
-    "name": "Rolling Pierce 3",
-    "image": "am-br-01",
+    "name": "Plus 3",
+    "image": "am-ti-04",
     "value": 0,
     "reshuffle": false,
     "count": 1
   },
+  {
+    "name": "Rolling Fire",
+    "image": "am-ti-05",
+    "value": 0,
+    "reshuffle": false,
+    "count": 2
+  },
+  {
+    "name": "Rolling Muddle",
+    "image": "am-ti-07",
+    "value": 0,
+    "reshuffle": false,
+    "count": 3
+  },
+  {
+    "name": "Plus 1 Wound",
+    "image": "am-ti-10",
+    "value": 0,
+    "reshuffle": false,
+    "count": 2
+  },
+  {
+    "name": "Plus 1 Immobilize",
+    "image": "am-ti-12",
+    "value": 0,
+    "reshuffle": false,
+    "count": 2
+  },
+  {
+    "name": "Plus 1 Heal 2 Self",
+    "image": "am-ti-14",
+    "value": 0,
+    "reshuffle": false,
+    "count": 2
+  },
+  {
+    "name": "Plus 0 Add Target",
+    "image": "am-ti-16",
+    "value": 0,
+    "reshuffle": false,
+    "count": 1
+  }
 ]
 
