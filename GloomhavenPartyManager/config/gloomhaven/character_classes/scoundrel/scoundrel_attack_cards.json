@@ -1,7 +1,35 @@
 [
   {
+    "name": "Rolling Plus 1",
+    "image": "am-sc-05",
+    "value": 0,
+    "reshuffle": false,
+    "count": 4
+  },
+  {
     "name": "Rolling Pierce 3",
-    "image": "am-br-01",
+    "image": "am-sc-09",
+    "value": 0,
+    "reshuffle": false,
+    "count": 2
+  },
+  {
+    "name": "Rolling Poison",
+    "image": "am-sc-11",
+    "value": 0,
+    "reshuffle": false,
+    "count": 4
+  },
+  {
+    "name": "Rolling Muddle",
+    "image": "am-sc-15",
+    "value": 0,
+    "reshuffle": false,
+    "count": 2
+  },
+  {
+    "name": "Rolling Invisible",
+    "image": "am-sc-17",
     "value": 0,
     "reshuffle": false,
     "count": 1
