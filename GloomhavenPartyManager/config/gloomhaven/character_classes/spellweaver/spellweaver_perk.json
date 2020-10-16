@@ -1,14 +1,124 @@
 [
-  {
-    "description": "Remove two -1 cards",
-    "count": 1,
-    "attack_cards":
-    [
-    	{
-    		"attack_card": "Minus 1",
-    		"effects": -2
-    	}
-    ]
-  },
+    {
+        "description": "Remove four +0 cards",
+        "count": "1",
+        "attack_card": [
+            {
+                "attack_card": "Zero",
+                "effects": -4
+            }
+        ]
+    },
+    {
+        "description": "Replace one -1 card with one +1 card",
+        "count": "2",
+        "attack_card": [
+            {
+                "attack_card": "Minus 1",
+                "effects": -1
+            },
+            {
+                "attack_card": "Plus 1",
+                "effects": 1
+            }
+        ]
+    },
+    {
+        "description": "Add two +1 cards",
+        "count": "2",
+        "attack_card": [
+            {
+                "attack_card": "Plus 1",
+                "effects": 2
+            }
+        ]
+    },
+    {
+        "description": "Add one +0 STUN card",
+        "count": "1",
+        "attack_card": [
+            {
+                "attack_card": "Plus 0 Stun",
+                "effects": 1
+            }
+        ]
+    },
+    {
+        "description": "Add one +1 WOUND card",
+        "count": "1",
+        "attack_card": [
+            {
+                "attack_card": "Plus 1 Wound",
+                "effects": 1
+            }
+        ]
+    },
+    {
+        "description": "Add one +1 IMMOBILIZE card",
+        "count": "1",
+        "attack_card": [
+            {
+                "attack_card": "Plus 1 Immobilize",
+                "effects": 1
+            }
+        ]
+    },
+    {
+        "description": "Add one +1 CURSE card",
+        "count": "1",
+        "attack_card": [
+            {
+                "attack_card": "Plus 1 Curse",
+                "effects": 1
+            }
+        ]
+    },
+    {
+        "description": "Add one +2 FIRE card",
+        "count": "2",
+        "attack_card": [
+            {
+                "attack_card": "Plus 2 Fire",
+                "effects": 1
+            }
+        ]
+    },
+    {
+        "description": "Add one +2 ICE card",
+        "count": "2",
+        "attack_card": [
+            {
+                "attack_card": "Plus 2 Ice",
+                "effects": 1
+            }
+        ]
+    },
+    {
+        "description": "Add one rolling EARTH and one rolling WIND card",
+        "count": "1",
+        "attack_card": [
+            {
+                "attack_card": "Rolling Earth",
+                "effects": 1
+            },
+            {
+                "attack_card": "Rolling Stun",
+                "effects": 1
+            }
+        ]
+    },
+    {
+        "description": "Add one rolling LIGHT and one rolling DARK card",
+        "count": "1",
+        "attack_card": [
+            {
+                "attack_card": "Rolling Light",
+                "effects": 1
+            },
+            {
+                "attack_card": "Rolling Dark",
+                "effects": 1
+            }
+        ]
+    }
 ]
-
