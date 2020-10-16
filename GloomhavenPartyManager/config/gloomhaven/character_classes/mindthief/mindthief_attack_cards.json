@@ -1,7 +1,45 @@
 [
   {
-    "name": "Rolling Pierce 3",
-    "image": "am-br-01",
+    "name": "Plus 2 Ice",
+    "image": "am-br-04",
+    "value": 0,
+    "reshuffle": false,
+    "count": 2
+  },
+  {
+    "name": "Rolling Plus 1",
+    "image": "am-br-06",
+    "value": 0,
+    "reshuffle": false,
+    "count": 4
+  },
+  {
+    "name": "Rolling Pull 1",
+    "image": "am-br-10",
+    "value": 0,
+    "reshuffle": false,
+    "count": 3
+  },
+    "name": "Rolling Muddle",
+    "image": "am-br-13",
+    "value": 0,
+    "reshuffle": false,
+    "count": 4
+  },
+    "name": "Rolling Immobalize",
+    "image": "am-br-17",
+    "value": 0,
+    "reshuffle": false,
+    "count": 2
+  },
+    "name": "Rolling Stun",
+    "image": "am-br-19",
+    "value": 0,
+    "reshuffle": false,
+    "count": 1
+  },
+    "name": "Rolling Disarm",
+    "image": "am-br-20",
     "value": 0,
     "reshuffle": false,
     "count": 1
