@@ -20,17 +20,19 @@
     "reshuffle": false,
     "count": 1
   },
+  {
     "name": "Rolling Light",
     "image": "am-sk-08",
     "value": 0,
     "reshuffle": false,
     "count": 4
   },
+  {
     "name": "Rolling Shield 1 Self",
     "image": "am-sk-12",
     "value": 0,
     "reshuffle": false,
     "count": 2
-  },
+  }
 ]
 
