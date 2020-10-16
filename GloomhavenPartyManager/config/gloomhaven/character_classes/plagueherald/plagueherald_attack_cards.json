@@ -1,10 +1,38 @@
 [
   {
-    "name": "Rolling Pierce 3",
+    "name": "Plus 1 Wind",
     "image": "am-br-01",
     "value": 0,
     "reshuffle": false,
-    "count": 1
+    "count": 3
+  },
+  {
+    "name": "Rolling Poison",
+    "image": "am-br-07",
+    "value": 0,
+    "reshuffle": false,
+    "count": 3
+  },
+  {
+    "name": "Rolling Curse",
+    "image": "am-br-10",
+    "value": 0,
+    "reshuffle": false,
+    "count": 2
+  },
+  {
+    "name": "Rolling Immobilize",
+    "image": "am-br-12",
+    "value": 0,
+    "reshuffle": false,
+    "count": 2
+  },
+  {
+    "name": "Rolling Stun",
+    "image": "am-br-14",
+    "value": 0,
+    "reshuffle": false,
+    "count": 2
   },
 ]
 
