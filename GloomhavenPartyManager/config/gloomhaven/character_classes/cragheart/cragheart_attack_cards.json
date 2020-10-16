@@ -1,10 +1,37 @@
 [
   {
-    "name": "Rolling Pierce 3",
-    "image": "am-br-01",
+    "name": "Plus 1 Immobilize",
+    "image": "am-ch-07",
+    "value": 1,
+    "reshuffle": false,
+    "count": 2
+  },
+  {
+    "name": "Plus 2 Muddle",
+    "image": "am-ch-09",
+    "value": 2,
+    "reshuffle": false,
+    "count": 2
+  },
+  {
+    "name": "Rolling Pierce 2",
+    "image": "am-ch-11",
     "value": 0,
     "reshuffle": false,
-    "count": 1
+    "count": 2
   },
+  {
+    "name": "Rolling Leaf",
+    "image": "am-ch-12",
+    "value": 0,
+    "reshuffle": false,
+    "count": 4
+  },
+  {
+    "name": "Rolling Wind",
+    "image": "am-ch-17",
+    "value": 0,
+    "reshuffle": false,
+    "count": 2
+  }
 ]
-
