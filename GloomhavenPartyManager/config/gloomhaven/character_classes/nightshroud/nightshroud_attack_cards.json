@@ -1,49 +1,49 @@
 [
   {
     "name": "Plus 1 Dark",
-    "image": "am-br-01",
+    "image": "am-ns-01",
     "value": 0,
     "reshuffle": false,
     "count": 2
   },
   {
     "name": "Plus 1 Invisible",
-    "image": "am-br-03",
+    "image": "am-ns-03",
     "value": 0,
     "reshuffle": false,
     "count": 2
   },
   {
     "name": "Rolling Muddle",
-    "image": "am-br-05",
+    "image": "am-ns-05",
     "value": 0,
     "reshuffle": false,
     "count": 6
   },
   {
     "name": "Rolling Heal 1",
-    "image": "am-br-11",
+    "image": "am-ns-11",
     "value": 0,
     "reshuffle": false,
     "count": 2
   },
   {
     "name": "Rolling Curse",
-    "image": "am-br-13",
+    "image": "am-ns-13",
     "value": 0,
     "reshuffle": false,
     "count": 2
   },
   {
     "name": "Rolling Add Target",
-    "image": "am-br-15",
+    "image": "am-ns-15",
     "value": 0,
     "reshuffle": false,
     "count": 1
   },
   {
     "name": "Minus 1 Dark",
-    "image": "am-br-19",
+    "image": "am-ns-19",
     "value": 0,
     "reshuffle": false,
     "count": 1
