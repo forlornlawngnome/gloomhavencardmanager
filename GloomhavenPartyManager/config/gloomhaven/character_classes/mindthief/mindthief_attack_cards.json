@@ -19,6 +19,7 @@
     "value": 0,
     "reshuffle": false,
     "count": 3
+  {
   },
     "name": "Rolling Muddle",
     "image": "am-br-13",
@@ -26,18 +27,21 @@
     "reshuffle": false,
     "count": 4
   },
+  {
     "name": "Rolling Immobalize",
     "image": "am-br-17",
     "value": 0,
     "reshuffle": false,
     "count": 2
   },
+  {
     "name": "Rolling Stun",
     "image": "am-br-19",
     "value": 0,
     "reshuffle": false,
     "count": 1
   },
+  {
     "name": "Rolling Disarm",
     "image": "am-br-20",
     "value": 0,
