@@ -27,6 +27,7 @@ class Party < ApplicationRecord
 		create_base_attack_cards
 
 		CharacterClass.all.each do |char_class|
+			print char_class.name
 			add_abilities(char_class)
 			add_attack_modifiers(char_class)
 			add_perks(char_class)
@@ -38,20 +39,47 @@ class Party < ApplicationRecord
 		file = File.read(file_path)
 		abilities = JSON.parse(file)
 		abilities.each do |ability|
-			new_ability = self.ability_cards.build(name:  ability["name"], initiative: ability[:initiative],
-				level: ability[:level], character_class_id: char_class.id, active: false, counter: 0,
-				max_counter: ability[:counter_max], image: ability[:image])
-			new_try = new_ability.save
-			if new_try == false
-				raise new_try.inspect
-			end
+			new_ability = self.ability_cards.build(name:  ability["name"], initiative: ability["initiative"],
+				level: ability["level"], character_class_id: char_class.id, active: false, counter: 0,
+				max_counter: ability["counter_max"], image: ability["image"])
+			new_ability.save
 		end
 	end
 
 	def add_attack_modifiers(char_class)
+		file_path = File.join(CHARACTER_LOCATION,char_class.file_formated_name, "#{char_class.file_formated_name}_attack_cards.json")
+		file = File.read(file_path)
+		cards = JSON.parse(file)
+		cards.each do |card|
+			new_card = self.attack_cards.build(name:  card["name"], character_class_id: char_class.id,
+				image: card["image"], value: card["value"], reshuffle: card["reshuffle"], count: card["count"] )
+			new_try = new_card.save
+		end
 	end
 
 	def add_perks(char_class)
+		print char_class.name
+		file_path = File.join(CHARACTER_LOCATION,char_class.file_formated_name, "#{char_class.file_formated_name}_perk.json")
+		file = File.read(file_path)
+		perks = JSON.parse(file)
+		perks.each do |perk|
+			new_perk = self.perks.build(description:  perk["description"], character_class_id: char_class.id,
+				count: perk["count"] )
+			new_try = new_perk.save
+			if !perk["attack_cards"].nil?
+				perk["attack_cards"].each do |attack_obj|
+					attack_card = AttackCard.where(name: attack_obj["attack_card"], character_class_id: char_class.id)
+					if attack_card.empty?
+						attack_card = AttackCard.where(name: attack_obj["attack_card"], character_class_id: nil)
+					end
+					if attack_card.empty?
+						print "sigh #{char_class.name} #{attack_obj["attack_card"]}"
+					end
+					attack_perk = new_perk.attack_cards_perks.build(attack_card_id: attack_card.first.id, effect: attack_obj["effects"])
+					attack_perk.save
+				end
+			end
+		end
 	end
 
 	def create_base_attack_cards

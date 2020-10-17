@@ -1,38 +1,37 @@
 [
   {
     "name": "Plus 1 Wind",
-    "image": "am-br-01",
+    "image": "am-ph-01",
     "value": 0,
     "reshuffle": false,
     "count": 3
   },
   {
     "name": "Rolling Poison",
-    "image": "am-br-07",
+    "image": "am-ph-07",
     "value": 0,
     "reshuffle": false,
     "count": 3
   },
   {
     "name": "Rolling Curse",
-    "image": "am-br-10",
+    "image": "am-ph-10",
     "value": 0,
     "reshuffle": false,
     "count": 2
   },
   {
     "name": "Rolling Immobilize",
-    "image": "am-br-12",
+    "image": "am-ph-12",
     "value": 0,
     "reshuffle": false,
     "count": 2
   },
   {
     "name": "Rolling Stun",
-    "image": "am-br-14",
+    "image": "am-ph-14",
     "value": 0,
     "reshuffle": false,
     "count": 2
   }
 ]
-

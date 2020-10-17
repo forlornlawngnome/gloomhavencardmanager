@@ -1,52 +1,51 @@
 [
   {
     "name": "Rolling Plus 1",
-    "image": "am-br-05",
+    "image": "am-ds-05",
     "value": 1,
     "reshuffle": false,
     "count": 4
   },
   {
     "name": "Plus 2 Muddle",
-    "image": "am-br-09",
+    "image": "am-ds-09",
     "value": 2,
     "reshuffle": false,
     "count": 1
   },
   {
     "name": "Plus 1 Poison",
-    "image": "am-br-10",
+    "image": "am-ds-10",
     "value": 1,
     "reshuffle": false,
     "count": 1
   },
   {
     "name": "Plus 1 Wound",
-    "image": "am-br-11",
+    "image": "am-ds-11",
     "value": 1,
     "reshuffle": false,
     "count": 1
   },
   {
     "name": "Plus 1 Immobilize",
-    "image": "am-br-12",
+    "image": "am-ds-12",
     "value": 1,
     "reshuffle": false,
     "count": 1
   },
   {
-    "name": "Plus 2 Stun",
-    "image": "am-br-13",
+    "name": "Plus 0 Stun",
+    "image": "am-ds-13",
     "value": 1,
     "reshuffle": false,
     "count": 1
   },
   {
     "name": "Rolling Add Target",
-    "image": "am-br-14",
+    "image": "am-ds-14",
     "value": 0,
     "reshuffle": false,
     "count": 2
   }
 ]
-

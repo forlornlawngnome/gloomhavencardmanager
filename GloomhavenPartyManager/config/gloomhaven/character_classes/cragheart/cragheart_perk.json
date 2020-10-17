@@ -22,7 +22,7 @@
     	{
     		"attack_card": "Plus 1",
     		"effects": 1
-    	}      
+    	}
     ]
   },
   {
@@ -37,7 +37,7 @@
     	{
     		"attack_card": "Plus 2",
     		"effects": 2
-    	}      
+    	}
     ]
   },
   {
@@ -48,7 +48,7 @@
     	{
     		"attack_card": "Plus 1 Immobilize",
     		"effects": 1
-    	}     
+    	}
     ]
   },
   {
@@ -59,7 +59,7 @@
     	{
     		"attack_card": "Plus 2 Muddle",
     		"effects": 1
-    	}     
+    	}
     ]
   },
   {
@@ -68,9 +68,9 @@
     "attack_cards":
     [
     	{
-    		"attack_card": "Rolling Push",
+    		"attack_card": "Rolling Push 2",
     		"effects": 2
-    	}     
+    	}
     ]
   },
   {
@@ -81,7 +81,7 @@
     	{
     		"attack_card": "Rolling Earth",
     		"effects": 2
-    	}     
+    	}
     ]
   },
   {
@@ -92,23 +92,21 @@
     	{
     		"attack_card": "Rolling Wind",
     		"effects": 2
-    	}     
+    	}
     ]
   },
   {
     "description": "Add two rolling WIND cards",
     "count": 1,
     "attack_cards":
-    [ 
+    [
     ]
   },
   {
     "description": "Ignore negative scenario effects",
     "count": 1,
     "attack_cards":
-    [  
+    [
     ]
   }
 ]
-
-

@@ -86,7 +86,7 @@
     "attack_cards":
     [
         {
-            "attack_card": "Rolling Heal 3",
+            "attack_card": "Rolling Heal 3 Self",
             "effects": 1
         }
     ]
@@ -103,4 +103,3 @@
     ]
   }
 ]
-

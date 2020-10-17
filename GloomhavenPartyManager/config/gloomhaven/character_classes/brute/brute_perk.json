@@ -42,7 +42,7 @@
     "attack_cards":
     [
     	{
-    		"attack_card": "Plus 3 1",
+    		"attack_card": "Plus 3",
     		"effects": 1
     	}
     ]
@@ -129,4 +129,3 @@
     ]
   }
 ]
-

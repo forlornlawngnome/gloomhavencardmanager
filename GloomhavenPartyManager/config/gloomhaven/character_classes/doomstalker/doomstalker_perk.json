@@ -75,7 +75,7 @@
     "attack_cards":
     [
         {
-            "attack_card": "Plus 1 Immoiblize",
+            "attack_card": "Plus 1 Immobilize",
             "effects": 1
         }
     ]
@@ -108,4 +108,3 @@
     "attack_cards": []
   }
 ]
-
