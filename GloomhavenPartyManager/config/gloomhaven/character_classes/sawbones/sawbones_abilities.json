@@ -64,7 +64,7 @@
   },
   {
     "name": "First Aid",
-    "initiative": 08,
+    "initiative": 8,
     "level": 1,
     "image": "first-aid",
     "counter_max": 0
@@ -106,7 +106,7 @@
   },
   {
     "name": "Precaution",
-    "initiative": 09,
+    "initiative": 9,
     "level": 2,
     "image": "precaution",
     "counter_max": 0
@@ -169,7 +169,7 @@
   },
   {
     "name": "Prescription",
-    "initiative": 06,
+    "initiative": 6,
     "level": 6,
     "image": "prescription",
     "counter_max": 0
@@ -190,7 +190,7 @@
   },
   {
     "name": "Bedside Manner",
-    "initiative": 05,
+    "initiative": 5,
     "level": 8,
     "image": "bedside-manner",
     "counter_max": 0
@@ -217,4 +217,3 @@
     "counter_max": 0
   }
 ]
-

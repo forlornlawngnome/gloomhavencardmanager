@@ -36,7 +36,7 @@
   },
   {
     "name": "Race to the Grave",
-    "initiative": 09,
+    "initiative": 9,
     "level": 1,
     "image": "race-to-the-grave",
     "counter_max": 0
@@ -215,6 +215,5 @@
     "level": 9,
     "image": "lead-to-slaughter",
     "counter_max": 0
-  },
+  }
 ]
-
