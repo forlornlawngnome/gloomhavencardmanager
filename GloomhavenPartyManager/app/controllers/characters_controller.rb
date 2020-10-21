@@ -1,7 +1,7 @@
 class CharactersController < ApplicationController
-  before_action :set_character, only: [:show, :edit, :update, :destroy, :levelup, :play, :manage]
+  before_action :set_character, only: [:show, :edit, :update, :destroy, :levelup, :play, :manage, :levelup_complete]
 
-  
+
   def select_class
     #page lets you select from the different characters
     ids = active_party.active_character_classes.pluck(:id)
@@ -17,6 +17,9 @@ class CharactersController < ApplicationController
   end
   def levelup
     #level up the character (choose card, choose perk)
+  end
+  def levelup_complete
+    raise params.inspect
   end
   def play
     #play the scenario
@@ -58,10 +61,11 @@ class CharactersController < ApplicationController
   # POST /characters.json
   def create
     @character = Character.new(character_params)
+    @character.level = 1
 
     respond_to do |format|
       if @character.save
-        format.html { redirect_to @character, notice: 'Character was successfully created.' }
+        format.html { redirect_to levelup_character_path @character, level: character_params[:level], notice: 'Character was successfully created.' }
         format.json { render :show, status: :created, location: @character }
       else
         format.html { render :new }
@@ -102,6 +106,6 @@ class CharactersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def character_params
-      params.require(:character).permit(:name, :character_class_id, :level, :is_active, :player_id, :experience, :gold, :notes, :personal_quest, :check_marks, :party_id)
+      params.require(:character).permit(:name, :character_class_id, :level, :is_active, :player_id, :experience, :gold, :notes, :personal_quest, :check_marks, :party_id, perks_attributes: [:id, :applied])
     end
 end

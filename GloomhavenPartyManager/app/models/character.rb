@@ -20,11 +20,35 @@ class Character < ApplicationRecord
 
   scope :active, -> { where(is_active: true) }
 
+  after_create :enable_ability_cards
+  after_create :reset_perks
+  after_create :reset_cards
+
   def getQuestImage
   	return "#{PERSONAL_QUEST_LOCATION}#{self.personal_quest}"
   end
 
+  def level_up_cards(level)
+    ability_cards.where("available is false and level <= ?", level)
+  end
+
   private
+    def enable_ability_cards
+      ability_cards.each do |card|
+        if card.level <= 1
+          card.available = true
+        else
+          card.available = false
+        end
+        card.save
+      end
+    end
+    def reset_perks
+      character_classes.perks.each do |perk|
+        perk.applied = 0
+        perk.save
+      end
+    end
     def verify_prosperity
       if level > party.prosperity
         errors.add(:level, 'Must be lower than party\'s prosperity')

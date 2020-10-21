@@ -1,15 +1,18 @@
 class Party < ApplicationRecord
-	has_many :characters
+	has_many :characters, dependent: :destroy
 	has_many :character_classes, through: :characters
 	has_many :active_characters,-> { where(is_active: true)}, class_name: "Character"
 	has_many :active_character_classes, through: :active_characters,class_name: "CharacterClass", source: :character_class
-	has_many :attack_cards
-	has_many :ability_cards
-	has_many :perks
-	has_many :scenarios
+	has_many :perks, dependent: :destroy
+	has_many :attack_cards_perks, through: :perks, dependent: :destroy
+	has_many :attack_cards, dependent: :destroy
+
+	has_many :ability_cards, dependent: :destroy
+
+	has_many :scenarios, dependent: :destroy
 	has_many :players_parties, dependent: :destroy
-	has_many :players, through: :players_parties
-	has_many :items
+	has_many :players, through: :players_parties, dependent: :destroy
+	has_many :items, dependent: :destroy
 
 	accepts_nested_attributes_for :players_parties, allow_destroy: true
 
@@ -23,14 +26,16 @@ class Party < ApplicationRecord
 	end
 
 	def initial_setup
-		create_items
-		create_base_attack_cards
+		ActsAsTenant.without_tenant do
+			create_items
+			create_base_attack_cards
 
-		CharacterClass.all.each do |char_class|
-			print char_class.name
-			add_abilities(char_class)
-			add_attack_modifiers(char_class)
-			add_perks(char_class)
+			CharacterClass.all.each do |char_class|
+				print char_class.name
+				add_abilities(char_class)
+				add_attack_modifiers(char_class)
+				add_perks(char_class)
+			end
 		end
 	end
 

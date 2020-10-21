@@ -7,8 +7,8 @@ Rails.application.routes.draw do
     put 'scenario_new', on: :collection
   end
   resources :character_scenarios
-  resources :scenarios do 
-    member do 
+  resources :scenarios do
+    member do
       get 'play'
       put 'reset_characters'
     end
@@ -17,12 +17,13 @@ Rails.application.routes.draw do
   resources :items
   resources :characters do
     member do
-     
+
       get 'levelup'
-      get 'play' 
+      get 'play'
       get 'manage'
+      put 'levelup_complete'
     end
-    collection do 
+    collection do
       get 'select_class'
       get 'setup'
       get 'choose'

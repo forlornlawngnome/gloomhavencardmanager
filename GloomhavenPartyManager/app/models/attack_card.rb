@@ -1,8 +1,8 @@
 class AttackCard < ApplicationRecord
 	acts_as_tenant(:party)
 	belongs_to :character_class, optional: true
-	has_many :attack_cards_perks
-	has_many :parks, through: :attack_cards_perks
+	has_many :attack_cards_perks, dependent: :destroy
+	has_many :perks, through: :attack_cards_perks, dependent: :destroy
 	has_many :active_attack_cards
 
 	IMAGE_LOCATION = "gloomhaven-Images/images/attack-modifiers/"
