@@ -56,10 +56,10 @@
     "counter_max": 0
   },
   {
-    "name": "Spare Daggar",
+    "name": "Spare Dagger",
     "initiative": 27,
     "level": 1,
-    "image": "spare-daggar",
+    "image": "spare-dagger",
     "counter_max": 0
   },
   {
@@ -94,14 +94,14 @@
     "name": "Juggernaut",
     "initiative": 34,
     "level": 2,
-    "image": "Juggernaut",
+    "image": "juggernaut",
     "counter_max": 3
   },
   {
-    "name": "Fatal Advice",
+    "name": "Fatal Advance",
     "initiative": 40,
     "level": 2,
-    "image": "fatal-advice",
+    "image": "fatal-advance",
     "counter_max": 0
   },
   {
@@ -203,4 +203,3 @@
     "counter_max": 0
   }
 ]
-

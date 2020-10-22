@@ -44,7 +44,7 @@ Enhancement.create(description: "Attack Hex, Cost = 200g divided by number of he
 
 ###########  Class Creations #####################
 brute = CharacterClass.create(name: "Brute" , hand_size: 10, symbol: "", character_abbreviation: "br", health: [10,12,14,16,18,20,22,24,26,28], is_locked: false)
-CharacterClass.create(name: "Tinkerer", hand_size: 12, symbol: "", character_abbreviation: "tr", health: [8,9,11,12,14,15,17,18,20], is_locked: false)
+CharacterClass.create(name: "Tinkerer", hand_size: 12, symbol: "", character_abbreviation: "ti", health: [8,9,11,12,14,15,17,18,20], is_locked: false)
 CharacterClass.create(name: "Spellweaver", hand_size: 8, symbol: "", character_abbreviation: "sw", health: [6,7,8,9,10,11,12,13,14], is_locked: false)
 CharacterClass.create(name: "Scoundrel", hand_size: 9, symbol: "", character_abbreviation: "sc", health: [8,9,11,12,14,15,17,18,20], is_locked: false)
 CharacterClass.create(name: "Cragheart", hand_size: 11, symbol: "", character_abbreviation: "ch", health: [10,12,14,16,18,20,22,24,26], is_locked: false)

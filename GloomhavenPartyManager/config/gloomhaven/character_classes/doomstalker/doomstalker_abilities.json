@@ -56,10 +56,10 @@
     "counter_max": 0
   },
   {
-    "name": "Denotation",
+    "name": "Detonation",
     "initiative": 54,
     "level": 1,
-    "image": "denotation",
+    "image": "detonation",
     "counter_max": 0
   },
   {
@@ -199,7 +199,7 @@
     "name": "Feral Instincts",
     "initiative": 35,
     "level": 8,
-    "image": "feral-instints",
+    "image": "feral-instincts",
     "counter_max": 0
   },
   {

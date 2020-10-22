@@ -1,14 +1,20 @@
 <h2>Level up <%@character.name%> <small>Level <%=(@character.level + 1)%></small></h2>
 <hr />
-<%= form_with(url: levelup_complete_character_path, method: :put, local: true) do |form| %>
+<%= form_with(url: levelup_complete_character_path, scope: :character,method: :put, local: true) do |form| %>
   <%=form.hidden_field :target_level, value: params["level"]%>
+  <%=form.hidden_field :id, value: @character.id%>
   <div class="grid-x grid-margin-x align-spaced">
     <div class="cell small-12 medium-3 auto">
       <h3>Choose a Perk </h3>
-      <%@character.character_class.perks.each do |perk|%>
+      <%@character.character_class.availablePerks.each do |perk|%>
         <fieldset class="cell">
-          <%=form.radio_button :perk_id, perk.id%> <label for="perk_id_<%=perk.id%>" style="display: inline;"><%=perk.description%></label>
+          <%=form.radio_button :perk_id, perk.id%> <label for="character_perk_id_<%=perk.id%>" style="display: inline;"><%=perk.description%></label>
         </fieldset>
+      <%end%>
+      <hr />
+      <h4>Perks Already Applied</h4>
+      <%@character.character_class.chosenPerks.each do |perk|%>
+        <li><%=perk.description%> x<%=perk.applied%></li>
       <%end%>
     </div>
     <div class="cell small-12 medium-9 auto">
@@ -40,7 +46,7 @@
               <%end%>
       		   	<div class="card-section grid-x align-bottom">
                 <fieldset class="cell">
-                  <%=form.radio_button :ability_card_id, card.id%> <label for="ability_card_id_<%=card.id%>">Select this Card</label>
+                  <%=form.radio_button :ability_card_id, card.id%> <label for="character_ability_card_id_<%=card.id%>">Select this Card</label>
                 </fieldset>
       		    </div>
       			</div>

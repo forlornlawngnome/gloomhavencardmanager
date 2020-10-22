@@ -16,21 +16,21 @@ class ApplicationController < ActionController::Base
 	def choose_party
 		if logged_in?
 			if current_player.parties.count > 1
-				current_party = Party.find_by(id: session[:party_id]) 
+				current_party = Party.find_by(id: session[:party_id])
 		    set_current_tenant(current_party)
 			else
-				current_party = current_player.parties.first 
+				current_party = current_player.parties.first
 		    set_current_tenant(current_party)
 			end
 		end
-	    
+
 	end
 
 	def active_party
-		Party.find_by(id: session[:party_id]) 
+		Party.find_by(id: session[:party_id])
 	end
 	def active_character
-		Character.find_by(id: session[:character_id]) 
+		current_player.activeCharacter 
 	end
 	def active_scenario
 		if active_party and active_party.active_scenario
@@ -47,10 +47,10 @@ class ApplicationController < ActionController::Base
 	end
 
 	def current_player
-	    Player.find_by(id: session[:player_id])  
+	    Player.find_by(id: session[:player_id])
 	end
 	def logged_in?
-	    !current_player.nil?  
+	    !current_player.nil?
 	end
 
 	private

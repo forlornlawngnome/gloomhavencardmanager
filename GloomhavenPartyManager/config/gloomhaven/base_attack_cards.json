@@ -1,66 +1,65 @@
 [
   {
     "name": "Zero",
-    "image": "am-p-01",
+    "image": "base/player/am-p-01",
     "value": 0,
     "reshuffle": false,
     "count": 6
   },
   {
     "name": "Plus 1",
-    "image": "am-p-07",
+    "image": "base/player/am-p-07",
     "value": 1,
     "reshuffle": false,
     "count": 5
   },
   {
     "name": "Minus 1",
-    "image": "am-p-12",
+    "image": "base/player/am-p-12",
     "value": -1,
     "reshuffle": false,
     "count": 5
   },
   {
     "name": "Minus 2",
-    "image": "am-p-17",
+    "image": "base/player/am-p-17",
     "value": -2,
     "reshuffle": false,
     "count": 1
   },
   {
     "name": "Plus 2",
-    "image": "am-p-18",
+    "image": "base/player/am-p-18",
     "value": 2,
     "reshuffle": false,
     "count": 1
   },
   {
     "name": "Null",
-    "image": "am-p-19",
+    "image": "base/player/am-p-19",
     "value": -100,
     "reshuffle": true,
     "count": 1
   },
   {
     "name": "x2",
-    "image": "am-p-20",
+    "image": "base/player/am-p-20",
     "value": 100,
     "reshuffle": true,
     "count": 1
   },
   {
     "name": "Bless",
-    "image": "../player-mod/am-pm-01",
+    "image": "base/player-mod/am-pm-01",
     "value": 100,
     "reshuffle": false,
     "count": 0
   },
   {
     "name": "Curse",
-    "image": "../player-mod/am-pm-21",
+    "image": "base/player-mod/am-pm-21",
     "value": -100,
     "reshuffle": false,
     "count": 0
   }
 ]
-

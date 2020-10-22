@@ -31,7 +31,7 @@
         "name": "Thief's Knack",
         "initiative": "23",
         "level": "1",
-        "image": "thief's-knack",
+        "image": "thiefs-knack",
         "counter_max": "0"
     },
     {
@@ -73,7 +73,7 @@
         "name": "Trickster's Reversal",
         "initiative": "9",
         "level": "0",
-        "image": "trickster's-reversal",
+        "image": "tricksters-reversal",
         "counter_max": "0"
     },
     {
@@ -108,7 +108,7 @@
         "name": "Duelist's Advance",
         "initiative": "16",
         "level": "3",
-        "image": "duelist's-advance",
+        "image": "duelists-advance",
         "counter_max": "0"
     },
     {
@@ -178,7 +178,7 @@
         "name": "Pain's End",
         "initiative": "38",
         "level": "8",
-        "image": "pain's-end",
+        "image": "pains-end",
         "counter_max": "0"
     },
     {

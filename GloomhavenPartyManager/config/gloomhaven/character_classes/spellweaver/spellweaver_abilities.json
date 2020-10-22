@@ -42,10 +42,10 @@
         "counter_max": "0"
     },
     {
-        "name": "Fire Orb",
+        "name": "Fire Orbs",
         "initiative": "69",
         "level": "1",
-        "image": "fire-orb",
+        "image": "fire-orbs",
         "counter_max": "0"
     },
     {
@@ -154,10 +154,10 @@
         "counter_max": "0"
     },
     {
-        "name": "Stone Fist",
+        "name": "Stone Fists",
         "initiative": "62",
         "level": "7",
-        "image": "stone-fist",
+        "image": "stone-fists",
         "counter_max": "0"
     },
     {

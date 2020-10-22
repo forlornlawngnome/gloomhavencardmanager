@@ -1,5 +1,6 @@
 class CharactersController < ApplicationController
-  before_action :set_character, only: [:show, :edit, :update, :destroy, :levelup, :play, :manage, :levelup_complete]
+  before_action :set_character, only: [:show, :edit, :update, :destroy, :levelup, :play,
+    :manage, :levelup_complete, :retire]
 
 
   def select_class
@@ -19,7 +20,27 @@ class CharactersController < ApplicationController
     #level up the character (choose card, choose perk)
   end
   def levelup_complete
-    raise params.inspect
+    perk = Perk.find character_params[:perk_id]
+    perk.applied = perk.applied + 1
+    perk.save!
+    raise perk.inspect
+
+    card = AbilityCard.find character_params[:ability_card_id]
+    card.available = true
+    card.save
+
+    @character.level = @character.level + 1
+    respond_to do |format|
+      if @character.save!
+        if @character.level < character_params[:target_level].to_f
+          format.html { redirect_to levelup_character_path @character, level: character_params[:target_level], notice: 'Character was successfully created.' }
+        else
+          format.html { redirect_to manage_character_path @character, notice: 'Character was successfully created.' }
+        end
+      else
+        format.html { render levelup_character_path @character, level: character_params[:target_level], notice: 'Character failed to save.'  }
+      end
+    end
   end
   def play
     #play the scenario
@@ -27,8 +48,14 @@ class CharactersController < ApplicationController
   def manage
     ##Setup deck for the scenario, buy/sell items, temple donate
   end
-  def choose
-    #This is the page that they get to choose the active character on
+  def retire
+    @character.items.each do |item|
+      item.character = nil
+      item.save
+    end
+    @character.is_active = false
+    @character.save
+    redirect_to select_class_characters_path
   end
   def selected
     #set the character selected in the session
@@ -65,8 +92,13 @@ class CharactersController < ApplicationController
 
     respond_to do |format|
       if @character.save
-        format.html { redirect_to levelup_character_path @character, level: character_params[:level], notice: 'Character was successfully created.' }
-        format.json { render :show, status: :created, location: @character }
+        if character_params[:level].to_f > 1
+          format.html { redirect_to levelup_character_path @character, level: character_params[:level], notice: 'Character was successfully created.' }
+          format.json { render :show, status: :created, location: @character }
+        else
+          format.html { redirect_to manage_character_path @character, notice: 'Character was successfully created.' }
+          format.json { render :show, status: :created, location: @character }
+        end
       else
         format.html { render :new }
         format.json { render json: @character.errors, status: :unprocessable_entity }
@@ -106,6 +138,8 @@ class CharactersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def character_params
-      params.require(:character).permit(:name, :character_class_id, :level, :is_active, :player_id, :experience, :gold, :notes, :personal_quest, :check_marks, :party_id, perks_attributes: [:id, :applied])
+      params.require(:character).permit(:name, :character_class_id, :level, :is_active, :player_id,
+        :experience, :gold, :notes, :personal_quest, :check_marks, :party_id, :target_level, :perk_id,
+        :ability_card_id, perks_attributes: [:id, :applied])
     end
 end

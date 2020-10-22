@@ -9,7 +9,7 @@ class AttackCard < ApplicationRecord
 
 	def getImage
 		if self.character_class.nil?
-			return "#{IMAGE_LOCATION}base/player/#{self.image}"
+			return "#{IMAGE_LOCATION}#{self.image}"
 		else
 			return "#{IMAGE_LOCATION}#{self.character_class.character_abbreviation.upcase}/#{self.image}"
 		end

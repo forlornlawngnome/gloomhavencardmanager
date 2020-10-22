@@ -7,7 +7,7 @@ class WelcomeController < ApplicationController
 				return
 			end
 			if !character_chosen?
-				redirect_to choose_characters_path
+				redirect_to select_class_characters_path
 				return
 			end
 			if !active_scenario.nil? and active_scenario.rounds.count >= 1

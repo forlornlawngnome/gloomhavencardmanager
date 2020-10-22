@@ -154,10 +154,10 @@
     "counter_max": 0
   },
   {
-    "name": "Eye of the Hurricate",
+    "name": "Eye of the Hurricane",
     "initiative": 29,
     "level": 6,
-    "image": "eye-of-the-hurricate",
+    "image": "eye-of-the-hurricane",
     "counter_max": 0
   },
   {
@@ -189,10 +189,10 @@
     "counter_max": 0
   },
   {
-    "name": "Etheral Manifestation",
+    "name": "Ethereal Manifestation",
     "initiative": 98,
     "level": 9,
-    "image": "etheral-manifestation",
+    "image": "ethereal-manifestation",
     "counter_max": 0
   },
   {
@@ -203,4 +203,3 @@
     "counter_max": 0
   }
 ]
-

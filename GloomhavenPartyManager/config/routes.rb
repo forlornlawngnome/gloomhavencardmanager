@@ -22,11 +22,11 @@ Rails.application.routes.draw do
       get 'play'
       get 'manage'
       put 'levelup_complete'
+      get 'retire'
     end
     collection do
       get 'select_class'
       get 'setup'
-      get 'choose'
     end
   end
   resources :players

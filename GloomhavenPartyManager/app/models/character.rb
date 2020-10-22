@@ -16,13 +16,15 @@ class Character < ApplicationRecord
   PERSONAL_QUEST_LOCATION = "gloomhaven-Images/images/personal-goals/"
 
   validate :verify_prosperity, :on => :create
-  validate :verify_class_uniqueness
+  validate :verify_class_uniqueness, :on => :create
+  validate :verify_player_uniqueness, :on => :create
+
 
   scope :active, -> { where(is_active: true) }
 
   after_create :enable_ability_cards
   after_create :reset_perks
-  after_create :reset_cards
+  after_create :enable_ability_cards
 
   def getQuestImage
   	return "#{PERSONAL_QUEST_LOCATION}#{self.personal_quest}"
@@ -44,7 +46,7 @@ class Character < ApplicationRecord
       end
     end
     def reset_perks
-      character_classes.perks.each do |perk|
+      character_class.perks.each do |perk|
         perk.applied = 0
         perk.save
       end
@@ -59,6 +61,11 @@ class Character < ApplicationRecord
         if party.active_character_classes.include?(character_class)
           errors.add(:character_class, 'May only have one character active of each class per party')
         end
+      end
+    end
+    def verify_player_uniqueness
+      if player.hasActiveCharacter
+        errors.add(:player, 'Player already has an active character in this party.')
       end
     end
 end
