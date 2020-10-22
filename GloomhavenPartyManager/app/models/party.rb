@@ -105,7 +105,7 @@ class Party < ApplicationRecord
 		items.each do |item|
 			count = item["count"]
 			for i in 1..count
-				new_item = self.items.build(number: item["number"], name:  item["number"],
+				new_item = self.items.build(number: item["number"], name:  item["name"],
 					item_type: item["slot"],usage_state: item["limit"],
 					negative_effects: item[:negativeCardsCount], counter_max: item["uses"], price: item["price"])
 				new_item.save

@@ -10,14 +10,14 @@
 			    <p><b>Scenarios Complete:</b> <%=party.scenarios.count%></p>
 			    <p><b>Prosperity:</b> <%=party.prosperity%></p>
 			    <p><b>Reputaiton:</b> <%=party.reputation%></p>
-			    <p><b>Characters:</b> 
+			    <p><b>Characters:</b>
 			    	<%party.characters.active.each do |character|%>
 			    		<dd><%=character.name%> </dd>
 			    	<%end%>
 			    </p>
 			  </div>
 		    <div class="card-section grid-x align-bottom">
-		    	<%= form_with url: select_party_path, class: "small-12" do |form|%>
+		    	<%= form_with url: select_party_path, method: :post, class: "small-12" do |form|%>
 		    		<%= form.hidden_field :party_id, value: party.id%>
 		    		<%=form.submit "Select Party", class: "button large expanded", style: "margin: 0px"%>
 		    	<%end%>
@@ -37,7 +37,6 @@
 			  </div>
 			<%end%>
 		</div>
-				
+
 	</div>
 </div>
-

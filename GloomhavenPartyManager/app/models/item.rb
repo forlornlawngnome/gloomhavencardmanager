@@ -5,9 +5,11 @@ class Item < ApplicationRecord
   IMAGE_LOCATION = "gloomhaven-Images/images/items/"
 
   def getImage
-  	return "#{IMAGE_LOCATION}#{getItemRange}/#{self.image}"
+  	return "#{IMAGE_LOCATION}#{getItemRange}/#{self.getFileName}"
   end
-
+  def getFileName
+    self.name.gsub(" ","-").gsub("'","").downcase
+  end
 
   private
 	  def getItemRange

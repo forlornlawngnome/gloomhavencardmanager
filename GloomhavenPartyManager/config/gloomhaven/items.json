@@ -1075,7 +1075,7 @@
   },
   {
     "number": 72,
-    "name": "Boots of Happiness",
+    "name": "Shoes of Happiness",
     "slot": "Legs",
     "price": 50,
     "text": "If you move 6 or more hexes on your turn, gain 1 experience.",
@@ -2190,7 +2190,7 @@
   },
   {
     "number": 146,
-    "name": "Master’s Lute",
+    "name": "Master's Lute",
     "slot": "TwoHands",
     "price": 50,
     "text": "After performing any song action, immediately perform an Attack 2 or Move 2 action.",
@@ -2220,7 +2220,7 @@
   },
   {
     "number": 148,
-    "name": "Doctor’s Coat",
+    "name": "Doctor's Coat",
     "slot": "Body",
     "price": 50,
     "text": "Any time an ally performs a Medical Pack or Large Medical Pack action, they add +1 Heal to their Heal.",

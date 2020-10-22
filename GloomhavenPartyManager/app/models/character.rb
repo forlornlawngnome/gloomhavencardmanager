@@ -52,7 +52,7 @@ class Character < ApplicationRecord
       end
     end
     def verify_prosperity
-      if level > party.prosperity
+      if level > 1 and level > party.prosperity
         errors.add(:level, 'Must be lower than party\'s prosperity')
       end
     end
