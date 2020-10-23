@@ -6,6 +6,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.string :image
       t.references :character, null: true, foreign_key: true
       t.boolean :is_active
+      t.boolean :is_unlocked
       t.integer :counter
       t.integer :counter_max
       t.string :usage_state

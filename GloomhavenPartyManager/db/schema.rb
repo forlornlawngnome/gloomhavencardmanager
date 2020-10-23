@@ -172,6 +172,7 @@ ActiveRecord::Schema.define(version: 2020_10_05_192650) do
     t.string "image"
     t.bigint "character_id"
     t.boolean "is_active"
+    t.boolean "is_unlocked"
     t.integer "counter"
     t.integer "counter_max"
     t.string "usage_state"

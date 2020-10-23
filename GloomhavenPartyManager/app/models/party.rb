@@ -69,7 +69,7 @@ class Party < ApplicationRecord
 		perks = JSON.parse(file)
 		perks.each do |perk|
 			new_perk = self.perks.build(description:  perk["description"], character_class_id: char_class.id,
-				count: perk["count"] )
+				count: perk["count"].to_i, applied: 0 )
 			new_try = new_perk.save
 			if !perk["attack_cards"].nil?
 				perk["attack_cards"].each do |attack_obj|
@@ -105,8 +105,12 @@ class Party < ApplicationRecord
 		items.each do |item|
 			count = item["count"]
 			for i in 1..count
+				unlocked = false
+				if item["number"].to_i <= 14
+					unlocked = true
+				end
 				new_item = self.items.build(number: item["number"], name:  item["name"],
-					item_type: item["slot"],usage_state: item["limit"],
+					item_type: item["slot"],usage_state: item["limit"], is_unlocked: unlocked,
 					negative_effects: item[:negativeCardsCount], counter_max: item["uses"], price: item["price"])
 				new_item.save
 			end

@@ -8,6 +8,7 @@ class CharacterClass < ApplicationRecord
 	has_many :enhancements, through: :ability_cards
 	has_many :perks
 	has_many :attack_cards
+ # :name, :nickname, :hand_size, :symbol, :character_abbreviation,  :health, :is_locked
 
 
 	def getCharacterMatFrontLocation
@@ -19,11 +20,14 @@ class CharacterClass < ApplicationRecord
 	def getCharacterCardBack
 		return "#{CHARACTER_CARD_BACK}#{self.character_abbreviation.upcase}/#{self.character_abbreviation.downcase}-back"
 	end
+	def max_health(level)
+		health[(level-1)]
+	end
 	def availablePerks
 		perks.where("applied < count" )
 	end
 	def chosenPerks
-		perks.where("applied > 1" )
+		perks.where("applied > 0" )
 	end
 	def file_formated_name
 		self.name.downcase.gsub(" ","-")

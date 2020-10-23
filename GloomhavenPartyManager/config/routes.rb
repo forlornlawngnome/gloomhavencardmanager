@@ -17,12 +17,20 @@ Rails.application.routes.draw do
   resources :items
   resources :characters do
     member do
-
       get 'levelup'
       get 'play'
       get 'manage'
       put 'levelup_complete'
       get 'retire'
+      get 'add_check'
+      get 'add_perk'
+      put 'apply_perk'
+      get 'bank'
+      put 'modify_gold'
+      get 'shop'
+      put 'buy_items'
+      get 'sell_item'
+      get 'donate_temple'
     end
     collection do
       get 'select_class'

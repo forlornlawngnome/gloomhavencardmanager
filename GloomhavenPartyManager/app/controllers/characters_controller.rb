@@ -1,6 +1,7 @@
 class CharactersController < ApplicationController
   before_action :set_character, only: [:show, :edit, :update, :destroy, :levelup, :play,
-    :manage, :levelup_complete, :retire]
+    :manage, :levelup_complete, :retire, :add_check, :add_perk, :apply_perk, :bank, :modify_gold,
+    :shop, :buy_items, :sell_item, :donate_temple]
 
 
   def select_class
@@ -18,6 +19,83 @@ class CharactersController < ApplicationController
   end
   def levelup
     #level up the character (choose card, choose perk)
+  end
+  def add_check
+    @character.check_marks = @character.check_marks + 1
+    @character.save
+
+    redirect_to manage_character_path @character
+  end
+  def bank
+  end
+  def modify_gold
+    @character.gold = @character.gold + params["character"]["gold"].to_i
+    @character.save
+
+    redirect_to manage_character_path @character
+  end
+  def shop
+    @items = Item.where(character_id: nil, is_unlocked: true).select('distinct on (number) *').order(:number)
+  end
+  def buy_items
+    items = Item.where("id in (?)",params["items_to_buy"])
+    cost = items.sum(:price)
+    if cost > @character.gold
+      redirect_to shop_character_path @character, notice: "You don't have enough gold."
+    else
+      items.each do |item|
+        item.character = @character
+        item.save
+      end
+      @character.gold = @character.gold - cost
+      @character.save
+      redirect_to manage_character_path @character
+    end
+  end
+  def sell_item
+    item = Item.find(params["item_id"])
+    item.character_id = nil
+    item.save
+
+    @character.gold = @character.gold + item.price
+    @character.save
+    redirect_to manage_character_path @character
+  end
+  def donate_temple
+    @character.gold = @character.gold - 10
+
+    if @character.save!
+      session[:temple] = true
+      redirect_to manage_character_path @character, notice: "Successfully donated to the temple. May your next journey be blessed!"
+    else
+      redirect_to manage_character_path @character, notice: "Failed to donate to the temple"
+    end
+
+  end
+  def add_perk
+  end
+  def apply_perk
+    perk = Perk.find character_params[:perk_id]
+    perk.applied = perk.applied + 1
+    save_result = perk.save
+
+    if character_params[:target_level]
+      count = @character.perks.sum(:applied)
+      if count < @character.player.retired_characters_count(@character.party)
+        redirect_to add_perk_character_path @character, level: character_params[:target_level]
+      elsif character_params[:target_level].to_f > 1
+        redirect_to levelup_character_path @character, level: character_params[:target_level]
+      else
+        redirect_to manage_character_path @character
+      end
+      #IF there is a target level, then check if the number of perks applied so far is the same as the players retired
+    else
+      if save_result
+        redirect_to manage_character_path @character, notice: 'Perk was successfully created.'
+      else
+        render add_perk_character_path @character, notice: 'Perk failed to save.'
+      end
+    end
   end
   def levelup_complete
     perk = Perk.find character_params[:perk_id]
@@ -95,12 +173,16 @@ class CharactersController < ApplicationController
 
     respond_to do |format|
       if @character.save
-        if character_params[:level].to_f > 1
-          format.html { redirect_to levelup_character_path @character, level: character_params[:level], notice: 'Character was successfully created.' }
-          format.json { render :show, status: :created, location: @character }
+        if @character.player.retired_characters_count(@character.party) > 0
+          format.html { redirect_to add_perk_character_path @character, level: character_params[:level] }
         else
-          format.html { redirect_to manage_character_path @character, notice: 'Character was successfully created.' }
-          format.json { render :show, status: :created, location: @character }
+          if character_params[:level].to_f > 1
+            format.html { redirect_to levelup_character_path @character, level: character_params[:level], notice: 'Character was successfully created.' }
+            format.json { render :show, status: :created, location: @character }
+          else
+            format.html { redirect_to manage_character_path @character, notice: 'Character was successfully created.' }
+            format.json { render :show, status: :created, location: @character }
+          end
         end
       else
         format.html { render :new }
@@ -114,7 +196,7 @@ class CharactersController < ApplicationController
   def update
     respond_to do |format|
       if @character.update(character_params)
-        format.html { redirect_to @character, notice: 'Character was successfully updated.' }
+        format.html { redirect_to manage_character_path @character, notice: 'Character was successfully updated.' }
         format.json { render :show, status: :ok, location: @character }
       else
         format.html { render :edit }

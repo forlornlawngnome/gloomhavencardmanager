@@ -6,6 +6,14 @@ class Player < ApplicationRecord
 	def activeCharacter
 		characters.active.first
 	end
+	def retired_characters_count(party)
+		return characters.where(party: party).count - 1
+		#if character.count > 1
+		#	return characters.count - 1
+	#	else
+	#		return 0
+	#	end
+	end
 	def hasActiveCharacter
 		if characters.active.count > 0
 			return true

@@ -35,6 +35,10 @@ class Character < ApplicationRecord
   	return "#{PERSONAL_QUEST_LOCATION}#{self.personal_quest}"
   end
 
+  def max_health
+    character_class.max_health(level)
+  end
+
   def level_up_cards(level)
     ability_cards.where("available is false and level <= ?", level)
   end
