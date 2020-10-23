@@ -1,8 +1,98 @@
-##Setup deck for the scenario, buy/sell items, temple donate
+<h3><%=@character.name.titleize%> <small>Level: <%=@character.level%></small></h3>
+<br />
+<div class="grid-x grid-margin-x">
+  <div class="cell small-12 medium-3 right">
+    <div>
+      <b>Gold:</b> <%=@character.gold%><br />
+      <b>Experience:</b> <%=@character.experience%><br />
+      <b>Check Marks:</b><br />
+      <%(1..18).each do |i|%>
+        <%if i <= @character.check_marks %>
+          <i class="material-icons md-18">check_box</i>
+        <%else%>
+          <i class="material-icons md-18">check_box_outline_blank</i>
+        <%end%>
 
-<br />
-<%if @character.level < 9%>
-  <%=link_to "Level Up Character", levelup_character_path(@character, level: (@character.level+1))%>
-<%end%>
-<br />
-<%=link_to "Retire Character", retire_character_path(@character)%>
+        <%if i%9 == 0%>
+          <br />
+        <%elsif i%3 == 0%>
+          |
+        <%end%>
+      <%end%>
+      <br />
+      <b>Notes:</b> <%=@character.notes%>
+      <hr />
+    </div>
+    <div>
+      <%if active_scenario and active_scenario.rounds.count > 0%>
+        can't level up or do things in gloomhaven, just join scenario!
+      <%else%>
+        <%if active_scenario.nil?%>
+          <%=link_to "Start New Scenario", new_scenario_path, class: "button expanded"%>
+        <%end%>
+        <li>Buy Items</li>
+        <li>Donate to Temple</li>
+        <li>Purchase Card Enhancements</li>
+        <%if @character.level < 9%>
+          <%=link_to "Level Up Character", levelup_character_path(@character, level: (@character.level+1)), class: "button expanded"%>
+        <%end%>
+        <br />
+        <%=link_to "Retire Character", retire_character_path(@character), data: { confirm: 'Are you sure?' }, class: "button danger expanded"%>
+      <%end%>
+    </div>
+    <div>
+      <%=image_tag @character.getQuestImage rescue "Choose a Quest"%>
+    </div>
+  </div>
+  <div class="cell small-12 medium-9 right">
+    <div class="grid-x grid-margin-x">
+      <div class="cell small-12 medium-6">
+        <h5>Perks</h5>
+        <%@character.perks.each do |perk|%>
+          <%perk.count.times do |i|%>
+            <%if (i+1) <= perk.applied%>
+              <i class="material-icons md-18">check_box</i>
+            <%else%>
+              <i class="material-icons md-18">check_box_outline_blank</i>
+            <%end%>
+          <%end%>
+          <%=perk.description%><br />
+        <%end%>
+      </div>
+      <div class="cell small-12 medium-6">
+        <h5>Items</h5>
+        <div class="grid-x grid-margin-x">
+          <%@character.items.each do |item|%>
+            <div class="cell small-12 medium-4">
+              <button class="button" data-open="item_<%=item.id%>" style="padding:0"><%=image_tag item.getImage%></button>
+              <div class="tiny reveal" id="item_<%=item.id%>" data-reveal>
+                <%=image_tag item.getImage%>
+                <button class="close-button" data-close aria-label="Close modal" type="button">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            </div>
+          <%end%>
+        </div>
+      </div>
+    </div>
+    <div class="cell small-12">
+      <h5>Ability Cards</h5>
+      <div class="grid-x grid-margin-x">
+        <%@character.ability_cards.where(available: true).each do |card|%>
+          <div class="cell small-12 medium-3">
+            <button class="button" data-open="card_<%=card.id%>" style="padding:0">
+              <%=render card, card: card%>
+            </button>
+            <div class="tiny reveal" id="card_<%=card.id%>" data-reveal>
+              <%=render card, card: card%>
+              <button class="close-button" data-close aria-label="Close modal" type="button">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>

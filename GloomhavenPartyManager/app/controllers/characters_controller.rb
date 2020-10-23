@@ -23,7 +23,7 @@ class CharactersController < ApplicationController
     perk = Perk.find character_params[:perk_id]
     perk.applied = perk.applied + 1
     perk.save!
-    raise perk.inspect
+    #raise perk.inspect
 
     card = AbilityCard.find character_params[:ability_card_id]
     card.available = true
@@ -88,6 +88,9 @@ class CharactersController < ApplicationController
   # POST /characters.json
   def create
     @character = Character.new(character_params)
+    @character.experience = Character.experienceRequired[@character.level-1]
+    @character.gold = (@character.level + 1)*15
+    @character.check_marks = 0
     @character.level = 1
 
     respond_to do |format|

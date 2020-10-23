@@ -14,6 +14,7 @@ class Character < ApplicationRecord
   has_many :active_attack_cards
 
   PERSONAL_QUEST_LOCATION = "gloomhaven-Images/images/personal-goals/"
+  EXPERIENCE_REQUIRED = [0,45,95,150,210,275,345,420,500]
 
   validate :verify_prosperity, :on => :create
   validate :verify_class_uniqueness, :on => :create
@@ -22,16 +23,29 @@ class Character < ApplicationRecord
 
   scope :active, -> { where(is_active: true) }
 
+  before_save :verify_checkmarks
   after_create :enable_ability_cards
   after_create :reset_perks
   after_create :enable_ability_cards
 
+  def self.experienceRequired
+    EXPERIENCE_REQUIRED
+  end
   def getQuestImage
   	return "#{PERSONAL_QUEST_LOCATION}#{self.personal_quest}"
   end
 
   def level_up_cards(level)
     ability_cards.where("available is false and level <= ?", level)
+  end
+
+  def active_scenario
+    character_scenarios.each do |c_scenario|
+      if c_scenario.senario.active
+        return c_scenario
+      end
+    end
+    return nil
   end
 
   private
@@ -49,6 +63,11 @@ class Character < ApplicationRecord
       character_class.perks.each do |perk|
         perk.applied = 0
         perk.save
+      end
+    end
+    def verify_checkmarks
+      if check_marks > 18
+        errors.add(:level, 'Check Marks max out at 18 check marks')
       end
     end
     def verify_prosperity

@@ -7,8 +7,9 @@
 
     <% stylesheet_pack_tag 'stylesheets' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body>
@@ -51,11 +52,7 @@
       <%end%>
     </div>
     <div class="grid-container fluid">
-      <%if notice%>
-        <div class="callout success">
-          <p id="notice"><%= notice %></p>
-        </div>
-      <%end%>
+      <%=render "layouts/notice"%>
       <%= yield %>
     </div>
   </body>

@@ -1,0 +1,21 @@
+<%if !card.getTopEnhancements.empty?%>
+  <div class="card-section callout text-center" style="margin:0">
+    <%card.getTopEnhancements.each do |en|%>
+      <li>
+        <%=en.enhancement.description%>
+      </li>
+    <%end%>
+  </div>
+<%end%>
+<div class="">
+  <%= image_tag card.getCardImage%>
+</div>
+<%if !card.getBottomEnhancements.empty?%>
+  <div class="card-section callout text-center" style="margin:0">
+    <%card.getBottomEnhancements.each do |en|%>
+      <li>
+        <%=en.enhancement.description%>
+      </li>
+    <%end%>
+  </div>
+<%end%>
