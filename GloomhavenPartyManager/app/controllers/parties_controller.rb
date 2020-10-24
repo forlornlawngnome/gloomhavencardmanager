@@ -1,7 +1,10 @@
 class PartiesController < ApplicationController
-  before_action :set_party, only: [:show, :edit, :update, :destroy]
+  before_action :set_party, only: [:show, :edit, :update, :destroy, :manage]
   skip_before_action :authorized, only: [:create, :selected, :party_select]
 
+
+  def manage
+  end
   # GET /parties
   # GET /parties.json
   def index

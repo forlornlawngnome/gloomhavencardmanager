@@ -20,10 +20,10 @@
           <ul class=" menu">
             <%if party_chosen?%>
               <li><b><%=link_to active_party.name.titleize, root_path%></b></li>
+              <li><%=link_to "Manage Party", manage_party_path(active_party)%></li>
             <%else%>
               <li><b><%=link_to "Gloomhaven Card Manager", root_path%></b></li>
             <%end%>
-            <li><%=link_to "Select a Party", party_select_path%></li>
             <%if active_scenario.nil?%>
               <li><%=link_to "Start Game", new_scenario_path%></li>
             <%else%>
@@ -44,6 +44,7 @@
       <%else%>
       <div class="top-bar-right">
         <ul class="menu">
+          <li><%=link_to "Select a Party", party_select_path%></li>
           <li>
             <%= google_sign_in_button 'Sign in with Google', proceed_to: create_login_url, class: "button" %>
           </li>
