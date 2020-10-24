@@ -9,14 +9,20 @@ class AbilityCardsEnhancement < ApplicationRecord
 
 	before_create :verify_number_enhancements
 
-	def level_costs(level)
+	def self.level_costs(level)
 		LEVEL_COST[level-1]
 	end
-	def previous_enhancements(total_enhancements)
+	def self.previous_enhancements(total_enhancements)
 		PREVIOUS_ENHANCEMENTS[total_enhancements]
 	end
-	def cost
-		total_cost = self.cost + level_costs(ability_card.level) + previous_enhancements(ability_card.enhancements.count)
+	def cost(is_multi)
+		previous_enhancements = ability_card.ability_cards_enhancements.where(is_top: is_top).count
+		enhancement_cost =enhancement.cost
+
+		if is_multi == 1
+			enhancement_cost = enhancement_cost *2
+		end
+		total_cost = enhancement_cost + LEVEL_COST[ability_card.level-1] + PREVIOUS_ENHANCEMENTS[previous_enhancements]
 	end
 
 	def verify_number_enhancements

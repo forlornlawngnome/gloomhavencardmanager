@@ -101,14 +101,14 @@ class CharactersController < ApplicationController
   end
   def buy_enhancements
     @character = Character.find params["ability_cards_enhancements"]["character_id"]
-    enhance = AbilityCardsEnhancement.new(ability_card_id: params["ability_cards_enhancements"]["ability_card_id"], enhancement_id: params["ability_cards_enhancements"]["enhancement_id"])
-    raise enhance.inspect
-    #items = Item.where("id in (?)",params["items_to_buy"])
-    #cost = items.sum(:price)
+    enhance = AbilityCardsEnhancement.new(ability_card_id: params["ability_cards_enhancements"]["ability_card_id"],
+      enhancement_id: params["ability_cards_enhancements"]["enhancement_id"], is_top: params["ability_cards_enhancements"]["is_top"])
+    cost = enhance.cost(params["ability_cards_enhancements"]["is_multi_target"])
+
     if cost > @character.gold
-      redirect_to card_enhancements_character_path @character, notice: "You don't have enough gold."
+      redirect_to card_enhancements_character_path @character, notice: "The cost is #{cost}. You don't have enough gold. "
     else
-      #create enhancement
+      item = enhance.save!
       @character.gold = @character.gold - cost
       @character.save
       redirect_to manage_character_path @character

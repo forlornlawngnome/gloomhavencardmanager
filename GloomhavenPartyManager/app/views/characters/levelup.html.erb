@@ -5,12 +5,14 @@
   <%=form.hidden_field :id, value: @character.id%>
   <div class="grid-x grid-margin-x align-spaced">
     <div class="cell small-12 medium-3 auto">
-      <h3>Choose a Perk </h3>
-      <%@character.character_class.availablePerks.each do |perk|%>
-        <fieldset class="cell">
-          <%=form.radio_button :perk_id, perk.id%> <label for="character_perk_id_<%=perk.id%>" style="display: inline;"><%=perk.description%></label>
-        </fieldset>
-      <%end%>
+      <div class="callout alert">
+        <h3>Choose a Perk </h3>
+        <%@character.character_class.availablePerks.each do |perk|%>
+          <fieldset class="cell">
+            <%=form.radio_button :perk_id, perk.id, required: true%> <label for="character_perk_id_<%=perk.id%>" style="display: inline;"><%=perk.description%></label>
+          </fieldset>
+        <%end%>
+      </div>
       <hr />
       <h4>Perks Already Applied</h4>
       <%@character.character_class.chosenPerks.each do |perk|%>
@@ -26,7 +28,7 @@
               <%=render card, card: card%>
       		   	<div class="card-section grid-x align-bottom">
                 <fieldset class="cell">
-                  <%=form.radio_button :ability_card_id, card.id%> <label for="character_ability_card_id_<%=card.id%>">Select this Card</label>
+                  <%=form.radio_button :ability_card_id, card.id, required: true%> <label for="character_ability_card_id_<%=card.id%>">Select this Card</label>
                 </fieldset>
       		    </div>
       			</div>
