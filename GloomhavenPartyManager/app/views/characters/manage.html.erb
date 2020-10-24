@@ -43,9 +43,13 @@
           <span class="float-left"><i class="fas fa-store"></i></span> Buy Items
         <%end%>
         <%=link_to donate_temple_character_path(@character), class: "button expanded" do%>
-          <span class="float-left"><i class="fas fa-synagogue"></i></span> Donate to the Temple
+          <span class="float-left"><i class="fas fa-place-of-worship"></i></span> Donate to the Temple
         <%end%>
-        <li>Purchase Card Enhancements</li>
+        <%if @character.ability_cards_enhancements.count < @character.party.prosperity%>
+          <%=link_to card_enhancements_character_path(@character), class: "button expanded" do%>
+            <span class="float-left"><i class="fas fa-skull-crossbones"></i></span> Buy Card Enhancement
+          <%end%>
+        <%end%>
         <hr />
         <%if @character.level < 9%>
           <%=link_to levelup_character_path(@character, level: (@character.level+1)), class: "button expanded" do%>

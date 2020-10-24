@@ -31,6 +31,8 @@ Rails.application.routes.draw do
       put 'buy_items'
       get 'sell_item'
       get 'donate_temple'
+      get 'card_enhancements'
+      put 'buy_enhancements'
     end
     collection do
       get 'select_class'

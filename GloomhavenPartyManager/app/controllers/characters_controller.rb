@@ -1,7 +1,7 @@
 class CharactersController < ApplicationController
   before_action :set_character, only: [:show, :edit, :update, :destroy, :levelup, :play,
     :manage, :levelup_complete, :retire, :add_check, :add_perk, :apply_perk, :bank, :modify_gold,
-    :shop, :buy_items, :sell_item, :donate_temple]
+    :shop, :buy_items, :sell_item, :donate_temple, :card_enhancements]
 
 
   def select_class
@@ -95,6 +95,23 @@ class CharactersController < ApplicationController
       else
         render add_perk_character_path @character, notice: 'Perk failed to save.'
       end
+    end
+  end
+  def card_enhancements
+  end
+  def buy_enhancements
+    @character = Character.find params["ability_cards_enhancements"]["character_id"]
+    enhance = AbilityCardsEnhancement.new(ability_card_id: params["ability_cards_enhancements"]["ability_card_id"], enhancement_id: params["ability_cards_enhancements"]["enhancement_id"])
+    raise enhance.inspect
+    #items = Item.where("id in (?)",params["items_to_buy"])
+    #cost = items.sum(:price)
+    if cost > @character.gold
+      redirect_to card_enhancements_character_path @character, notice: "You don't have enough gold."
+    else
+      #create enhancement
+      @character.gold = @character.gold - cost
+      @character.save
+      redirect_to manage_character_path @character
     end
   end
   def levelup_complete
@@ -225,6 +242,6 @@ class CharactersController < ApplicationController
     def character_params
       params.require(:character).permit(:name, :character_class_id, :level, :is_active, :player_id,
         :experience, :gold, :notes, :personal_quest, :check_marks, :party_id, :target_level, :perk_id,
-        :ability_card_id, perks_attributes: [:id, :applied])
+        :ability_card_id, perks_attributes: [:id, :applied], ability_cards_enhancements_attributes: [ :id, :is_top, :ability_card_id, :enhancement_id ])
     end
 end
