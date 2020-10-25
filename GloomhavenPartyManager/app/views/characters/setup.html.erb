@@ -10,26 +10,26 @@
       </ul>
     </div>
   <% end %>
-
+  <h2>New <%=@character.character_class.name.titleize%> <%=image_tag @character.character_class.getIconImage, width: "50em"%></h2>
   <%= form.hidden_field :player_id, value: current_player.id %>
   <%= form.hidden_field :is_active, value: true %>
-
-  <div class="field">
-    <%= form.label :character_class_id %>
-    <%= form.collection_select :character_class_id, CharacterClass.all, :id, :name, prompt: true %>
-  </div>
+  <%= form.hidden_field :character_class_id, value: @character.character_class.id %>
 
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= form.label :level %>
-    <%= form.select :level, 1..active_party.prosperity %>
-  </div>
+  <%if active_party.prosperity > 1%>
+    <div class="field">
+      <%= form.label :level %>
+      <%= form.select :level, 1..active_party.prosperity %>
+    </div>
+  <%else%>
+    <%= form.hidden_field :level, value: 1 %>
+  <%end%>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit, class: "button expanded" %>
   </div>
 <% end %>

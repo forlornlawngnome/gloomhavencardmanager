@@ -25,6 +25,7 @@ class Character < ApplicationRecord
 
 
   scope :active, -> { where(is_active: true) }
+  scope :retired, -> { where(is_active: false) }
 
   before_save :verify_checkmarks
   after_create :enable_ability_cards

@@ -1,4 +1,4 @@
-<h2><%=@character.name.titleize%> <small><%=@character.character_class.name%> <i class="material-icons">filter_<%=@character.level%></i></small></h2>
+<h2><%=@character.name.titleize%>  <%=image_tag @character.character_class.getIconImage, width: "50em"%> <small><%=@character.character_class.name%> <i class="material-icons">filter_<%=@character.level%></i></small></h2>
 <br />
 <div class="grid-x grid-margin-x">
   <div class="cell small-12 medium-3 right">

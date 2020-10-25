@@ -3,7 +3,7 @@ class CharacterClass < ApplicationRecord
 
 	CHARACTER_MAT = "gloomhaven-Images/images/character-mats/"
 	CHARACTER_CARD_BACK = "gloomhaven-Images/images/character-ability-cards/"
-
+	ICON_LOCATION = "Icons/"
 	has_many :ability_cards
 	has_many :enhancements, through: :ability_cards
 	has_many :perks
@@ -19,6 +19,9 @@ class CharacterClass < ApplicationRecord
 	end
 	def getCharacterCardBack
 		return "#{CHARACTER_CARD_BACK}#{self.character_abbreviation.upcase}/#{self.character_abbreviation.downcase}-back"
+	end
+	def getIconImage
+		return "#{ICON_LOCATION}#{self.icon_image}"
 	end
 	def max_health(level)
 		health[(level-1)]

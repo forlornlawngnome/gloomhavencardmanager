@@ -1,9 +1,44 @@
 class PartiesController < ApplicationController
-  before_action :set_party, only: [:show, :edit, :update, :destroy, :manage]
+  before_action :set_party, only: [:show, :edit, :update, :destroy, :manage, :add_prosperity, :remove_prosperity, :add_reputation, :remove_reputation]
   skip_before_action :authorized, only: [:create, :selected, :party_select]
 
 
   def manage
+  end
+  def add_prosperity
+    if @party.prosperity < 9.0
+      @party.prosperity = @party.prosperity + 0.2
+      @party.save
+      if @party.prosperity % 1 == 0
+        range_bot = Item.prosperityItem(@party.prosperity - 1)
+        range_top = Item.prosperityItem(@party.prosperity)
+        items = Item.where("number > ? AND number <= ?", range_bot, range_top)
+        items.update_all(is_unlocked: true)
+        #make items available
+      end
+      redirect_to manage_party_path @party
+      return
+    end
+    redirect_to manage_party_path @party
+  end
+  def add_reputation
+    @party.reputation += 1
+    @party.save
+    redirect_to manage_party_path @party
+  end
+  def remove_prosperity
+    if @party.prosperity.floor == (@party.prosperity - 0.2).floor
+      @party.prosperity = @party.prosperity - 0.2
+      @party.save
+      redirect_to manage_party_path @party
+    else
+      redirect_to manage_party_path @party
+    end
+  end
+  def remove_reputation
+    @party.reputation -= 1
+    @party.save
+    redirect_to manage_party_path @party
   end
   # GET /parties
   # GET /parties.json

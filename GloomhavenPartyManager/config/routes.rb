@@ -50,6 +50,10 @@ Rails.application.routes.draw do
   resources :parties do
     member do
       get 'manage'
+      get 'add_prosperity'
+      get 'add_reputation'
+      get 'remove_prosperity'
+      get 'remove_reputation'
     end
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

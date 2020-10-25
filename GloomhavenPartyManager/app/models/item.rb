@@ -3,6 +3,7 @@ class Item < ApplicationRecord
   belongs_to :character, optional: true
 
   IMAGE_LOCATION = "gloomhaven-Images/images/items/"
+  PROSPERITY_ITEM_UNLOCK = [14, 21, 28, 35, 42, 49, 56, 63, 70]
 
   def getImage
   	return "#{IMAGE_LOCATION}#{getItemRange}/#{self.getFileName}"
@@ -11,6 +12,9 @@ class Item < ApplicationRecord
     self.name.gsub(" ","-").gsub("'","").downcase
   end
 
+  def self.prosperityItem(prosperity)
+    PROSPERITY_ITEM_UNLOCK[prosperity]
+  end
   private
 	  def getItemRange
 	  	case self.number
