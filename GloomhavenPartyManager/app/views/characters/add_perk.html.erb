@@ -1,5 +1,3 @@
-<h2>Level up <%@character.name%> <small>Level <%=(@character.level + 1)%></small></h2>
-<hr />
 <%= form_with(url: apply_perk_character_path, scope: :character,method: :put, local: true) do |form| %>
   <%if params["level"]%>
     <%=form.hidden_field :target_level, value: params["level"]%>

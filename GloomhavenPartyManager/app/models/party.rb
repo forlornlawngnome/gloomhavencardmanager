@@ -24,6 +24,9 @@ class Party < ApplicationRecord
 	def active_scenario
 		scenarios.active.first
 	end
+	def average_level
+		characters.active.average(:level)
+	end
 
 	def initial_setup
 		ActsAsTenant.without_tenant do

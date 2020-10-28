@@ -3,6 +3,7 @@
 <div class="grid-x grid-margin-x">
   <div class="cell small-12 medium-3 right">
     <div class="callout alert">
+      <b>Average level:</b> <%=@party.average_level%><br />
       <b>Prosperity:</b>
       <div class="input-group" style="height:2.5em">
         <%if @party.prosperity % 1 != 0 %>
@@ -35,40 +36,58 @@
           <%end%>
         </div>
       </div>
+      <b>Players:</b> <br />
+      <%@party.players.each do |player|%>
+        <li><%=player.name%></li>
+      <%end%>
     </div>
     <hr />
     <div>
       <%if active_scenario.nil?%>
-        <%=link_to "Start New Scenario", new_scenario_path, class: "button expanded"%>
+        <%=link_to new_scenario_path, class: "button expanded" do%>
+          <span class="float-left"><i class="fas fa-map"></i></span> Start New Scenario
+        <%end%>
       <%else%>
-        <%=link_to "Enter Scenario", active_scenario, class: "button expanded"%>
+        <%=link_to active_scenario, class: "button expanded" do%>
+          <span class="float-left"><i class="fas fa-map-marked-alt"></i></span> Enter Scenario
+        <%end%>
       <%end%>
       <hr />
-      <li>Add PLayers</li>
-      <li>Unlock Class</li>
-      <li>Unlock Item </li>
+      <button class="button expanded" data-open="addPlayerModal"><span class="float-left">
+        <i class="fas fa-user-plus"></i></span> Add Player
+      </button>
+      <%=render "addPlayer", party: @party%>
+      <button class="button expanded" data-open="unlockClassModal"><span class="float-left">
+        <i class="fas fa-user-lock"></i></span> Unlock Class
+      </button>
+      <%=render "unlockClass", party: @party%>
+      <button class="button expanded" data-open="unlockItemModal"><span class="float-left">
+        <i class="fas fa-bomb"></i></span> Unlock Item
+      </button>
+      <%=render "unlockItem", party: @party%>
     </div>
   </div>
   <div class="cell small-12 medium-9 right">
     <div class="grid-x grid-margin-x">
       <div class="cell small-12">
-        <%@party.characters.active.each do |character|%>
-          <div class="cell small-12 medium-6">
-            Character cheat sheet!
-            Character level/experience
-            character gold
-            character check marks
-          </div>
-        <%end%>
+        <div class="grid-x grid-margin-x">
+          <%@party.characters.active.each do |character|%>
+            <div class="cell flex-container small-12 medium-6">
+              <%=render "characters/character_card", character: character%>
+            </div>
+          <%end%>
+        </div>
       </div>
       <div class="cell small-12">
         <hr />
         <h4>Retired Characters</h4>
-        <%@party.characters.retired.each do |character|%>
-          <div class="cell small-12 medium-3">
-            Character cheat sheet!
-          </div>
-        <%end%>
+        <div class="grid-x grid-margin-x">
+          <%@party.characters.retired.each do |character|%>
+            <div class="cell flex-container small-12 medium-4">
+              <%=render "characters/character_card", character: character%>
+            </div>
+          <%end%>
+        </div>
       </div>
     </div>
   </div>

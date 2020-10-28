@@ -4,9 +4,28 @@
   <div class="cell small-12 medium-3 right">
     <div>
       <b>Gold:</b> <%=@character.gold%>
-      <%= link_to bank_character_path(@character) do%>
-        <i class="material-icons md-18">account_balance</i><br />
-      <%end%>
+      <a href="javascript:;">
+        <i class="material-icons md-18" data-open="editGold">account_balance</i>
+      </a><br />
+      <div class="reveal" id="editGold" data-reveal>
+        <br /><br />
+        <%= form_with(url: modify_gold_character_path, scope: :character,method: :put, local: true) do |form| %>
+          <%=form.hidden_field :id, value: @character.id%>
+            <div class="input-group">
+              <span class="input-group-label">
+                <i class="fas fa-donate fa-2x"></i>
+              </span>
+              <%=form.number_field :gold, value: 0, class: "input-group-field" %>
+              <div class="input-group-button">
+                <%= form.submit "Submit", class: "button expanded" %>
+              </div>
+            </div>
+            <p class="help-text">A positive number adds gold, a negative one removes that amount.</p>
+          <%end%>
+          <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
       <b>Experience:</b> <%=@character.experience%><br />
       <b>Health:</b> <%=@character.max_health%><br />
       <b>Hand Size:</b> <%=@character.character_class.hand_size%><br />
@@ -28,7 +47,27 @@
         <%end%>
       <%end%>
       <br />
-      <b>Notes:</b> <%=@character.notes%>
+      <b>Notes:</b>
+      <a href="javascript:;">
+        <i class="material-icons md-18" data-open="editNotes">create</i>
+      </a><br />
+      <%=raw @character.notes%>
+      <div class="reveal" id="editNotes" data-reveal>
+        <%= form_with(url: edit_notes_character_path, scope: :character, method: :put, local: true) do |form| %>
+          <%=form.hidden_field :id, value: @character.id%>
+          <div class="field">
+            <%= form.label :notes %>
+            <%= form.text_area :notes, rows: 8%>
+          </div>
+
+          <div class="actions">
+            <%= form.submit "Update Notes", class: "button expanded" %>
+          </div>
+          <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        <% end %>
+      </div>
       <hr />
     </div>
     <div>

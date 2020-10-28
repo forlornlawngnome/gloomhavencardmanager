@@ -1,9 +1,14 @@
 class CharactersController < ApplicationController
   before_action :set_character, only: [:show, :edit, :update, :destroy, :levelup, :play,
     :manage, :levelup_complete, :retire, :add_check, :add_perk, :apply_perk, :bank, :modify_gold,
-    :shop, :buy_items, :sell_item, :donate_temple, :card_enhancements]
+    :shop, :buy_items, :sell_item, :donate_temple, :card_enhancements, :edit_notes]
 
 
+  def edit_notes
+    @character.notes = character_params[:notes]
+    @character.save!
+    redirect_to manage_character_path @character
+  end
   def select_class
     #page lets you select from the different characters
     ids = active_party.active_character_classes.pluck(:id)
@@ -25,8 +30,6 @@ class CharactersController < ApplicationController
     @character.save
 
     redirect_to manage_character_path @character
-  end
-  def bank
   end
   def modify_gold
     @character.gold = @character.gold + params["character"]["gold"].to_i
@@ -191,7 +194,8 @@ class CharactersController < ApplicationController
     respond_to do |format|
       if @character.save
         if @character.player.retired_characters_count(@character.party) > 0
-          format.html { redirect_to add_perk_character_path @character, level: character_params[:level] }
+          redirect_to add_perk_character_path @character, level: character_params[:level]
+          return
         else
           if character_params[:level].to_f > 1
             format.html { redirect_to levelup_character_path @character, level: character_params[:level], notice: 'Character was successfully created.' }

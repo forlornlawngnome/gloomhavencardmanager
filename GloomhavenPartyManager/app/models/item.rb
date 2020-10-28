@@ -15,6 +15,9 @@ class Item < ApplicationRecord
   def self.prosperityItem(prosperity)
     PROSPERITY_ITEM_UNLOCK[prosperity]
   end
+  def display
+    "#{number} - #{name}"
+  end
   private
 	  def getItemRange
 	  	case self.number

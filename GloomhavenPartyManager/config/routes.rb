@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :players_parties
+  resources :players_parties do
+    put 'party_add', on: :collection
+  end
   get 'welcome/index'
   resources :active_attack_cards
   resources :character_rounds
@@ -14,7 +16,9 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :items
+  resources :items do
+    put 'unlock', on: :collection
+  end
   resources :characters do
     member do
       get 'levelup'
@@ -25,7 +29,6 @@ Rails.application.routes.draw do
       get 'add_check'
       get 'add_perk'
       put 'apply_perk'
-      get 'bank'
       put 'modify_gold'
       get 'shop'
       put 'buy_items'
@@ -33,6 +36,7 @@ Rails.application.routes.draw do
       get 'donate_temple'
       get 'card_enhancements'
       put 'buy_enhancements'
+      put 'edit_notes'
     end
     collection do
       get 'select_class'
@@ -46,7 +50,9 @@ Rails.application.routes.draw do
   resources :ability_cards_enhancements
   resources :enhancements
   resources :ability_cards
-  resources :character_classes
+  resources :character_classes do
+    put 'unlock', on: :collection
+  end
   resources :parties do
     member do
       get 'manage'

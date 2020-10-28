@@ -1,6 +1,14 @@
 class PlayersPartiesController < ApplicationController
   before_action :set_players_party, only: [:show, :edit, :update, :destroy]
 
+  def party_add
+    @players_party = PlayersParty.new(players_party_params)
+    if @players_party.save
+      redirect_to manage_party_path @players_party.party, notice: 'Player successfully added.'
+    else
+      render manage_party_path @players_party.party, notice: "Failed to add player."
+    end
+  end
   # GET /players_parties
   # GET /players_parties.json
   def index

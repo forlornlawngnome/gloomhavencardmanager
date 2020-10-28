@@ -1,0 +1,16 @@
+<div class="reveal" id="addPlayerModal" data-reveal>
+  <%= form_with(url: party_add_players_parties_path, scope: :players_party, method: :put, local: true) do |form| %>
+    <%=form.hidden_field :party_id, value: party.id%>
+    <div class="field">
+      <%= form.label :player_id %>
+      <%= form.collection_select :player_id, Player.all, :id, :name %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "Add Player", class: "button expanded" %>
+    </div>
+  <% end %>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>

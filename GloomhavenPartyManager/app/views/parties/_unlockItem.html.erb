@@ -1,0 +1,11 @@
+<div class="reveal" id="unlockItemModal" data-reveal>
+  <%= form_with(url: unlock_items_path, scope: :item, method: :put, local: true) do |form| %>
+    <%=form.hidden_field :party_id, value: party.id%>
+    <div class="field">
+      <%= form.collection_select :number, @unlockable_items, :number, :display %>
+    </div>
+    <div class="actions">
+      <%= form.submit "Unlock Item", class: "button expanded" %>
+    </div>
+  <% end %>
+</div>

@@ -1,6 +1,16 @@
 class CharacterClassesController < ApplicationController
-  before_action :set_character_class, only: [:show, :edit, :update, :destroy]
+  before_action :set_character_class, only: [:show, :edit, :update, :destroy, ]
 
+  def unlock
+    @character_classes = CharacterClass.find(params["character_classes"]["id"])
+    @character_classes.is_locked = false
+    @party = params["character_classes"]["party_id"]
+    if @character_classes.save
+      redirect_to manage_party_path @party, notice: 'Class successfully unlocked.'
+    else
+      render manage_party_path @party, notice: "Failed to unlock class."
+    end
+  end
   # GET /character_classes
   # GET /character_classes.json
   def index

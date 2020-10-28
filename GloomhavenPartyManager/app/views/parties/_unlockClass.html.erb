@@ -1,0 +1,15 @@
+<div class="reveal" id="unlockClassModal" data-reveal>
+  <%= form_with(url: unlock_character_classes_path, scope: :character_classes, method: :put, local: true) do |form| %>
+    <%=form.hidden_field :party_id, value: party.id%>
+    <div class="field">
+      <%CharacterClass.where(is_locked: true).order(:nickname).each do |char_class|%>
+        <fieldset class="cell">
+          <%=form.radio_button :id, char_class.id%> <label for="character_classes_id_<%=char_class.id%>" style="display: inline;"><%=image_tag char_class.getIconImage, width: "20em"%> <%=char_class.nickname%></label>
+        </fieldset>
+      <%end%>
+    </div>
+    <div class="actions">
+      <%= form.submit "Unlock Class", class: "button expanded" %>
+    </div>
+  <% end %>
+</div>

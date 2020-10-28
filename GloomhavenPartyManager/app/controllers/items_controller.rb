@@ -1,6 +1,15 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
+  def unlock
+    @items = Item.where(number: params["item"]["number"])
+    @items.each do |item|
+      item.is_unlocked = true
+      item.save
+    end
+    @party = Party.find(params["item"]["party_id"])
+    redirect_to manage_party_path @party
+  end
   # GET /items
   # GET /items.json
   def index

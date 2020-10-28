@@ -38,13 +38,13 @@
         </div>
         <div class="top-bar-right">
           <ul class="menu">
+            <li><%=link_to "Select a Party", party_select_path%></li>
             <li><%=link_to "Log Out", logout_path%></li>
           </ul>
         </div>
       <%else%>
       <div class="top-bar-right">
         <ul class="menu">
-          <li><%=link_to "Select a Party", party_select_path%></li>
           <li>
             <%= google_sign_in_button 'Sign in with Google', proceed_to: create_login_url, class: "button" %>
           </li>

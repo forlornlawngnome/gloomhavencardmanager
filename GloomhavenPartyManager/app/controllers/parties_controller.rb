@@ -4,6 +4,7 @@ class PartiesController < ApplicationController
 
 
   def manage
+    @unlockable_items = Item.where(is_unlocked: false).select('distinct on (number) *').order(:number)
   end
   def add_prosperity
     if @party.prosperity < 9.0
@@ -78,6 +79,7 @@ class PartiesController < ApplicationController
 
     respond_to do |format|
       if @party.save
+        session[:party_id] = @party.id
         format.html { redirect_to @party, notice: 'Party was successfully created.' }
         format.json { render :show, status: :created, location: @party }
       else
