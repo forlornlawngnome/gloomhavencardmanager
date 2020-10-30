@@ -11,20 +11,20 @@
         <br /><br />
         <%= form_with(url: modify_gold_character_path, scope: :character,method: :put, local: true) do |form| %>
           <%=form.hidden_field :id, value: @character.id%>
-            <div class="input-group">
-              <span class="input-group-label">
-                <i class="fas fa-donate fa-2x"></i>
-              </span>
-              <%=form.number_field :gold, value: 0, class: "input-group-field" %>
-              <div class="input-group-button">
-                <%= form.submit "Submit", class: "button expanded" %>
-              </div>
+          <div class="input-group">
+            <span class="input-group-label">
+              <i class="fas fa-donate fa-2x"></i>
+            </span>
+            <%=form.number_field :gold, value: 0, class: "input-group-field" %>
+            <div class="input-group-button">
+              <%= form.submit "Submit", class: "button expanded" %>
             </div>
-            <p class="help-text">A positive number adds gold, a negative one removes that amount.</p>
-          <%end%>
-          <button class="close-button" data-close aria-label="Close modal" type="button">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          </div>
+          <p class="help-text">A positive number adds gold, a negative one removes that amount.</p>
+        <%end%>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
       <b>Experience:</b> <%=@character.experience%><br />
       <b>Health:</b> <%=@character.max_health%><br />
@@ -71,12 +71,8 @@
       <hr />
     </div>
     <div>
-      <%if active_scenario and active_scenario.rounds.count > 0%>
-        can't level up or do things in gloomhaven, just join scenario!
-      <%else%>
-        <%if active_scenario.nil?%>
-          <%=link_to "Start New Scenario", new_scenario_path, class: "button expanded"%>
-        <%end%>
+      <%if active_scenario.nil?%>
+        <%=link_to "Start New Scenario", new_scenario_path, class: "button expanded"%>
         <hr />
         <%=link_to shop_character_path(@character), class: "button expanded" do%>
           <span class="float-left"><i class="fas fa-store"></i></span> Buy Items
@@ -96,6 +92,33 @@
           <%end%>
         <%end%>
         <%=link_to "Retire Character", retire_character_path(@character), data: { confirm: 'Are you sure you want to retire?' }, class: "button alert expanded"%>
+      <%elsif active_scenario.rounds.count > 0%>
+          can't level up or do things in gloomhaven, just play scenario!
+      <%else%>
+        <%@character_scenario = CharacterScenario.where(character: @character, scenario: active_scenario)%>
+        <%if @character_scenario.empty?%>
+          link to join scenario
+        <%else%>
+          <%=link_to "Setup Scenario", scenario_setup_character_scenario_path(@character_scenario.first), class: "button expanded"%>
+          <%=link_to shop_character_path(@character), class: "button expanded" do%>
+            <span class="float-left"><i class="fas fa-store"></i></span> Buy Items
+          <%end%>
+          <%=link_to donate_temple_character_path(@character), class: "button expanded" do%>
+            <span class="float-left"><i class="fas fa-place-of-worship"></i></span> Donate to the Temple
+          <%end%>
+          <%if @character.ability_cards_enhancements.count < @character.party.prosperity%>
+            <%=link_to card_enhancements_character_path(@character), class: "button expanded" do%>
+              <span class="float-left"><i class="fas fa-skull-crossbones"></i></span> Buy Card Enhancement
+            <%end%>
+          <%end%>
+          <hr />
+          <%if @character.level < 9%>
+            <%=link_to levelup_character_path(@character, level: (@character.level+1)), class: "button expanded" do%>
+              <span class="float-left"><i class="fas fa-level-up-alt"></i></span> Level Up Character
+            <%end%>
+          <%end%>
+          <%=link_to "Retire Character", retire_character_path(@character), data: { confirm: 'Are you sure you want to retire?' }, class: "button alert expanded"%>
+        <%end%>
       <%end%>
     </div>
     <div>
@@ -126,7 +149,7 @@
       <div class="cell small-12 medium-6">
         <h5>Items</h5>
         <div class="grid-x grid-margin-x">
-          <%@character.items.each do |item|%>
+          <%@character.items.order(:item_type).each do |item|%>
             <div class="cell small-12 medium-4">
               <button class="button" data-open="item_<%=item.id%>" style="padding:0"><%=image_tag item.getImage%></button>
               <div class="tiny reveal" id="item_<%=item.id%>" data-reveal>

@@ -5,6 +5,13 @@ class Item < ApplicationRecord
   IMAGE_LOCATION = "gloomhaven-Images/images/items/"
   PROSPERITY_ITEM_UNLOCK = [14, 21, 28, 35, 42, 49, 56, 63, 70]
 
+  scope :head, -> { where(item_type: "Head") }
+  scope :boots, -> { where(item_type: "Legs") }
+  scope :armor, -> { where(item_type: "Body") }
+  scope :small_item, -> { where(item_type: "SmallItem") }
+  scope :onehand, -> { where(item_type: "OneHand") }
+  scope :twohand, -> { where(item_type: "TwoHands") }
+
   def getImage
   	return "#{IMAGE_LOCATION}#{getItemRange}/#{self.getFileName}"
   end

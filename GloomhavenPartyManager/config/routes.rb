@@ -8,7 +8,13 @@ Rails.application.routes.draw do
   resources :rounds do
     put 'scenario_new', on: :collection
   end
-  resources :character_scenarios
+  resources :character_scenarios do
+    member do
+      delete 'remove_character'
+      get 'scenario_setup'
+      put 'setup_character'
+    end
+  end
   resources :scenarios do
     member do
       get 'play'

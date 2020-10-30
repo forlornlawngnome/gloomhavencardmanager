@@ -30,11 +30,11 @@ class Scenario < ApplicationRecord
   def current_round
   	rounds.order(number: :desc).first
   end
-  def initialize_characters 
+  def initialize_characters
     [].tap do |o|
-      Character.all.each do |character|
+      Character.active.all.each do |character|
         if !character_scenarios.find { |c| c.character_id == character.id }
-          o << CharacterScenario.new(scenario: self, character: character, attack_deck_draw_order: [], health: 0, gold: 0)
+          o << CharacterScenario.new(scenario: self, character: character, attack_deck_draw_order: [], health: character.max_health, gold: 0)
         end
       end
       o.each(&:save)

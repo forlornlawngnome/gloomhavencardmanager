@@ -30,11 +30,11 @@
 							Health: <%=character_s.health%><br />
 						</div>
 						<div class="cell auto text-right">
-							<%=link_to "<i class=\"fas fa-trash-alt\ fa-3x\"></i>".html_safe, character_s, title: "Remove character from the scenario", method: :delete, data: { confirm: 'Are you sure?' } %>
+							<%=link_to "<i class=\"fas fa-trash-alt\ fa-3x\"></i>".html_safe, remove_character_character_scenario_path(character_s), title: "Remove character from the scenario", method: :delete, data: { confirm: 'Are you sure?' } %>
 						</div>
 					</div>
 			  </div>
-			  <%=link_to setup_character_path character, title: "Go to character's setup page" do%>
+			  <%=link_to scenario_setup_character_scenario_path character_s, title: "Go to character's scenario setup page" do%>
 			    <%= image_tag character.character_class.getCharacterMatFrontLocation%>
 			  <%end%>
 			</div>

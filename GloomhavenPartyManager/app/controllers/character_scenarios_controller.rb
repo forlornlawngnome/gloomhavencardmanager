@@ -1,5 +1,19 @@
 class CharacterScenariosController < ApplicationController
-  before_action :set_character_scenario, only: [:show, :edit, :update, :destroy]
+  before_action :set_character_scenario, only: [:show, :edit, :update, :destroy, :remove_character, :scenario_setup, :setup_character]
+
+
+  def scenario_setup
+    @character = @character_scenario.character
+  end
+  def setup_character
+    #saves the characters setup
+  end
+
+  def remove_character
+    scenario = @character_scenario.scenario
+    @character_scenario.destroy
+    redirect_to play_scenario_path scenario, notice: 'Character was successfully removed.'
+  end
 
   # GET /character_scenarios
   # GET /character_scenarios.json
