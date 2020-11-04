@@ -10,6 +10,7 @@ class AbilityCard < ApplicationRecord
 	validates_uniqueness_to_tenant :name
 
 	scope :available, ->{where(available: true)}
+	scope :active, ->{where(active: true)}
 
 	CARD_IMAGE = "gloomhaven-Images/images/character-ability-cards/"
 

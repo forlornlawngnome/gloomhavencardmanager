@@ -27,7 +27,13 @@
             <%if active_scenario.nil?%>
               <li><%=link_to "Start Game", new_scenario_path%></li>
             <%else%>
-              <li><%=link_to "Play Scenario", play_scenario_path(active_scenario)%></li>
+              <li><%=link_to "Manage Scenario", play_scenario_path(active_scenario)%></li>
+              <%if current_player.hasActiveCharacter%>
+                <% char_s = CharacterScenario.where(scenario: active_scenario, character: current_player.activeCharacter)%>
+                <%if char_s.count > 0%>
+                  <li><%=link_to "Play Scenario", play_round_character_scenario_path(char_s.first)%></li>
+                <%end%>
+              <%end%>
             <%end%>
             <%if current_player.hasActiveCharacter %>
               <li><%=link_to "Manage Character", manage_character_path(current_player.activeCharacter)%></li>

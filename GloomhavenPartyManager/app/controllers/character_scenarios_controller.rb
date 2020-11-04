@@ -1,12 +1,60 @@
 class CharacterScenariosController < ApplicationController
-  before_action :set_character_scenario, only: [:show, :edit, :update, :destroy, :remove_character, :scenario_setup, :setup_character]
+  before_action :set_character_scenario, only: [:show, :edit, :update, :destroy, :remove_character,
+    :scenario_setup, :setup_character, :play_round]
 
 
   def scenario_setup
     @character = @character_scenario.character
   end
+  def play_round
+    @scenario = @character_scenario.scenario
+    @character = @character_scenario.character
+
+    @round = @scenario.rounds.order(number: :desc).first
+    @character_round = @round.character_rounds.where(character_scenario: @character_scenario).first
+  end
   def setup_character
-    #saves the characters setup
+    character = @character_scenario.character
+    active_items = []
+    active_items << params[:helm_id]
+    active_items << params[:armor_id]
+    active_items << params[:boots_id]
+    if !params[:one_handed_weapon_id].nil?
+      params[:one_handed_weapon_id].each do |weapon|
+        active_items << weapon
+      end
+    end
+    active_items << params[:two_handed_weapon_id]
+
+    if !params[:items_id].nil?
+      params[:items_id].each do |small_item|
+        active_items << small_item
+      end
+    end
+    if session[:temple]
+      donate1 = ActiveAttackCard.new(attack_card: AttackCard.bless.first, character: @character_scenario.character, is_drawn: false)
+      donate2 = ActiveAttackCard.new(attack_card: AttackCard.bless.first, character: @character_scenario.character, is_drawn: false)
+      donate1.save
+      donate2.save
+      session[:temple] = false
+    end
+    equiped_items = character.items.where(id: active_items)
+    equiped_items.update_all(is_active: true)
+
+    unequiped_items = character.items.where.not(id: active_items)
+    unequiped_items.update_all(is_active: false)
+
+    active_cards = params[:ability_cards_id]
+    equiped_cards = character.ability_cards.where(id: active_cards)
+    equiped_cards.update_all(active: true, status: "Available")
+
+    unequiped_cards = character.ability_cards.where.not(id: active_cards)
+    unequiped_cards.update_all(active: false)
+
+    @character_scenario.update(experience: 0, gold: 0, is_poison: false, is_stun: false, is_invisible: false,
+      is_strengthen: false, is_wound: false, is_immobilize: false, is_disarm: false, is_muddle: false)
+
+    redirect_to scenario_setup_character_scenario_path(@character_scenario)
   end
 
   def remove_character

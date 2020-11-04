@@ -2,7 +2,7 @@
     {
         "description": "Remove two -1 cards",
         "count": "1",
-        "attack_card": [
+        "attack_cards": [
             {
                 "attack_card": "Minus 1",
                 "effects": -2
@@ -12,7 +12,7 @@
     {
         "description": "Remove four +0 cards",
         "count": "1",
-        "attack_card": [
+        "attack_cards": [
             {
                 "attack_card": "Zero",
                 "effects": -4
@@ -22,7 +22,7 @@
     {
         "description": "Replace one -1 card with one +1 card",
         "count": "2",
-        "attack_card": [
+        "attack_cards": [
             {
                 "attack_card": "Minus 1",
                 "effects": -1
@@ -36,7 +36,7 @@
     {
         "description": "Replace one +0 card with one rolling +2 card",
         "count": "2",
-        "attack_card": [
+        "attack_cards": [
             {
                 "attack_card": "Zero",
                 "effects": -1
@@ -50,7 +50,7 @@
     {
         "description": "Add two rolling WOUND cards",
         "count": "2",
-        "attack_card": [
+        "attack_cards": [
             {
                 "attack_card": "Rolling Wound",
                 "effects": 2
@@ -60,7 +60,7 @@
     {
         "description": "Add one rolling STUN cards",
         "count": "2",
-        "attack_card": [
+        "attack_cards": [
             {
                 "attack_card": "Rolling Stun",
                 "effects": 1
@@ -70,7 +70,7 @@
     {
         "description": "Add one rolling +1 DISARM card",
         "count": "1",
-        "attack_card": [
+        "attack_cards": [
             {
                 "attack_card": "Rolling Plus 1 Disarm",
                 "effects": 1
@@ -80,7 +80,7 @@
     {
         "description": "Add two rolling HEAL 1 cards",
         "count": "1",
-        "attack_card": [
+        "attack_cards": [
             {
                 "attack_card": "Rolling Heal 1",
                 "effects": 2
@@ -90,7 +90,7 @@
     {
         "description": "Add one +2 FIRE card",
         "count": "2",
-        "attack_card": [
+        "attack_cards": [
             {
                 "attack_card": "Plus 2 Fire",
                 "effects": 1

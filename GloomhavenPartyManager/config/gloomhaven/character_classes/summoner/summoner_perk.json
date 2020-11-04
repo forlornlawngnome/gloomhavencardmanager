@@ -2,7 +2,7 @@
     {
         "description": "Remove two -1 cards",
         "count": "1",
-        "attack_card": [
+        "attack_cards": [
             {
                 "attack_card": "Minus 1",
                 "effects": -2
@@ -12,7 +12,7 @@
     {
         "description": "Replace one -2 card with one +0 card",
         "count": "1",
-        "attack_card": [
+        "attack_cards": [
             {
                 "attack_card": "Minus 2",
                 "effects": -1
@@ -26,7 +26,7 @@
     {
         "description": "Replace one -1 card with one +1 card",
         "count": "3",
-        "attack_card": [
+        "attack_cards": [
             {
                 "attack_card": "Minus 1",
                 "effects": -1
@@ -40,7 +40,7 @@
     {
         "description": "Add one +2 card",
         "count": "2",
-        "attack_card": [
+        "attack_cards": [
             {
                 "attack_card": "Plus 2",
                 "effects": 1
@@ -50,7 +50,7 @@
     {
         "description": "Add two rolling WOUND cards",
         "count": "1",
-        "attack_card": [
+        "attack_cards": [
             {
                 "attack_card": "Rolling Wound",
                 "effects": 2
@@ -60,7 +60,7 @@
     {
         "description": "Add two rolling POISON cards",
         "count": "1",
-        "attack_card": [
+        "attack_cards": [
             {
                 "attack_card": "Rolling Poison",
                 "effects": 2
@@ -70,9 +70,9 @@
     {
         "description": "Add two rolling HEAL 1 cards",
         "count": "3",
-        "attack_card": [
+        "attack_cards": [
             {
-                "attack_card": "Rolling Heal 1",
+                "attack_card": "Rolling Heal 1 Self",
                 "effects": 2
             }
         ]
@@ -80,7 +80,7 @@
     {
         "description": "Add one rolling FIRE and one rolling WIND card",
         "count": "1",
-        "attack_card": [
+        "attack_cards": [
             {
                 "attack_card": "Rolling Fire",
                 "effects": 1
@@ -94,7 +94,7 @@
     {
         "description": "Add one rolling DARK and one rolling EARTH card",
         "count": "1",
-        "attack_card": [
+        "attack_cards": [
             {
                 "attack_card": "Rolling Dark",
                 "effects": 1
@@ -108,7 +108,7 @@
     {
         "description": "Ignore negative scenario effects and add two +1 cards",
         "count": "1",
-        "attack_card": [
+        "attack_cards": [
             {
                 "attack_card": "Plus 1",
                 "effects": 2

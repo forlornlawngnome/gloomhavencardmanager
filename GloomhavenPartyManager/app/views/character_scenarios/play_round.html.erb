@@ -1,0 +1,108 @@
+<h3><%=@scenario.display%>: <%=image_tag @character.character_class.getIconImage, width: "50em"%> <%=@character.name%><small> Round <%=@scenario.current_round.number%></small></h3>
+<%if @character_round.nil?%>
+  <div class="grid-x grid-margin-x align-spaced">
+    <div class="cell small-12 medium-3">
+      <%=link_to "Long Rest", "#", class: "button expanded"%>
+    </div>
+    <div class="cell small-12 medium-3">
+      <%=link_to "Short Rest", "#", class: "button expanded"%>
+    </div>
+  </div>
+  <div class="grid-x grid-margin-x">
+    <div class="cell small-12 medium-3">
+      <div class="card">
+        <h5>Discarded Cards</h5>
+        <%@character.ability_cards.where(available: true, active: true, status: "Discarded").each do |card|%>
+          <li>
+            <a href="javascript:;" data-open="ability_cards_<%=card.id%>">
+              <%card.name%>
+            </a>
+          </li>
+          <div class="tiny reveal" id="ability_cards_<%=card.id%>" data-reveal>
+            <%=render card, card: card%>
+            <button class="close-button" data-close aria-label="Close modal" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        <%end%>
+      </div>
+      <div class="card">
+        <h5>Lost Cards</h5>
+        <%@character.ability_cards.where(available: true, active: true, status: "Lost").each do |card|%>
+          <li>
+            <a href="javascript:;" data-open="ability_cards_<%=card.id%>">
+              <%card.name%>
+            </a>
+          </li>
+          <div class="tiny reveal" id="ability_cards_<%=card.id%>" data-reveal>
+            <%=render card, card: card%>
+            <button class="close-button" data-close aria-label="Close modal" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        <%end%>
+      </div>
+    </div>
+    <div class="cell small-12 medium-8">
+      <h4>Choose your Cards</h4><br />
+      <%= form_with(url: choose_abilities_character_round_path, method: :put, local: true) do |form| %>
+        <%=form.hidden_field :round_id, value: @round.id%>
+        <%=form.hidden_field :character_scenario_id, value: @character_scenario.id%>
+        <%if session[:short_rest]%>
+          <%=form.hidden_field :short_rest, value: true%>
+        <%else%>
+          <%=form.hidden_field :short_rest, value: false%>
+        <%end%>
+        <div class="grid-x grid-padding-x">
+        <%@character.ability_cards.where(available: true, active: true, status: "Available").each do |card|%>
+          <div class="cell small-12 medium-3">
+            <div class="grid-x">
+              <div class="cell auto callout warning">
+                <b><%=card.name%></b><br />
+                <%=radio_button_tag :first_card, card.id, nil, required: 'required' %> <label for="first_card_<%=card.id%>" >First</label><br />
+                <%=radio_button_tag :second_card, card.id, nil, required: 'required' %> <label for="second_card_<%=card.id%>">Second</label>
+                <%form.check_box :played_ability_cards_id, { multiple: true }, card.id, false%>
+              </div>
+              <a href="javascript:;" data-open="ability_cards_<%=card.id%>">
+                <%=render card, card: card%>
+              </a>
+              <br />
+              <div class="tiny reveal" id="ability_cards_<%=card.id%>" data-reveal>
+                <%=render card, card: card%>
+                <button class="close-button" data-close aria-label="Close modal" type="button">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        <%end%>
+        </div>
+        <%=form.submit "Confirm Cards", class: "button expanded"%>
+      <%end%>
+    </div>
+  </div>
+  Short rest (reroll lost card), long rest
+  choose cards!
+<%else%>
+
+  <div class="grid-x grid-margin-x grid-padding-x">
+      <div class="cell small-12 medium-6">
+        <%=render "character_scenarios/play_round_partials/play_ability_cards"%>
+      </div>
+      <div class="cell small-12 medium-6">
+        draw deck?
+      </div>
+    <div class="cell small-12 medium-6">
+      Items
+    </div>
+    <div class="cell small-12 medium-6">
+      Active Cards
+    </div>
+    <div class="cell small-12 medium-6">
+      Discarded
+    </div>
+    <div class="cell small-12 medium-6">
+      Lost
+    </div>
+  </div>
+<%end%>

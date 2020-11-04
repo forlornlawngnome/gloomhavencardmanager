@@ -42,11 +42,10 @@
     "count": 2
   },
   {
-    "name": "Plus 0 Add Target",
+    "name": "Add Target",
     "image": "am-ti-16",
     "value": 0,
     "reshuffle": false,
     "count": 1
   }
 ]
-

@@ -76,15 +76,24 @@ class Party < ApplicationRecord
 			new_try = new_perk.save
 			if !perk["attack_cards"].nil?
 				perk["attack_cards"].each do |attack_obj|
-					attack_card = AttackCard.where(name: attack_obj["attack_card"], character_class_id: char_class.id)
+					attack_card = AttackCard.where(name: attack_obj["attack_card"], character_class_id: char_class.id, party: self)
 					if attack_card.empty?
-						attack_card = AttackCard.where(name: attack_obj["attack_card"], character_class_id: nil)
+						attack_card = AttackCard.where(name: attack_obj["attack_card"], character_class_id: nil, party: self)
 					end
-					if attack_card.empty?
+					if attack_card.count < 1
 						print "sigh #{char_class.name} #{attack_obj["attack_card"]}"
 					end
-					attack_perk = new_perk.attack_cards_perks.build(attack_card_id: attack_card.first.id, effect: attack_obj["effects"])
-					attack_perk.save
+					if attack_card.first.nil?
+						print perk.inspect
+					end
+					if new_perk.nil?
+						print perk.inspect
+					end
+					attack_perk = AttackCardsPerk.new(attack_card_id: attack_card.first.id, perk_id: new_perk.id, effect: attack_obj["effects"], party: self)
+					if !attack_perk.valid?
+						print attack_perk.errors
+					end
+					attack_perk.save!
 				end
 			end
 		end

@@ -4,21 +4,26 @@ Rails.application.routes.draw do
   end
   get 'welcome/index'
   resources :active_attack_cards
-  resources :character_rounds
-  resources :rounds do
-    put 'scenario_new', on: :collection
+  resources :character_rounds do
+    member do
+      put 'choose_abilities'
+    end
   end
+  resources :rounds
   resources :character_scenarios do
     member do
       delete 'remove_character'
       get 'scenario_setup'
       put 'setup_character'
+      get 'play_round'
     end
   end
   resources :scenarios do
     member do
       get 'play'
       put 'reset_characters'
+      get 'create_first_round'
+      put 'finish_scenario'
     end
   end
 

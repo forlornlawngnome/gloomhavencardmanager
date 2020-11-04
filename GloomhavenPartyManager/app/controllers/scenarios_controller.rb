@@ -1,11 +1,24 @@
 class ScenariosController < ApplicationController
-  before_action :set_scenario, only: [:show, :edit, :update, :destroy, :play, :reset_characters]
+  before_action :set_scenario, only: [:show, :edit, :update, :destroy, :play, :reset_characters, :start,
+    :create_first_round, :finish_scenario]
 
   def play
   end
+  def start
+  end
+  def create_first_round
+    @scenario.rounds.build(number: 1)
+    @scenario.save
+    redirect_to play_scenario_path @scenario
+  end
+  def finish_scenario
+    @scenario.active = false
+    @scenario.save
+    redirect_to root_url
+  end
   def reset_characters
     @scenario.initialize_characters
-    redirect_to play_scenario_path @scenario
+
   end
   # GET /scenarios
   # GET /scenarios.json

@@ -1,0 +1,40 @@
+<div class="cell small-12 <%=card_size%> card">
+  <h6><b>Choose Your <%=type.titleize%></b> <small><%=subtitle rescue ""%></small></h6>
+  <div class="grid-x grid-padding-x">
+    <%items.each do |item|%>
+      <div class="cell small-12 <%=item_size%>">
+        <div class="grid-x">
+          <div class="cell auto">
+            <%if item.is_active%>
+              <%=radio_button_tag "#{type}_id", item.id, checked: true %>
+            <%else%>
+              <%=radio_button_tag "#{type}_id", item.id %>
+            <%end%>
+          </div>
+          <div class="cell shrink">
+            <a href="javascript:;">
+              <i class="material-icons md-18" data-open="item_<%=item.id%>">info</i>
+            </a>
+            <div class="tiny reveal" id="item_<%=item.id%>" data-reveal>
+              <%=image_tag item.getImage%>
+              <button class="close-button" data-close aria-label="Close modal" type="button">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
+          <label for="<%=type%>_id_<%=item.id%>">
+            <%=image_tag item.getImage%>
+            <br />
+            <b><%=item.name%></b>
+          </label>
+        </div>
+      </div>
+    <%end%>
+    <div class="cell auto">
+      <%=form.radio_button "#{type}_id", 0, checked: false%>
+      <label for="<%=type%>_id_0">
+        <b>None</b>
+      </label>
+    </div>
+  </div>
+</div>

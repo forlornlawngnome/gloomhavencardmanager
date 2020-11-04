@@ -7,6 +7,8 @@ class AttackCard < ApplicationRecord
 
 	IMAGE_LOCATION = "gloomhaven-Images/images/attack-modifiers/"
 
+	scope :bless, ->{where(name: "Bless")}
+
 	def getImage
 		if self.character_class.nil?
 			return "#{IMAGE_LOCATION}#{self.image}"

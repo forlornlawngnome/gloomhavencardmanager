@@ -1,0 +1,41 @@
+<div class="cell small-12 <%=card_size%> card">
+  <h6><b>Choose Your <%=type.titleize %></b> <small><%=subtitle rescue ""%></small></h6>
+  <div class="grid-x grid-padding-x">
+    <%items.each do |item|%>
+      <div class="cell small-12 <%=item_size%>">
+        <div class="grid-x">
+          <div class="cell auto">
+            <%=form.check_box "#{type}_id", { multiple: true, checked: item.is_active }, item.id, false%>
+          </div>
+          <div class="cell shrink">
+            <a href="javascript:;">
+              <i class="material-icons md-18" data-open="item_<%=item.id%>">info</i>
+            </a>
+            <div class="tiny reveal" id="item_<%=item.id%>" data-reveal>
+              <%=image_tag item.getImage%>
+              <button class="close-button" data-close aria-label="Close modal" type="button">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
+          <label for="<%=type%>_id_<%=item.id%>">
+            <%=image_tag item.getImage%>
+            <br />
+            <b><%=item.name%></b>
+          </label>
+        </div>
+      </div>
+    <%end%>
+  </div>
+</div>
+<%= javascript_tag do%>
+  $("input[name='<%=j type%>_id[]'").change(function(){
+      var max= <%=j max %>;
+      if( $("input[name='<%=j type%>_id[]']:checked").length == max ){
+          $("input[name='<%=j type%>_id[]']").attr('disabled', 'disabled');
+          $("input[name='<%=j type%>_id[]']:checked").removeAttr('disabled');
+      }else{
+           $("input[name='<%=j type%>_id[]']").removeAttr('disabled');
+      }
+  });
+<%end%>

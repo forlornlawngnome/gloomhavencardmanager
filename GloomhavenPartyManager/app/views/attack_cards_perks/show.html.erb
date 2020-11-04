@@ -2,17 +2,17 @@
 
 <p>
   <strong>Attack card:</strong>
-  <%= @attack_cards_perk.attack_card_id %>
+  <%= @attack_cards_perk.attack_card %>
 </p>
 
 <p>
   <strong>Perk:</strong>
-  <%= @attack_cards_perk.perk_id %>
+  <%= link_to @attack_cards_perk.perk.description, @attack_cards_perk.perk %>
 </p>
 
 <p>
   <strong>Effects:</strong>
-  <%= @attack_cards_perk.effects %>
+  <%= @attack_cards_perk.effect %>
 </p>
 
 <%= link_to 'Edit', edit_attack_cards_perk_path(@attack_cards_perk) %> |

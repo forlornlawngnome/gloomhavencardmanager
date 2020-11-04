@@ -2,7 +2,7 @@
     {
         "description": "Remove two -1 cards",
         "count": "2",
-        "attack_card": [
+        "attack_cards": [
             {
                 "attack_card": "Minus 1",
                 "effects": -2
@@ -12,7 +12,7 @@
     {
         "description": "Remove four +0 cards",
         "count": "1",
-        "attack_card": [
+        "attack_cards": [
             {
                 "attack_card": "Zero",
                 "effects": -4
@@ -20,23 +20,9 @@
         ]
     },
     {
-        "description": "Replace two +1 cards with two +2 cards",
-        "count": "1",
-        "attack_card": [
-            {
-                "attack_card": "Plus 1",
-                "effects": -2
-            },
-            {
-                "attack_card": "Plus 2",
-                "effects": 2
-            }
-        ]
-    },
-    {
         "description": "Replace one -2 card with one +0 card",
         "count": "1",
-        "attack_card": [
+        "attack_cards": [
             {
                 "attack_card": "Minus 2",
                 "effects": -1
@@ -48,11 +34,29 @@
         ]
     },
     {
-        "description": "Add One +2 ICE card",
-        "count": "2",
-        "attack_card": [
+        "description": "Replace one -1 card with one +1 card",
+        "count": "1",
+        "attack_cards": [
             {
-                "attack_card": "Plus 2 Ice",
+                "attack_card": "Minus 1",
+                "effects": -1
+            },
+            {
+                "attack_card": "Plus 1",
+                "effects": 1
+            }
+        ]
+    },
+    {
+        "description": "Replace one +0 card with one +2 card",
+        "count": "2",
+        "attack_cards": [
+            {
+                "attack_card": "Zero",
+                "effects": -1
+            },
+            {
+                "attack_card": "Plus 2",
                 "effects": 1
             }
         ]
@@ -60,7 +64,7 @@
     {
         "description": "Add two rolling +1 cards",
         "count": "2",
-        "attack_card": [
+        "attack_cards": [
             {
                 "attack_card": "Rolling Plus 1",
                 "effects": 2
@@ -68,55 +72,41 @@
         ]
     },
     {
-        "description": "Add three rolling PULL 1 cards",
+        "description": "Add two rolling PIERCE 3 cards",
         "count": "1",
-        "attack_card": [
+        "attack_cards": [
             {
-                "attack_card": "Rolling Pull 1",
-                "effects": 3
-            }
-        ]
-    },
-    {
-        "description": "Add three rolling MUDDLE cards",
-        "count": "1",
-        "attack_card": [
-            {
-                "attack_card": "Rolling Muddle",
-                "effects": 3
-            }
-        ]
-    },
-    {
-        "description": "Add two rolling IMMOBILIZE cards",
-        "count": "1",
-        "attack_card": [
-            {
-                "attack_card": "Rolling Immobilize",
+                "attack_card": "Rolling Pierce 3",
                 "effects": 2
             }
         ]
     },
     {
-        "description": "Add one rolling STUN card",
-        "count": "1",
-        "attack_card": [
+        "description": "Add two rolling POISON cards",
+        "count": "2",
+        "attack_cards": [
             {
-                "attack_card": "Rolling Stun",
-                "effects": 1
+                "attack_card": "Rolling Poison",
+                "effects": 2
             }
         ]
     },
     {
-        "description": "Add one rolling DISARM card and one rolling MUDDLE card",
+        "description": "Add two rolling MUDDLE card",
         "count": "1",
-        "attack_card": [
-            {
-                "attack_card": "Rolling Disarm",
-                "effects": 1
-            },
+        "attack_cards": [
             {
                 "attack_card": "Rolling Muddle",
+                "effects": 2
+            }
+        ]
+    },
+    {
+        "description": "Add one rolling INVISIBLE card",
+        "count": "1",
+        "attack_cards": [
+            {
+                "attack_card": "Rolling Invisible",
                 "effects": 1
             }
         ]

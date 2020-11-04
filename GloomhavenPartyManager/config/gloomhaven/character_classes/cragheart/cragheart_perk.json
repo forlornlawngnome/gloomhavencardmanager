@@ -96,7 +96,7 @@
     ]
   },
   {
-    "description": "Add two rolling WIND cards",
+    "description": "Ignore Negative Item effects",
     "count": 1,
     "attack_cards":
     [

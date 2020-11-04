@@ -18,222 +18,28 @@ Set up the character for the current scenario
     </div>
     <div class="cell small-12 medium-9 right">
       <h5>Choose Items</h5>
-      <div class="grid-x grid-margin-x">
-        <div class="cell small-12 medium-4 card">
-          <b>Choose a Helm:</b>
-          <div class="grid-x grid-padding-x">
-            <%@character.items.head.each do |item|%>
-              <div class="cell small-12 medium-6">
-                <div class="grid-x">
-                  <div class="cell auto">
-                    <%=radio_button_tag :helm_id, item.id, checked: item.is_active%>
-                  </div>
-                  <div class="cell shrink">
-                    <a href="javascript:;">
-                      <i class="material-icons md-18" data-open="item_<%=item.id%>">info</i>
-                    </a>
-                    <div class="tiny reveal" id="item_<%=item.id%>" data-reveal>
-                      <%=image_tag item.getImage%>
-                      <button class="close-button" data-close aria-label="Close modal" type="button">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                  </div>
-                  <label for="helm_id_<%=item.id%>">
-                    <%=image_tag item.getImage%>
-                    <br />
-                    <b><%=item.name%></b>
-                  </label>
-                </div>
-              </div>
-            <%end%>
-            <div class="cell auto">
-              <%=form.radio_button :helm_id, nil, checked: false%>
-              <label for="helm_id">
-                <b>None</b>
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="cell small-12 medium-4 card">
-          <b>Choose your Armor:</b>
-          <div class="grid-x grid-padding-x">
-            <%@character.items.armor.each do |item|%>
-              <div class="cell small-12 medium-6">
-                <div class="grid-x">
-                  <div class="cell auto">
-                    <%=radio_button_tag :armor_id, item.id, checked: item.is_active %>
-                  </div>
-                  <div class="cell shrink">
-                    <a href="javascript:;">
-                      <i class="material-icons md-18" data-open="item_<%=item.id%>">info</i>
-                    </a>
-                    <div class="tiny reveal" id="item_<%=item.id%>" data-reveal>
-                      <%=image_tag item.getImage%>
-                      <button class="close-button" data-close aria-label="Close modal" type="button">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                  </div>
-                  <label for="armor_id_<%=item.id%>">
-                    <%=image_tag item.getImage%>
-                    <br />
-                    <b><%=item.name%></b>
-                  </label>
-                </div>
-              </div>
-            <%end%>
-            <div class="cell auto">
-              <%=form.radio_button :armor_id, nil, checked: false%>
-              <label for="armor_id">
-                <b>None</b>
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="cell small-12 medium-4 card">
-          <b>Choose your Boots:</b>
-          <div class="grid-x grid-padding-x">
-            <%@character.items.boots.each do |item|%>
-              <div class="cell small-12 medium-6">
-                <div class="grid-x">
-                  <div class="cell auto">
-                    <%=radio_button_tag :boots_id, item.id, checked: item.is_active%>
-                  </div>
-                  <div class="cell shrink">
-                    <a href="javascript:;">
-                      <i class="material-icons md-18" data-open="item_<%=item.id%>">info</i>
-                    </a>
-                    <div class="tiny reveal" id="item_<%=item.id%>" data-reveal>
-                      <%=image_tag item.getImage%>
-                      <button class="close-button" data-close aria-label="Close modal" type="button">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                  </div>
-                  <label for="boots_id_<%=item.id%>">
-                    <%=image_tag item.getImage%>
-                    <br />
-                    <b><%=item.name%></b>
-                  </label>
-                </div>
-              </div>
-            <%end%>
-            <div class="cell auto">
-              <%=form.radio_button :boots_id, nil, checked: false%>
-              <label for="boots_id">
-                <b>None</b>
-              </label>
-            </div>
-          </div>
-        </div>
+      <div class="grid-x grid-margin-x grid-padding-x">
+        <%=render "character_scenarios/setup_partials/item_radio", form: form, type: "helm",
+          items: @character.items.head, card_size: "medium-4", item_size: "medium-6"%>
+        <%=render "character_scenarios/setup_partials/item_radio", form: form, type: "armor",
+          items: @character.items.armor, card_size: "medium-4", item_size: "medium-6"%>
+        <%=render "character_scenarios/setup_partials/item_radio", form: form, type: "boots",
+          items: @character.items.boots, card_size: "medium-4", item_size: "medium-6"%>
       </div>
-      <div class="grid-x grid-margin-x">
+      <div class="grid-x grid-margin-x grid-padding-x">
         <div class="cell small-12 ">
           Choose Either 2 One Handed or 1 Two Handed
         </div>
-        <div class="cell small-12 medium-6 card">
-          <b>Choose your Weapon (Choose 2):</b>
-          <div class="grid-x grid-padding-x">
-            <%@character.items.onehand.each do |item|%>
-              <div class="cell small-12 medium-4">
-                <div class="grid-x">
-                  <div class="cell auto">
-                    <%=form.check_box :weapon_id, { multiple: true, checked: item.is_active }, item.id, false%>
-                  </div>
-                  <div class="cell shrink">
-                    <a href="javascript:;">
-                      <i class="material-icons md-18" data-open="item_<%=item.id%>">info</i>
-                    </a>
-                    <div class="tiny reveal" id="item_<%=item.id%>" data-reveal>
-                      <%=image_tag item.getImage%>
-                      <button class="close-button" data-close aria-label="Close modal" type="button">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                  </div>
-                  <label for="weapon_id_<%=item.id%>">
-                    <%=image_tag item.getImage%>
-                    <br />
-                    <b><%=item.name%></b>
-                  </label>
-                </div>
-              </div>
-            <%end%>
-          </div>
-        </div>
-        <div class="cell small-12 medium-6 card">
-          <b>Choose your Weapon (Choose 1):</b>
-          <div class="grid-x grid-padding-x">
-            <%@character.items.twohand.each do |item|%>
-              <div class="cell small-12 medium-4">
-                <div class="grid-x">
-                  <div class="cell auto">
-                    <%=radio_button_tag :weapon_two_id, item.id, checked: item.is_active%>
-                  </div>
-                  <div class="cell shrink">
-                    <a href="javascript:;">
-                      <i class="material-icons md-18" data-open="item_<%=item.id%>">info</i>
-                    </a>
-                    <div class="tiny reveal" id="item_<%=item.id%>" data-reveal>
-                      <%=image_tag item.getImage%>
-                      <button class="close-button" data-close aria-label="Close modal" type="button">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                  </div>
-                  <label for="weapon_two_id_<%=item.id%>">
-                    <%=image_tag item.getImage%>
-                    <br />
-                    <b><%=item.name%></b>
-                  </label>
-                </div>
-              </div>
-            <%end%>
-            <div class="cell auto">
-              <%=form.radio_button :weapon_two_id, nil, checked: false%>
-              <label for="boots_id">
-                <b>None</b>
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div class="cell small-12 card">
-          <b>Choose your Items (Max  <%=(@character.level/2).ceil%>):</b>
-          <div class="grid-x grid-padding-x">
-            <%@character.items.small_item.each do |item|%>
-              <div class="cell small-12 medium-2">
-                <div class="grid-x">
-                  <div class="cell auto">
-                    <%=form.check_box :items_id, { multiple: true, checked: item.is_active }, item.id, false%>
-                  </div>
-                  <div class="cell shrink">
-                    <a href="javascript:;">
-                      <i class="material-icons md-18" data-open="item_<%=item.id%>">info</i>
-                    </a>
-                    <div class="tiny reveal" id="item_<%=item.id%>" data-reveal>
-                      <%=image_tag item.getImage%>
-                      <button class="close-button" data-close aria-label="Close modal" type="button">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                  </div>
-                  <label for="items_id_<%=item.id%>">
-                    <%=image_tag item.getImage%>
-                    <br />
-                    <b><%=item.name%></b>
-                  </label>
-                </div>
-              </div>
-            <%end%>
-
-          </div>
-        </div>
-
+        <%=render "character_scenarios/setup_partials/item_checkbox", form: form, type: "one_handed_weapon", subtitle: "(Choose 2)",
+          items: @character.items.onehand, card_size: "medium-6", item_size: "medium-4", max: 2%>
+        <%=render "character_scenarios/setup_partials/item_radio", form: form, type: "two_handed_weapon", subtitle: "(Choose 1)",
+          items: @character.items.twohand, card_size: "medium-6", item_size: "medium-4"%>
+        <%=render "character_scenarios/setup_partials/item_checkbox", form: form, type: "items", subtitle: "(Max  #{(@character.level/2).ceil})",
+            items: @character.items.small_item, card_size: "medium-12", item_size: "medium-2", max: (@character.level/2).ceil%>
       </div>
       <hr />
       <h5>Ability Cards <small>Choose <%=@character.character_class.hand_size%></small></h5>
+      <span class="totalchecked"><%=@character.ability_cards.active.count%></span>/<%=@character.character_class.hand_size%>
       <div class="grid-x grid-padding-x">
         <%@character.ability_cards.where(available: true).each do |card|%>
           <div class="cell small-12 medium-3">
@@ -263,17 +69,7 @@ Set up the character for the current scenario
       </div>
     </div>
   </div>
-<%end%>
-<%= javascript_tag do%>
-  $("input[name='items_id[]'").change(function(){
-      var max= <%=j (@character.level/2).ceil %>;
-      if( $("input[name='items_id[]']:checked").length == max ){
-          $("input[name='items_id[]']").attr('disabled', 'disabled');
-          $("input[name='items_id[]']:checked").removeAttr('disabled');
-      }else{
-           $("input[name='items_id[]']").removeAttr('disabled');
-      }
-  });
+  <%= form.submit "Save", class: "button expanded" %>
 <%end%>
 <%= javascript_tag do%>
   $("input[name='ability_cards_id[]'").change(function(){
@@ -284,5 +80,7 @@ Set up the character for the current scenario
       }else{
            $("input[name='ability_cards_id[]']").removeAttr('disabled');
       }
+      var number = $("input[name='ability_cards_id[]']:checked").length;
+      $('.totalchecked').text(number);
   });
 <%end%>

@@ -1,6 +1,22 @@
 class CharacterRoundsController < ApplicationController
   before_action :set_character_round, only: [:show, :edit, :update, :destroy]
 
+
+  def choose_abilities
+    character_s = CharacterScenario.find(params[:character_scenario_id])
+    round = Round.find(params[:round_id])
+    card_1 =  AbilityCard.find(params[:first_card])
+    card_2 = AbilityCard.find(params[:second_card])
+    short_rest = params[:short_rest]
+
+    party = character_s.party
+    character_round = CharacterRound.new(character_scenario: character_s, round: round, card_1_id: card_1.id, card_2_id: card_2.id, short_rest: short_rest, party: party )
+
+    character_round.save
+    session[:short_rest] = false
+
+    redirect_to play_round_character_scenario_path(character_s)
+  end
   # GET /character_rounds
   # GET /character_rounds.json
   def index

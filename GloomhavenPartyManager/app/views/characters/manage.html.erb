@@ -93,7 +93,10 @@
         <%end%>
         <%=link_to "Retire Character", retire_character_path(@character), data: { confirm: 'Are you sure you want to retire?' }, class: "button alert expanded"%>
       <%elsif active_scenario.rounds.count > 0%>
-          can't level up or do things in gloomhaven, just play scenario!
+        <% char_s = @character.character_scenarios.where(scenario: active_scenario).first%>
+        <%if !char_s.nil?%>
+          <%=link_to "Play Scenario", play_round_character_scenario_path(char_s), class: "button expanded"%>
+        <%end%>
       <%else%>
         <%@character_scenario = CharacterScenario.where(character: @character, scenario: active_scenario)%>
         <%if @character_scenario.empty?%>
