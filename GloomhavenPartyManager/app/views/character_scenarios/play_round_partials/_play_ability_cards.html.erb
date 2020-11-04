@@ -1,55 +1,70 @@
 <%if @character_round.long_rest%>
 <%else%>
-  <%= form_with(url: setup_character_character_scenario_path(@character_scenario) ,method: :put, local: true) do |form| %>
+  <%= form_with(url: ability_play_character_round_path(@character_round) ,method: :put, local: true) do |form| %>
     <div class="grid-x grid-margin-x grid-padding-x">
-      <div class="cell small-12 medium-6">
-        <div class="grid-x">
-          <div class="cell auto">
-            <%=form.check_box "card_id", { multiple: true}, @character_round.card_1.id, false%>
+      <%if @character_round.card_1.status == "Available"%>
+        <div class="cell small-12 medium-6">
+          <div class="grid-x">
+            <div class="cell auto">
+              <%=radio_button_tag :card_id, @character_round.card_1.id,nil, required: 'required' %>
+              <label for="card_id_<%=@character_round.card_1.id%>">
+                <b><%=@character_round.card_1.name%></b>
+              </label>
+            </div>
+            <div class="cell shrink">
+              <a href="javascript:;">
+                <i class="material-icons md-18" data-open="card_<%=@character_round.card_1.id%>">info</i>
+              </a>
+              <div class="tiny reveal" id="card_<%=@character_round.card_1.id%>" data-reveal>
+                <%= render @character_round.card_1, card: @character_round.card_1%>
+                <button class="close-button" data-close aria-label="Close modal" type="button">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            </div>
             <label for="card_id_<%=@character_round.card_1.id%>">
-              <b><%=@character_round.card_1.name%></b>
-            </label>
-          </div>
-          <div class="cell shrink">
-            <a href="javascript:;">
-              <i class="material-icons md-18" data-open="item_<%=@character_round.card_1.id%>">info</i>
-            </a>
-            <div class="tiny reveal" id="card_<%=@character_round.card_1.id%>" data-reveal>
               <%= render @character_round.card_1, card: @character_round.card_1%>
-              <button class="close-button" data-close aria-label="Close modal" type="button">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-          </div>
-          <label for="card_id_<%=@character_round.card_1.id%>">
-            <%= render @character_round.card_1, card: @character_round.card_1%>
-          </label>
-        </div>
-      </div>
-      <div class="cell small-12 medium-6">
-        <div class="grid-x">
-          <div class="cell auto">
-            <%=form.check_box "card_id", { multiple: true}, @character_round.card_2.id, false%>
-            <label for="card_id_<%=@character_round.card_2.id%>">
-              <b><%=@character_round.card_2.name%></b>
             </label>
           </div>
-          <div class="cell shrink">
-            <a href="javascript:;">
-              <i class="material-icons md-18" data-open="item_<%=@character_round.card_2.id%>">info</i>
-            </a>
-            <div class="tiny reveal" id="card_<%=@character_round.card_2.id%>" data-reveal>
-              <%= render @character_round.card_2, card: @character_round.card_2%>
-              <button class="close-button" data-close aria-label="Close modal" type="button">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-          </div>
-          <label for="card_id_<%=@character_round.card_2.id%>">
-            <%= render @character_round.card_2, card: @character_round.card_2%>
-          </label>
         </div>
+      <%end%>
+      <%if @character_round.card_2.status == "Available"%>
+        <div class="cell small-12 medium-6">
+          <div class="grid-x">
+            <div class="cell auto">
+              <%=radio_button_tag :card_id, @character_round.card_2.id %>
+              <label for="card_id_<%=@character_round.card_2.id%>">
+                <b><%=@character_round.card_2.name%></b>
+              </label>
+            </div>
+            <div class="cell shrink">
+              <a href="javascript:;">
+                <i class="material-icons md-18" data-open="card_<%=@character_round.card_2.id%>">info</i>
+              </a>
+              <div class="tiny reveal" id="card_<%=@character_round.card_2.id%>" data-reveal>
+                <%= render @character_round.card_2, card: @character_round.card_2%>
+                <button class="close-button" data-close aria-label="Close modal" type="button">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            </div>
+            <label for="card_id_<%=@character_round.card_2.id%>">
+              <%= render @character_round.card_2, card: @character_round.card_2%>
+            </label>
+          </div>
 
+        </div>
+        <%end%>
+    </div>
+    <div class="grid-x grid-margin-x grid-padding-x grid-padding-y">
+      <div class="cell small-12 medium-4">
+        <%=form.submit "Discard Card",name: "discard", class: "button expanded"%>
+      </div>
+      <div class="cell small-12 medium-4">
+        <%=form.submit "Lose Card",name: "lose", class: "button expanded alert"%>
+      </div>
+      <div class="cell small-12 medium-4">
+        <%=form.submit "Activate Card",name: "activate", class: "button expanded success"%>
       </div>
     </div>
   <%end%>

@@ -7,6 +7,11 @@ Rails.application.routes.draw do
   resources :character_rounds do
     member do
       put 'choose_abilities'
+      put 'ability_play'
+      put 'recover_lost'
+      put 'recover_discarded'
+      put 'avoid_damage_active'
+      put 'avoid_damage_discard'
     end
   end
   resources :rounds
