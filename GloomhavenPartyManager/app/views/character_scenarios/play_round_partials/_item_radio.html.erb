@@ -1,0 +1,22 @@
+<div class="grid-x">
+  <div class="cell auto">
+    <%=radio_button_tag "item_id", item.id, nil, required: 'required' %>
+    <label for="item_id_<%=item.id%>">
+      <b><%=item.name%></b>
+    </label>
+  </div>
+  <div class="cell shrink">
+    <a href="javascript:;">
+      <i class="material-icons md-18" data-open="item_<%=item.id%>">info</i>
+    </a>
+    <div class="tiny reveal" id="item_<%=item.id%>" data-reveal>
+      <%= image_tag item.getImage%>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </div>
+  <label for="item_id_<%=item.id%>">
+    <%= image_tag item.getImage%>
+  </label>
+</div>

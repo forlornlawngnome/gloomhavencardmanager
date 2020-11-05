@@ -1,6 +1,6 @@
 class ScenariosController < ApplicationController
   before_action :set_scenario, only: [:show, :edit, :update, :destroy, :play, :reset_characters, :start,
-    :create_first_round, :finish_scenario]
+    :create_first_round, :finish_scenario, :next_round]
 
   def play
   end
@@ -8,6 +8,12 @@ class ScenariosController < ApplicationController
   end
   def create_first_round
     @scenario.rounds.build(number: 1)
+    @scenario.save
+    redirect_to play_scenario_path @scenario
+  end
+  def next_round
+    prev_round = @scenario.current_round.number
+    @scenario.rounds.build(number: (prev_round+1))
     @scenario.save
     redirect_to play_scenario_path @scenario
   end

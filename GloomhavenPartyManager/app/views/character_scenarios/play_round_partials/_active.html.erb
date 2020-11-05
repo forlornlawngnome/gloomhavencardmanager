@@ -1,0 +1,24 @@
+<h5>Active Cards</h5> 
+<%= form_with(url: active_cards_character_round_path(@character_round) ,method: :put, local: true) do |form| %>
+  <div class="grid-x grid-margin-x grid-padding-x grid-padding-y">
+    <%@character.ability_cards.where(available: true, status: "Active").each do |card|%>
+      <div class="cell small-12 medium-4">
+        <%=render "character_scenarios/play_round_partials/ability_radio", card: card,type: "active"%>
+        <%if card.max_counter>0%>
+          Used: <%=card.counter%>/<%=card.max_counter%>
+        <%end%>
+      </div>
+    <%end%>
+  </div>
+  <div class="grid-x grid-padding-x grid-padding-y">
+    <div class="cell small-12 medium-4">
+      <%=form.submit "Increase Counter", class:"button expanded"%>
+    </div>
+    <div class="cell small-12 medium-4">
+      <%=form.submit "Discard Card", class:"button secondary expanded"%>
+    </div>
+    <div class="cell small-12 medium-4">
+      <%=form.submit "Lose Card", class:"button alert expanded"%>
+    </div>
+  </div>
+<%end%>

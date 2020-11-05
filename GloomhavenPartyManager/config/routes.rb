@@ -9,9 +9,10 @@ Rails.application.routes.draw do
       put 'choose_abilities'
       put 'ability_play'
       put 'recover_lost'
-      put 'recover_discarded'
+      put 'discard_actions'
       put 'avoid_damage_active'
-      put 'avoid_damage_discard'
+      put 'items'
+      put 'active_cards'
     end
   end
   resources :rounds
@@ -29,6 +30,9 @@ Rails.application.routes.draw do
       put 'reset_characters'
       get 'create_first_round'
       put 'finish_scenario'
+      put 'next_round'
+      put 'short_rest'
+      put 'long_rest'
     end
   end
 

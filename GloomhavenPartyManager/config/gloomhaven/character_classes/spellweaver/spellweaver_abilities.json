@@ -39,7 +39,7 @@
         "initiative": "20",
         "level": "1",
         "image": "frost-armor",
-        "counter_max": "0"
+        "counter_max": "2"
     },
     {
         "name": "Fire Orbs",
@@ -67,7 +67,7 @@
         "initiative": "25",
         "level": "0",
         "image": "crackling-air",
-        "counter_max": "0"
+        "counter_max": "4"
     },
     {
         "name": "Aid from the Ether",

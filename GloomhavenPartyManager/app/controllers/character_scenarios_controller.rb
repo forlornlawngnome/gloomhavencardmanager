@@ -46,7 +46,7 @@ class CharacterScenariosController < ApplicationController
 
     active_cards = params[:ability_cards_id]
     equiped_cards = character.ability_cards.where(id: active_cards)
-    equiped_cards.update_all(active: true, status: "Available")
+    equiped_cards.update_all(active: true, status: "Available", counter: 0)
 
     unequiped_cards = character.ability_cards.where.not(id: active_cards)
     unequiped_cards.update_all(active: false)

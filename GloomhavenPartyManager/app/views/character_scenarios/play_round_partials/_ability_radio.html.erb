@@ -1,0 +1,22 @@
+<div class="grid-x">
+  <div class="cell auto">
+    <%=radio_button_tag "#{type}_card_id", card.id, nil, required: 'required' %>
+    <label for="<%=type%>_card_id_<%=card.id%>">
+      <b><%=card.name%></b>
+    </label>
+  </div>
+  <div class="cell shrink">
+    <a href="javascript:;">
+      <i class="material-icons md-18" data-open="card_<%=card.id%>">info</i>
+    </a>
+    <div class="tiny reveal" id="card_<%=card.id%>" data-reveal>
+      <%= render card, card: card%>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </div>
+  <label for="<%=type%>_card_id_<%=card.id%>">
+    <%= render card, card: card%>
+  </label>
+</div>
