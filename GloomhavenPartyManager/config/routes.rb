@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       put 'avoid_damage_active'
       put 'items'
       put 'active_cards'
+      put 'long_rest'
     end
   end
   resources :rounds
@@ -22,6 +23,7 @@ Rails.application.routes.draw do
       get 'scenario_setup'
       put 'setup_character'
       get 'play_round'
+      put 'update_loot'
     end
   end
   resources :scenarios do
@@ -32,7 +34,6 @@ Rails.application.routes.draw do
       put 'finish_scenario'
       put 'next_round'
       put 'short_rest'
-      put 'long_rest'
     end
   end
 
@@ -92,6 +93,7 @@ Rails.application.routes.draw do
   post 'party_selected', to: 'parties#selected', as: :select_party
 
   post 'character_selected', to: 'characters#selected', as: :select_character
+  get 'short_rest', to: 'character_rounds#short_rest', as: :short_rest
 
   root 'welcome#index'
 end

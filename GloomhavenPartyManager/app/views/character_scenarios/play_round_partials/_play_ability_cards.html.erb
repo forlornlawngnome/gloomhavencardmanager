@@ -1,5 +1,6 @@
 <%if @character_round.long_rest%>
-  Long Resting
+  <h2 class="text-center">Long Resting</h2>
+  <i class="material-icons md-20em text-center">hotel</i>
 <%else%>
   <%= form_with(url: ability_play_character_round_path(@character_round) ,method: :put, local: true) do |form| %>
     <div class="grid-x grid-margin-x grid-padding-x">

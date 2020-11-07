@@ -1,17 +1,42 @@
 class CharacterRoundsController < ApplicationController
   before_action :set_character_round, only: [:show, :edit, :update, :destroy, :ability_play, :recover_lost,
-     :discard_actions, :avoid_damage_active, :items, :active_cards, :short_rest, :long_rest]
+     :discard_actions, :avoid_damage_active, :items, :active_cards]
 
   def short_rest
+    @character_scenario = CharacterScenario.find(params[:character_scenario_id])
+
     session[:short_rest] = true
+    case params[:commit]
+    when "Confirm Card"
+      AbilityCard.find(params[:card_id]).update(status: "Lost")
+      @character_scenario.character.ability_cards.chosen.discarded.update_all(status: "Available")
+      redirect_to play_round_character_scenario_path(@character_scenario)
+      return
+    when "Short Rest"
+      @card = @character_scenario.character.ability_cards.chosen.discarded.order('RANDOM()').first
+    when "Lose A Different Card"
+      AbilityCard.find(params[:card_id]).update(status: "Available")
+      card = @character_scenario.character.ability_cards.chosen.discarded.order('RANDOM()').first
+      card.update(status: "Lost")
+      @character_scenario.character.ability_cards.chosen.discarded.update_all(status: "Available")
+      @character_scenario.update(health: (@character_scenario.health -1))
+      redirect_to play_round_character_scenario_path(@character_scenario)
+      return
+    else
+      raise "uh oh"
+    end
+
   end
   def long_rest
     character_s = CharacterScenario.find(params[:character_scenario_id])
     round = Round.find(params[:round_id])
-
+    card = AbilityCard.find(params[:lost_card_id])
+    card.update(status: "Lost")
     party = character_s.party
     character_round = CharacterRound.new(character_scenario: character_s, round: round, long_rest: true, party: party )
 
+    character_s.character.items.active.discarded.update_all(used: false, counter: 0)
+    character_s.character.ability_cards.discarded.update_all(status: "Available", counter: 0)
     character_round.save
     redirect_to play_round_character_scenario_path(character_s)
   end
@@ -55,13 +80,13 @@ class CharacterRoundsController < ApplicationController
   end
   def recover_lost
     card = AbilityCard.find(params[:lost_card_id])
-    card.update(status: "Available", count: 0)
+    card.update(status: "Available", counter: 0)
     redirect_to play_round_character_scenario_path(@character_round.character_scenario)
   end
   def discard_actions
     card = AbilityCard.find(params[:discarded_card_id])
     if params[:commit]=="Recover Discarded Card"
-      card.update(status: "Available", count: 0)
+      card.update(status: "Available", counter: 0)
       redirect_to play_round_character_scenario_path(@character_round.character_scenario)
       return
     elsif params[:commit]=="Lose to Avoid Damage"

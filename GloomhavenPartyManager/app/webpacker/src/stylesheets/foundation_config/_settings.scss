@@ -77,12 +77,12 @@ $dark-purple: #42253b;
 $green: #508484; //steel teal
 $blue: #197bbd; //star command blue
 $frost: rgba(255,255,255,.2);
-
+$frostier: rgba(255,255,255,.3);
 
 $foundation-palette: (
   primary: $purple, //#1779ba, > Changed to purple
   secondary: $blue, //#767676, > changed to blue
-  tertiary: $pink, //#ff00ff,
+  tertiary: $frostier, //#ff00ff,
   success: $green, //#3adb76,
   warning: #ffae00,
   alert: $pink, //#cc4b37,
@@ -340,7 +340,7 @@ $callout-link-tint: 30%;
 // 14. Card
 // --------
 
-$card-background: inherit;
+$card-background: $frostier;
 $card-font-color: $body-font-color;
 $card-divider-background: $blue;
 $card-border: 2px solid $blue;

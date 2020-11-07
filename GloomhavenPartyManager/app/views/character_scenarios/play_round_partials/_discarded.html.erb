@@ -1,5 +1,5 @@
 <h5>Discarded Cards</h5>
-<%discarded_abilities = @character.ability_cards.where(available: true, status: "Discarded")%>
+<%discarded_abilities = @character.ability_cards.chosen.discarded%>
 <%if discarded_abilities.count <1 %>
   <i>None.</i>
 <%else%>

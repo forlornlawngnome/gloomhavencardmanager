@@ -39,9 +39,9 @@ Set up the character for the current scenario
       </div>
       <hr />
       <h5>Ability Cards <small>Choose <%=@character.character_class.hand_size%></small></h5>
-      <span class="totalchecked"><%=@character.ability_cards.active.count%></span>/<%=@character.character_class.hand_size%>
+      <span class="totalchecked"><%=@character.ability_cards.chosen.count%></span>/<%=@character.character_class.hand_size%>
       <div class="grid-x grid-padding-x">
-        <%@character.ability_cards.where(available: true).each do |card|%>
+        <%@character.ability_cards.in_available_deck.order(:level).each do |card|%>
           <div class="cell small-12 medium-3">
             <div class="grid-x">
               <div class="cell auto">

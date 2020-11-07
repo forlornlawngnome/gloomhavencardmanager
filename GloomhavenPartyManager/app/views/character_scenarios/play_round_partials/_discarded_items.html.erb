@@ -1,5 +1,5 @@
 <h5>Consumed Items</h5>
-<%items = @character.items.where(is_active: true, used: true, usage_state: "Spent")%>
+<%items = @character.items.active.discarded%>
 <%if items.count <1 %>
   <i>None.</i>
 <%else%>

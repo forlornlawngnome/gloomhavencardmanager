@@ -1,5 +1,5 @@
 <h5>Lost Cards</h5>
-<%lost_abilities = @character.ability_cards.where(available: true, status: "Lost")%>
+<%lost_abilities = @character.ability_cards.chosen.lost%>
 <%if lost_abilities.count <1 %>
   <i>None.</i>
 <%else%>
@@ -19,7 +19,7 @@
                 <i class="material-icons md-18" data-open="card_<%=card.id%>">info</i>
               </a>
               <div class="tiny reveal" id="card_<%=card.id%>" data-reveal>
-                <%= render @character_round.card_1, card: card%>
+                <%= render card, card: card%>
                 <button class="close-button" data-close aria-label="Close modal" type="button">
                   <span aria-hidden="true">&times;</span>
                 </button>

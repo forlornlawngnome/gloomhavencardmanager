@@ -9,12 +9,17 @@ class AbilityCard < ApplicationRecord
 
 	validates_uniqueness_to_tenant :name
 
-	scope :available, ->{where(available: true)}
-	scope :active, ->{where(active: true)}
+	scope :in_available_deck, ->{where(available: true)}
+
+	scope :chosen, ->{where(chosen: true)}
+	scope :available, ->{where(status: "Available")}
+	scope :lost, ->{where(status: "Lost")}
+	scope :discarded, ->{where(status: "Discarded")}
+	scope :active, ->{where(status: "Active")}
 
 	CARD_IMAGE = "gloomhaven-Images/images/character-ability-cards/"
 
-	#active = in active status for round
+	#active = in active status for round <<<Not used
 	#status = Available, discarded, lost
 	#available = in Character's available cards
 	#chosen = Chosen for scenario

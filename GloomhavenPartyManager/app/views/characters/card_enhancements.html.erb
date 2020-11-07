@@ -46,7 +46,7 @@ Purchased <%=@character.ability_cards_enhancements.count%> of current maximum <%
     <div class="cell small-12 medium-9 auto">
       <h4>Choose a Card </h4>
       <div class="grid-x grid-margin-x ">
-      	<%@character.ability_cards.available.order(:level, :name).each do |card|%>
+      	<%@character.ability_cards.in_available_deck.order(:level, :name).each do |card|%>
       		<div class="cell small-12 medium-3 auto">
       			<div class="card">
               <%=render card, card: card%>

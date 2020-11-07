@@ -12,6 +12,11 @@ class Item < ApplicationRecord
   scope :onehand, -> { where(item_type: "OneHand") }
   scope :twohand, -> { where(item_type: "TwoHands") }
 
+  scope :active, ->{where(is_active: true)}
+  scope :available, ->{where(used: false)}
+  scope :discarded, ->{where(used: true, usage_state: "Spent")}
+  scope :lost, ->{where(used: true, usage_state: "Consumed")}
+
   def getImage
   	return "#{IMAGE_LOCATION}#{getItemRange}/#{self.getFileName}"
   end

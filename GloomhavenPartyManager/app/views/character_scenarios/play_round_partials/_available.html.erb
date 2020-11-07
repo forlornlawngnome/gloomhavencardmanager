@@ -1,5 +1,9 @@
 <h5>Available Cards</h5>
-<%available_abilities = @character.ability_cards.where(available: true, status: "Available")%>
+<%if @character_round.card_1.nil? or @character_round.card_2.nil?%>
+  <%available_abilities = @character.ability_cards.chosen.available%>
+<%else%>
+  <%available_abilities = @character.ability_cards.chosen.available.where("ability_cards.id not in (?)",[@character_round.card_1.id,@character_round.card_2.id])%>
+<%end%>
 <%if available_abilities.count <1 %>
   <i>None.</i>
 <%else%>

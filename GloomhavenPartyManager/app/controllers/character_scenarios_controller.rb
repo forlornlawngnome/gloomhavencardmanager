@@ -1,8 +1,41 @@
 class CharacterScenariosController < ApplicationController
   before_action :set_character_scenario, only: [:show, :edit, :update, :destroy, :remove_character,
-    :scenario_setup, :setup_character, :play_round]
+    :scenario_setup, :setup_character, :play_round, :update_loot]
 
-
+  def update_loot
+    if params[:health_minus]
+      @character_scenario.update(health: (@character_scenario.health - 1))
+    elsif params[:health_plus]
+      @character_scenario.update(health: (@character_scenario.health + 1))
+    elsif params[:xp_minus]
+      @character_scenario.update(experience: (@character_scenario.experience - 1))
+    elsif params[:xp_plus]
+      @character_scenario.update(experience: (@character_scenario.experience + 1))
+    elsif params[:gold_minus]
+      @character_scenario.update(gold: (@character_scenario.gold - 1))
+    elsif params[:gold_plus]
+      @character_scenario.update(gold: (@character_scenario.gold + 1))
+    elsif params[:poison]
+      @character_scenario.update(is_poison: !@character_scenario.is_poison)
+    elsif params[:wound]
+      @character_scenario.update(is_wound: !@character_scenario.is_wound)
+    elsif params[:immobilize]
+      @character_scenario.update(is_immobilize: !@character_scenario.is_immobilize)
+    elsif params[:disarm]
+      @character_scenario.update(is_disarm: !@character_scenario.is_disarm)
+    elsif params[:stun]
+      @character_scenario.update(is_stun: !@character_scenario.is_stun)
+    elsif params[:muddle]
+      @character_scenario.update(is_muddle: !@character_scenario.is_muddle)
+    elsif params[:invisible]
+      @character_scenario.update(is_invisible: !@character_scenario.is_invisible)
+    elsif params[:strengthen]
+      @character_scenario.update(is_strengthen: !@character_scenario.is_strengthen)
+    else
+      raise params.inspect
+    end
+    redirect_to play_round_character_scenario_path(@character_scenario)
+  end
   def scenario_setup
     @character = @character_scenario.character
   end
@@ -46,10 +79,10 @@ class CharacterScenariosController < ApplicationController
 
     active_cards = params[:ability_cards_id]
     equiped_cards = character.ability_cards.where(id: active_cards)
-    equiped_cards.update_all(active: true, status: "Available", counter: 0)
+    equiped_cards.update_all(chosen: true, status: "Available", counter: 0)
 
     unequiped_cards = character.ability_cards.where.not(id: active_cards)
-    unequiped_cards.update_all(active: false)
+    unequiped_cards.update_all(chosen: false)
 
     @character_scenario.update(experience: 0, gold: 0, is_poison: false, is_stun: false, is_invisible: false,
       is_strengthen: false, is_wound: false, is_immobilize: false, is_disarm: false, is_muddle: false)

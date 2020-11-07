@@ -40,7 +40,7 @@ class Character < ApplicationRecord
   end
 
   def max_health
-    character_class.max_health(level)
+    character_class.max_health(level).to_f
   end
 
   def level_up_cards(level)
