@@ -12,10 +12,10 @@ class CharacterClass < ApplicationRecord
 
 
 	def getCharacterMatFrontLocation
-		return CHARACTER_MAT + "" + self.file_formated_name
+		return CHARACTER_MAT + "" + self.file_formated_name +".png"
 	end
 	def getCharacterMatBackLocation
-		return CHARACTER_MAT + "" + self.file_formated_name + "-back"
+		return CHARACTER_MAT + "" + self.file_formated_name + "-back.png"
 	end
 	def getCharacterCardBack
 		return "#{CHARACTER_CARD_BACK}#{self.character_abbreviation.upcase}/#{self.character_abbreviation.downcase}-back.png"
