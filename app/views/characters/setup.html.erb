@@ -23,7 +23,7 @@
   <%if active_party.prosperity > 1%>
     <div class="field">
       <%= form.label :level %>
-      <%= form.select :level, 1..active_party.prosperity %>
+      <%= form.select :level, 1..active_party.prosperity_actual %>
     </div>
   <%else%>
     <%= form.hidden_field :level, value: 1 %>
