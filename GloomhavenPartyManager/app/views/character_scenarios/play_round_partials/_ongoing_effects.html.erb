@@ -1,0 +1,97 @@
+<div class="cell small-12 medium-6">
+  <%= form_with(url: update_loot_character_scenario_path(@character_scenario), method: :put, local: true) do |form| %>
+    <div class="grid-x grid-padding-x">
+      <div class="cell small-12 medium-6">
+        <b>Experience:</b>
+        <div class="input-group" style="height:2.5em">
+          <%if @character_scenario.experience > 0%>
+            <div class="input-group-button">
+              <%= button_tag(type: 'submit', class: "button", name: "xp_minus") do %>
+                <i class="fas fa-minus"></i>
+              <% end %>
+            </div>
+          <%end%>
+          <span class="input-group-label" style="width:5em"><%=@character_scenario.experience%></span>
+          <div class="input-group-button">
+            <%= button_tag(type: 'submit', class: "button", name: "xp_plus") do %>
+              <i class="fas fa-plus"></i>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="cell small-12 medium-6">
+        <b>Gold:</b>
+        <div class="input-group" style="height:2.5em">
+          <%if @character_scenario.gold > 0%>
+            <div class="input-group-button">
+              <%= button_tag(type: 'submit', class: "button", name: "gold_minus") do %>
+                <i class="fas fa-minus"></i>
+              <% end %>
+            </div>
+          <%end%>
+          <span class="input-group-label" style="width:5em"><%=@character_scenario.gold%></span>
+          <div class="input-group-button">
+            <%= button_tag(type: 'submit', class: "button", name: "gold_plus") do %>
+              <i class="fas fa-plus"></i>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="cell small-12 medium-12">
+        <b>Health:</b>
+        <div class="input-group" style="height:2.5em">
+          <%if @character_scenario.health > 0%>
+            <div class="input-group-button">
+              <%= button_tag(type: 'submit', class: "button", name: "health_minus") do %>
+                <i class="fas fa-minus"></i>
+              <% end %>
+            </div>
+          <%end%>
+          <span class="input-group-label" style="width:5em"><%=@character_scenario.health%></span>
+          <%if @character_scenario.health < @character_scenario.character.max_health %>
+            <div class="input-group-button">
+              <%= button_tag(type: 'submit', class: "button", name: "health_plus") do %>
+                <i class="fas fa-plus"></i>
+              <% end %>
+            </div>
+          <%end%>
+        </div>
+      </div>
+      <div class="cell small-12 medium-12">
+        <b>Status Effects:</b><br />
+        <%poison = @character_scenario.is_poison ? "alert" : "tertiary"%>
+        <%wound = @character_scenario.is_wound ? "alert" : "tertiary"%>
+        <%immobilize = @character_scenario.is_immobilize ? "alert" : "tertiary"%>
+        <%disarm = @character_scenario.is_disarm ? "alert" : "tertiary"%>
+        <%stun = @character_scenario.is_stun ? "alert" : "tertiary"%>
+        <%muddle = @character_scenario.is_muddle ? "alert" : "tertiary"%>
+        <%invisible = @character_scenario.is_invisible ? "success" : "tertiary"%>
+        <%strengthen = @character_scenario.is_strengthen ? "success" : "tertiary"%>
+        <%= button_tag(type: 'submit', class: "button #{poison}", name: "poison") do %>
+          <i class="fas fa-skull-crossbones"></i>
+        <% end %>
+        <%= button_tag(type: 'submit', class: "button #{wound}", name: "wound") do %>
+          <i class="fas fa-fire"></i>
+        <% end %>
+        <%= button_tag(type: 'submit', class: "button #{immobilize}", name: "immobilize") do %>
+          <i class="fas fa-walking"></i>
+        <% end %>
+        <%= button_tag(type: 'submit', class: "button #{disarm}", name: "disarm") do %>
+          <i class="fas fa-hand-sparkles"></i>
+        <% end %>
+        <%= button_tag(type: 'submit', class: "button #{stun}", name: "stun") do %>
+          <i class="fas fa-bahai"></i>
+        <% end %>
+        <%= button_tag(type: 'submit', class: "button #{muddle}", name: "muddle") do %>
+          <i class="fas fa-question"></i>
+        <% end %>
+        <%= button_tag(type: 'submit', class: "button #{invisible}", name: "invisible") do %>
+          <i class="fas fa-eye-slash"></i>
+        <% end %>
+        <%= button_tag(type: 'submit', class: "button #{strengthen}", name: "strengthen") do %>
+          <i class="fas fa-dumbbell"></i>
+        <% end %>
+      </div>
+    </div>
+  <%end%>
+</div>

@@ -1,6 +1,40 @@
 class CharacterScenariosController < ApplicationController
   before_action :set_character_scenario, only: [:show, :edit, :update, :destroy, :remove_character,
-    :scenario_setup, :setup_character, :play_round, :update_loot]
+    :scenario_setup, :setup_character, :play_round, :update_loot, :draw_attack_card, :shuffle_deck,
+    :add_to_attack_deck]
+
+  def draw_attack_card
+    deck = @character_scenario.character.active_attack_cards.in_deck
+    drawn = deck.order('RANDOM()').first
+    drawn.update(is_drawn: true)
+    order = @character_scenario.attack_deck_draw_order << drawn.id
+    @character_scenario.update(attack_deck_draw_order: order)
+    if drawn.attack_card.reshuffle
+      session[:shuffle] = true
+    end
+    redirect_to play_round_character_scenario_path(@character_scenario)
+  end
+  def shuffle_deck
+    active_cards = @character_scenario.character.active_attack_cards.where(is_drawn: true)
+    bless = AttackCard.where(name: "Bless").first
+    curse = AttackCard.where(name: "Curse").first
+    remove_cards = (active_cards.where(attack_card_id: bless.id)).or(active_cards.where(attack_card_id: curse.id))
+    remove_cards.destroy_all
+    @character_scenario.character.active_attack_cards.update_all(is_drawn: false)
+    @character_scenario.update(attack_deck_draw_order: [])
+    session[:shuffle]=false
+    redirect_to play_round_character_scenario_path(@character_scenario)
+  end
+  def add_to_attack_deck
+    name = params[:card]
+    card = AttackCard.where("lower(name) = ?", name.downcase).first
+    character = @character_scenario.character
+
+    active_attack = ActiveAttackCard.new(attack_card: card, character: character, is_drawn: false)
+    active_attack.save
+
+    redirect_to play_round_character_scenario_path(@character_scenario)
+  end
 
   def update_loot
     if params[:health_minus]

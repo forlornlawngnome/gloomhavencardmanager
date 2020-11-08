@@ -14,8 +14,8 @@ class Item < ApplicationRecord
 
   scope :active, ->{where(is_active: true)}
   scope :available, ->{where(used: false)}
-  scope :discarded, ->{where(used: true, usage_state: "Spent")}
-  scope :lost, ->{where(used: true, usage_state: "Consumed")}
+  scope :discarded, ->{where(used: true, usage_state: "Discarded")}
+  scope :lost, ->{where(used: true, usage_state: "Lost")}
 
   def getImage
   	return "#{IMAGE_LOCATION}#{getItemRange}/#{self.getFileName}"

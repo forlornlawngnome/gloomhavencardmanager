@@ -16,4 +16,7 @@ class AttackCard < ApplicationRecord
 			return "#{IMAGE_LOCATION}#{self.character_class.character_abbreviation.upcase}/#{self.image}"
 		end
 	end
+	def self.back
+			return "attack-modifier-back"
+	end
 end

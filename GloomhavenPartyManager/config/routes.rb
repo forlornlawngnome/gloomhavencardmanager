@@ -24,6 +24,9 @@ Rails.application.routes.draw do
       put 'setup_character'
       get 'play_round'
       put 'update_loot'
+      put 'draw_attack_card'
+      get 'shuffle_deck'
+      get 'add_to_attack_deck'
     end
   end
   resources :scenarios do
