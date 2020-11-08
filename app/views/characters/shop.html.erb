@@ -7,7 +7,9 @@ You have <b><%=@character.gold%></b> gold to spend.
       <%@items.each do |item|%>
         <div class="cell small-12 medium-2">
           <div class="card">
-            <button class="button" data-open="item_<%=item.id%>" style="padding:0"><%=image_tag item.getImage%></button>
+            <a href="javascript:;" class="button"data-open="item_<%=item.id%>" style="padding:0">
+               <%=image_tag item.getImage%>
+            </a>
             <span style="margin-left:5px">
               <%=check_box_tag 'items_to_buy[]', item.id, false, id: "buy_#{item.id}"%>
               <label for="buy_<%=item.id%>" type="checkbox" style="margin-left:0">
