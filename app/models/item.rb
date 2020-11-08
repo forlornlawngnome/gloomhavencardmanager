@@ -18,7 +18,7 @@ class Item < ApplicationRecord
   scope :lost, ->{where(used: true, usage_state: "Lost")}
 
   def getImage
-  	return "#{IMAGE_LOCATION}#{getItemRange}/#{self.getFileName}"
+  	return "#{IMAGE_LOCATION}#{getItemRange}/#{self.getFileName}.png"
   end
   def getFileName
     self.name.gsub(" ","-").gsub("'","").downcase
