@@ -6,15 +6,15 @@
       <b>Average level:</b> <%=@party.average_level%><br />
       <b>Prosperity:</b>
       <div class="input-group" style="height:2.5em">
-        <%if @party.prosperity % 1 != 0 %>
+        <%if !@party.prosperity_bottom %>
           <div class="input-group-button">
             <%= link_to remove_prosperity_party_path(@party), class: "button" do%>
               <i class="fas fa-minus" style= "margin-top:.6em"></i>
             <%end%>
           </div>
         <%end%>
-        <span class="input-group-label" style="width:5em"><%=@party.prosperity%></span>
-        <%if @party.prosperity < 9.0 %>
+        <span class="input-group-label" style="width:5em"><%=@party.prosperity_actual%> + <%=@party.prosperity_tics%></span>
+        <%if @party.prosperity_actual < 9.0 %>
           <div class="input-group-button">
             <%= link_to add_prosperity_party_path(@party), class: "button" do%>
               <i class="fas fa-plus" style= "margin-top:.6em"></i>

@@ -20,12 +20,54 @@ class Party < ApplicationRecord
 
 	DATA_LOCATION = Rails.root.join('config', 'gloomhaven')
 	CHARACTER_LOCATION = File.join(DATA_LOCATION, 'character_classes')
+	PROSPERITY_MAP = {
+		0..3 => 1,
+		4..8 => 2,
+		9..14 => 3,
+		15..21 => 4,
+		22..29 => 5,
+		30..38 => 6,
+		39..49 => 7,
+		50..63 => 8,
+		64 => 9
+	}
 
 	def active_scenario
 		scenarios.active.first
 	end
 	def average_level
 		characters.active.average(:level)
+	end
+	def prosperity_actual
+		prosperity_calc(prosperity)
+	end
+	def prosperity_top
+		actual = prosperity_actual
+		increase = prosperity_calc(prosperity + 1 )
+		if actual == increase
+			return false
+		else
+			return true
+		end
+	end
+	def prosperity_range
+		PROSPERITY_MAP.select {|tic| tic === prosperity }.keys.first
+	end
+	def prosperity_tics
+		return (prosperity - prosperity_range.begin)
+	end
+	def prosperity_bottom
+		actual = prosperity_actual
+		increase = prosperity_calc(prosperity - 1 )
+		if actual == increase
+			return false
+		else
+			return true
+		end
+	end
+
+	def prosperity_calc(value)
+		PROSPERITY_MAP.select {|tic| tic === value }.values.first
 	end
 
 	def initial_setup

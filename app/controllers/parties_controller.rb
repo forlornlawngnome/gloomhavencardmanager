@@ -7,12 +7,12 @@ class PartiesController < ApplicationController
     @unlockable_items = Item.where(is_unlocked: false).select('distinct on (number) *').order(:number)
   end
   def add_prosperity
-    if @party.prosperity < 9.0
-      @party.prosperity = @party.prosperity + 0.2
+    if @party.prosperity_actual < 9.0
+      @party.prosperity = @party.prosperity + 1
       @party.save
-      if @party.prosperity % 1 == 0
-        range_bot = Item.prosperityItem(@party.prosperity - 1)
-        range_top = Item.prosperityItem(@party.prosperity)
+      if @party.prosperity_bottom
+        range_bot = Item.prosperityItem(@party.prosperity_actual - 1)
+        range_top = Item.prosperityItem(@party.prosperity_actual)
         items = Item.where("number > ? AND number <= ?", range_bot, range_top)
         items.update_all(is_unlocked: true)
         #make items available
@@ -28,8 +28,8 @@ class PartiesController < ApplicationController
     redirect_to manage_party_path @party
   end
   def remove_prosperity
-    if @party.prosperity.floor == (@party.prosperity - 0.2).floor
-      @party.prosperity = @party.prosperity - 0.2
+    if !@party.prosperity_bottom
+      @party.prosperity = @party.prosperity - 1
       @party.save
       redirect_to manage_party_path @party
     else
