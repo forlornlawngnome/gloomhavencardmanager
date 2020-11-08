@@ -26,7 +26,7 @@ class AbilityCard < ApplicationRecord
 
 
 	def getCardImage
-		return "#{CARD_IMAGE}#{self.character_class.character_abbreviation.upcase}/#{self.image}"
+		return "#{CARD_IMAGE}#{self.character_class.character_abbreviation.upcase}/#{self.image}.png"
 	end
 	def getTopEnhancements
 		self.ability_cards_enhancements.where(is_top: true)

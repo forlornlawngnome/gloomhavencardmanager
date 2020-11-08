@@ -36,7 +36,7 @@ class Character < ApplicationRecord
     EXPERIENCE_REQUIRED
   end
   def getQuestImage
-  	return "#{PERSONAL_QUEST_LOCATION}#{self.personal_quest}"
+  	return "#{PERSONAL_QUEST_LOCATION}#{self.personal_quest}.png"
   end
 
   def max_health

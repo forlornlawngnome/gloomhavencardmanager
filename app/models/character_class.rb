@@ -18,10 +18,10 @@ class CharacterClass < ApplicationRecord
 		return CHARACTER_MAT + "" + self.file_formated_name + "-back"
 	end
 	def getCharacterCardBack
-		return "#{CHARACTER_CARD_BACK}#{self.character_abbreviation.upcase}/#{self.character_abbreviation.downcase}-back"
+		return "#{CHARACTER_CARD_BACK}#{self.character_abbreviation.upcase}/#{self.character_abbreviation.downcase}-back.png"
 	end
 	def getIconImage
-		return "#{ICON_LOCATION}#{self.icon_image}"
+		return "#{ICON_LOCATION}#{self.icon_image}.png"
 	end
 	def max_health(level)
 		health[(level-1)]
