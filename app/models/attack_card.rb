@@ -13,10 +13,10 @@ class AttackCard < ApplicationRecord
 		if self.character_class.nil?
 			return "#{IMAGE_LOCATION}#{self.image}.png"
 		else
-			return "#{IMAGE_LOCATION}#{self.character_class.character_abbreviation.upcase}/#{self.image}"
+			return "#{IMAGE_LOCATION}#{self.character_class.character_abbreviation.upcase}/#{self.image}.png"
 		end
 	end
 	def self.back
-			return "attack-modifier-back"
+			return "attack-modifier-back.jpg"
 	end
 end
