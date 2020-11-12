@@ -121,7 +121,7 @@ class CharacterScenariosController < ApplicationController
     @character_scenario.update(experience: 0, gold: 0, is_poison: false, is_stun: false, is_invisible: false,
       is_strengthen: false, is_wound: false, is_immobilize: false, is_disarm: false, is_muddle: false)
 
-    redirect_to scenario_setup_character_scenario_path(@character_scenario)
+    redirect_to play_scenario_path(@character_scenario.scenario)
   end
 
   def remove_character

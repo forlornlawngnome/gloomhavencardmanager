@@ -46,6 +46,9 @@
     <%end%>
   </div>
   <div class="cell small-12 medium-2">
+    <%prev = draw_deck[(draw_deck.length - 2)]%>
+    <%prev_card = ActiveAttackCard.find(prev)%>
+    <%=image_tag prev_card.getImage, width: "70px"%><br /><br />
     <%=link_to "Bless", add_to_attack_deck_character_scenario_path(@character_scenario, card: "bless"), class: "button expanded"%>
     <%=link_to "Curse", add_to_attack_deck_character_scenario_path(@character_scenario, card: "curse"), class: "button alert expanded"%>
     <a href="javascript:;" data-open="attack_cards_add">Add Other Card</a>

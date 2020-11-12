@@ -40,12 +40,15 @@ Set up the character for the current scenario
       <hr />
       <h5>Ability Cards <small>Choose <%=@character.character_class.hand_size%></small></h5>
       <span class="totalchecked"><%=@character.ability_cards.chosen.count%></span>/<%=@character.character_class.hand_size%>
-      <div class="grid-x grid-padding-x">
+      <div class="grid-x grid-padding-x grid-padding-y">
         <%@character.ability_cards.in_available_deck.order(:level).each do |card|%>
           <div class="cell small-12 medium-3">
             <div class="grid-x">
               <div class="cell auto">
                 <%=form.check_box :ability_cards_id, { multiple: true, checked: card.chosen }, card.id, false%>
+                <label for="ability_cards_id_<%=card.id%>">
+                  <b><%=card.name%></b>
+                </label>
               </div>
               <div class="cell shrink">
                 <a href="javascript:;">
@@ -60,8 +63,6 @@ Set up the character for the current scenario
               </div>
               <label for="ability_cards_id_<%=card.id%>">
                 <%=render card, card: card%>
-                <br />
-                <b><%=card.name%></b>
               </label>
             </div>
           </div>
