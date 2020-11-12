@@ -8,7 +8,9 @@ class CharacterRoundsController < ApplicationController
     session[:short_rest] = true
     case params[:commit]
     when "Confirm Card"
-      AbilityCard.find(params[:card_id]).update(status: "Lost")
+      card_confirm =AbilityCard.find(params[:card_id])
+      card_confirm.status = "Lost"
+      card_confirm.save
       @character_scenario.character.ability_cards.chosen.discarded.update_all(status: "Available")
       redirect_to play_round_character_scenario_path(@character_scenario)
       return
@@ -17,9 +19,11 @@ class CharacterRoundsController < ApplicationController
     when "Lose A Different Card"
       AbilityCard.find(params[:card_id]).update(status: "Available")
       card = @character_scenario.character.ability_cards.chosen.discarded.order('RANDOM()').first
-      card.update(status: "Lost")
+      card.status = "Lost"
+      card.save
       @character_scenario.character.ability_cards.chosen.discarded.update_all(status: "Available")
-      @character_scenario.update(health: (@character_scenario.health -1))
+      @character_scenario.health = @character_scenario.health - 1
+      @character_scenario.save
       redirect_to play_round_character_scenario_path(@character_scenario)
       return
     else
