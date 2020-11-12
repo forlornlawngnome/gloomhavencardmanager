@@ -45,7 +45,7 @@ Set up the character for the current scenario
           <div class="cell small-12 medium-3">
             <div class="grid-x">
               <div class="cell auto">
-                <%=form.check_box :ability_cards_id, { multiple: true, checked: card.active }, card.id, false%>
+                <%=form.check_box :ability_cards_id, { multiple: true, checked: card.chosen }, card.id, false%>
               </div>
               <div class="cell shrink">
                 <a href="javascript:;">

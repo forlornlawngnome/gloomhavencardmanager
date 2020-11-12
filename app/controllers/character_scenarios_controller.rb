@@ -106,10 +106,10 @@ class CharacterScenariosController < ApplicationController
       session[:temple] = false
     end
     equiped_items = character.items.where(id: active_items)
-    equiped_items.update_all(is_active: true)
+    equiped_items.update_all(is_active: true, used: false)
 
     unequiped_items = character.items.where.not(id: active_items)
-    unequiped_items.update_all(is_active: false)
+    unequiped_items.update_all(is_active: false, used: false)
 
     active_cards = params[:ability_cards_id]
     equiped_cards = character.ability_cards.where(id: active_cards)
