@@ -1,5 +1,37 @@
 <h1>New Party</h1>
 
-<%= render 'form', party: @party %>
+<%= form_with(model: @party, local: true) do |form| %>
+  <% if @party.errors.any? %>
+    <div id="error_explanation" class="callout alert">
+      <h2><%= pluralize(@party.errors.count, "error") %> prohibited this party from being saved:</h2>
+
+      <ul>
+        <% @party.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <%= form.hidden_field :reputation, value: 0%>
+  <%= form.hidden_field :prosperity, value: 0%>
+
+  <%if !@party.persisted?%>
+    <div class="field">
+      <%= form.fields_for :players_parties do |f| %>
+        <%= f.hidden_field :player_id, value: current_player.id%>
+      <%end%>
+    </div>
+  <%end%>
+
+  <div class="actions">
+    <%= form.submit "Create Party", class: "button expanded" %>
+  </div>
+<% end %>
 
 <%= link_to 'Back', parties_path %>
