@@ -28,10 +28,20 @@
 
   <div class="field">
     <%= form.label :active %>
-    <%= form.check_box :active %>
+    <%if scenario.persisted?%>
+      <%= form.check_box :active %>
+    <%else%>
+      <%= form.check_box :active, checked: true %>
+    <%end%>
+
   </div>
 
+
   <div class="actions">
-    <%= form.submit %>
+    <%if scenario.persisted?%>
+      <%= form.submit "Update Scenario", class: "button expanded"%>
+    <%else%>
+      <%= form.submit "Create Scenario", class: "button expanded"%>
+    <%end%>
   </div>
 <% end %>
