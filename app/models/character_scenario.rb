@@ -2,6 +2,7 @@ class CharacterScenario < ApplicationRecord
 	acts_as_tenant(:party)
   belongs_to :character
   belongs_to :scenario
+	has_many :character_rounds
 
 	after_create :setup_attack_cards
 

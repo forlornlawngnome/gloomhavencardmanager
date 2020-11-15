@@ -1,17 +1,56 @@
 <%if @scenario.started%>
+	<%if @scenario.current_round.character_rounds.count == @scenario.characters_alive.count%>
+		<%all_chosen = true%>
+	<%end%>
 	<h3><%=@scenario.display%><small> Round <%=@scenario.current_round.number%></small></h3>
 	<div class="grid-x grid-margin-x align-spaced">
-		<%=link_to "Next Round", next_round_scenario_path(@scenario),method: :put, class: "cell small-12 medium-3 button success"%>
+		<%if all_chosen%>
+			<%=link_to "Next Round", next_round_scenario_path(@scenario),method: :put, class: "cell small-12 medium-3 button success"%>
+		<%end%>
 		<%=link_to "Finish Scenario", finish_scenario_scenario_path(@scenario),method: :put, class: "cell small-12 medium-3 button warning"%>
 	</div>
-
-	<%@scenario.character_scenarios.each do |character_s|%>
-		<%character = character_s.character%>
-		<%=character.name%> - <%= character.character_class.name%><br />
-		Health: <%=character_s.health%><br />
-		Gold: <%=character_s.gold%><br />
-		Experience: <%=character_s.experience%><br />
-	<%end%>
+	<div class="grid-x grid-margin-x align-spaced">
+		<%@scenario.character_scenarios.each do |character_s|%>
+	    <%character = character_s.character%>
+	    <div class="card cell small-12 medium-4 flex-container">
+	      <div class="card-section  text-center" style="margin: 0;">
+	        <div class="cell grid-x grid-margin-x align-justify">
+						<div class="cell small-4">
+							<%=link_to play_round_character_scenario_path(character_s) do %>
+								<%=image_tag character.character_class.getIconImage%>
+							<%end%>
+						</div>
+	          <div class="cell shrink text-left">
+	            <b>Name: </b><%=character.name%><br />
+	            <b>Health:</b> <%=character_s.health%><br />
+							<b>Gold:</b> <%=character_s.gold%><br />
+							<b>Experience:</b> <%=character_s.experience%><br />
+	            <b>Deck Size:</b>	<%=character.active_attack_cards.count%><br />
+						</div>
+						<div class="cell auto text-right">
+							<%if all_chosen and character_s.health > 0%>
+								<b>Initiative:</b><br />
+								<%char_round = character_s.character_rounds.where(round: @scenario.current_round).first%>
+								<%if char_round.long_rest%>
+									<span style="font-size:3em">
+										99
+									</span>
+								<%else%>
+									<span style="font-size:3em">
+										<%=char_round.card_1.initiative%>
+									</span>
+									(<%=char_round.card_2.initiative%>)
+								<%end%>
+							<%elsif character_s.health <= 0 %>
+								Dead <br />
+								<i class="fas fa-book-dead fa-3x"></i>
+							<%end%>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  <%end%>
+	</div>
 <%else%>
 	<%=render "initial_setup"%>
 <%end%>

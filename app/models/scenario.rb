@@ -15,6 +15,9 @@ class Scenario < ApplicationRecord
   def display
   	return "#{self.number} - #{self.name}"
   end
+	def characters_alive
+		character_scenarios.where("health > ?", 0)
+	end
   def available_characters
   	ids = self.character_scenarios.pluck(:id)
   	characters = Character.where("id not in (?)",ids)
