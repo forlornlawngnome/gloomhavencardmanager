@@ -34,7 +34,7 @@ class Scenario < ApplicationRecord
     [].tap do |o|
       Character.active.all.each do |character|
         if !character_scenarios.find { |c| c.character_id == character.id }
-          o << CharacterScenario.new(scenario: self, character: character, attack_deck_draw_order: [], health: character.max_health, gold: 0)
+          o << CharacterScenario.new(scenario: self, character: character, attack_deck_draw_order: [], health: character.max_health, gold: 0, experience: 0)
         end
       end
       o.each(&:save)

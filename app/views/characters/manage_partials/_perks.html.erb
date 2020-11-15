@@ -1,0 +1,17 @@
+<h5>Perks
+  <small>
+    <%= link_to add_perk_character_path(@character) do%>
+      <i class="material-icons md-18">plus_one</i><br />
+    <%end%>
+  </small>
+</h5>
+<%@character.perks.each do |perk|%>
+  <%perk.count.times do |i|%>
+    <%if (i+1) <= perk.applied%>
+      <i class="material-icons md-18">check_box</i>
+    <%else%>
+      <i class="material-icons md-18">check_box_outline_blank</i>
+    <%end%>
+  <%end%>
+  <%=perk.description%><br />
+<%end%>

@@ -14,50 +14,7 @@
 
   <body>
 
-    <div class="top-bar">
-      <%if logged_in?%>
-        <div class="top-bar-left">
-          <ul class=" menu">
-            <%if party_chosen?%>
-              <li><b><%=link_to active_party.name.titleize, root_path%></b></li>
-              <li><%=link_to "Manage Party", manage_party_path(active_party)%></li>
-            <%else%>
-              <li><b><%=link_to "Gloomhaven Card Manager", root_path%></b></li>
-            <%end%>
-            <%if active_scenario.nil?%>
-              <li><%=link_to "Start Game", new_scenario_path%></li>
-            <%else%>
-              <li><%=link_to "Manage Scenario", play_scenario_path(active_scenario)%></li>
-              <%if current_player.hasActiveCharacter%>
-                <% char_s = CharacterScenario.where(scenario: active_scenario, character: current_player.activeCharacter)%>
-                <%if char_s.count > 0%>
-                  <li><%=link_to "Play Scenario", play_round_character_scenario_path(char_s.first)%></li>
-                <%end%>
-              <%end%>
-            <%end%>
-            <%if current_player.hasActiveCharacter %>
-              <li><%=link_to "Manage Character", manage_character_path(current_player.activeCharacter)%></li>
-            <%else%>
-              <li><%= link_to "Create a Character",select_class_characters_path%></li>
-            <%end%>
-          </ul>
-        </div>
-        <div class="top-bar-right">
-          <ul class="menu">
-            <li><%=link_to "Select a Party", party_select_path%></li>
-            <li><%=link_to "Log Out", logout_path%></li>
-          </ul>
-        </div>
-      <%else%>
-      <div class="top-bar-right">
-        <ul class="menu">
-          <li>
-            <%= google_sign_in_button 'Sign in with Google', proceed_to: create_login_url, class: "button" %>
-          </li>
-        </ul>
-      </div>
-      <%end%>
-    </div>
+    <%=render "layouts/nav"%>
     <div class="grid-container fluid">
       <%=render "layouts/notice"%>
       <%= yield %>

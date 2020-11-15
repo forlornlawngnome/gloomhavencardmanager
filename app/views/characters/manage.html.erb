@@ -2,97 +2,13 @@
 <br />
 <div class="grid-x grid-margin-x">
   <div class="cell small-12 medium-3 right">
-    <div>
-      <b>Gold:</b> <%=@character.gold%>
-      <a href="javascript:;">
-        <i class="material-icons md-18" data-open="editGold">account_balance</i>
-      </a><br />
-      <div class="reveal" id="editGold" data-reveal>
-        <br /><br />
-        <%= form_with(url: modify_gold_character_path, scope: :character,method: :put, local: true) do |form| %>
-          <%=form.hidden_field :id, value: @character.id%>
-          <div class="input-group">
-            <span class="input-group-label">
-              <i class="fas fa-donate fa-2x"></i>
-            </span>
-            <%=form.number_field :gold, value: 0, class: "input-group-field" %>
-            <div class="input-group-button">
-              <%= form.submit "Submit", class: "button expanded" %>
-            </div>
-          </div>
-          <p class="help-text">A positive number adds gold, a negative one removes that amount.</p>
-        <%end%>
-        <button class="close-button" data-close aria-label="Close modal" type="button">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <b>Experience:</b> <%=@character.experience%><br />
-      <b>Health:</b> <%=@character.max_health%><br />
-      <b>Hand Size:</b> <%=@character.character_class.hand_size%><br />
-      <b>Check Marks:</b>
-      <%= link_to add_check_character_path(@character), data: { confirm: 'Are you sure you want to add a check?' } do%>
-        <i class="material-icons md-18">plus_one</i><br />
-      <%end%>
-      <%(1..18).each do |i|%>
-        <%if i <= @character.check_marks %>
-          <i class="material-icons md-18">check_box</i>
-        <%else%>
-          <i class="material-icons md-18">check_box_outline_blank</i>
-        <%end%>
-
-        <%if i%9 == 0%>
-          <br />
-        <%elsif i%3 == 0%>
-          |
-        <%end%>
-      <%end%>
-      <br />
-      <b>Notes:</b>
-      <a href="javascript:;">
-        <i class="material-icons md-18" data-open="editNotes">create</i>
-      </a><br />
-      <%=raw @character.notes%>
-      <div class="reveal" id="editNotes" data-reveal>
-        <%= form_with(url: edit_notes_character_path, scope: :character, method: :put, local: true) do |form| %>
-          <%=form.hidden_field :id, value: @character.id%>
-          <div class="field">
-            <%= form.label :notes %>
-            <%= form.text_area :notes, rows: 8%>
-          </div>
-
-          <div class="actions">
-            <%= form.submit "Update Notes", class: "button expanded" %>
-          </div>
-          <button class="close-button" data-close aria-label="Close modal" type="button">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        <% end %>
-      </div>
-      <hr />
-    </div>
+    <%=render "characters/manage_partials/assets"%>
     <div>
       <%if active_scenario.nil?%>
         <%=link_to "Start New Scenario", new_scenario_path, class: "button expanded"%>
         <hr />
-        <%=link_to shop_character_path(@character), class: "button expanded" do%>
-          <span class="float-left"><i class="fas fa-store"></i></span> Buy Items
-        <%end%>
-        <%=link_to donate_temple_character_path(@character), class: "button expanded" do%>
-          <span class="float-left"><i class="fas fa-place-of-worship"></i></span> Donate to the Temple
-        <%end%>
-        <%if @character.ability_cards_enhancements.count < @character.party.prosperity%>
-          <%=link_to card_enhancements_character_path(@character), class: "button expanded" do%>
-            <span class="float-left"><i class="fas fa-skull-crossbones"></i></span> Buy Card Enhancement
-          <%end%>
-        <%end%>
-        <hr />
-        <%if @character.level < 9%>
-          <%=link_to levelup_character_path(@character, level: (@character.level+1)), class: "button expanded" do%>
-            <span class="float-left"><i class="fas fa-level-up-alt"></i></span> Level Up Character
-          <%end%>
-        <%end%>
-        <%=link_to "Retire Character", retire_character_path(@character), data: { confirm: 'Are you sure you want to retire?' }, class: "button alert expanded"%>
-      <%elsif active_scenario.rounds.count > 0%>
+        <%=render "characters/manage_partials/gloomhaven_links"%>
+      <%elsif active_scenario.rounds.count > 1%>
         <% char_s = @character.character_scenarios.where(scenario: active_scenario).first%>
         <%if !char_s.nil?%>
           <%=link_to "Play Scenario", play_round_character_scenario_path(char_s), class: "button expanded"%>
@@ -103,24 +19,9 @@
           link to join scenario
         <%else%>
           <%=link_to "Setup Scenario", scenario_setup_character_scenario_path(@character_scenario.first), class: "button expanded"%>
-          <%=link_to shop_character_path(@character), class: "button expanded" do%>
-            <span class="float-left"><i class="fas fa-store"></i></span> Buy Items
-          <%end%>
-          <%=link_to donate_temple_character_path(@character), class: "button expanded" do%>
-            <span class="float-left"><i class="fas fa-place-of-worship"></i></span> Donate to the Temple
-          <%end%>
-          <%if @character.ability_cards_enhancements.count < @character.party.prosperity%>
-            <%=link_to card_enhancements_character_path(@character), class: "button expanded" do%>
-              <span class="float-left"><i class="fas fa-skull-crossbones"></i></span> Buy Card Enhancement
-            <%end%>
-          <%end%>
+          <%=link_to "Play Scenario", play_round_character_scenario_path(@character_scenario), class: "button expanded"%>
           <hr />
-          <%if @character.level < 9%>
-            <%=link_to levelup_character_path(@character, level: (@character.level+1)), class: "button expanded" do%>
-              <span class="float-left"><i class="fas fa-level-up-alt"></i></span> Level Up Character
-            <%end%>
-          <%end%>
-          <%=link_to "Retire Character", retire_character_path(@character), data: { confirm: 'Are you sure you want to retire?' }, class: "button alert expanded"%>
+          <%=render "characters/manage_partials/gloomhaven_links"%>
         <%end%>
       <%end%>
     </div>
@@ -131,62 +32,15 @@
   <div class="cell small-12 medium-9 right">
     <div class="grid-x grid-margin-x">
       <div class="cell small-12 medium-6">
-        <h5>Perks
-          <small>
-            <%= link_to add_perk_character_path(@character) do%>
-              <i class="material-icons md-18">plus_one</i><br />
-            <%end%>
-          </small>
-        </h5>
-        <%@character.perks.each do |perk|%>
-          <%perk.count.times do |i|%>
-            <%if (i+1) <= perk.applied%>
-              <i class="material-icons md-18">check_box</i>
-            <%else%>
-              <i class="material-icons md-18">check_box_outline_blank</i>
-            <%end%>
-          <%end%>
-          <%=perk.description%><br />
-        <%end%>
+        <%=render "characters/manage_partials/perks"%>
       </div>
       <div class="cell small-12 medium-6">
-        <h5>Items</h5>
-        <div class="grid-x grid-margin-x">
-          <%@character.items.order(:item_type).each do |item|%>
-            <div class="cell small-12 medium-4">
-              <button class="button" data-open="item_<%=item.id%>" style="padding:0"><%=image_tag item.getImage%></button>
-              <div class="tiny reveal" id="item_<%=item.id%>" data-reveal>
-                <%=image_tag item.getImage%>
-                <%=link_to (sell_item_character_path @character, item_id: item.id), class: "button expanded alert" do%>
-                  Sell item for <%=item.price%> gold
-                <%end%>
-                <button class="close-button" data-close aria-label="Close modal" type="button">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-            </div>
-          <%end%>
-        </div>
+        <%=render "characters/manage_partials/items"%>
       </div>
     </div>
     <div class="cell small-12">
       <hr />
-      <h5>Ability Cards</h5>
-      <div class="grid-x grid-margin-x">
-        <%@character.ability_cards.in_available_deck.each do |card|%>
-          <div class="cell small-12 medium-3">
-            <button class="button" data-open="card_<%=card.id%>" style="padding:0">
-              <%=render card, card: card%>
-            </button>
-            <div class="tiny reveal" id="card_<%=card.id%>" data-reveal>
-              <%=render card, card: card%>
-              <button class="close-button" data-close aria-label="Close modal" type="button">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-          </div>
-        <%end%>
-      </div>
+      <%=render "characters/manage_partials/ability_cards"%>
     </div>
   </div>
 </div>

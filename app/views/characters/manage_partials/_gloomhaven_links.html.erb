@@ -1,0 +1,18 @@
+<%=link_to shop_character_path(@character), class: "button expanded" do%>
+  <span class="float-left"><i class="fas fa-store"></i></span> Buy Items
+<%end%>
+<%=link_to donate_temple_character_path(@character), class: "button expanded" do%>
+  <span class="float-left"><i class="fas fa-place-of-worship"></i></span> Donate to the Temple
+<%end%>
+<%if @character.ability_cards_enhancements.count < @character.party.prosperity%>
+  <%=link_to card_enhancements_character_path(@character), class: "button expanded" do%>
+    <span class="float-left"><i class="fas fa-skull-crossbones"></i></span> Buy Card Enhancement
+  <%end%>
+<%end%>
+<hr />
+<%if @character.level < 9%>
+  <%=link_to levelup_character_path(@character, level: (@character.level+1)), class: "button expanded" do%>
+    <span class="float-left"><i class="fas fa-level-up-alt"></i></span> Level Up Character
+  <%end%>
+<%end%>
+<%=link_to "Retire Character", retire_character_path(@character), data: { confirm: 'Are you sure you want to retire?' }, class: "button alert expanded"%>

@@ -1,0 +1,16 @@
+<h5>Ability Cards</h5>
+<div class="grid-x grid-margin-x">
+  <%@character.ability_cards.in_available_deck.each do |card|%>
+    <div class="cell small-12 medium-3">
+      <button class="button" data-open="card_<%=card.id%>" style="padding:0">
+        <%=render card, card: card%>
+      </button>
+      <div class="tiny reveal" id="card_<%=card.id%>" data-reveal>
+        <%=render card, card: card%>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+  <%end%>
+</div>
