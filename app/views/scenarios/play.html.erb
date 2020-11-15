@@ -9,7 +9,7 @@
 		<%end%>
 		<%=link_to "Finish Scenario", finish_scenario_scenario_path(@scenario),method: :put, class: "cell small-12 medium-3 button warning"%>
 	</div>
-	<div class="grid-x grid-margin-x align-spaced">
+	<div class="grid-x grid-margin-x">
 		<%@scenario.character_scenarios.each do |character_s|%>
 	    <%character = character_s.character%>
 	    <div class="card cell small-12 medium-4 flex-container">
