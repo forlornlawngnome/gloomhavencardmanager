@@ -22,8 +22,31 @@
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
-  <b>Experience:</b> <%=@character.experience%><br />
-  <b>Health:</b> <%=@character.max_health%><br />
+  <b>Experience:</b> <%=@character.experience%>
+  <a href="javascript:;">
+    <i class="material-icons md-18" data-open="editXp">account_balance</i>
+  </a><br />
+  <div class="reveal" id="editXp" data-reveal>
+    <br /><br />
+    <%= form_with(url: modify_xp_character_path, scope: :character,method: :put, local: true) do |form| %>
+      <%=form.hidden_field :id, value: @character.id%>
+      <div class="input-group">
+        <span class="input-group-label">
+          XP
+        </span>
+        <%=form.number_field :experience, value: 0, class: "input-group-field" %>
+        <div class="input-group-button">
+          <%= form.submit "Submit", class: "button expanded" %>
+        </div>
+      </div>
+      <p class="help-text">A positive number adds experience, a negative one removes that amount.</p>
+    <%end%>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <b>Max Health:</b> <%=@character.max_health%><br />
   <b>Hand Size:</b> <%=@character.character_class.hand_size%><br />
   <b>Check Marks:</b>
   <%= link_to add_check_character_path(@character), data: { confirm: 'Are you sure you want to add a check?' } do%>

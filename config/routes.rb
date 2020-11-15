@@ -54,6 +54,7 @@ Rails.application.routes.draw do
       get 'add_perk'
       put 'apply_perk'
       put 'modify_gold'
+      put 'modify_xp'
       get 'shop'
       put 'buy_items'
       get 'sell_item'
