@@ -1,5 +1,14 @@
 <h5>Items</h5>
 <div class="grid-x grid-margin-x">
+  <div class="cell small-12 medium-4">
+    <h6>Item Counts:</h6>
+    <b>Helm:</b> <%=@character.items.head.count%><br />
+    <b>Armor:</b> <%=@character.items.armor.count%><br />
+    <b>Boots:</b> <%=@character.items.boots.count%><br />
+    <b>One-Handed:</b> <%=@character.items.onehand.count%><br />
+    <b>Two-Handed:</b> <%=@character.items.twohand.count%><br />
+    <b>Small Items:</b> <%=@character.items.small_item.count%>
+  </div>
   <%@character.items.order(:item_type).each do |item|%>
     <div class="cell small-12 medium-4">
       <button class="button" data-open="item_<%=item.id%>" style="padding:0"><%=image_tag item.getImage%></button>
