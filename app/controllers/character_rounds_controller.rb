@@ -24,7 +24,9 @@ class CharacterRoundsController < ApplicationController
       @character_scenario.character.ability_cards.chosen.discarded.update_all(status: "Available")
       @character_scenario.health = @character_scenario.health - 1
       @character_scenario.save
-      redirect_to play_round_character_scenario_path(@character_scenario)
+      flash[:notice] = "You lost #{card.name}"
+      flash.keep
+      redirect_to(play_round_character_scenario_path(@character_scenario),flash: {notice:  "You lost #{card.name}."})
       return
     else
       raise "uh oh"
@@ -102,10 +104,17 @@ class CharacterRoundsController < ApplicationController
     end
   end
   def avoid_damage_active
-    card = AbilityCard.find(params[:discarded_card_id])
-    card.update(status: "Lost")
-    redirect_to play_round_character_scenario_path(@character_round.character_scenario)
-    return
+    if params[:commit]=="Discard"
+      card = AbilityCard.find(params[:discarded_card_id])
+      card.update(status: "Discarded")
+      redirect_to play_round_character_scenario_path(@character_round.character_scenario)
+      return
+    else
+      card = AbilityCard.find(params[:discarded_card_id])
+      card.update(status: "Lost")
+      redirect_to play_round_character_scenario_path(@character_round.character_scenario)
+      return
+    end
   end
   def items
     item = Item.find(params[:item_id])

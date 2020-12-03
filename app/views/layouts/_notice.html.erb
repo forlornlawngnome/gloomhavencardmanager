@@ -6,3 +6,11 @@
     <p><%= params["notice"] %></p>
   </div>
 <%end%>
+<%if flash[:notice]%>
+  <div class="callout success" data-closable>
+    <button class="close-button" aria-label="Close alert" type="button" data-close>
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <p><%= flash[:notice] %></p>
+  </div>
+<%end%>

@@ -74,6 +74,7 @@ class CharacterScenariosController < ApplicationController
     @character = @character_scenario.character
   end
   def play_round
+    #flash.keep
     @scenario = @character_scenario.scenario
     @character = @character_scenario.character
 
