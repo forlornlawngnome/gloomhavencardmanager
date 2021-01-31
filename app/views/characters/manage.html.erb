@@ -19,7 +19,7 @@
           link to join scenario
         <%else%>
           <%=link_to "Setup Scenario", scenario_setup_character_scenario_path(@character_scenario.first), class: "button expanded"%>
-          <%=link_to "Play Scenario", play_round_character_scenario_path(@character_scenario), class: "button expanded"%>
+          <%=link_to "Play Scenario", play_round_character_scenario_path(@character_scenario.first), class: "button expanded"%>
           <hr />
           <%=render "characters/manage_partials/gloomhaven_links"%>
         <%end%>

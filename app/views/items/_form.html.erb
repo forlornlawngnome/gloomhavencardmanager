@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label :character_id %>
-    <%= form.collection_select :character_id, Character.all, :id, :name %>
+    <%= form.collection_select :character_id, Character.all, :id, :name, {include_blank: true} %>
   </div>
 
   <div class="field">

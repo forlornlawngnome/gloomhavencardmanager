@@ -15,6 +15,8 @@ class PartiesController < ApplicationController
         range_top = Item.prosperityItem(@party.prosperity_actual)
         items = Item.where("number > ? AND number <= ?", range_bot, range_top)
         items.update_all(is_unlocked: true)
+        locked_items = Item.where(is_unlocked: false)
+        locked_items.update_all(character_id: nil) #If the item is locked, it should have no owner
         #make items available
       end
       redirect_to manage_party_path @party

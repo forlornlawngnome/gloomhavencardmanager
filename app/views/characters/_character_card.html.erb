@@ -4,7 +4,7 @@
       <%=image_tag character.character_class.getIconImage%>
     </div>
     <div class="cell small-6">
-      <h4><%=character.name%></h4>
+      <h4><%=link_to character.name, manage_character_path(character)%></h4>
       <li><b>Player:</b> <%=character.player.name%></li>
       <li><b>Level:</b> <%=character.level%></li>
       <li><b>Gold:</b> <%=character.gold%></li>

@@ -128,6 +128,9 @@ class CharacterRoundsController < ApplicationController
       redirect_to play_round_character_scenario_path(@character_round.character_scenario)
       return
     when "Increase Counter"
+      if item.counter.nil?
+        item.counter = 0
+      end
       item.counter = item.counter + 1
       if item.counter >= item.counter_max
         item.used = true
