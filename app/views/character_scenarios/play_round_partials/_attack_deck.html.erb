@@ -51,8 +51,8 @@
       <%prev_card = ActiveAttackCard.find(prev)%>
       <%=image_tag prev_card.getImage, width: "70px"%><br /><br />
     <%end%>
-    <%=link_to "Bless", add_to_attack_deck_character_scenario_path(@character_scenario, card: "bless"), class: "button expanded"%>
-    <%=link_to "Curse", add_to_attack_deck_character_scenario_path(@character_scenario, card: "curse"), class: "button alert expanded"%>
+    <%=link_to "Bless (#{@character.active_attack_cards.bless.in_deck.count})", add_to_attack_deck_character_scenario_path(@character_scenario, card: "bless"), class: "button expanded"%>
+    <%=link_to "Curse (#{@character.active_attack_cards.curse.in_deck.count})", add_to_attack_deck_character_scenario_path(@character_scenario, card: "curse"), class: "button alert expanded"%>
     <a href="javascript:;" data-open="attack_cards_add">Add Other Card</a>
     <div class="reveal" id="attack_cards_add" data-reveal>
       <%AttackCard.where(character_class: nil).each do |card|%>
