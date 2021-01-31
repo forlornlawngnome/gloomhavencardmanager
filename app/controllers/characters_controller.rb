@@ -1,6 +1,6 @@
 class CharactersController < ApplicationController
   before_action :set_character, only: [:show, :edit, :update, :destroy, :levelup, :play,
-    :manage, :levelup_complete, :retire, :add_check, :add_perk, :apply_perk, :bank, :modify_gold, :modify_xp,
+    :manage, :levelup_complete, :retire, :remove_check, :add_check, :add_perk, :apply_perk, :bank, :modify_gold, :modify_xp,
     :shop, :buy_items, :sell_item, :donate_temple, :card_enhancements, :edit_notes]
 
 
@@ -27,6 +27,12 @@ class CharactersController < ApplicationController
   end
   def add_check
     @character.check_marks = @character.check_marks + 1
+    @character.save
+
+    redirect_to manage_character_path @character
+  end
+  def remove_check
+    @character.check_marks = @character.check_marks - 1
     @character.save
 
     redirect_to manage_character_path @character

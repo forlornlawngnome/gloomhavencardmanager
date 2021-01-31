@@ -50,6 +50,7 @@ Rails.application.routes.draw do
       get 'manage'
       put 'levelup_complete'
       get 'retire'
+      get 'remove_check'
       get 'add_check'
       get 'add_perk'
       put 'apply_perk'

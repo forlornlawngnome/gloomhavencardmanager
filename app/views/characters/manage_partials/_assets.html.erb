@@ -49,7 +49,12 @@
   <b>Max Health:</b> <%=@character.max_health%><br />
   <b>Hand Size:</b> <%=@character.character_class.hand_size%><br />
   <b>Check Marks:</b>
-  <%= link_to add_check_character_path(@character), data: { confirm: 'Are you sure you want to add a check?' } do%>
+  <%if @character.check_marks%3 != 0%>
+    <%= link_to remove_check_character_path(@character) do%>
+      <i class="material-icons md-18">remove_circle_outline</i> &nbsp
+    <%end%>
+  <%end%>
+  <%= link_to add_check_character_path(@character) do%>
     <i class="material-icons md-18">plus_one</i><br />
   <%end%>
   <%(1..18).each do |i|%>
