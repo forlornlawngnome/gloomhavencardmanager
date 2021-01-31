@@ -32,11 +32,28 @@ class Party < ApplicationRecord
 		64 => 9
 	}
 
+	REPUTATION_DISCOUNT = {
+    -20..-19 => 5,
+		-18..-15 => 4,
+    -14..-11 => 3,
+    -10..-7 => 2,
+    -6..-3 => 1,
+    -2..2 => 0,
+    3..6 => -1,
+    7..10 => -2,
+    11..14 => -3,
+    15..18 => -4,
+    19..20 => -5
+  }
+
 	def active_scenario
 		scenarios.active.first
 	end
 	def average_level
 		characters.active.average(:level)
+	end
+	def shop_discount
+		REPUTATION_DISCOUNT.select {|tic| tic === reputation }.values.first
 	end
 	def prosperity_actual
 		prosperity_calc(prosperity)

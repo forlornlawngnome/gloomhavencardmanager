@@ -30,6 +30,9 @@ class Item < ApplicationRecord
   def display
     "#{number} - #{name}"
   end
+  def sell_price
+    return (price/2).floor
+  end
   private
 	  def getItemRange
 	  	case self.number

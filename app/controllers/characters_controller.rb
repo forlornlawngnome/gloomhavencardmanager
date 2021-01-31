@@ -54,7 +54,7 @@ class CharactersController < ApplicationController
   end
   def buy_items
     items = Item.where("id in (?)",params["items_to_buy"])
-    cost = items.sum(:price)
+    cost = items.sum(:price) + items.count*@character.party.shop_discount
     if cost > @character.gold
       redirect_to shop_character_path @character, notice: "You don't have enough gold."
     else
@@ -72,7 +72,7 @@ class CharactersController < ApplicationController
     item.character_id = nil
     item.save
 
-    @character.gold = @character.gold + item.price
+    @character.gold = @character.gold + item.sell_price
     @character.save
     redirect_to manage_character_path @character
   end

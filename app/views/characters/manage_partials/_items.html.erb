@@ -15,7 +15,7 @@
       <div class="tiny reveal" id="item_<%=item.id%>" data-reveal>
         <%=image_tag item.getImage%>
         <%=link_to (sell_item_character_path @character, item_id: item.id), class: "button expanded alert" do%>
-          Sell item for <%=item.price%> gold
+          Sell item for <%=item.sell_price%> gold
         <%end%>
         <button class="close-button" data-close aria-label="Close modal" type="button">
           <span aria-hidden="true">&times;</span>
